@@ -1,0 +1,86 @@
+[
+  {
+    "id": "kipu_offline_surrogate",
+    "title": "Kipu-style offline quantum-feature surrogates",
+    "source": "https://kipu-quantum.com/blog/classical-surrogates-for-quantum-feature-extraction",
+    "guarantee": "Public vendor workflow: acquire quantum feature pairs, fit a classical surrogate, and deploy with a classical predictor. Ridge is the student family reported in Kipu's example. The native demos here use small reference teachers, not Kipu's DQFE circuits, proprietary SDK, datasets or claimed accuracy figures. Held-out fidelity is an empirical acceptance gate, not a universal theorem."
+  },
+  {
+    "id": "parameter_shift",
+    "title": "Parameter-shift differentiation",
+    "source": "https://doi.org/10.1103/PhysRevA.99.032331",
+    "guarantee": "Exact expectation derivative identity for a single Pauli rotation occurrence per coordinate; unbiased sampled expectation gradients. Nonlinear losses require a classical chain rule; shifting the loss itself is generally incorrect."
+  },
+  {
+    "id": "reuploading",
+    "title": "Angle encoding and data re-uploading",
+    "source": "https://doi.org/10.22331/q-2020-02-06-226",
+    "guarantee": "Expressivity results for the published constructions; no universal convergence or advantage claim for the small executable."
+  },
+  {
+    "id": "fidelity_kernel",
+    "title": "Fidelity quantum kernels",
+    "source": "https://doi.org/10.1038/s41586-019-0980-2",
+    "guarantee": "The ideal kernel |<psi(x)|psi(y)>|^2 is PSD; the regularized downstream optimization is convex. No general trainability or predictive superiority guarantee."
+  },
+  {
+    "id": "projected_kernel",
+    "title": "Projected quantum kernels",
+    "source": "https://doi.org/10.1038/s41467-021-22539-9",
+    "guarantee": "A Gaussian kernel on fixed measured feature vectors is PSD. The source's advantage statements need its particular access and task assumptions, which this toy implementation does not establish."
+  },
+  {
+    "id": "frozen_features",
+    "title": "Frozen quantum features and convex readouts",
+    "source": "https://doi.org/10.1103/PhysRevLett.122.040504",
+    "guarantee": "For a fixed feature matrix and positive ridge regularization, the readout objective is strictly convex. This does not guarantee useful quantum features."
+  },
+  {
+    "id": "spsa",
+    "title": "Simultaneous perturbation stochastic approximation",
+    "source": "https://doi.org/10.1109/9.119632",
+    "guarantee": "Conditional stochastic-approximation convergence under the source's smoothness, noise, boundedness and gain-sequence assumptions. Two loss calls per perturbation, not two total shots."
+  },
+  {
+    "id": "shot_allocation",
+    "title": "Independent-term shot allocation",
+    "source": "https://doi.org/10.22331/q-2020-05-11-263",
+    "guarantee": "For independent sample means, variance is sum c_i^2 sigma_i^2/N_i. Continuous optimal known-variance allocation is proportional to |c_i| sigma_i; integer allocation is rounded and not claimed exactly optimal."
+  },
+  {
+    "id": "classical_shadows",
+    "title": "Classical shadows for local quantum features",
+    "source": "https://doi.org/10.1038/s41567-020-0932-7",
+    "guarantee": "Unbiased local Pauli shadow estimators; median-of-means sample complexity depends on shadow norms, locality, accuracy and confidence. Arbitrary default shot counts do not certify the theorem's confidence."
+  },
+  {
+    "id": "born_mmd",
+    "title": "Born machines with characteristic-kernel MMD",
+    "source": "https://doi.org/10.1103/PhysRevA.98.062324",
+    "guarantee": "Correct population-MMD parameter-shift gradients and unbiased MMD-squared U-statistics. A characteristic Gaussian kernel identifies distributions on finite binary support; no global optimization guarantee."
+  },
+  {
+    "id": "classical_pretraining",
+    "title": "Classically pretrained feature extractors",
+    "source": "https://doi.org/10.22331/q-2020-10-09-340",
+    "guarantee": "The frozen ridge readout is strictly convex conditional on the learned features. Supervised MLP pretraining is an empirical engineering companion explicitly requested by the user; no global pretraining or plateau guarantee is asserted."
+  },
+  {
+    "id": "classical_warm_start",
+    "title": "Classical simulator warm starts for quantum parameters",
+    "source": "https://doi.org/10.22331/q-2019-12-09-214",
+    "guarantee": "The gradient identity remains exact on the simulator; warm-start effectiveness has no general guarantee here. This is an explicitly requested engineering companion, not a claimed theorem from the linked initialization paper."
+  },
+  {
+    "id": "nystrom",
+    "title": "Nystr\u00f6m approximation of quantum kernels",
+    "source": "https://proceedings.neurips.cc/paper/2000/file/19de10adbaa1b2ee13f77f679fa1483a-Paper.pdf",
+    "guarantee": "For PSD kernels, landmark features produce a PSD low-rank approximation; using all landmarks with positive eigenspaces recovers the ideal Gram matrix up to tolerance. Accuracy with few landmarks depends on spectrum and selection."
+  },
+  {
+    "id": "kernel_surrogate",
+    "title": "Density-embedding fidelity-kernel surrogate (not Kipu DQFE)",
+    "source": "https://www.nature.com/articles/s41467-024-49877-8",
+    "guarantee": "The learned embedding inner product is PSD by construction. If density-embedding errors are uniformly <= epsilon and target norms are one, kernel errors are <= 2 epsilon + epsilon^2. The error premise is not guaranteed by finite training data. This concrete small-state student is not a reproduction of the cited shadow-model theorem."
+  }
+]

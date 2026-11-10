@@ -1,0 +1,70 @@
+{
+  "protocol": "Three fresh-context agents, five project tasks; two follow-ups reuse task context. Independent replay and artifact assertions.",
+  "human_scientific_review": "deferred to repository owner",
+  "limitations": "One attempt per scenario, no control condition, no measured token/tool counts; activity logs are self-reported. Not a general agent success-rate estimate.",
+  "tasks": [
+    {
+      "task": "csv_classification",
+      "replay_seconds": 3.1332009000034304,
+      "returncode": 0,
+      "script_sha256": "41738926994a4e8abbcc7c09dd3549b5679f5fcb17348e5f7bcdae8b2685341f",
+      "activity_log": "agent_eval\\runs\\csv_classification\\activity.md",
+      "checks": {
+        "split_isolation": true,
+        "metrics_recomputed": true,
+        "qml_models": 2,
+        "controls": 4
+      },
+      "passed": true
+    },
+    {
+      "task": "regression_artifact",
+      "replay_seconds": 3.0977764000126626,
+      "returncode": 0,
+      "script_sha256": "a68e08e1d0fdb3fa349ef8ca7c42cb41628e4b25f366fc03af2f5471131f069c",
+      "activity_log": "agent_eval\\runs\\regression_artifact\\activity.md",
+      "checks": {
+        "train_only_preprocessing": true,
+        "reload_max_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "task": "finite_shot_gradient",
+      "replay_seconds": 1.285909600002924,
+      "returncode": 0,
+      "script_sha256": "70c3ad597c60f9d35abfa6c71428acecc54b6b2a40d8143638ae76d6925e9d9b",
+      "activity_log": "agent_eval\\runs\\finite_shot_gradient\\activity.md",
+      "checks": {
+        "shots_accounted": true,
+        "bias_disclosed": true
+      },
+      "passed": true
+    },
+    {
+      "task": "surrogate_deployment",
+      "replay_seconds": 2.329349200008437,
+      "returncode": 0,
+      "script_sha256": "ea17488d2e32f11f9c6886fefe989b94f7dbf39f54ed9cdb3b7ff353fa13ca9a",
+      "activity_log": "agent_eval\\runs\\surrogate_deployment\\activity.md",
+      "checks": {
+        "validation_passed": true,
+        "teacher_free_artifact": true
+      },
+      "passed": true
+    },
+    {
+      "task": "failed_surrogate_gate",
+      "replay_seconds": 2.6298600000009174,
+      "returncode": 0,
+      "script_sha256": "2ee3eb227edad9e152f110dcdc20001ce87a63b261cf9df34f37728fb9bb4fc8",
+      "activity_log": "agent_eval\\runs\\failed_surrogate_gate\\activity.md",
+      "checks": {
+        "failed_gate_enforced": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": 5,
+  "total": 5
+}

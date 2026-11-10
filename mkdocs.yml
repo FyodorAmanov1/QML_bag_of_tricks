@@ -1,0 +1,19 @@
+site_name: QML Bag of Tricks
+site_description: Evidence-led strategies for trainable quantum machine learning
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+plugins:
+  - search
+hooks:
+  - scripts/docs_sources.py
+markdown_extensions:
+  - tables
+  - fenced_code
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

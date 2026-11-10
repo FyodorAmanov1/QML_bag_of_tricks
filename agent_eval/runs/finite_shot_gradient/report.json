@@ -1,0 +1,176 @@
+{
+  "task": "finite_shot_gradient",
+  "seed": 37,
+  "exact": {
+    "strategy": "local_loss",
+    "framework": "qiskit",
+    "configuration": {
+      "n_qubits": 4,
+      "depth": 2,
+      "seed": 37,
+      "shots": null,
+      "steps": 0,
+      "variant": "strategy",
+      "learning_rate": 0.1,
+      "initializations": 8,
+      "repetitions": 8,
+      "encoding_scale": 0.1,
+      "features": null,
+      "metric_regularization": 0.001
+    },
+    "loss": 0.47552896047089166,
+    "training_trace": [
+      0.47552896047089166
+    ],
+    "gradient_statistics": {
+      "coordinate": 0,
+      "exact_coordinate_variance": 0.006225636169321278,
+      "mean_squared_exact_coordinate": 0.008052030644639952,
+      "between_initialization_variance_of_means": 0.006225636169321278,
+      "within_initialization_sampling_variance": 0.0,
+      "noise_corrected_variance": 0.006225636169321278,
+      "signal_status": "resolved_on_exact_simulator",
+      "difference_step": 1e-05,
+      "gradient_estimator": "central_finite_difference",
+      "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+      "initializations": 8,
+      "repetitions": 8,
+      "bootstrap_exact_variance_interval_95": [
+        0.0018003933572239253,
+        0.009395118117992264
+      ],
+      "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+      "asymptotic_conclusion": "none"
+    },
+    "resources": {
+      "qubits": 4,
+      "ancillas": 0,
+      "native_operations": 4,
+      "two_qubit_operations": 0,
+      "native_depth": 1,
+      "gate_count_stage": "logical, before hardware synthesis",
+      "objective_evaluations": 145,
+      "sampled_objective_evaluations": 0,
+      "simulated_measurement_shots": 0,
+      "elapsed_seconds": 0.07768610000493936,
+      "statevector_bytes": 256,
+      "density_matrix_bytes": 4096,
+      "classical_parameter_bytes": 128,
+      "stored_parameter_count": 16,
+      "simulator": "statevector",
+      "hardware_executed": false
+    },
+    "assumption_checks": {
+      "published_result": "https://doi.org/10.1038/s41467-021-21728-w",
+      "guarantee_scope": "initialization ensemble",
+      "role": "trainability_strategy",
+      "implementation_status": "analytically checked special case",
+      "automatic_theorem_certification": false,
+      "assumptions": "Local observable; logarithmic alternating-layer depth; independent local 2-design blocks; nonvanishing input-dependent purity factors.",
+      "baseline_changes": "Global all-zero infidelity versus its local surrogate; same zero set."
+    },
+    "provenance": {
+      "sdk_version": "2.3.1",
+      "numpy_version": "2.2.4",
+      "literature_cutoff": "2026-11-09"
+    }
+  },
+  "sampled": {
+    "strategy": "local_loss",
+    "framework": "qiskit",
+    "configuration": {
+      "n_qubits": 4,
+      "depth": 2,
+      "seed": 37,
+      "shots": 4096,
+      "steps": 0,
+      "variant": "strategy",
+      "learning_rate": 0.1,
+      "initializations": 8,
+      "repetitions": 8,
+      "encoding_scale": 0.1,
+      "features": null,
+      "metric_regularization": 0.001
+    },
+    "loss": 0.476318359375,
+    "training_trace": [
+      0.476318359375
+    ],
+    "gradient_statistics": {
+      "coordinate": 0,
+      "exact_coordinate_variance": 0.006204911698491106,
+      "mean_squared_exact_coordinate": 0.008025226303884369,
+      "between_initialization_variance_of_means": 0.00616402079945796,
+      "within_initialization_sampling_variance": 0.0004712643983241703,
+      "noise_corrected_variance": 0.006105112749667439,
+      "signal_status": "finite_sample_estimate",
+      "difference_step": 0.1,
+      "gradient_estimator": "central_finite_difference",
+      "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+      "initializations": 8,
+      "repetitions": 8,
+      "bootstrap_exact_variance_interval_95": [
+        0.0017944000421346302,
+        0.009363842784236586
+      ],
+      "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+      "asymptotic_conclusion": "none"
+    },
+    "resources": {
+      "qubits": 4,
+      "ancillas": 0,
+      "native_operations": 4,
+      "two_qubit_operations": 0,
+      "native_depth": 1,
+      "gate_count_stage": "logical, before hardware synthesis",
+      "objective_evaluations": 145,
+      "sampled_objective_evaluations": 129,
+      "simulated_measurement_shots": 528384,
+      "elapsed_seconds": 0.07725440000649542,
+      "statevector_bytes": 256,
+      "density_matrix_bytes": 4096,
+      "classical_parameter_bytes": 128,
+      "stored_parameter_count": 16,
+      "simulator": "statevector",
+      "hardware_executed": false
+    },
+    "assumption_checks": {
+      "published_result": "https://doi.org/10.1038/s41467-021-21728-w",
+      "guarantee_scope": "initialization ensemble",
+      "role": "trainability_strategy",
+      "implementation_status": "analytically checked special case",
+      "automatic_theorem_certification": false,
+      "assumptions": "Local observable; logarithmic alternating-layer depth; independent local 2-design blocks; nonvanishing input-dependent purity factors.",
+      "baseline_changes": "Global all-zero infidelity versus its local surrogate; same zero set."
+    },
+    "provenance": {
+      "sdk_version": "2.3.1",
+      "numpy_version": "2.2.4",
+      "literature_cutoff": "2026-11-09"
+    }
+  },
+  "comparison": {
+    "coordinate": 0,
+    "analytic_derivative_variance_on_same_initializations": 0.006225636169316575,
+    "sampled_minus_exact_loss": 0.0007893989041083405,
+    "sampled_minus_exact_reported_reference_variance": -2.0724470830172335e-05,
+    "sampled_noise_corrected_variance_minus_same_step_reference": -9.97989488236671e-05,
+    "sampled_reference_finite_difference_scale": 0.9983341664682815
+  },
+  "shot_accounting": {
+    "shots_per_sampled_objective": 4096,
+    "sampled_objective_evaluations": 129,
+    "exact_reference_evaluations_in_sampled_run": 16,
+    "total_objective_evaluations_per_run": 145,
+    "total_sampled_shots": 528384,
+    "readout": "One computational-basis bitstring gives all four local diagonal terms; shots are not multiplied by qubit count."
+  },
+  "limitations": [
+    "Central finite differences have O(h^2) truncation bias. The shot run uses h=0.1, whereas the exact run uses h=1e-5; even its exact reference gradients use h=0.1. For this local loss the finite difference equals the true derivative times sin(h)/h. The sampled finite-difference estimate is not an unbiased parameter-shift estimator.",
+    "The loss is linear in measured probabilities, so multinomial shot sampling adds variance without plug-in loss bias. Expected sampled differences equal the biased central differences. Noise-corrected variance can fluctuate or become negative with small ensembles; eight initializations and eight repetitions give limited uncertainty resolution.",
+    "Each plus/minus evaluation uses 4096 fresh simulated shots. Zero training steps still require 1+2*8*8=129 sampled objectives, totaling 528384 shots. Sixteen extra exact reference objectives use no shots; 145 probability evaluations are made per run. The exact run also repeats objectives but samples no shots.",
+    "All native probabilities are computed with a classical Qiskit statevector simulator, then sampled on the host; no hardware was executed. Input loading is four RY angles into the all-zero state, with four native single-qubit gates and no ancillas or entangling gates. Readout concerns a single diagnostic coordinate, not a full gradient norm.",
+    "One four-qubit complex128 statevector needs 256 bytes; the hypothetical dense density matrix needs 4096 bytes, excluding temporary arrays, probability vectors, Python, SDK, and parameter overhead. Only four of the stored parameter coordinates drive gates in this warm-up circuit.",
+    "This analytically checked product-state initialization diagnostic establishes neither general plateau avoidance nor training success, generalization, or quantum advantage. It is not an implementation of the publication's general alternating-layer theorem."
+  ]
+}

@@ -1,0 +1,1 @@
+"""Local-moment MMD objectives."""

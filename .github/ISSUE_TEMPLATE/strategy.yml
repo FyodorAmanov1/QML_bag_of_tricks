@@ -1,0 +1,15 @@
+name: Strategy or evidence correction
+description: Propose a construction or correct a scientific claim
+body:
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Primary publication and exact result
+      description: Include DOI, theorem locator, assumptions, bounded metric, and scope.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Implementation, reproduction, and classical alternatives
+      description: Include commands, versions, control differences, and resource assumptions.

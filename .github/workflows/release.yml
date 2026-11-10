@@ -1,0 +1,55 @@
+name: Prepare release artifacts
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing reviewed tag for an optional draft release
+        default: v0.2.0
+        required: true
+      create_draft:
+        description: Create a GitHub draft release from the verified tag
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ".[all,learning,notebooks,dev,docs]"
+      - run: python -m pytest -q
+      - run: python scripts/run_notebooks.py
+      - run: python -m mkdocs build --strict
+      - run: python -m build
+      - run: python scripts/prepare_release.py --repo-url "https://github.com/$GITHUB_REPOSITORY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qml-release-candidate
+          path: release/
+  draft:
+    if: inputs.create_draft
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: qml-release-candidate
+          path: release
+      - name: Create draft only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: gh release create "$TAG" --verify-tag --draft --title "QML Bag of Tricks $TAG" --notes-file RELEASE_NOTES.md release/*

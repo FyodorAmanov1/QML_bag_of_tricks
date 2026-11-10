@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qml-bag-of-tricks"
+version = "0.2.0"
+readme = "README.md"
+description = "Evidence-led, three-framework recipes for trainable quantum machine learning"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2"]
+
+[project.urls]
+Repository = "https://github.com/FyodorAmanov1/QML_bag_of_tricks"
+
+[project.optional-dependencies]
+learning = ["scikit-learn>=1.6,<2"]
+notebooks = ["nbformat>=5.10,<6", "nbclient>=0.10,<1", "ipykernel>=6.29,<8", "matplotlib>=3.9,<4"]
+qiskit = ["qiskit==2.3.1", "qiskit-aer==0.17.2"]
+pennylane = ["pennylane==0.45.1"]
+cirq = ["cirq-core==1.7.0"]
+all = ["qiskit==2.3.1", "qiskit-aer==0.17.2", "pennylane==0.45.1", "cirq-core==1.7.0"]
+dev = ["pytest>=9,<10", "build>=1,<2"]
+docs = ["mkdocs-material>=9.7,<10"]
+
+[project.scripts]
+qml-tricks = "qml_tricks.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qml_tricks = ["catalog.json"]
+"qml_tricks.learning" = ["catalog.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,1 @@
+"""Depth-dependent Gaussian initialization."""

@@ -1,0 +1,1 @@
+"""Near-identity data encoding."""

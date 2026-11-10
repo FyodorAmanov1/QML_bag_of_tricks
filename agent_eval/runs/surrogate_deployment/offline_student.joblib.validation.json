@@ -1,0 +1,16 @@
+{
+  "feature_rmse": 3.002328704130345e-09,
+  "relative_feature_rmse": 9.797027627796393e-09,
+  "feature_r2": 0.9999999999999999,
+  "acceptance_thresholds": {
+    "min_agreement": 0.95,
+    "max_accuracy_drop": 0.02,
+    "max_relative_feature_rmse": 0.2
+  },
+  "confidence_statement": "held-out empirical validation, no universal accuracy guarantee",
+  "teacher_student_agreement": 1.0,
+  "teacher_accuracy": 0.9791666666666666,
+  "student_accuracy": 0.9791666666666666,
+  "accuracy_drop": 0.0,
+  "passed": true
+}

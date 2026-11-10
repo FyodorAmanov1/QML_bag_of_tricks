@@ -1,0 +1,383 @@
+{
+  "task": "surrogate_deployment",
+  "seed": 41,
+  "validation": {
+    "feature_rmse": 3.002328704130345e-09,
+    "relative_feature_rmse": 9.797027627796393e-09,
+    "feature_r2": 0.9999999999999999,
+    "acceptance_thresholds": {
+      "min_agreement": 0.95,
+      "max_accuracy_drop": 0.02,
+      "max_relative_feature_rmse": 0.2
+    },
+    "confidence_statement": "held-out empirical validation, no universal accuracy guarantee",
+    "teacher_student_agreement": 1.0,
+    "teacher_accuracy": 0.9791666666666666,
+    "student_accuracy": 0.9791666666666666,
+    "accuracy_drop": 0.0,
+    "passed": true
+  },
+  "inference_quantum_calls": 0,
+  "quantum_backend_import_attempts": [],
+  "teacher_free_artifact": true,
+  "artifact": "agent_eval\\runs\\surrogate_deployment\\offline_student.joblib",
+  "test_predictions": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "test_labels": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "test_probabilities": [
+    [
+      0.706371190967444,
+      0.293628809032556
+    ],
+    [
+      0.36005820414906525,
+      0.6399417958509347
+    ],
+    [
+      0.40346480167319954,
+      0.5965351983268004
+    ],
+    [
+      0.5119031193365544,
+      0.48809688066344564
+    ],
+    [
+      0.3756589944602494,
+      0.6243410055397506
+    ],
+    [
+      0.5512427009234943,
+      0.44875729907650574
+    ],
+    [
+      0.2253892134527779,
+      0.774610786547222
+    ],
+    [
+      0.18589185699214747,
+      0.8141081430078526
+    ],
+    [
+      0.22882048169787944,
+      0.7711795183021205
+    ],
+    [
+      0.6064582211226731,
+      0.39354177887732694
+    ],
+    [
+      0.2500598386614916,
+      0.7499401613385084
+    ],
+    [
+      0.5761568772189521,
+      0.42384312278104774
+    ],
+    [
+      0.7006146461649586,
+      0.2993853538350414
+    ],
+    [
+      0.23446192942681682,
+      0.7655380705731831
+    ],
+    [
+      0.7411679217453645,
+      0.25883207825463544
+    ],
+    [
+      0.6244965726434062,
+      0.3755034273565939
+    ],
+    [
+      0.473791194341338,
+      0.526208805658662
+    ],
+    [
+      0.6790882004649272,
+      0.32091179953507276
+    ],
+    [
+      0.7296540560831902,
+      0.2703459439168097
+    ],
+    [
+      0.4771558722752057,
+      0.5228441277247943
+    ],
+    [
+      0.8346835229404923,
+      0.1653164770595077
+    ],
+    [
+      0.39434931128314654,
+      0.6056506887168535
+    ],
+    [
+      0.8712240874836955,
+      0.1287759125163045
+    ],
+    [
+      0.594730980864539,
+      0.405269019135461
+    ],
+    [
+      0.7171743906036709,
+      0.28282560939632895
+    ],
+    [
+      0.43700870171834993,
+      0.5629912982816501
+    ],
+    [
+      0.19149621927769578,
+      0.8085037807223042
+    ],
+    [
+      0.4688616608808268,
+      0.5311383391191732
+    ],
+    [
+      0.38205581401457495,
+      0.617944185985425
+    ],
+    [
+      0.28429941553660176,
+      0.7157005844633981
+    ],
+    [
+      0.7091051443396855,
+      0.29089485566031453
+    ],
+    [
+      0.34211986112080917,
+      0.6578801388791908
+    ],
+    [
+      0.8024200430287145,
+      0.1975799569712855
+    ],
+    [
+      0.2402942661067221,
+      0.7597057338932779
+    ],
+    [
+      0.3277471288686692,
+      0.6722528711313308
+    ],
+    [
+      0.8063128484780357,
+      0.1936871515219643
+    ],
+    [
+      0.6180308097519394,
+      0.38196919024806064
+    ],
+    [
+      0.457683236440301,
+      0.5423167635596989
+    ],
+    [
+      0.6282917079397599,
+      0.3717082920602401
+    ],
+    [
+      0.5413069586885317,
+      0.4586930413114684
+    ],
+    [
+      0.20986110323753984,
+      0.7901388967624602
+    ],
+    [
+      0.415023427265012,
+      0.584976572734988
+    ],
+    [
+      0.5551667417370736,
+      0.4448332582629264
+    ],
+    [
+      0.13752341093213133,
+      0.8624765890678687
+    ],
+    [
+      0.6756570232750784,
+      0.3243429767249215
+    ],
+    [
+      0.706409760904632,
+      0.2935902390953681
+    ],
+    [
+      0.6483013988359636,
+      0.35169860116403634
+    ],
+    [
+      0.8157731709188268,
+      0.1842268290811731
+    ]
+  ],
+  "test_accuracy": 1.0,
+  "test_feature_rmse": 3.05687081517839e-09,
+  "test_audit": {
+    "feature_rmse": 3.05687081517839e-09,
+    "relative_feature_rmse": 9.856040129741506e-09,
+    "feature_r2": 0.9999999999999999,
+    "acceptance_thresholds": {
+      "min_agreement": 0.95,
+      "max_accuracy_drop": 0.02,
+      "max_relative_feature_rmse": 0.2
+    },
+    "confidence_statement": "held-out empirical validation, no universal accuracy guarantee",
+    "teacher_student_agreement": 1.0,
+    "teacher_accuracy": 1.0,
+    "student_accuracy": 1.0,
+    "accuracy_drop": 0.0,
+    "passed": true
+  },
+  "reload_predictions_identical": true,
+  "known_linear_map": [
+    [
+      0.5,
+      -0.1
+    ],
+    [
+      -0.2,
+      0.4
+    ],
+    [
+      0.1,
+      0.3
+    ]
+  ],
+  "split_sizes": {
+    "train": 96,
+    "validation": 48,
+    "test": 48
+  },
+  "resources": {
+    "teacher_training_pairs": 96,
+    "teacher_validation_pairs": 48,
+    "feature_dimension": 2,
+    "quantum_queries_at_student_inference": 0,
+    "teacher_feature_access": "supplied measured pairs or frozen native teacher",
+    "validation_fitted": false,
+    "degree": 1,
+    "student_kind": "ridge"
+  },
+  "preprocessing_train_mean": [
+    0.10689720620258657,
+    0.06447509389269486,
+    -0.0804841765436277
+  ],
+  "actual_train_mean": [
+    0.10689720620258657,
+    0.06447509389269486,
+    -0.0804841765436277
+  ],
+  "limitations": [
+    "Synthetic recorded pairs from a known linear map; no quantum data were acquired and no proprietary circuits were implemented.",
+    "Independent IID train, validation, and untouched test inputs; fixed thresholds and hyperparameters with no validation tuning.",
+    "The gate measures held-out imitation and downstream accuracy retention. Accurate imitation of a poor teacher would not establish useful task accuracy.",
+    "All input loading, readout fitting, storage, and inference are classical. Zero shots and no statevector simulation. Pair storage scales with rows times feature dimension.",
+    "No industrial performance or quantum advantage claim. Export is contingent on the repository's held-out validation gate."
+  ]
+}

@@ -1,0 +1,10 @@
+include README.md LICENSE CITATION.cff CHANGELOG.md CONTRIBUTING.md AGENTS.md mkdocs.yml references.bib
+include requirements-reference.txt VALIDATION.md
+include RELEASE_NOTES.md
+recursive-include docs *.md *.js *.png *.svg
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include results *.json
+recursive-include notebooks *.ipynb
+recursive-include agent_eval *.py *.json *.md *.csv
+prune results/local

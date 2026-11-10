@@ -1,0 +1,4486 @@
+{
+  "source_hashes": {
+    "src/qml_tricks/core.py": "2d80352418fd47105683f1e76508d993671afdcee7a65c0f293ead48598ed666",
+    "src/qml_tricks/fixtures.py": "505cf7317db177bfa99cd54c898b7d4d12826153fb7a954914405afcd6422075",
+    "src/qml_tricks/geometry.py": "b6e146200ba848cfa15f2b8aa9e172cc1980aa4e0fee3b75ca6565d0412161d8",
+    "src/qml_tricks/__init__.py": "f02fb55092db3431c790f6b2bd7147b0161ee98a74f33057f0a0e6c9351c0e21",
+    "src/qml_tricks/__main__.py": "204a807a58cd1b21a15cda24bc65b1e04145243c7cb5bc57057ea24342da9fef",
+    "src/qml_tricks/learning/benchmark.py": "2773c65e3109be5ce2a9cfb3dafa8fec065cc785eb0760b396d57e3721274633",
+    "src/qml_tricks/learning/demos.py": "85b46fc201ac647a15ded128d0974ba68240b38b449c8e1f0a7634b9acfa2b03",
+    "src/qml_tricks/learning/generative.py": "d87b69f3602213d9b30ba2866fc6442629479a5632d3af21fcbaeef520caaf5b",
+    "src/qml_tricks/learning/methods.py": "fe5a427761739c186d453908de64d8d9b48b68e6c2aafb314379bf7c9d2bb9e4",
+    "src/qml_tricks/learning/models.py": "ebcfdd2cf7220302a5267d38d5fc9bd057d4644d09f54a4957981a050cc2c229",
+    "src/qml_tricks/learning/offline_surrogate.py": "65fcf2ba2b7f5857ff549b137837b4ce6a475459d8c94f1cec0ba0fcabac2c04",
+    "src/qml_tricks/learning/study.py": "51deb7497b4379b7416352d906ca79c4e94243ab3ceee08fe1254aba892984d2",
+    "src/qml_tricks/learning/__init__.py": "6a046b5bd7f42b64f299234cd54dd14678976a16e8494e60259c1271dc792dba",
+    "src/qml_tricks/strategies/__init__.py": "b1b50a9e3c9e47e3fb6d7bbe634790014bbf16e8e7d2e95468ec6eacfb0dbd5e",
+    "src/qml_tricks/learning/backends/cirq.py": "db31f5cd4add0cbf8b95d18db8ddaa786527fffbacefda360292e02396a73d0d",
+    "src/qml_tricks/learning/backends/pennylane.py": "7d959ada1bf6ec3ba375e84056050f6ec9cfdfafbb7731a4970163bd307b157f",
+    "src/qml_tricks/learning/backends/qiskit.py": "30598ebdcea6364946ad0cd754b0aab7a9bd42d5fdb4274b9d8790990842c242",
+    "src/qml_tricks/learning/backends/__init__.py": "5c3c306059baf58b0f7f14abca71e81d5d32983fda9e06a57b00a41a787a8eae",
+    "src/qml_tricks/learning/recipes/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/born_mmd/cirq_impl.py": "d5a6036dd12f66807c16503e26b4041c2ca8d3aa8fbfb849f9ac81ce56d6b2b9",
+    "src/qml_tricks/learning/recipes/born_mmd/pennylane_impl.py": "37ff0c997e3e9c971821463bedc89e514d4f0d7f1db64d0577039281cb5d3ba9",
+    "src/qml_tricks/learning/recipes/born_mmd/qiskit_impl.py": "a42bf5e2cfdc6214356cbf2ee72ba35697950fc6cbb64a131edfdaf6892273f0",
+    "src/qml_tricks/learning/recipes/born_mmd/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/classical_pretraining/cirq_impl.py": "ebee91e05ce6a791bf0c76a36da5eb16d7b8bd8bfec722a99446615debee72ba",
+    "src/qml_tricks/learning/recipes/classical_pretraining/pennylane_impl.py": "2f8e88efb959d0e27823c78687b9ca371e1ea22f501bf3fbfded8d8b566ac566",
+    "src/qml_tricks/learning/recipes/classical_pretraining/qiskit_impl.py": "bc2d19e25476ffa24482d5bb4feb2ddb090f277b4e5d321eb96a0947cefb3e97",
+    "src/qml_tricks/learning/recipes/classical_pretraining/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/classical_shadows/cirq_impl.py": "ab3586e1294a7dc93754f06d8a6ad0506682a180f2b5e143afaaae72d80369eb",
+    "src/qml_tricks/learning/recipes/classical_shadows/pennylane_impl.py": "b72d841fd05e1c8269d735229e7199433a8e9788e3763502e9fb3726f0a92665",
+    "src/qml_tricks/learning/recipes/classical_shadows/qiskit_impl.py": "ca8f07edddbcc5ae2f2df86974d41d65d78d80e7a84b81d19e5831c247c4060f",
+    "src/qml_tricks/learning/recipes/classical_shadows/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/classical_warm_start/cirq_impl.py": "f43929a9267213a938af32058fd7241992552cee28e6ed421dbca97d90c15ca5",
+    "src/qml_tricks/learning/recipes/classical_warm_start/pennylane_impl.py": "a240bd277ecc03bbde5675147d61b83646718b6b1bc8b7717c2286d5064abd1b",
+    "src/qml_tricks/learning/recipes/classical_warm_start/qiskit_impl.py": "80c6d144fa8c62c95f6ed64a1d05a359657903eb75924492fe3c806fa566e5ff",
+    "src/qml_tricks/learning/recipes/classical_warm_start/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/fidelity_kernel/cirq_impl.py": "2cd0bb26578829d8dd2bd7f799b1ab4468606982dadc5e0e6d14b6cb02c1b776",
+    "src/qml_tricks/learning/recipes/fidelity_kernel/pennylane_impl.py": "1d56354f2a4069da644f7ec7c5a80b42818c42f4b597da3de704261141c8dd64",
+    "src/qml_tricks/learning/recipes/fidelity_kernel/qiskit_impl.py": "33e4ac8d8b8ac77eeaa03d0d913b775713300bc7a56b16702df7c37d5727826c",
+    "src/qml_tricks/learning/recipes/fidelity_kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/frozen_features/cirq_impl.py": "92b22c7caddd0ad442b9cc6f2771dd6bed30635e59327e9aae576285128dd230",
+    "src/qml_tricks/learning/recipes/frozen_features/pennylane_impl.py": "57573d480eaee4d6917afae3a6a749d0f7351599210906b2b4fdb0df5ac2acb1",
+    "src/qml_tricks/learning/recipes/frozen_features/qiskit_impl.py": "19277f4108409b35328a7571e94d55977898f4f4b1a85ef290b55dd8b6098613",
+    "src/qml_tricks/learning/recipes/frozen_features/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/kernel_surrogate/cirq_impl.py": "6430be0ac5913997aebdfb8d1ce31387eb6a4a0da34feea6a8ef4b2f18249cf1",
+    "src/qml_tricks/learning/recipes/kernel_surrogate/pennylane_impl.py": "3a88533ef08ca6284dcc18fd1d1c0cb34f379d9d3cdd496169a52b6df083de72",
+    "src/qml_tricks/learning/recipes/kernel_surrogate/qiskit_impl.py": "b9aabcac98030e7db9493405652ab43f9069befc8c56e92d399ded544e1b8d5c",
+    "src/qml_tricks/learning/recipes/kernel_surrogate/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/kipu_offline_surrogate/cirq_impl.py": "0164f214fcf00ba60a9ed7d3db464838055b6f422b19eef277222a68966a6245",
+    "src/qml_tricks/learning/recipes/kipu_offline_surrogate/pennylane_impl.py": "8f498a9564d8805e07abf3119fb86797d2c0de5a88c54f2ddf8a4a63c5e0a921",
+    "src/qml_tricks/learning/recipes/kipu_offline_surrogate/qiskit_impl.py": "e0aaa854bea67879d9083345a204ce2bb3b298112c377a525d4f82769d5a86ae",
+    "src/qml_tricks/learning/recipes/kipu_offline_surrogate/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/nystrom/cirq_impl.py": "f6deece74b78e47c60c2051d91f0d930a591a92c409a35f6d662dda80296e873",
+    "src/qml_tricks/learning/recipes/nystrom/pennylane_impl.py": "ad0504105e954d8aa0eca27b42444e691ec8a2e2079cb8e561c4eca2ebc886ec",
+    "src/qml_tricks/learning/recipes/nystrom/qiskit_impl.py": "467f527eb5e08272c50f7996d48c3a6df32f3b6541a0e4af241a063824f8f183",
+    "src/qml_tricks/learning/recipes/nystrom/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/parameter_shift/cirq_impl.py": "c739d8be9ee42cc0f4a9530aadef9a8bcd7a4f982c5b42b048af64eee8dd56e1",
+    "src/qml_tricks/learning/recipes/parameter_shift/pennylane_impl.py": "7a5bfba495c826edac55bc564b5b584bb74bea5cbe284139a5e8b0135eba80c1",
+    "src/qml_tricks/learning/recipes/parameter_shift/qiskit_impl.py": "92693be34811bd2b873a15adb40810ccd5a25b4d11fef033d3706d67dfee7843",
+    "src/qml_tricks/learning/recipes/parameter_shift/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/projected_kernel/cirq_impl.py": "1c741708a09c10d3ae60bd7c5db907761a90c95efe29d561fc5fd0d8527fecd9",
+    "src/qml_tricks/learning/recipes/projected_kernel/pennylane_impl.py": "971a32158121adbe03cf025e2bb2964144745de16ba6b0f2d0bd75d309ae428f",
+    "src/qml_tricks/learning/recipes/projected_kernel/qiskit_impl.py": "c4639fd3236df91f25613e646eb84eee3b55206f62acde128fd2eefa7f003ac4",
+    "src/qml_tricks/learning/recipes/projected_kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/reuploading/cirq_impl.py": "5956c066b71c1b55d08f9a3b112f2f10ff9eaed0df65db3de3280193ad9e113f",
+    "src/qml_tricks/learning/recipes/reuploading/pennylane_impl.py": "068563eaa36c5b6a27911bb213cdc2fa134e79783480d20ce10256dfec7e4eb8",
+    "src/qml_tricks/learning/recipes/reuploading/qiskit_impl.py": "6229544667be71ab0fe8dcbd7d455a2ee6e863f35bb695806bf6ad7ee2ccf275",
+    "src/qml_tricks/learning/recipes/reuploading/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/shot_allocation/cirq_impl.py": "a77d52d40b7c68423d45a13cb8a618665b0a29c2ad37d35029f46304310e0b8f",
+    "src/qml_tricks/learning/recipes/shot_allocation/pennylane_impl.py": "bf4981c5e4f0499a63318676200efc72c41273483d2697389f20ec8e0141f393",
+    "src/qml_tricks/learning/recipes/shot_allocation/qiskit_impl.py": "41d638074ac93d6c13103180c2ce65b34133f684559d667cdfa8ba79cc189998",
+    "src/qml_tricks/learning/recipes/shot_allocation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/learning/recipes/spsa/cirq_impl.py": "1b8b03684d33734202673dda4bcc3f50c82f78d5737b167cd7240153a3bc5f6e",
+    "src/qml_tricks/learning/recipes/spsa/pennylane_impl.py": "314ca17a7facac612f8d94b77b0e73581654477703b19cbf3c97b9d6bf604a4a",
+    "src/qml_tricks/learning/recipes/spsa/qiskit_impl.py": "621d9ce51fa2f55a0d505130e80e849ea5aba86d4ab8c91416a27be55e83e82b",
+    "src/qml_tricks/learning/recipes/spsa/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/qml_tricks/strategies/constrained_hva/cirq_impl.py": "f18b4335a69ce3b18752952ea3c0be8fc7d1a64c465494e447a4378afa66ac98",
+    "src/qml_tricks/strategies/constrained_hva/pennylane_impl.py": "4bba777976737ef3a026f31e3662372f4ce01bcbe7da42321643d27c3d4a8e1a",
+    "src/qml_tricks/strategies/constrained_hva/qiskit_impl.py": "c9f85e49d5ff5a13baaea41be4bd3cbea6dce7425b87c4658c12b5a86f809c44",
+    "src/qml_tricks/strategies/constrained_hva/__init__.py": "44fcada410067c7e4f425952e8815fee4a7a72704c3c3cb3ed6824099dcf73c3",
+    "src/qml_tricks/strategies/correlated_parameters/cirq_impl.py": "759f966fdde0eaf7bc76915de9df364c064b05093c1d2ced0a194ea389fea0e0",
+    "src/qml_tricks/strategies/correlated_parameters/pennylane_impl.py": "2c76e028d8d6dd062492270c41d06251b6e17c40e7c639a2be431db7b7136acc",
+    "src/qml_tricks/strategies/correlated_parameters/qiskit_impl.py": "569db42a5b86e1fd424b9eced309452bfdad12f3917c90ef9480e53c981b4498",
+    "src/qml_tricks/strategies/correlated_parameters/__init__.py": "e5f9f2c6fb5edb5aee038831261b1a09dc1c44ec4859399d9785d45d68c7125b",
+    "src/qml_tricks/strategies/engineered_dissipation/cirq_impl.py": "648780aa6f06858fd0ad34e9fe496458507d45e03664dc25d0a9c78e7c1f9adb",
+    "src/qml_tricks/strategies/engineered_dissipation/pennylane_impl.py": "13efee8ae44a3883b8b02ef2000e646136dab2658ee17d137531fbf676dd72b6",
+    "src/qml_tricks/strategies/engineered_dissipation/qiskit_impl.py": "cf63a1f55b638610669e537a9922ed6bfbb9a33fcd2bd893c621f44160374e06",
+    "src/qml_tricks/strategies/engineered_dissipation/__init__.py": "6769de0a073f39393e85bcfd90910369d9fa294797a6bf64557fc67a989de4de",
+    "src/qml_tricks/strategies/finite_local_depth/cirq_impl.py": "4e08f526453bac5c164b773e3a612e42da75055645586aaa4b26371e638a9262",
+    "src/qml_tricks/strategies/finite_local_depth/pennylane_impl.py": "076dea7443a2cc1c4eb5094281acba47d3317a617c8db15a442d5a8fb0cfc3c6",
+    "src/qml_tricks/strategies/finite_local_depth/qiskit_impl.py": "19d016da1a7a2e49da8ede6b4c128b804090918a492389a5e888addd473b8e0e",
+    "src/qml_tricks/strategies/finite_local_depth/__init__.py": "ae9652833b448b6455aa794304c9a1a93456cc90bd059857cd980d295e8bfe81",
+    "src/qml_tricks/strategies/gaussian_init/cirq_impl.py": "0858492ac8f558e544816b47bdaf3cc06d8a2880f63bfefab5522a8e9a5d476f",
+    "src/qml_tricks/strategies/gaussian_init/pennylane_impl.py": "9383dedf3e81557c90b720e00833d5214334209ae910bc290dbeed854c230b05",
+    "src/qml_tricks/strategies/gaussian_init/qiskit_impl.py": "4c22673b93fe880fdae5cdc37b32d5e5f76dbb053bce2c3858d376705c3ed406",
+    "src/qml_tricks/strategies/gaussian_init/__init__.py": "43b2ea63f4bba200e07b324138a21e8f34c5ac0efb19871c6e60395e621f391c",
+    "src/qml_tricks/strategies/gaussian_mixture/cirq_impl.py": "503cc5a1426470dfac5cc33070d1052db672a4aefce4d5c0fc23eb41c13a5e16",
+    "src/qml_tricks/strategies/gaussian_mixture/pennylane_impl.py": "6231853628b4da0a9e036f48f80448cf51adf61379bf4e96dc87ebb5fe4819f6",
+    "src/qml_tricks/strategies/gaussian_mixture/qiskit_impl.py": "494b84542b26c7986f5578603e30149e4aa2bb54df7db3ff8a77998ebe923a13",
+    "src/qml_tricks/strategies/gaussian_mixture/__init__.py": "cd7ddf6e35d6ab71fca0f5a57ef9ce7ca965c556a41a42e388c3373dde02f635",
+    "src/qml_tricks/strategies/identity_block_init/cirq_impl.py": "a2fb7cb157a815a957a7d2bf85d9fe9d911e0722a67ab862e6471660bf3b9064",
+    "src/qml_tricks/strategies/identity_block_init/pennylane_impl.py": "941c10b2470de07d6810c5d88204214f680fa65d83d9a7672c64313a044104ba",
+    "src/qml_tricks/strategies/identity_block_init/qiskit_impl.py": "8f4b12df5b7a4f817de1df7274798dc085a984eec2dafbdc37c21de407ffd931",
+    "src/qml_tricks/strategies/identity_block_init/__init__.py": "d48a5a6ce79c75f110f81adf3c0ba81292bbd2c71119305c30da78aaf9a16eb2",
+    "src/qml_tricks/strategies/local_loss/cirq_impl.py": "31b39c80b8d315f0599a6651e9fc793c60dff4f1e5374204811703c2b257a7e7",
+    "src/qml_tricks/strategies/local_loss/pennylane_impl.py": "46b7de082b53837816b0d7ab7da44f6bb28213eb72d231d78898d829e7942684",
+    "src/qml_tricks/strategies/local_loss/qiskit_impl.py": "a985b800516eed88ee6f66257e2754fc4980cbbe26ff7b3eb02ed73f826112f6",
+    "src/qml_tricks/strategies/local_loss/__init__.py": "fa1bc7d83bf5b8d819aac6fe951e2923d4cebdf888e8fa8306a54d5893cb9490",
+    "src/qml_tricks/strategies/low_excitation/cirq_impl.py": "eacc4f17c27f5d22b5712fd81bb91169c0eb9df9dfafe45dc99bad08c968d2fd",
+    "src/qml_tricks/strategies/low_excitation/pennylane_impl.py": "40c846af92c24287befee65361008bd7099b2e54bfadd288bd6d1078b3d1c044",
+    "src/qml_tricks/strategies/low_excitation/qiskit_impl.py": "d61b0d9e61124d660d9e557384527e50f476df5dafb19aa4b9f2f39810b6b894",
+    "src/qml_tricks/strategies/low_excitation/__init__.py": "5c6a2a1a6878e30a03ad5fde8a621e3469977a6d74f69dd738571f9a69e6f828",
+    "src/qml_tricks/strategies/matchgate/cirq_impl.py": "9e2e905aceb239f5ea071124f9a6bf2a76eb6826d1bf8100838ac560fa7b3411",
+    "src/qml_tricks/strategies/matchgate/pennylane_impl.py": "5eb708ac452c0cda0ee587e7eb53dba0645b3a20c615fc52e569ac3f36693870",
+    "src/qml_tricks/strategies/matchgate/qiskit_impl.py": "a4c07587c08d0ed9c91515303828d3fd498509b3f398b132e2d47274d359170b",
+    "src/qml_tricks/strategies/matchgate/__init__.py": "a012ca068a3049ec0e8163f85ef34a06c99b004dd2e9207f6a902289ebcdeef4",
+    "src/qml_tricks/strategies/mera/cirq_impl.py": "2905bfe4e5962cc8a9ff3938eb8c8a65cbbf09016d8726c36497c8c40fe91343",
+    "src/qml_tricks/strategies/mera/pennylane_impl.py": "3392a39619b8d67a1c01a6d7305f613d501112afdcb9d2c7330d1613eb8684ff",
+    "src/qml_tricks/strategies/mera/qiskit_impl.py": "b1f8ca8d7cb7435b9611e499edc988df4281698332d46f48056052029681fa06",
+    "src/qml_tricks/strategies/mera/__init__.py": "933dba75ad6983f633a940b487cd0f90e9ea14a429adec8778663f68fd95be36",
+    "src/qml_tricks/strategies/mmd_loss/cirq_impl.py": "2f49dbdc9f478f2ae031296e1ba4e9755989fb11cd1819854442690ec8da8868",
+    "src/qml_tricks/strategies/mmd_loss/pennylane_impl.py": "28b3af10b6bbdd26e49f417c56677a66d299330e47eba3b8c137f7f4fa703ab1",
+    "src/qml_tricks/strategies/mmd_loss/qiskit_impl.py": "dc45a10e3d7286ae5e583aa5fb46b731d3905ddb533567377103c368d7c296eb",
+    "src/qml_tricks/strategies/mmd_loss/__init__.py": "dc2b4de7ba46cf09122509e45ec1f413b62a40f828ab04a278c605c650ee35b4",
+    "src/qml_tricks/strategies/mps/cirq_impl.py": "a627e8b8473bcd33e00fcb0b0c51cde07d8dd48d557d19173d90c81fa68e081c",
+    "src/qml_tricks/strategies/mps/pennylane_impl.py": "7051e1ba69f522a229fbc68aac0b4162aea587237bdef2479b23e65bcda46e38",
+    "src/qml_tricks/strategies/mps/qiskit_impl.py": "1e68e2d7b09ddac194b2785f7aa24108e8bf822c2fca51811d71e2900caa5d42",
+    "src/qml_tricks/strategies/mps/__init__.py": "5a429d0ea5c2ef3b1402a434c3136924a295de093dc69b28d2586eebbbe81ad2",
+    "src/qml_tricks/strategies/natural_gradient/cirq_impl.py": "fb371c514656fa73079c92d88039f7ec7eb2f23350592173bb5a64b422d445ee",
+    "src/qml_tricks/strategies/natural_gradient/pennylane_impl.py": "3eff93c73991bce142f2aa0e99249f4299ef0c273d2699fb72c0bed3e4591ad5",
+    "src/qml_tricks/strategies/natural_gradient/qiskit_impl.py": "c3c6c74c3df66365f36066a2bb7c40c6b59a85b12ab68a6805e531966dec2367",
+    "src/qml_tricks/strategies/natural_gradient/__init__.py": "23ca49976305d1f526c64ab085633a792b967059b96c66049e63d1b9e0946c3b",
+    "src/qml_tricks/strategies/near_identity_encoding/cirq_impl.py": "21d5380ebbbce85df6ead4b3bfcd5271c20906a92d475ffe237443a3f95f5891",
+    "src/qml_tricks/strategies/near_identity_encoding/pennylane_impl.py": "fda3aa0f54a0598c9850f45e3f6ccc6b77fbd283eafc913c4c31fbb77679214d",
+    "src/qml_tricks/strategies/near_identity_encoding/qiskit_impl.py": "2e03d3af9d23b82c34975992909bdf5c3e767a08e5c24aab3dcc97f291158fc1",
+    "src/qml_tricks/strategies/near_identity_encoding/__init__.py": "63b33faac9c6a04af82ea6a497b338229c566d2ebe048855c66965e0550ec9df",
+    "src/qml_tricks/strategies/nonunital_noise/cirq_impl.py": "c3d49a8469c54c4cba64b6e50fd5b5e1f50dfaf6127a39fe8fb7d016b6d6eb10",
+    "src/qml_tricks/strategies/nonunital_noise/pennylane_impl.py": "fc40ecfe52b18b66c11b603298c196cc30f3fa35112a35ae64e51a2dc7d39919",
+    "src/qml_tricks/strategies/nonunital_noise/qiskit_impl.py": "9d7b910968f877035b81dd615f8065d8d2ed0e9c07366fca41842a731f887235",
+    "src/qml_tricks/strategies/nonunital_noise/__init__.py": "7d15983b38b3d28ae6f72942e4795f7b41396e35fa4b7d8b78eb623b072b84b4",
+    "src/qml_tricks/strategies/permutation_equivariant/cirq_impl.py": "20eec8637af0cf2937d5d0e74e99a9847923e2cd315f4d51e54c540ddfd8babe",
+    "src/qml_tricks/strategies/permutation_equivariant/pennylane_impl.py": "192cb23096c71630cde1815c5c5bcb876e85b9ee6cf473a99c1885a29d17bd1f",
+    "src/qml_tricks/strategies/permutation_equivariant/qiskit_impl.py": "6a486db4f847138e119f7c95ef0be2e49f6fd134608660968231781932bdff31",
+    "src/qml_tricks/strategies/permutation_equivariant/__init__.py": "6a7d90d8cb0da654a84fd5180fc6d6181314f4c822ef7a305d6b2e866d142373",
+    "src/qml_tricks/strategies/qcnn/cirq_impl.py": "ac3e258be2d73fd30f151d7dd8f0965066515d518f8282c793b878947c4e9d13",
+    "src/qml_tricks/strategies/qcnn/pennylane_impl.py": "cc0ffa9af778ea11e8c1b78d7aff34ffdcbb8f36178cc8b8a0571db61bbe7712",
+    "src/qml_tricks/strategies/qcnn/qiskit_impl.py": "6a4efaf8343389eef8dc6631301348d3f9beb0dd508f856b4da331d35a77f2bb",
+    "src/qml_tricks/strategies/qcnn/__init__.py": "0a993f773a4f287dca88c7050c05ca630a46fbc4ae120f7751a9f87fda8a719b",
+    "src/qml_tricks/strategies/ttn/cirq_impl.py": "89295ece3c4238dcbae28c0df20f8535838a8bc74f6b96854f67bed737ec2d4c",
+    "src/qml_tricks/strategies/ttn/pennylane_impl.py": "7b83b32c4a7869ffc91deaa8d60b852998a8f7898253ccda01d1d446e777b77f",
+    "src/qml_tricks/strategies/ttn/qiskit_impl.py": "1e6d567ff9ca071ea4a17b02e80e5d14b7ff2400d4474231568bea1e2f0f6781",
+    "src/qml_tricks/strategies/ttn/__init__.py": "ea1bd14395fd53a669fa778508315464674b8951133ae19ac9b9cb077ef77bbe"
+  },
+  "runs": [
+    {
+      "strategy": "near_identity_encoding",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.0248589569952833,
+      "training_trace": [
+        6.938893903907228e-17,
+        -0.0248589569952833
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0,
+        "mean_squared_exact_coordinate": 0.061877080556759764,
+        "between_initialization_variance_of_means": 0.0,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0,
+          0.0
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 0,
+        "native_depth": 2,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 34,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.040781300005619414,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 32,
+        "stored_parameter_count": 4,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1007/s42484-023-00103-6",
+        "guarantee_scope": "analytical special case; no universal encoding guarantee",
+        "role": "encoding_design",
+        "implementation_status": "analytically checked product-encoder special case; bounded features required",
+        "automatic_theorem_certification": false,
+        "assumptions": "Bounded features $|x_i|\\leq1$; $E_\\epsilon(x)=\\bigotimes_i R_y(\\epsilon x_i)$; reference trainable angles $\\theta_i=\\pi/2$; normalized mean-Z objective.",
+        "baseline_changes": "Use encoding scale 1 instead of encoding_scale, keeping the bounded features and trainable reference identical."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "near_identity_encoding",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.024858956995335246,
+      "training_trace": [
+        6.938893903907228e-17,
+        -0.024858956995335246
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0,
+        "mean_squared_exact_coordinate": 0.061877080556759764,
+        "between_initialization_variance_of_means": 0.0,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0,
+          0.0
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 0,
+        "native_depth": 2,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 34,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.09152109999558888,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 32,
+        "stored_parameter_count": 4,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1007/s42484-023-00103-6",
+        "guarantee_scope": "analytical special case; no universal encoding guarantee",
+        "role": "encoding_design",
+        "implementation_status": "analytically checked product-encoder special case; bounded features required",
+        "automatic_theorem_certification": false,
+        "assumptions": "Bounded features $|x_i|\\leq1$; $E_\\epsilon(x)=\\bigotimes_i R_y(\\epsilon x_i)$; reference trainable angles $\\theta_i=\\pi/2$; normalized mean-Z objective.",
+        "baseline_changes": "Use encoding scale 1 instead of encoding_scale, keeping the bounded features and trainable reference identical."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "near_identity_encoding",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.024858956995179732,
+      "training_trace": [
+        1.3877787807814457e-17,
+        -0.024858956995179732
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 6.4197664812907865e-25,
+        "mean_squared_exact_coordinate": 0.06187708055572413,
+        "between_initialization_variance_of_means": 9.930576275746685e-25,
+        "within_initialization_sampling_variance": 1.8657446336251347e-24,
+        "noise_corrected_variance": 6.018531076210112e-26,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0,
+          6.4197664812907865e-25
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 0,
+        "native_depth": 2,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 34,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.09496059999219142,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 32,
+        "stored_parameter_count": 4,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1007/s42484-023-00103-6",
+        "guarantee_scope": "analytical special case; no universal encoding guarantee",
+        "role": "encoding_design",
+        "implementation_status": "analytically checked product-encoder special case; bounded features required",
+        "automatic_theorem_certification": false,
+        "assumptions": "Bounded features $|x_i|\\leq1$; $E_\\epsilon(x)=\\bigotimes_i R_y(\\epsilon x_i)$; reference trainable angles $\\theta_i=\\pi/2$; normalized mean-Z objective.",
+        "baseline_changes": "Use encoding scale 1 instead of encoding_scale, keeping the bounded features and trainable reference identical."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "identity_block_init",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.07829105396022756,
+      "training_trace": [
+        4.440892098500626e-16,
+        -0.07829105396022756
+      ],
+      "gradient_statistics": {
+        "coordinate": 4,
+        "exact_coordinate_variance": 0.13489150750926293,
+        "mean_squared_exact_coordinate": 0.15549096220874473,
+        "between_initialization_variance_of_means": 0.13489150750926293,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.13489150750926293,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.002542549984251225,
+          0.19765297222692904
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 45,
+        "two_qubit_operations": 12,
+        "native_depth": 21,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 90,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2877251000027172,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 256,
+        "stored_parameter_count": 32,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2019-12-09-214",
+        "guarantee_scope": "initialization only; shallow-block conditions",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked shallow-block special case; independent copies; initialization only",
+        "automatic_theorem_certification": false,
+        "assumptions": "Each block has independent forward/backward parameters initialized to equal values; invert gate order and angles exactly. Preserve shallow effective causal cones and a nonzero state-observable commutator.",
+        "baseline_changes": "Independently randomize forward and inverse branches instead of matching their initial values."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "identity_block_init",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.07829105395721125,
+      "training_trace": [
+        1.1102230246251565e-16,
+        -0.07829105395721125
+      ],
+      "gradient_statistics": {
+        "coordinate": 4,
+        "exact_coordinate_variance": 0.13489150749368642,
+        "mean_squared_exact_coordinate": 0.15549096219803266,
+        "between_initialization_variance_of_means": 0.13489150749368642,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.13489150749368642,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0025425499853708564,
+          0.19765297220213826
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 45,
+        "two_qubit_operations": 12,
+        "native_depth": 21,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 90,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.7511846999987029,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 256,
+        "stored_parameter_count": 32,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2019-12-09-214",
+        "guarantee_scope": "initialization only; shallow-block conditions",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked shallow-block special case; independent copies; initialization only",
+        "automatic_theorem_certification": false,
+        "assumptions": "Each block has independent forward/backward parameters initialized to equal values; invert gate order and angles exactly. Preserve shallow effective causal cones and a nonzero state-observable commutator.",
+        "baseline_changes": "Independently randomize forward and inverse branches instead of matching their initial values."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "identity_block_init",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.07829105395792607,
+      "training_trace": [
+        -4.45500559831303e-33,
+        -0.07829105395792607
+      ],
+      "gradient_statistics": {
+        "coordinate": 4,
+        "exact_coordinate_variance": 0.13489150750098167,
+        "mean_squared_exact_coordinate": 0.15549096219768196,
+        "between_initialization_variance_of_means": 0.13489150750098167,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.13489150750098167,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.002542549985650764,
+          0.19765297221509348
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 45,
+        "two_qubit_operations": 12,
+        "native_depth": 21,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 90,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.8274378000060096,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 256,
+        "stored_parameter_count": 32,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2019-12-09-214",
+        "guarantee_scope": "initialization only; shallow-block conditions",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked shallow-block special case; independent copies; initialization only",
+        "automatic_theorem_certification": false,
+        "assumptions": "Each block has independent forward/backward parameters initialized to equal values; invert gate order and angles exactly. Preserve shallow effective causal cones and a nonzero state-observable commutator.",
+        "baseline_changes": "Independently randomize forward and inverse branches instead of matching their initial values."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "natural_gradient",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.11328496079744124,
+      "training_trace": [
+        -0.07955073010596121,
+        -0.11328496079744124
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.011376429704697174,
+        "mean_squared_exact_coordinate": 0.008551022899704008,
+        "between_initialization_variance_of_means": 0.011376429704697174,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.011376429704697174,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.92485063725121e-07,
+          0.0154128486060579
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none",
+        "optimizer": {
+          "name": "quantum_natural_gradient",
+          "metric_convention": "Fubini-Study; QFIM = 4g",
+          "regularization": 0.001,
+          "metric_estimator": "exact statevector central differences",
+          "metric_trace": [
+            {
+              "minimum_eigenvalue": 0.09055804635575915,
+              "maximum_eigenvalue": 0.2500000000074171,
+              "regularized_condition_number": 2.7414302729017184
+            }
+          ],
+          "barren_plateau_avoidance_guarantee": false
+        }
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 3,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 42,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.0888721999945119,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 64,
+        "stored_parameter_count": 8,
+        "simulator": "statevector",
+        "hardware_executed": false,
+        "metric_state_evaluations": 17,
+        "metric_matrix_bytes": 512,
+        "metric_jacobian_bytes": 2048,
+        "metric_hardware_measurements": "not implemented; simulator-only metric"
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2020-05-25-269",
+        "guarantee_scope": "geometric optimization method; no general barren-plateau avoidance guarantee",
+        "role": "optimization_companion",
+        "implementation_status": "optimizer companion; exact-simulator metric; not a proven general plateau remedy",
+        "automatic_theorem_certification": false,
+        "assumptions": "Differentiable normalized pure state; consistently defined Fubini-Study metric; regularization or a pseudoinverse for singular directions; gradient and metric estimation budgets must be affordable.",
+        "baseline_changes": "Euclidean gradient descent; same circuit, objective, initialization, learning rate and gradient estimator. QNG adds separately counted exact metric state evaluations."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "natural_gradient",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.11328496079704545,
+      "training_trace": [
+        -0.0795507301059613,
+        -0.11328496079704545
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.011376429704712844,
+        "mean_squared_exact_coordinate": 0.008551022899744267,
+        "between_initialization_variance_of_means": 0.011376429704712844,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.011376429704712844,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.924850653274446e-07,
+          0.01541284860645579
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none",
+        "optimizer": {
+          "name": "quantum_natural_gradient",
+          "metric_convention": "Fubini-Study; QFIM = 4g",
+          "regularization": 0.001,
+          "metric_estimator": "exact statevector central differences",
+          "metric_trace": [
+            {
+              "minimum_eigenvalue": 0.09055804635663403,
+              "maximum_eigenvalue": 0.250000000005886,
+              "regularized_condition_number": 2.7414302728588007
+            }
+          ],
+          "barren_plateau_avoidance_guarantee": false
+        }
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 3,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 42,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.21765610000875313,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 64,
+        "stored_parameter_count": 8,
+        "simulator": "statevector",
+        "hardware_executed": false,
+        "metric_state_evaluations": 17,
+        "metric_matrix_bytes": 512,
+        "metric_jacobian_bytes": 2048,
+        "metric_hardware_measurements": "not implemented; simulator-only metric"
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2020-05-25-269",
+        "guarantee_scope": "geometric optimization method; no general barren-plateau avoidance guarantee",
+        "role": "optimization_companion",
+        "implementation_status": "optimizer companion; exact-simulator metric; not a proven general plateau remedy",
+        "automatic_theorem_certification": false,
+        "assumptions": "Differentiable normalized pure state; consistently defined Fubini-Study metric; regularization or a pseudoinverse for singular directions; gradient and metric estimation budgets must be affordable.",
+        "baseline_changes": "Euclidean gradient descent; same circuit, objective, initialization, learning rate and gradient estimator. QNG adds separately counted exact metric state evaluations."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "natural_gradient",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.11328496079796632,
+      "training_trace": [
+        -0.07955073010596123,
+        -0.11328496079796632
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.011376429705314937,
+        "mean_squared_exact_coordinate": 0.008551022900204836,
+        "between_initialization_variance_of_means": 0.011376429705314937,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.011376429705314937,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.924850626569054e-07,
+          0.015412848606853677
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none",
+        "optimizer": {
+          "name": "quantum_natural_gradient",
+          "metric_convention": "Fubini-Study; QFIM = 4g",
+          "regularization": 0.001,
+          "metric_estimator": "exact statevector central differences",
+          "metric_trace": [
+            {
+              "minimum_eigenvalue": 0.09055804635387586,
+              "maximum_eigenvalue": 0.2500000000067446,
+              "regularized_condition_number": 2.7414302729507605
+            }
+          ],
+          "barren_plateau_avoidance_guarantee": false
+        }
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 3,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 42,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.19014389999210835,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 64,
+        "stored_parameter_count": 8,
+        "simulator": "statevector",
+        "hardware_executed": false,
+        "metric_state_evaluations": 17,
+        "metric_matrix_bytes": 512,
+        "metric_jacobian_bytes": 2048,
+        "metric_hardware_measurements": "not implemented; simulator-only metric"
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2020-05-25-269",
+        "guarantee_scope": "geometric optimization method; no general barren-plateau avoidance guarantee",
+        "role": "optimization_companion",
+        "implementation_status": "optimizer companion; exact-simulator metric; not a proven general plateau remedy",
+        "automatic_theorem_certification": false,
+        "assumptions": "Differentiable normalized pure state; consistently defined Fubini-Study metric; regularization or a pseudoinverse for singular directions; gradient and metric estimation budgets must be affordable.",
+        "baseline_changes": "Euclidean gradient descent; same circuit, objective, initialization, learning rate and gradient estimator. QNG adds separately counted exact metric state evaluations."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "local_loss",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.546572243971249,
+      "training_trace": [
+        0.5509697477557167,
+        0.546572243971249
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008954958277716004,
+        "mean_squared_exact_coordinate": 0.007377762753505649,
+        "between_initialization_variance_of_means": 0.008954958277716004,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008954958277716004,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          1.6200633143640885e-06,
+          0.013554378580496252
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.0479668999905698,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-021-21728-w",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local observable; logarithmic alternating-layer depth; independent local 2-design blocks; nonvanishing input-dependent purity factors.",
+        "baseline_changes": "Global all-zero infidelity versus its local surrogate; same zero set."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "local_loss",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.546572243971249,
+      "training_trace": [
+        0.5509697477557167,
+        0.546572243971249
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008954958277716004,
+        "mean_squared_exact_coordinate": 0.007377762753505649,
+        "between_initialization_variance_of_means": 0.008954958277716004,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008954958277716004,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          1.6200633143640885e-06,
+          0.013554378580496252
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.12530020000122022,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-021-21728-w",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local observable; logarithmic alternating-layer depth; independent local 2-design blocks; nonvanishing input-dependent purity factors.",
+        "baseline_changes": "Global all-zero infidelity versus its local surrogate; same zero set."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "local_loss",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.5465722439712404,
+      "training_trace": [
+        0.5509697477557167,
+        0.5465722439712404
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008954958277465048,
+        "mean_squared_exact_coordinate": 0.007377762753246044,
+        "between_initialization_variance_of_means": 0.008954958278112195,
+        "within_initialization_sampling_variance": 3.851859888774472e-24,
+        "noise_corrected_variance": 0.008954958278112195,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          1.6200632931674265e-06,
+          0.013554378579003734
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.09564590000081807,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-021-21728-w",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local observable; logarithmic alternating-layer depth; independent local 2-design blocks; nonvanishing input-dependent purity factors.",
+        "baseline_changes": "Global all-zero infidelity versus its local surrogate; same zero set."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "qcnn",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.4203674874425971,
+      "training_trace": [
+        -0.41272435615009345,
+        -0.4203674874425971
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.027040521399358138,
+        "mean_squared_exact_coordinate": 0.02499630271147414,
+        "between_initialization_variance_of_means": 0.027040521399358138,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.027040521399358138,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0013432259390526852,
+          0.04780462210488936
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.15786160000425298,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevX.11.041011",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Independent local 2-design convolution blocks; the specified pooling channel; a nontrivial output observable and non-exponentially-small data-dependent factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "qcnn",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.4203674874427461,
+      "training_trace": [
+        -0.4127243561500935,
+        -0.4203674874427461
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.027040521400439003,
+        "mean_squared_exact_coordinate": 0.024996302712713657,
+        "between_initialization_variance_of_means": 0.027040521400439003,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.027040521400439003,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0013432259393069959,
+          0.047804622106991566
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.3063230999978259,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevX.11.041011",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Independent local 2-design convolution blocks; the specified pooling channel; a nontrivial output observable and non-exponentially-small data-dependent factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "qcnn",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.4203674874426135,
+      "training_trace": [
+        -0.4127243561500936,
+        -0.4203674874426135
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.027040521399462055,
+        "mean_squared_exact_coordinate": 0.024996302711837986,
+        "between_initialization_variance_of_means": 0.027040521399462055,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.027040521399462055,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0013432259394595824,
+          0.04780462210629083
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.29850900000019465,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevX.11.041011",
+        "guarantee_scope": "initialization ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Independent local 2-design convolution blocks; the specified pooling channel; a nontrivial output observable and non-exponentially-small data-dependent factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mps",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.15097332260968505,
+      "training_trace": [
+        -0.1486187623222064,
+        -0.15097332260968505
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.006490865231726203,
+        "mean_squared_exact_coordinate": 0.010776847979245448,
+        "between_initialization_variance_of_means": 0.006490865231726203,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.006490865231726203,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.989984097632665e-05,
+          0.009494862926512413
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.105843500001356,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Open boundaries; isometric gauge; Haar-distributed unitary tensors; finite-range extensive Hamiltonian; controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mps",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.1509733226096389,
+      "training_trace": [
+        -0.1486187623222063,
+        -0.1509733226096389
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.006490865231503683,
+        "mean_squared_exact_coordinate": 0.010776847978998551,
+        "between_initialization_variance_of_means": 0.006490865231503683,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.006490865231503683,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.98998410092224e-05,
+          0.009494862926232969
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.17664990000776015,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Open boundaries; isometric gauge; Haar-distributed unitary tensors; finite-range extensive Hamiltonian; controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mps",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.150973322609598,
+      "training_trace": [
+        -0.14861876232220633,
+        -0.150973322609598
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00649086523165256,
+        "mean_squared_exact_coordinate": 0.0107768479793769,
+        "between_initialization_variance_of_means": 0.00649086523165256,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00649086523165256,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.98998409434309e-05,
+          0.009494862926357891
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.19258679999620654,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Open boundaries; isometric gauge; Haar-distributed unitary tensors; finite-range extensive Hamiltonian; controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "ttn",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.04758435903436572,
+      "training_trace": [
+        0.05024211550907427,
+        0.04758435903436572
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0020697344328329836,
+        "mean_squared_exact_coordinate": 0.0022146708926925234,
+        "between_initialization_variance_of_means": 0.0020697344328329836,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0020697344328329836,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.6369759344027958e-05,
+          0.004102264951922501
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.10782459999609273,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Isometric tree tensors; Haar tensor ensemble; finite-range extensive objective; fixed branching and controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "ttn",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.04758435903434483,
+      "training_trace": [
+        0.05024211550907435,
+        0.04758435903434483
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.002069734433649149,
+        "mean_squared_exact_coordinate": 0.0022146708934251903,
+        "between_initialization_variance_of_means": 0.002069734433649149,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.002069734433649149,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.6369759335119892e-05,
+          0.004102264953564684
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.18461160000879318,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Isometric tree tensors; Haar tensor ensemble; finite-range extensive objective; fixed branching and controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "ttn",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.047584359034288544,
+      "training_trace": [
+        0.05024211550907423,
+        0.047584359034288544
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0020697344332689474,
+        "mean_squared_exact_coordinate": 0.0022146708931668267,
+        "between_initialization_variance_of_means": 0.0020697344332689474,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0020697344332689474,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.6369759303050862e-05,
+          0.004102264952846229
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.18474379999679513,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Isometric tree tensors; Haar tensor ensemble; finite-range extensive objective; fixed branching and controlled bond dimension.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mera",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.03723705849894979,
+      "training_trace": [
+        0.03893136913062603,
+        0.03723705849894979
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0014260521474963657,
+        "mean_squared_exact_coordinate": 0.0018215021545658213,
+        "between_initialization_variance_of_means": 0.0014260521474963657,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0014260521474963657,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          6.417714193196315e-07,
+          0.002788545282014545
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 5,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.11697370000183582,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Published isometric MERA geometry; Haar tensor ensemble; finite-range extensive objective; bounded bond dimension and branching.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mera",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.03723705849899552,
+      "training_trace": [
+        0.038931369130625955,
+        0.03723705849899552
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0014260521477631226,
+        "mean_squared_exact_coordinate": 0.0018215021547896735,
+        "between_initialization_variance_of_means": 0.0014260521477631226,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0014260521477631226,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          6.417714201534502e-07,
+          0.002788545282522271
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 5,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.1937231000047177,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Published isometric MERA geometry; Haar tensor ensemble; finite-range extensive objective; bounded bond dimension and branching.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mera",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.037237058498983365,
+      "training_trace": [
+        0.03893136913062602,
+        0.037237058498983365
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.0014260521475916174,
+        "mean_squared_exact_coordinate": 0.0018215021546800724,
+        "between_initialization_variance_of_means": 0.0014260521475916174,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0014260521475916174,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          6.417714234887256e-07,
+          0.0027885452821837867
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 8,
+        "two_qubit_operations": 5,
+        "native_depth": 6,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2503446000046097,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevA.109.L050402",
+        "guarantee_scope": "Haar tensor ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Published isometric MERA geometry; Haar tensor ensemble; finite-range extensive objective; bounded bond dimension and branching.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "finite_local_depth",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.15097332260968505,
+      "training_trace": [
+        -0.1486187623222064,
+        -0.15097332260968505
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.006490865231726203,
+        "mean_squared_exact_coordinate": 0.010776847979245448,
+        "between_initialization_variance_of_means": 0.006490865231726203,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.006490865231726203,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.989984097632665e-05,
+          0.009494862926512413
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.12305690000357572,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevLett.132.150603",
+        "guarantee_scope": "local 2-design ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local 2-design gates; bounded number of gates incident on each physical qubit; local Hamiltonian; nontrivial input and observable factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "finite_local_depth",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.1509733226096389,
+      "training_trace": [
+        -0.1486187623222063,
+        -0.1509733226096389
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.006490865231503683,
+        "mean_squared_exact_coordinate": 0.010776847978998551,
+        "between_initialization_variance_of_means": 0.006490865231503683,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.006490865231503683,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.98998410092224e-05,
+          0.009494862926232969
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.19887130000279285,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevLett.132.150603",
+        "guarantee_scope": "local 2-design ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local 2-design gates; bounded number of gates incident on each physical qubit; local Hamiltonian; nontrivial input and observable factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "finite_local_depth",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.150973322609598,
+      "training_trace": [
+        -0.14861876232220633,
+        -0.150973322609598
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00649086523165256,
+        "mean_squared_exact_coordinate": 0.0107768479793769,
+        "between_initialization_variance_of_means": 0.00649086523165256,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00649086523165256,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          8.98998409434309e-05,
+          0.009494862926357891
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 6,
+        "two_qubit_operations": 3,
+        "native_depth": 4,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.21212399999785703,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1103/PhysRevLett.132.150603",
+        "guarantee_scope": "local 2-design ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local 2-design gates; bounded number of gates incident on each physical qubit; local Hamiltonian; nontrivial input and observable factors.",
+        "baseline_changes": "Replace the structured architecture with depth-configured full-register Haar sweeps and the same input and observable. Gate counts differ and must be compared; a short control need not exhibit a plateau."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_init",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.926214519152247,
+      "training_trace": [
+        0.9323130891681973,
+        0.926214519152247
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00033976968385137724,
+        "mean_squared_exact_coordinate": 0.00047220906780924966,
+        "between_initialization_variance_of_means": 0.00033976968385137724,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00033976968385137724,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.5626705474081888e-05,
+          0.0004488304090833958
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.11131020000902936,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://papers.nips.cc/paper_files/paper/2022/file/7611a3cb5d733e628081431445cb01fd-Paper-Conference.pdf",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Specified rotation/entangler ordering; independent Gaussian angles with depth-dependent variance; observable support and nonzero initial-state overlap conditions in the appropriate bound.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_init",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.926214519152353,
+      "training_trace": [
+        0.9323130891681972,
+        0.926214519152353
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00033976968359732455,
+        "mean_squared_exact_coordinate": 0.0004722090675777876,
+        "between_initialization_variance_of_means": 0.00033976968359732455,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00033976968359732455,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.5626705474081888e-05,
+          0.00044883040881702054
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2783190000045579,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://papers.nips.cc/paper_files/paper/2022/file/7611a3cb5d733e628081431445cb01fd-Paper-Conference.pdf",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Specified rotation/entangler ordering; independent Gaussian angles with depth-dependent variance; observable support and nonzero initial-state overlap conditions in the appropriate bound.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_init",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.9262145191519162,
+      "training_trace": [
+        0.9323130891681972,
+        0.9262145191519162
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00033976968354841624,
+        "mean_squared_exact_coordinate": 0.0004722090674592615,
+        "between_initialization_variance_of_means": 0.00033976968354841624,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00033976968354841624,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          2.5626705502183202e-05,
+          0.0004488304086359734
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2894882999971742,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://papers.nips.cc/paper_files/paper/2022/file/7611a3cb5d733e628081431445cb01fd-Paper-Conference.pdf",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Specified rotation/entangler ordering; independent Gaussian angles with depth-dependent variance; observable support and nonzero initial-state overlap conditions in the appropriate bound.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_mixture",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.058054883007336286,
+      "training_trace": [
+        0.17849169348455546,
+        0.058054883007336286
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008367071181115545,
+        "mean_squared_exact_coordinate": 0.006896628137204446,
+        "between_initialization_variance_of_means": 0.008367071181115545,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008367071181115545,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0003555495169678304,
+          0.011860327736108088
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.1201535000000149,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/1367-2630/ae0823",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "single Z-string G1 special case; full-norm theorem, coordinate diagnostic only",
+        "automatic_theorem_certification": false,
+        "assumptions": "RX then RY after each CZ block; Gaussian variance $1/(2LS)$; last-layer distributions selected from Table 1 for each Pauli site; all-zero reference; theorem-specific observable coefficients.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_mixture",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.05805488300894028,
+      "training_trace": [
+        0.17849169348455554,
+        0.05805488300894028
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008367071182093141,
+        "mean_squared_exact_coordinate": 0.006896628137799274,
+        "between_initialization_variance_of_means": 0.008367071182093141,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008367071182093141,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0003555495170725023,
+          0.011860327737214455
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.29981470000348054,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/1367-2630/ae0823",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "single Z-string G1 special case; full-norm theorem, coordinate diagnostic only",
+        "automatic_theorem_certification": false,
+        "assumptions": "RX then RY after each CZ block; Gaussian variance $1/(2LS)$; last-layer distributions selected from Table 1 for each Pauli site; all-zero reference; theorem-specific observable coefficients.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "gaussian_mixture",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.05805488300679196,
+      "training_trace": [
+        0.17849169348455537,
+        0.05805488300679196
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00836707118184929,
+        "mean_squared_exact_coordinate": 0.00689662813746072,
+        "between_initialization_variance_of_means": 0.00836707118184929,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00836707118184929,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0003555495170725023,
+          0.011860327737214455
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.283769100002246,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/1367-2630/ae0823",
+        "guarantee_scope": "initialization only",
+        "role": "trainability_strategy",
+        "implementation_status": "single Z-string G1 special case; full-norm theorem, coordinate diagnostic only",
+        "automatic_theorem_certification": false,
+        "assumptions": "RX then RY after each CZ block; Gaussian variance $1/(2LS)$; last-layer distributions selected from Table 1 for each Pauli site; all-zero reference; theorem-specific observable coefficients.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "correlated_parameters",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.6548961919211387,
+      "training_trace": [
+        0.7066825070539889,
+        0.6548961919211387
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.5731173297772175,
+        "mean_squared_exact_coordinate": 0.4721768162169121,
+        "between_initialization_variance_of_means": 0.5731173297772175,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.5731173297772175,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00010368405059314197,
+          0.8674802290771343
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.044163500002468936,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/2058-9565/abd891",
+        "guarantee_scope": "specified parameter ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Correlation pattern and observable must match the construction. Parameter tying alone gives no general lower bound; resource cost can grow exponentially in some examples.",
+        "baseline_changes": "Independent angles versus one spatially shared angle."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "correlated_parameters",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.6548961919211387,
+      "training_trace": [
+        0.7066825070539889,
+        0.6548961919211387
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.5731173297772175,
+        "mean_squared_exact_coordinate": 0.4721768162169121,
+        "between_initialization_variance_of_means": 0.5731173297772175,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.5731173297772175,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00010368405059314197,
+          0.8674802290771343
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.12000400001124945,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/2058-9565/abd891",
+        "guarantee_scope": "specified parameter ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Correlation pattern and observable must match the construction. Parameter tying alone gives no general lower bound; resource cost can grow exponentially in some examples.",
+        "baseline_changes": "Independent angles versus one spatially shared angle."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "correlated_parameters",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.6548961919215581,
+      "training_trace": [
+        0.7066825070539888,
+        0.6548961919215581
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.5731173297734283,
+        "mean_squared_exact_coordinate": 0.47217681621292806,
+        "between_initialization_variance_of_means": 0.5731173297744322,
+        "within_initialization_sampling_variance": 1.9259299443872359e-23,
+        "noise_corrected_variance": 0.5731173297744322,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00010368405059314197,
+          0.8674802290711642
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 4,
+        "two_qubit_operations": 0,
+        "native_depth": 1,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.107155599995167,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1088/2058-9565/abd891",
+        "guarantee_scope": "specified parameter ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "analytically checked special case",
+        "automatic_theorem_certification": false,
+        "assumptions": "Correlation pattern and observable must match the construction. Parameter tying alone gives no general lower bound; resource cost can grow exponentially in some examples.",
+        "baseline_changes": "Independent angles versus one spatially shared angle."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "constrained_hva",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.00031249999482552387,
+      "training_trace": [
+        -0.00016112196214453453,
+        -0.00031249999482552387
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 5.592921492621864e-17,
+        "mean_squared_exact_coordinate": 0.9999999815585804,
+        "between_initialization_variance_of_means": 5.592921492621864e-17,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 5.592921492621864e-17,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          4.981868982774509e-18,
+          9.263026681059205e-17
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 6,
+        "native_depth": 8,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.09142070000234526,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2024-02-01-1239",
+        "guarantee_scope": "specified short-time region",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local generators and observable; reference commutator $g=|\\mathrm{Tr}(\\rho_0[H^{(m)},O])|=\\Theta(1)$; nonnegative total evolution time below the theorem threshold $\\tau_0=\\Theta(1/n)$.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "constrained_hva",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.00031249999482563495,
+      "training_trace": [
+        -0.00016112196214464555,
+        -0.00031249999482563495
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 5.588461067466871e-17,
+        "mean_squared_exact_coordinate": 0.9999999815641315,
+        "between_initialization_variance_of_means": 5.588461067466871e-17,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 5.588461067466871e-17,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          4.9694865416021946e-18,
+          9.256858547853565e-17
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 6,
+        "native_depth": 8,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.19564489999902435,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2024-02-01-1239",
+        "guarantee_scope": "specified short-time region",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local generators and observable; reference commutator $g=|\\mathrm{Tr}(\\rho_0[H^{(m)},O])|=\\Theta(1)$; nonnegative total evolution time below the theorem threshold $\\tau_0=\\Theta(1/n)$.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "constrained_hva",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.0003124999948251354,
+      "training_trace": [
+        -0.00016112196214447902,
+        -0.0003124999948251354
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 5.594142886146307e-17,
+        "mean_squared_exact_coordinate": 0.9999999815571926,
+        "between_initialization_variance_of_means": 5.594142886146307e-17,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 5.594142886146307e-17,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          4.9694865416021946e-18,
+          9.244528444418108e-17
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 15,
+        "two_qubit_operations": 6,
+        "native_depth": 8,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.22946120001142845,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2024-02-01-1239",
+        "guarantee_scope": "specified short-time region",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local generators and observable; reference commutator $g=|\\mathrm{Tr}(\\rho_0[H^{(m)},O])|=\\Theta(1)$; nonnegative total evolution time below the theorem threshold $\\tau_0=\\Theta(1/n)$.",
+        "baseline_changes": "Same circuit and task, uniformly initialized parameters."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "low_excitation",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 1.3135365359617024,
+      "training_trace": [
+        1.3752276621338164,
+        1.3135365359617024
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.25996324531580295,
+        "mean_squared_exact_coordinate": 0.27840816160408544,
+        "between_initialization_variance_of_means": 0.25996324531580295,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.25996324531580295,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.013463496375017828,
+          0.46289284249986684
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.09957910000230186,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2025-05-15-1745",
+        "guarantee_scope": "specified sector ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Weight-preserving circuit; reference in weight-k sector; sufficiently mixed ensemble within the relevant sector; suitable measurement and data factors. Fixed k is essential to the dimension argument.",
+        "baseline_changes": "Add nonconserving Y rotations to the same excitation-preserving circuit; compare task quality and leakage as well as gradients."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "low_excitation",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 1.3135365359617024,
+      "training_trace": [
+        1.3752276621338164,
+        1.3135365359617024
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.25996324531580295,
+        "mean_squared_exact_coordinate": 0.27840816160408544,
+        "between_initialization_variance_of_means": 0.25996324531580295,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.25996324531580295,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.013463496375017828,
+          0.46289284249986684
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2717204000073252,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2025-05-15-1745",
+        "guarantee_scope": "specified sector ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Weight-preserving circuit; reference in weight-k sector; sufficiently mixed ensemble within the relevant sector; suitable measurement and data factors. Fixed k is essential to the dimension argument.",
+        "baseline_changes": "Add nonconserving Y rotations to the same excitation-preserving circuit; compare task quality and leakage as well as gradients."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "low_excitation",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 1.3135365359613016,
+      "training_trace": [
+        1.3752276621338162,
+        1.3135365359613016
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.25996324531565745,
+        "mean_squared_exact_coordinate": 0.2784081616023729,
+        "between_initialization_variance_of_means": 0.25996324531565745,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.25996324531565745,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.013463496375017828,
+          0.46289284249986684
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 13,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.25128129999211524,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.22331/q-2025-05-15-1745",
+        "guarantee_scope": "specified sector ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Weight-preserving circuit; reference in weight-k sector; sufficiently mixed ensemble within the relevant sector; suitable measurement and data factors. Fixed k is essential to the dimension argument.",
+        "baseline_changes": "Add nonconserving Y rotations to the same excitation-preserving circuit; compare task quality and leakage as well as gradients."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "permutation_equivariant",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.4265505652390094,
+      "training_trace": [
+        -0.15457847000979458,
+        -0.4265505652390094
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.7910597293474653,
+        "mean_squared_exact_coordinate": 0.5934354985095256,
+        "between_initialization_variance_of_means": 0.7910597293474653,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.7910597293474653,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.007422980447073285,
+          1.0208302276462877
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 20,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.12802189998910762,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00804-1",
+        "guarantee_scope": "specified equivariant ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Full S_n-equivariant generators; compatible measurement; input projection onto relevant representation sectors must not be exponentially weak; use the published mixing/ensemble assumptions.",
+        "baseline_changes": "Replace collective parameters with site/pair-dependent angles, breaking full permutation equivariance."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "permutation_equivariant",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.42655056523830776,
+      "training_trace": [
+        -0.15457847000979463,
+        -0.42655056523830776
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.7910597293340836,
+        "mean_squared_exact_coordinate": 0.5934354984994072,
+        "between_initialization_variance_of_means": 0.7910597293340836,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.7910597293340836,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.007422980447431986,
+          1.0208302276247223
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 20,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.3592849999986356,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00804-1",
+        "guarantee_scope": "specified equivariant ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Full S_n-equivariant generators; compatible measurement; input projection onto relevant representation sectors must not be exponentially weak; use the published mixing/ensemble assumptions.",
+        "baseline_changes": "Replace collective parameters with site/pair-dependent angles, breaking full permutation equivariance."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "permutation_equivariant",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.42655056523752233,
+      "training_trace": [
+        -0.15457847000979466,
+        -0.42655056523752233
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.7910597293481448,
+        "mean_squared_exact_coordinate": 0.5934354985100436,
+        "between_initialization_variance_of_means": 0.7910597293481448,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.7910597293481448,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.007422980445758054,
+          1.0208302276365275
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 20,
+        "two_qubit_operations": 12,
+        "native_depth": 11,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.30901019999873824,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00804-1",
+        "guarantee_scope": "specified equivariant ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Full S_n-equivariant generators; compatible measurement; input projection onto relevant representation sectors must not be exponentially weak; use the published mixing/ensemble assumptions.",
+        "baseline_changes": "Replace collective parameters with site/pair-dependent angles, breaking full permutation equivariance."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "matchgate",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.09429922240668355,
+      "training_trace": [
+        -0.0889918429825214,
+        -0.09429922240668355
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 7.703719777548942e-24,
+        "mean_squared_exact_coordinate": 7.70371977754894e-24,
+        "between_initialization_variance_of_means": 7.703719777548942e-24,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 7.703719777548942e-24,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0,
+          1.0271626370065254e-23
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.10945360000187065,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-024-49909-3",
+        "guarantee_scope": "specified mixed group ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Nearest-neighbor fermionic Gaussian generators; observable in a polynomial-size algebra/module; non-exponentially-small input projection; the group-ensemble assumptions of the variance theorem.",
+        "baseline_changes": "Add Y rotations that leave the quadratic-fermion gate family. No plateau is guaranteed at the small default depth."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "matchgate",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.09429922240663449,
+      "training_trace": [
+        -0.08899184298252141,
+        -0.09429922240663449
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 3.972230510298673e-24,
+        "mean_squared_exact_coordinate": 3.0092655381050553e-24,
+        "between_initialization_variance_of_means": 3.972230510298673e-24,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 3.972230510298673e-24,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0,
+          7.864213939581214e-24
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.2530476000101771,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-024-49909-3",
+        "guarantee_scope": "specified mixed group ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Nearest-neighbor fermionic Gaussian generators; observable in a polynomial-size algebra/module; non-exponentially-small input projection; the group-ensemble assumptions of the variance theorem.",
+        "baseline_changes": "Add Y rotations that leave the quadratic-fermion gate family. No plateau is guaranteed at the small default depth."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "matchgate",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.0942992224066129,
+      "training_trace": [
+        -0.08899184298252137,
+        -0.0942992224066129
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 2.3672888899759765e-24,
+        "mean_squared_exact_coordinate": 2.5277830520082463e-24,
+        "between_initialization_variance_of_means": 2.3672888899759765e-24,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 2.3672888899759765e-24,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          1.2037062152420222e-25,
+          3.330253862169594e-24
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.19699250000121538,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41467-024-49909-3",
+        "guarantee_scope": "specified mixed group ensemble",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Nearest-neighbor fermionic Gaussian generators; observable in a polynomial-size algebra/module; non-exponentially-small input projection; the group-ensemble assumptions of the variance theorem.",
+        "baseline_changes": "Add Y rotations that leave the quadratic-fermion gate family. No plateau is guaranteed at the small default depth."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "engineered_dissipation",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.1593465510148748,
+      "training_trace": [
+        -0.1514845868379701,
+        -0.1593465510148748
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.026227136556715283,
+        "mean_squared_exact_coordinate": 0.020521411182916092,
+        "between_initialization_variance_of_means": 0.026227136556715283,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.026227136556715283,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00011383444241215752,
+          0.0403554357280182
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.3751273000088986,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00875-0",
+        "guarantee_scope": "specified engineered channel",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "A tailored Liouvillian with known stationary state; non-exponentially-small effective-Hamiltonian coefficients; faithfulness to the original task must be checked independently.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "engineered_dissipation",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.15934655101496153,
+      "training_trace": [
+        -0.15148458683797772,
+        -0.15934655101496153
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.026227136556987843,
+        "mean_squared_exact_coordinate": 0.020521411183241967,
+        "between_initialization_variance_of_means": 0.026227136556987843,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.026227136556987843,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0001138344423529309,
+          0.04035543572785725
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.688565499993274,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00875-0",
+        "guarantee_scope": "specified engineered channel",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "A tailored Liouvillian with known stationary state; non-exponentially-small effective-Hamiltonian coefficients; faithfulness to the original task must be checked independently.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "engineered_dissipation",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.1593465510149694,
+      "training_trace": [
+        -0.15148458683797011,
+        -0.1593465510149694
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.026227136557050126,
+        "mean_squared_exact_coordinate": 0.020521411183116615,
+        "between_initialization_variance_of_means": 0.026227136557050126,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.026227136557050126,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00011383444230851092,
+          0.04035543572769629
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.570279000006849,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00875-0",
+        "guarantee_scope": "specified engineered channel",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "A tailored Liouvillian with known stationary state; non-exponentially-small effective-Hamiltonian coefficients; faithfulness to the original task must be checked independently.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "nonunital_noise",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.13509814756987681,
+      "training_trace": [
+        -0.11103585362470905,
+        -0.13509814756987681
+      ],
+      "gradient_statistics": {
+        "coordinate": 8,
+        "exact_coordinate_variance": 0.04118617610681414,
+        "mean_squared_exact_coordinate": 0.06050973404072109,
+        "between_initialization_variance_of_means": 0.04118617610681414,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.04118617610681414,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.4898463106934666e-05,
+          0.057696406582974764
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.4785070999932941,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41567-026-03245-z",
+        "guarantee_scope": "random noisy ensemble; parameter-position dependent",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local random gates; specified local non-unital noise; local output observables. Bounds depend on distance from output; useful input information and earlier gradients can still be lost.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "nonunital_noise",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.13509814757058627,
+      "training_trace": [
+        -0.11103585362470772,
+        -0.13509814757058627
+      ],
+      "gradient_statistics": {
+        "coordinate": 8,
+        "exact_coordinate_variance": 0.04118617610989488,
+        "mean_squared_exact_coordinate": 0.06050973404374818,
+        "between_initialization_variance_of_means": 0.04118617610989488,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.04118617610989488,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.48984630658045e-05,
+          0.05769640658681402
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.7721563000086462,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41567-026-03245-z",
+        "guarantee_scope": "random noisy ensemble; parameter-position dependent",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local random gates; specified local non-unital noise; local output observables. Bounds depend on distance from output; useful input information and earlier gradients can still be lost.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "nonunital_noise",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": -0.13509814757053074,
+      "training_trace": [
+        -0.11103585362470872,
+        -0.13509814757053074
+      ],
+      "gradient_statistics": {
+        "coordinate": 8,
+        "exact_coordinate_variance": 0.0411861761092577,
+        "mean_squared_exact_coordinate": 0.060509734044703355,
+        "between_initialization_variance_of_means": 0.0411861761092577,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.0411861761092577,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          5.4898463045239435e-05,
+          0.057696406585951675
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 22,
+        "two_qubit_operations": 6,
+        "native_depth": 9,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.7511361999931978,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "density_matrix",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41567-026-03245-z",
+        "guarantee_scope": "random noisy ensemble; parameter-position dependent",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "Local random gates; specified local non-unital noise; local output observables. Bounds depend on distance from output; useful input information and earlier gradients can still be lost.",
+        "baseline_changes": "Same circuit and observable with damping disabled; not evidence that all noise helps."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mmd_loss",
+      "framework": "qiskit",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.4955118109076251,
+      "training_trace": [
+        0.5090454770971246,
+        0.4955118109076251
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.00872393525616089,
+        "mean_squared_exact_coordinate": 0.009854029688814573,
+        "between_initialization_variance_of_means": 0.00872393525616089,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.00872393525616089,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.00017600831561236094,
+          0.012740087730678558
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.08717330000945367,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00902-0",
+        "guarantee_scope": "specified loss and shallow architecture",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "An implicit sample loss; significant low-body kernel contributions; shallow compatible circuit and nonvanishing data-dependent factors. Full-distribution identification needs a richer kernel.",
+        "baseline_changes": "Use the global delta kernel, whose MMD squared equals the full probability-vector squared distance to the same independent-bit target. It distinguishes more distributions but can concentrate."
+      },
+      "provenance": {
+        "sdk_version": "2.3.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mmd_loss",
+      "framework": "pennylane",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.4955118109077561,
+      "training_trace": [
+        0.5090454770971247,
+        0.4955118109077561
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008723935255460821,
+        "mean_squared_exact_coordinate": 0.00985402968811983,
+        "between_initialization_variance_of_means": 0.008723935255460821,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008723935255460821,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0001760083154696726,
+          0.012740087729505177
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.23204339999938384,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00902-0",
+        "guarantee_scope": "specified loss and shallow architecture",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "An implicit sample loss; significant low-body kernel contributions; shallow compatible circuit and nonvanishing data-dependent factors. Full-distribution identification needs a richer kernel.",
+        "baseline_changes": "Use the global delta kernel, whose MMD squared equals the full probability-vector squared distance to the same independent-bit target. It distinguishes more distributions but can concentrate."
+      },
+      "provenance": {
+        "sdk_version": "0.45.1",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    },
+    {
+      "strategy": "mmd_loss",
+      "framework": "cirq",
+      "configuration": {
+        "n_qubits": 4,
+        "depth": 2,
+        "seed": 7,
+        "shots": null,
+        "steps": 1,
+        "variant": "strategy",
+        "learning_rate": 0.1,
+        "initializations": 4,
+        "repetitions": 2,
+        "encoding_scale": 0.1,
+        "features": null,
+        "metric_regularization": 0.001
+      },
+      "loss": 0.49551181090772817,
+      "training_trace": [
+        0.5090454770971246,
+        0.49551181090772817
+      ],
+      "gradient_statistics": {
+        "coordinate": 0,
+        "exact_coordinate_variance": 0.008723935255222302,
+        "mean_squared_exact_coordinate": 0.009854029687901014,
+        "between_initialization_variance_of_means": 0.008723935255222302,
+        "within_initialization_sampling_variance": 0.0,
+        "noise_corrected_variance": 0.008723935255222302,
+        "signal_status": "resolved_on_exact_simulator",
+        "difference_step": 1e-05,
+        "gradient_estimator": "central_finite_difference",
+        "finite_difference_bias": "O(h^2) for a smooth loss; not an unbiased parameter-shift estimate",
+        "initializations": 4,
+        "repetitions": 2,
+        "bootstrap_exact_variance_interval_95": [
+          0.0001760083155617296,
+          0.012740087729270232
+        ],
+        "interval_caveat": "percentile bootstrap; small ensembles give unreliable coverage",
+        "asymptotic_conclusion": "none"
+      },
+      "resources": {
+        "qubits": 4,
+        "ancillas": 0,
+        "native_operations": 14,
+        "two_qubit_operations": 6,
+        "native_depth": 7,
+        "gate_count_stage": "logical, before hardware synthesis",
+        "objective_evaluations": 58,
+        "sampled_objective_evaluations": 0,
+        "simulated_measurement_shots": 0,
+        "elapsed_seconds": 0.20048539999697823,
+        "statevector_bytes": 256,
+        "density_matrix_bytes": 4096,
+        "classical_parameter_bytes": 128,
+        "stored_parameter_count": 16,
+        "simulator": "statevector",
+        "hardware_executed": false
+      },
+      "assumption_checks": {
+        "published_result": "https://doi.org/10.1038/s41534-024-00902-0",
+        "guarantee_scope": "specified loss and shallow architecture",
+        "role": "trainability_strategy",
+        "implementation_status": "restricted demonstration; inspect guide before transferring the published guarantee",
+        "automatic_theorem_certification": false,
+        "assumptions": "An implicit sample loss; significant low-body kernel contributions; shallow compatible circuit and nonvanishing data-dependent factors. Full-distribution identification needs a richer kernel.",
+        "baseline_changes": "Use the global delta kernel, whose MMD squared equals the full probability-vector squared distance to the same independent-bit target. It distinguishes more distributions but can concentrate."
+      },
+      "provenance": {
+        "sdk_version": "1.7.0",
+        "numpy_version": "2.2.4",
+        "literature_cutoff": "2026-11-09"
+      }
+    }
+  ]
+}

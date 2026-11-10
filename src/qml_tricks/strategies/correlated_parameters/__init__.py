@@ -1,0 +1,1 @@
+"""Spatially correlated parameters."""

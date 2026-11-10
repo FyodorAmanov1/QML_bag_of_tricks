@@ -1,0 +1,7 @@
+# Activity log
+
+- Read `AGENTS.md` and `agent_eval/tasks.json` using `Get-Content`.
+- Searched documentation and APIs with `rg -n "finite.shot|local.loss|initializations|4096" docs qml* src examples pyproject.toml`. The command returned useful matches but exit code 1 because PowerShell did not expand `qml*` and `examples` does not exist. Corrected by reading known paths directly; no implementation changes followed from this error.
+- Read `docs/strategies/local_loss.md`, `docs/reproduction.md`, `src/qml_tricks/core.py`, and the native Qiskit local-loss implementation. Read fixtures and the package entrypoint and verified the assigned interpreter exists.
+- Created a standalone public-API experiment in `solution.py` for seed 37, four qubits, zero updates, eight initializations and eight repetitions. The paired run uses exact probabilities or 4096 simulated shots per sampled objective. No circuits, library, documentation, tests, or grader were edited or inspected.
+- Executed `.venv-clean/Scripts/python.exe agent_eval/runs/finite_shot_gradient/solution.py` from the repository root. Exit code 0; regenerated `report.json`. Embedded assertions verified shot/evaluation counts, zero-update traces, the exact analytical coordinate variance and the sampled-run reference's expected finite-difference bias. Observed analytical variance `0.006225636169316575`, sampled noise-corrected variance `0.006105112749667439`, and `528384` total simulated shots. No execution error or correction was required.

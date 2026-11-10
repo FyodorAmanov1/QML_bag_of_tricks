@@ -1,0 +1,1 @@
+"""Fixed low-excitation sectors."""

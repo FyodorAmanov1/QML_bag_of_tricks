@@ -1,0 +1,24 @@
+{
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "executable_scope": "workspace-local validation kernel",
+  "runs": [
+    {
+      "notebook": "01_classification.ipynb",
+      "seconds": 8.118201000004774,
+      "executed_code_cells": 5,
+      "errors": []
+    },
+    {
+      "notebook": "02_regression.ipynb",
+      "seconds": 7.044580200003111,
+      "executed_code_cells": 4,
+      "errors": []
+    },
+    {
+      "notebook": "03_offline_surrogate.ipynb",
+      "seconds": 7.99347120001039,
+      "executed_code_cells": 4,
+      "errors": []
+    }
+  ]
+}

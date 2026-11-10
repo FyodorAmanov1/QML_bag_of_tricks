@@ -1,0 +1,59 @@
+{
+  "task": "failed_surrogate_gate",
+  "seed": 43,
+  "validation": {
+    "feature_rmse": 0.623211184083506,
+    "relative_feature_rmse": 1.0305642338246412,
+    "feature_r2": -0.06163424776286841,
+    "acceptance_thresholds": {
+      "min_agreement": 0.99,
+      "max_accuracy_drop": 0.0,
+      "max_relative_feature_rmse": 0.01
+    },
+    "confidence_statement": "held-out empirical validation, no universal accuracy guarantee",
+    "teacher_student_agreement": 0.55,
+    "teacher_accuracy": 1.0,
+    "student_accuracy": 0.55,
+    "accuracy_drop": 0.44999999999999996,
+    "passed": false
+  },
+  "export_rejected": true,
+  "exception_type": "ValueError",
+  "exception_message": "Surrogate failed held-out fidelity requirements; improve acquisition/model and revalidate on a fresh holdout",
+  "artifact_path_attempted": "C:\\Users\\\u0424\u0451\u0434\u043e\u0440\\Oxford\\PersonalResearch\\QML_bag_of_tricks\\agent_eval\\runs\\failed_surrogate_gate\\rejected_student.joblib",
+  "artifact_created": false,
+  "failed_checks": {
+    "agreement": true,
+    "accuracy_drop": true,
+    "relative_feature_rmse": true
+  },
+  "data": {
+    "train_rows": 80,
+    "validation_rows": 60,
+    "input_dimension": 4,
+    "feature_dimension": 3,
+    "train_validation_inputs_disjoint": true,
+    "construction": "Independent random streams for training inputs, unrelated feature targets, validation inputs and independent validation feature targets; labels derive from each target's first coordinate.",
+    "feature_source": "Synthetic numerical targets only; no quantum acquisition or proprietary circuits",
+    "preprocessing": "Repository StandardScaler and Ridge pipeline fitted on training inputs only"
+  },
+  "resources": {
+    "teacher_training_pairs": 80,
+    "teacher_validation_pairs": 60,
+    "feature_dimension": 3,
+    "quantum_queries_at_student_inference": 0,
+    "teacher_feature_access": "supplied measured pairs or frozen native teacher",
+    "validation_fitted": false,
+    "degree": 1,
+    "student_kind": "ridge",
+    "actual_quantum_calls": 0,
+    "hardware_executed": false,
+    "quantum_shots": 0
+  },
+  "limitations": [
+    "This intentionally invalid input-to-feature relationship is a negative control for the validation and export gate. A deterministic frozen teacher would not produce independent random feature targets on independent inputs. It does not estimate performance of any physical teacher or real task.",
+    "Accurate imitation alone would not establish useful task accuracy: a perfectly copied teacher can be inaccurate, biased or uninformative for the target labels. Absolute task accuracy on untouched test data and appropriate classical controls remain necessary, even after high feature fidelity and teacher-student agreement.",
+    "The held-out empirical thresholds are strict acceptance checks, not universal generalization guarantees. Thresholds and model were fixed before validation; the gate was neither overwritten nor bypassed, and no student was exported.",
+    "All observations are classical synthetic arrays; no loading, quantum readout, shots or statevector simulation was performed. The synthetic task provides no quantum advantage, industrial-performance or proprietary Kipu DQFE evidence, and concerns neither density-embedding approximation nor Nystrom."
+  ]
+}

@@ -1,0 +1,46 @@
+# Changelog
+
+## 0.2.0 candidate — 2026-11-09
+
+- Added three executed project notebooks and downloadable documentation copies.
+- Added a validation-selected real-data study with three datasets, ten seeds,
+  eight models, three candidates per model and all 240 test evaluations.
+- Retained the stronger classical scores and documented the scope of the result.
+- Replayed five agent-produced workflows with independent artifact checks.
+- Added release artwork, a revised README, an owner review packet, local release
+  packaging and a manual workflow that builds an existing tag before optionally
+  creating a draft release. Scientific review and public destination are pending.
+
+## Kipu surrogate clarification
+
+- Added the intended teacher-first offline quantum-feature distillation protocol,
+  with Ridge and optional RBF-ridge students, supplied Kipu feature-pair input,
+  frozen native reference teachers and strictly classical exported artifacts.
+- Added held-out fidelity gates and teacher/student task comparisons. The old
+  density-embedding kernel approximation remains a separate reference method.
+
+## Learning and benchmark workflows
+
+- Added 13 purpose-scoped learning/estimation guides and 39 native entrypoints.
+- Added complete binary classification, regression, simulator state-description
+  and correlated-bit generative workflows with classical baselines.
+- Added train-only supervised classical pretraining, simulator warm starts,
+  Nyström quantum-kernel approximations and fully classical learned surrogates.
+- Added held-out surrogate error, inference-query tests, repeated-seed reports,
+  model serialization, CSV input and explicit measurement/simulation accounting.
+
+## Fundamental-method audit
+
+- Added explicit near-identity data encoding and identity-block initialization
+  guides with native implementations and analytical special-case checks.
+- Added quantum natural gradient descent as a clearly labeled optimizer companion,
+  with a dense FS metric, regularization, Euclidean control, and cost reporting.
+- Documented why these methods were previously missing or only partly covered.
+- Expanded the collection to 19 guides and 57 native modules.
+
+## 0.1.0 — 2026-11-09
+
+- Initial curated catalog: 16 guides and 48 native SDK modules.
+- Exact/sampled diagnostics, resource reports, CLI, sweeps, and typed run results.
+- Coverage and implementation boundaries documented explicitly.
+- Searchable static documentation and contributor workflows.

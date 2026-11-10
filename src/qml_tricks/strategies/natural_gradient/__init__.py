@@ -1,0 +1,1 @@
+"""Quantum natural gradient descent."""

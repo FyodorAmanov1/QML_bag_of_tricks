@@ -1,0 +1,1 @@
+"""Permutation-equivariant quantum models."""
