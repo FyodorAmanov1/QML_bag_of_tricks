@@ -22,4 +22,11 @@ def on_files(files, config):
         files.append(File.generated(config,f'source/learning/{path.parent.name}/{path.name}',abs_src_path=str(path)))
     for path in (root/'notebooks').glob('*.ipynb'):
         files.append(File.generated(config,f'source/notebooks/{path.name}',abs_src_path=str(path)))
+    for path in (root/'src/qml_tricks/learning/application_backends').glob('*.py'):
+        if path.name != '__init__.py':
+            files.append(File.generated(config,f'source/applications/{path.name}',abs_src_path=str(path)))
+    for name in ('opportunities.json.gz', 'opportunities_summary.json'):
+        path = root/'results'/name
+        if path.exists():
+            files.append(File.generated(config,f'source/results/{name}',abs_src_path=str(path)))
     return files

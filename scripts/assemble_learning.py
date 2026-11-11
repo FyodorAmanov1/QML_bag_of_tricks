@@ -51,6 +51,108 @@ def state(theta, x, n, depth):
 '''
 }
 
+APPLICATION_BACKENDS = {
+"qiskit": '''"""Native verification circuits for the application benchmarks."""
+import numpy as np
+from qiskit import QuantumCircuit
+from qiskit.quantum_info import Statevector, DensityMatrix
+
+
+def ramsey_features(phases, frequencies=(1, 2, 3)):
+    out = []
+    for phase in np.asarray(phases).reshape(-1):
+        row = []
+        for frequency in frequencies:
+            circuit = QuantumCircuit(1)
+            circuit.h(0)
+            circuit.rz(float(frequency*phase), 0)
+            state = np.asarray(Statevector.from_instruction(circuit))
+            coherence = np.conj(state[0])*state[1]
+            row.extend([2*coherence.real, 2*coherence.imag])
+        out.append(row)
+    return np.asarray(out)
+
+
+def bell_probabilities(rho):
+    n = int(np.log2(len(rho)))
+    if n > 4 or np.shape(rho) != (2**n, 2**n):
+        raise ValueError('Small dense verification fixture only')
+    circuit = QuantumCircuit(2*n)
+    for j in range(n):
+        circuit.cx(j, n+j)
+        circuit.h(j)
+    order = [int(format(i, f'0{2*n}b')[::-1], 2) for i in range(4**n)]
+    both = np.kron(rho, rho)
+    native = both[np.ix_(order, order)]
+    probabilities = DensityMatrix(native).evolve(circuit).probabilities()
+    return np.asarray(probabilities)[order]
+''',
+"pennylane": '''"""Native verification circuits for the application benchmarks."""
+import numpy as np
+import pennylane as qml
+
+
+def ramsey_features(phases, frequencies=(1, 2, 3)):
+    dev = qml.device('default.qubit', wires=1)
+    @qml.qnode(dev)
+    def circuit(angle):
+        qml.Hadamard(wires=0)
+        qml.RZ(angle, wires=0)
+        return qml.expval(qml.PauliX(0)), qml.expval(qml.PauliY(0))
+    return np.array([[v for frequency in frequencies
+                      for v in circuit(float(frequency*phase))]
+                     for phase in np.asarray(phases).reshape(-1)], dtype=float)
+
+
+def bell_probabilities(rho):
+    n = int(np.log2(len(rho)))
+    if n > 4 or np.shape(rho) != (2**n, 2**n):
+        raise ValueError('Small dense verification fixture only')
+    dev = qml.device('default.mixed', wires=2*n)
+    @qml.qnode(dev)
+    def circuit():
+        qml.QubitDensityMatrix(np.kron(rho, rho), wires=range(2*n))
+        for j in range(n):
+            qml.CNOT(wires=[j, n+j])
+            qml.Hadamard(wires=j)
+        return qml.probs(wires=range(2*n))
+    return np.asarray(circuit(), dtype=float)
+''',
+"cirq": '''"""Native verification circuits for the application benchmarks."""
+import numpy as np
+import cirq
+
+
+def ramsey_features(phases, frequencies=(1, 2, 3)):
+    q = cirq.LineQubit(0)
+    simulator = cirq.Simulator(dtype=np.complex128)
+    out = []
+    for phase in np.asarray(phases).reshape(-1):
+        row = []
+        for frequency in frequencies:
+            circuit = cirq.Circuit(cirq.H(q), cirq.rz(float(frequency*phase))(q))
+            state = simulator.simulate(circuit, qubit_order=[q]).final_state_vector
+            coherence = np.conj(state[0])*state[1]
+            row.extend([2*coherence.real, 2*coherence.imag])
+        out.append(row)
+    return np.asarray(out)
+
+
+def bell_probabilities(rho):
+    n = int(np.log2(len(rho)))
+    if n > 4 or np.shape(rho) != (2**n, 2**n):
+        raise ValueError('Small dense verification fixture only')
+    qubits = cirq.LineQubit.range(2*n)
+    circuit = cirq.Circuit()
+    for j in range(n):
+        circuit.append(cirq.CNOT(qubits[j], qubits[n+j]))
+        circuit.append(cirq.H(qubits[j]))
+    result = cirq.DensityMatrixSimulator(dtype=np.complex128).simulate(
+        circuit, initial_state=np.kron(rho, rho), qubit_order=qubits)
+    return np.diag(result.final_density_matrix).real
+'''
+}
+
 RECIPES = [
 ("kipu_offline_surrogate", "Kipu-style offline quantum-feature surrogates", "https://kipu-quantum.com/blog/classical-surrogates-for-quantum-feature-extraction", "Public vendor workflow: acquire quantum feature pairs, fit a classical surrogate, and deploy with a classical predictor. Ridge is the student family reported in Kipu's example. The native demos here use small reference teachers, not Kipu's DQFE circuits, proprietary SDK, datasets or claimed accuracy figures. Held-out fidelity is an empirical acceptance gate, not a universal theorem.", "See [the full teacher-first workflow](kipu_workflow.md). Use an already-fitted quantum feature teacher or import real Kipu input/output feature pairs. Freeze the teacher before distillation, preserve the downstream predictor, and export a teacher-free classical artifact only after validation. This entry explicitly differs from density-embedding fidelity-kernel approximation and Nyström."),
 ("parameter_shift", "Parameter-shift differentiation", "https://doi.org/10.1103/PhysRevA.99.032331", "Exact expectation derivative identity for a single Pauli rotation occurrence per coordinate; unbiased sampled expectation gradients. Nonlinear losses require a classical chain rule; shifting the loss itself is generally incorrect.", "Use finite-shot training when numerical differences would amplify shot noise. Shared coordinates need occurrence-wise derivatives; arbitrary generators need generalized rules."),
@@ -140,4 +242,15 @@ asymptotic computational advantage.
     (ROOT/'src/qml_tricks/learning/catalog.json').write_text(json.dumps([dict(id=r[0],title=r[1],source=r[2],guarantee=r[3]) for r in RECIPES],indent=2)+'\n')
     print(f'Generated {len(RECIPES)} learning guides and {3*len(RECIPES)} native entrypoints.')
 
-if __name__ == '__main__': main()
+def assemble_application_backends():
+    directory = ROOT/'src/qml_tricks/learning/application_backends'
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory/'__init__.py').write_text('')
+    for sdk, source in APPLICATION_BACKENDS.items():
+        (directory/f'{sdk}.py').write_text(source, encoding='utf-8')
+    print('Generated three independent application verification backends.')
+
+
+if __name__ == '__main__':
+    main()
+    assemble_application_backends()

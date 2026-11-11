@@ -19,6 +19,12 @@ results: the tested classical configurations outperform these small quantum
 feature models. The repository helps you reproduce and investigate that outcome,
 as well as decide what to try next.
 
+Application-specific tests also show where structure helps: a two-copy quantum
+state-learning protocol improves sample efficiency for late queries. The report
+includes tuned regularized models, optimal inference for the tested classical
+records, and a query-known control that removes the gap. Periodic calibration
+shows a useful representation benefit that a classical Fourier model also gets.
+
 Repository: [PUBLIC REPOSITORY URL]
 Start with a notebook: [PUBLIC WALKTHROUGH URL]
 

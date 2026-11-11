@@ -1,5 +1,18 @@
 # Changelog
 
+## Application benchmarks — 2026-11-11
+
+- Added periodic calibration and late-query quantum-state property benchmarks,
+  fixed protocols, nine-candidate regularization searches and validation-only
+  classical family selection.
+- Ran 280 configurations and 1,720 base evaluations over ten seeds, retaining
+  every setting, failure/warning record and held-out prediction.
+- Added optimal local-record likelihood inference, query-known acquisition and
+  identical classical Fourier controls. Reported conditional measurement gains
+  separately from representation gains and computational advantage.
+- Added independent Qiskit/PennyLane/Cirq verification circuits and compressed
+  raw results with a readable summary and application guides.
+
 ## 0.2.0 candidate — 2026-11-09
 
 - Added three executed project notebooks and downloadable documentation copies.

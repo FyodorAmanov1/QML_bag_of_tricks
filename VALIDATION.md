@@ -1,11 +1,12 @@
 # Validation record
 
-Verified locally on Windows with CPython 3.12.3 on 2026-11-09.
+Verified locally on Windows with CPython 3.12.3; application extension checked
+on 2026-11-11. Earlier reference snapshots are retained from 2026-11-09.
 
 | Check | Observed result |
 |---|---|
 | Clean virtual environment, pinned dependency closure | All reference dependencies installed; `pip check` reports no broken requirements |
-| Native SDK suite | 168 tests passed, including probability agreement across Qiskit, PennyLane and Cirq |
+| Native SDK suite | 199 tests passed, including probability agreement across Qiskit, PennyLane and Cirq |
 | Analytical checks | Product-state objective/gradient formulas, exact variance quadrature, tied-parameter derivative |
 | Structural checks | Excitation conservation and deliberate control leakage; permutation-equivariant output |
 | Sampling and reporting | Finite-shot consistency, exact/sampled evaluation accounting, serializable results |
@@ -19,6 +20,8 @@ Verified locally on Windows with CPython 3.12.3 on 2026-11-09.
 | Executed notebooks | All three classification, regression and offline-distillation notebooks executed without cell errors; timings in `results/notebook_execution.json` |
 | Small real-data study | 240 selected test evaluations: three datasets, ten seeds, eight models and three validation candidates; zero failed final evaluations |
 | Agent implementation tasks | Five scripts independently re-executed and passed artifact checks; three agents, two follow-up tasks; not a general capability estimate |
+| Application comparisons | 280 fixed configurations, 1,720 base evaluations and ten independent synthetic-data seeds; zero failed final evaluations or tuning candidates; all 221 candidate warnings retained |
+| Application identities | Three native SDKs verify Ramsey/Fourier equivalence and Bell probabilities, including YY signs and bit ordering; likelihood-ratio and matched-copy accounting checked independently |
 | Packaging | 0.2.0 wheel/source archive built; wheel imported independently of the source tree and ran a native circuit plus learning model; source archive contains three notebooks and five agent solutions |
 
 Reference versions: Qiskit 2.3.1, Qiskit Aer 0.17.2, PennyLane 0.45.1, Cirq Core
@@ -36,6 +39,7 @@ python -m venv .venv-clean
 .\.venv-clean\Scripts\python.exe scripts/run_notebooks.py
 .\.venv-clean\Scripts\python.exe -m pytest -q
 .\.venv-clean\Scripts\python.exe scripts/grade_agent_tasks.py
+.\.venv-clean\Scripts\python.exe scripts/audit_opportunity_results.py
 .\.venv-clean\Scripts\python.exe -m pip check
 .\.venv-clean\Scripts\python.exe -m mkdocs build --strict
 ```
@@ -45,6 +49,13 @@ classical configurations outperform these quantum-feature configurations on mean
 scores; it establishes no general ranking of QML. Its repeated splits overlap,
 so bootstrap intervals are descriptive rather than independent-replication
 confidence guarantees. Full trial histories and warnings are retained.
+
+The new application report is a separate experiment. Its strongest recorded
+measurement benefit is conditional on late queries and two-copy coherent access;
+it compares against selected random single-copy local records, including optimal
+known-family inference. Knowing the query early removes that gap. Periodic
+quantum features match cheap classical Fourier features in the exact limit.
+These synthetic results establish no broad tabular, runtime or hardware advantage.
 
 Linux CI is configured but was not executed locally. Hardware jobs, production
 validation, exhaustive literature coverage and full theorem reproductions are

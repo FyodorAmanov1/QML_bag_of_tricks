@@ -32,6 +32,20 @@ Install `.[all,learning]` when you want all three SDKs.
 
 ## What does the evidence show?
 
+The [application benchmarks](docs/applications/index.md) now test useful
+structure explicitly: periodic sensor calibration and late-query quantum-state
+characterization. Across ten seeds, the eight-qubit, 512-copy state experiment
+reached **100% mean balanced accuracy** with two-copy Bell acquisition, compared
+with **49.14%** for the optimal classifier on the tested random single-copy local
+records. Both use the same number of state copies; Bell acquisition needs twice
+as many simultaneous qubits. This is a simulated, restricted quantum-input task.
+Knowing the query before acquisition removes the observed gap.
+
+Periodic quantum features also improve on generic regularized regressors in a
+held-out-period task, while cheap classical Fourier features match them. The
+[complete application report](docs/applications/results.md) retains all 280
+configurations and 1,720 base evaluations, including these decisive controls.
+
 ![Observed real-data comparisons](docs/assets/real_data_study.png)
 
 The small real-data study evaluates eight pipelines on three datasets, with ten

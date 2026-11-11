@@ -11,3 +11,4 @@ results/local/
 .cache/
 agent_eval/runs/**/*.joblib
 release/
+results/opportunities.json

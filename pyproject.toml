@@ -32,7 +32,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 qml_tricks = ["catalog.json"]
-"qml_tricks.learning" = ["catalog.json"]
+"qml_tricks.learning" = ["catalog.json", "opportunity_protocol.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

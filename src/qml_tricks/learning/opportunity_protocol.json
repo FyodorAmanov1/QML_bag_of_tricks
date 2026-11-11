@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "status": "specified before the first application benchmark run",
+  "seeds": [100,101,102,103,104,105,106,107,108,109],
+  "ramsey": {
+    "train_sizes": [24,48], "validation_size": 48, "test_size": 256,
+    "frequencies": [1,2,3], "target_noise_sd": 0.05,
+    "shots_per_setting": [null,1024],
+    "train_validation_phase_range": [0.0,6.283185307179586],
+    "test_phase_range": [6.283185307179586,18.84955592153876],
+    "models": ["ridge","elastic_net","rbf_svr","mlp_l2","boosting","fourier_ridge","quantum_ramsey_ridge"]
+  },
+  "pauli": {
+    "qubits": [2,4,6,8], "state_copies": [128,512,2048],
+    "readout_bit_flip": [0.0,0.01],
+    "train_size": 48, "validation_size": 32, "test_size": 128,
+    "nonzero_magnitude": 0.8,
+    "models": ["local_logistic_l2","local_rbf_svc","local_mlp_l2","local_bayes","bell_logistic_l2","query_known_bayes"]
+  },
+  "selection": "validation only, refit selected model on train+validation; nine candidates per learned family",
+  "pooled_control": "classical_selected chooses a conventional model family using validation only, pooling 45 regression or 27 classification candidates; physics-informed and Bayes controls remain separate",
+  "reporting": "keep every configuration, warning, failed candidate and test prediction; do not drop unfavorable cells",
+  "paired_gain_rule": "descriptive paired seed-bootstrap lower endpoint > 0; at least 8/10 positive seeds; not a multiple-comparison significance claim",
+  "claim_boundary": "simulated application prototypes; no observed hardware speedup or production benefit"
+}

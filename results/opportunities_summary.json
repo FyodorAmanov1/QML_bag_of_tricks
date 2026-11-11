@@ -1,0 +1,5968 @@
+{
+  "protocol": {
+    "version": 1,
+    "status": "specified before the first application benchmark run",
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "ramsey": {
+      "train_sizes": [
+        24,
+        48
+      ],
+      "validation_size": 48,
+      "test_size": 256,
+      "frequencies": [
+        1,
+        2,
+        3
+      ],
+      "target_noise_sd": 0.05,
+      "shots_per_setting": [
+        null,
+        1024
+      ],
+      "train_validation_phase_range": [
+        0.0,
+        6.283185307179586
+      ],
+      "test_phase_range": [
+        6.283185307179586,
+        18.84955592153876
+      ],
+      "models": [
+        "ridge",
+        "elastic_net",
+        "rbf_svr",
+        "mlp_l2",
+        "boosting",
+        "fourier_ridge",
+        "quantum_ramsey_ridge"
+      ]
+    },
+    "pauli": {
+      "qubits": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "state_copies": [
+        128,
+        512,
+        2048
+      ],
+      "readout_bit_flip": [
+        0.0,
+        0.01
+      ],
+      "train_size": 48,
+      "validation_size": 32,
+      "test_size": 128,
+      "nonzero_magnitude": 0.8,
+      "models": [
+        "local_logistic_l2",
+        "local_rbf_svc",
+        "local_mlp_l2",
+        "local_bayes",
+        "bell_logistic_l2",
+        "query_known_bayes"
+      ]
+    },
+    "selection": "validation only, refit selected model on train+validation; nine candidates per learned family",
+    "pooled_control": "classical_selected chooses a conventional model family using validation only, pooling 45 regression or 27 classification candidates; physics-informed and Bayes controls remain separate",
+    "reporting": "keep every configuration, warning, failed candidate and test prediction; do not drop unfavorable cells",
+    "paired_gain_rule": "descriptive paired seed-bootstrap lower endpoint > 0; at least 8/10 positive seeds; not a multiple-comparison significance claim",
+    "claim_boundary": "simulated application prototypes; no observed hardware speedup or production benefit"
+  },
+  "selected_applications": [
+    "ramsey",
+    "pauli"
+  ],
+  "native_verification": {
+    "framework": "qiskit",
+    "word": "XYZ",
+    "amplitude": 0.63,
+    "bell_probability_max_error": 1.0408340855860843e-17
+  },
+  "summary": [
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "ridge",
+      "metric": "rmse",
+      "mean": 0.7220430953826289,
+      "seed_sd": 0.18089921028166048,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "elastic_net",
+      "metric": "rmse",
+      "mean": 0.7658587667558809,
+      "seed_sd": 0.1565265101655425,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "rbf_svr",
+      "metric": "rmse",
+      "mean": 0.5596514648522006,
+      "seed_sd": 0.021521804272548663,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "mlp_l2",
+      "metric": "rmse",
+      "mean": 2.3930634006593237,
+      "seed_sd": 0.6795894093937657,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "boosting",
+      "metric": "rmse",
+      "mean": 0.7232817089454946,
+      "seed_sd": 0.029275324133107065,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "fourier_ridge",
+      "metric": "rmse",
+      "mean": 0.05213710868001039,
+      "seed_sd": 0.0024264704799577394,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "quantum_ramsey_ridge",
+      "metric": "rmse",
+      "mean": 0.05213710868001037,
+      "seed_sd": 0.002426470479957741,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "model": "classical_selected",
+      "metric": "rmse",
+      "mean": 1.1784354024855244,
+      "seed_sd": 1.0109153985174981,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "ridge",
+      "metric": "rmse",
+      "mean": 0.7220430953826289,
+      "seed_sd": 0.18089921028166048,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "elastic_net",
+      "metric": "rmse",
+      "mean": 0.7658587667558809,
+      "seed_sd": 0.1565265101655425,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "rbf_svr",
+      "metric": "rmse",
+      "mean": 0.5596514648522006,
+      "seed_sd": 0.021521804272548663,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "mlp_l2",
+      "metric": "rmse",
+      "mean": 2.3930634006593237,
+      "seed_sd": 0.6795894093937657,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "boosting",
+      "metric": "rmse",
+      "mean": 0.7232817089454946,
+      "seed_sd": 0.029275324133107065,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "fourier_ridge",
+      "metric": "rmse",
+      "mean": 0.05213710868001039,
+      "seed_sd": 0.0024264704799577394,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "quantum_ramsey_ridge",
+      "metric": "rmse",
+      "mean": 0.055468993343023146,
+      "seed_sd": 0.0025790969706890213,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "model": "classical_selected",
+      "metric": "rmse",
+      "mean": 1.1784354024855244,
+      "seed_sd": 1.0109153985174981,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "ridge",
+      "metric": "rmse",
+      "mean": 0.6805073676295563,
+      "seed_sd": 0.16489114894430557,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "elastic_net",
+      "metric": "rmse",
+      "mean": 0.7439821131614229,
+      "seed_sd": 0.15203884233512416,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "rbf_svr",
+      "metric": "rmse",
+      "mean": 0.5606758413831472,
+      "seed_sd": 0.022147892076535326,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "mlp_l2",
+      "metric": "rmse",
+      "mean": 2.601467600536105,
+      "seed_sd": 0.5609773598770251,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "boosting",
+      "metric": "rmse",
+      "mean": 0.725146406574763,
+      "seed_sd": 0.044872849957164805,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "fourier_ridge",
+      "metric": "rmse",
+      "mean": 0.05199530506528466,
+      "seed_sd": 0.002778246083848955,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "quantum_ramsey_ridge",
+      "metric": "rmse",
+      "mean": 0.05199530506528466,
+      "seed_sd": 0.002778246083848956,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "model": "classical_selected",
+      "metric": "rmse",
+      "mean": 0.9573318372909781,
+      "seed_sd": 0.889038609946827,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "ridge",
+      "metric": "rmse",
+      "mean": 0.6805073676295563,
+      "seed_sd": 0.16489114894430557,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "elastic_net",
+      "metric": "rmse",
+      "mean": 0.7439821131614229,
+      "seed_sd": 0.15203884233512416,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "rbf_svr",
+      "metric": "rmse",
+      "mean": 0.5606758413831472,
+      "seed_sd": 0.022147892076535326,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "mlp_l2",
+      "metric": "rmse",
+      "mean": 2.601467600536105,
+      "seed_sd": 0.5609773598770251,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "boosting",
+      "metric": "rmse",
+      "mean": 0.725146406574763,
+      "seed_sd": 0.044872849957164805,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "fourier_ridge",
+      "metric": "rmse",
+      "mean": 0.05199530506528466,
+      "seed_sd": 0.002778246083848955,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "quantum_ramsey_ridge",
+      "metric": "rmse",
+      "mean": 0.05504119256052955,
+      "seed_sd": 0.0029101450536048227,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "model": "classical_selected",
+      "metric": "rmse",
+      "mean": 0.9573318372909781,
+      "seed_sd": 0.889038609946827,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9453125,
+      "seed_sd": 0.01327869664998121,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.93515625,
+      "seed_sd": 0.01428736117119292,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.92109375,
+      "seed_sd": 0.033643172624413874,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.94609375,
+      "seed_sd": 0.013999666724703761,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.996875,
+      "seed_sd": 0.004034357652299392,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.93984375,
+      "seed_sd": 0.015207084709017119,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.91484375,
+      "seed_sd": 0.025368914329078236,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.9140625,
+      "seed_sd": 0.019136638615493577,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.90234375,
+      "seed_sd": 0.023653518391386654,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.91796875,
+      "seed_sd": 0.027621358640099514,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.99765625,
+      "seed_sd": 0.005273035607113694,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.91640625,
+      "seed_sd": 0.024443125063036076,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9984375,
+      "seed_sd": 0.004941058844013092,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.99921875,
+      "seed_sd": 0.0024705294220065464,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.99921875,
+      "seed_sd": 0.0024705294220065464,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.9984375,
+      "seed_sd": 0.004941058844013092,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.996875,
+      "seed_sd": 0.009882117688026184,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.9890625,
+      "seed_sd": 0.020898336091394666,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9984375,
+      "seed_sd": 0.0032940392293420617,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.996875,
+      "seed_sd": 0.009882117688026184,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.58984375,
+      "seed_sd": 0.05672661695518741,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.559375,
+      "seed_sd": 0.03458741190809165,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.58203125,
+      "seed_sd": 0.05802677071655519,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.5765625,
+      "seed_sd": 0.042440726640548675,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9953125,
+      "seed_sd": 0.007547592055306999,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.59453125,
+      "seed_sd": 0.05781601903704255,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5390625,
+      "seed_sd": 0.07074519639169857,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.52890625,
+      "seed_sd": 0.06781342005264232,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5484375,
+      "seed_sd": 0.047278357157959236,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.58671875,
+      "seed_sd": 0.03991262429514,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9921875,
+      "seed_sd": 0.008235098073355155,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.540625,
+      "seed_sd": 0.06038073644245599,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.81953125,
+      "seed_sd": 0.03303290723005537,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.8,
+      "seed_sd": 0.05526726414534296,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.78984375,
+      "seed_sd": 0.034636395662855694,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.82109375,
+      "seed_sd": 0.03579190010110139,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.8,
+      "seed_sd": 0.05684007627399293,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.76640625,
+      "seed_sd": 0.030021422472822083,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.75625,
+      "seed_sd": 0.02941671093008946,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.7515625,
+      "seed_sd": 0.028479631488525663,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.7671875,
+      "seed_sd": 0.02824050356609575,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.76015625,
+      "seed_sd": 0.03436118725009529,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.975,
+      "seed_sd": 0.02323407085749527,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.9734375,
+      "seed_sd": 0.016552342272990316,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.971875,
+      "seed_sd": 0.021537576175140974,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.97421875,
+      "seed_sd": 0.022112426786826855,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.975,
+      "seed_sd": 0.02323407085749527,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.975,
+      "seed_sd": 0.018706546870904135,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.96953125,
+      "seed_sd": 0.023131685407502555,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9640625,
+      "seed_sd": 0.026093698020573645,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.97578125,
+      "seed_sd": 0.019986024848281138,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.96875,
+      "seed_sd": 0.021788021524324883,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.48984375,
+      "seed_sd": 0.02359610685432145,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.49140625,
+      "seed_sd": 0.019643773089214694,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.49453125,
+      "seed_sd": 0.023306927953400464,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.49375,
+      "seed_sd": 0.030324847141686748,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.99375,
+      "seed_sd": 0.006162583107395434,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.4921875,
+      "seed_sd": 0.02240188871625684,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.4890625,
+      "seed_sd": 0.02996489554925526,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.496875,
+      "seed_sd": 0.029737713382542077,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.49375,
+      "seed_sd": 0.03142313151874657,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.005764568651348608,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.98984375,
+      "seed_sd": 0.009778637164332598,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.490625,
+      "seed_sd": 0.02987422999937497,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5046875,
+      "seed_sd": 0.06842568708297914,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.478125,
+      "seed_sd": 0.03310468454598063,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.490625,
+      "seed_sd": 0.0629109751840735,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.5203125,
+      "seed_sd": 0.05223934965883264,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.5,
+      "seed_sd": 0.06978000524465762,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.50234375,
+      "seed_sd": 0.025793084405029965,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.5109375,
+      "seed_sd": 0.03612196017583271,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5046875,
+      "seed_sd": 0.026093698020573645,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.51328125,
+      "seed_sd": 0.021490292745601835,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.50390625,
+      "seed_sd": 0.02737473442920396,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.6640625,
+      "seed_sd": 0.0339541791937638,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.659375,
+      "seed_sd": 0.06064969428337349,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.646875,
+      "seed_sd": 0.0469905982026665,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.675,
+      "seed_sd": 0.037952993129659746,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.6671875,
+      "seed_sd": 0.03214854033752284,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.63515625,
+      "seed_sd": 0.045113006735708845,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.615625,
+      "seed_sd": 0.07014834232222138,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.61953125,
+      "seed_sd": 0.060856204676018405,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.66015625,
+      "seed_sd": 0.027621358640099514,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.6265625,
+      "seed_sd": 0.06667887258053416,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5015625,
+      "seed_sd": 0.015537951968933643,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.5,
+      "seed_sd": 0.01518477055949297,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.49921875,
+      "seed_sd": 0.014937114999687483,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.50625,
+      "seed_sd": 0.016387638252658616,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.9984375,
+      "seed_sd": 0.0032940392293420617,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.5015625,
+      "seed_sd": 0.015537951968933643,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.011905343177773395,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.011905343177773395,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5015625,
+      "seed_sd": 0.012103072956898178,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.5,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.98515625,
+      "seed_sd": 0.012461964702088955,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.9984375,
+      "seed_sd": 0.0032940392293420617,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.011905343177773395,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.49609375,
+      "seed_sd": 0.02307297545139238,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.48984375,
+      "seed_sd": 0.013304208098380002,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.49453125,
+      "seed_sd": 0.021803578842640083,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.49140625,
+      "seed_sd": 0.021616152051507433,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.49609375,
+      "seed_sd": 0.02307297545139238,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.014937114999687485,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.49609375,
+      "seed_sd": 0.012889967365379772,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.496875,
+      "seed_sd": 0.01387803395257732,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.49921875,
+      "seed_sd": 0.0024705294220065464,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.50078125,
+      "seed_sd": 0.014937114999687485,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.5078125,
+      "seed_sd": 0.0318943976924893,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.50546875,
+      "seed_sd": 0.02301411572425594,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.51171875,
+      "seed_sd": 0.030201597668602087,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.4984375,
+      "seed_sd": 0.028479631488525663,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.5109375,
+      "seed_sd": 0.029964895549255258,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "local_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.4890625,
+      "seed_sd": 0.017738944131173332,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "local_rbf_svc",
+      "metric": "balanced_accuracy",
+      "mean": 0.49375,
+      "seed_sd": 0.020104436526686233,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "local_mlp_l2",
+      "metric": "balanced_accuracy",
+      "mean": 0.48984375,
+      "seed_sd": 0.020521758650880777,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "local_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 0.50546875,
+      "seed_sd": 0.013304208098380002,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "bell_logistic_l2",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "query_known_bayes",
+      "metric": "balanced_accuracy",
+      "mean": 1.0,
+      "seed_sd": 0.0,
+      "successes": 10,
+      "failures": 0
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "model": "classical_selected",
+      "metric": "balanced_accuracy",
+      "mean": 0.4890625,
+      "seed_sd": 0.017738944131173332,
+      "successes": 10,
+      "failures": 0
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "ridge",
+      "mean_gain": 0.6699059867026188,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5708881830891789,
+        0.7795905441076774
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "elastic_net",
+      "mean_gain": 0.7137216580758705,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.626024073745063,
+        0.8093311426338248
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "rbf_svr",
+      "mean_gain": 0.5075143561721903,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.49683918981171143,
+        0.5211335694244917
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "mlp_l2",
+      "mean_gain": 2.3409262919793132,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        1.9078913854464181,
+        2.711612358910066
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "boosting",
+      "mean_gain": 0.6711446002654842,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6538000598007837,
+        0.6883052039108319
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "fourier_ridge",
+      "mean_gain": 1.8041124150158794e-17,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -2.0816681711721684e-18,
+        3.8857805861880476e-17
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        null
+      ],
+      "control": "classical_selected",
+      "mean_gain": 1.126298293805514,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.513121416012432,
+        1.7554396032817645
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "ridge",
+      "mean_gain": 0.6665741020396059,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5670924832338555,
+        0.776859934465168
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "elastic_net",
+      "mean_gain": 0.7103897734128577,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6222147029702951,
+        0.8056270222471862
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "rbf_svr",
+      "mean_gain": 0.5041824715091776,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.493683522477755,
+        0.5170591493841602
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "mlp_l2",
+      "mean_gain": 2.3375944073163004,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        1.9046106865280286,
+        2.7078326291275503
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "boosting",
+      "mean_gain": 0.6678127156024715,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6505241623552537,
+        0.6843468417201347
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "fourier_ridge",
+      "mean_gain": -0.003331884663012762,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.004176826699581041,
+        -0.002631904916320843
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        24,
+        1024
+      ],
+      "control": "classical_selected",
+      "mean_gain": 1.1229664091425013,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5094070090824354,
+        1.7519318118088134
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "ridge",
+      "mean_gain": 0.6285120625642717,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5406189710208851,
+        0.7308742217211833
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "elastic_net",
+      "mean_gain": 0.6919868080961384,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6067027282977006,
+        0.7839990606130574
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "rbf_svr",
+      "mean_gain": 0.5086805363178624,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.49873145956622655,
+        0.521765650702804
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "mlp_l2",
+      "mean_gain": 2.54947229547082,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        2.2126329033955816,
+        2.8662965173383093
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "boosting",
+      "mean_gain": 0.6731511015094784,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6468753140539295,
+        0.701233169049668
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "fourier_ridge",
+      "mean_gain": 9.714451465470119e-18,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -5.551115123125783e-18,
+        2.5673907444456746e-17
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        null
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.9053365322256935,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5056359592080234,
+        1.554875912045731
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "ridge",
+      "mean_gain": 0.6254661750690267,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5377276299606925,
+        0.7271829212245529
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "elastic_net",
+      "mean_gain": 0.6889409206008933,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6030333492864016,
+        0.7812990753620245
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "rbf_svr",
+      "mean_gain": 0.5056346488226175,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4958316157406588,
+        0.5190207398909502
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "mlp_l2",
+      "mean_gain": 2.5464264079755754,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        2.2095117850122543,
+        2.862336059304596
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "boosting",
+      "mean_gain": 0.6701052140142336,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.6431998109778854,
+        0.6985752398849084
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "fourier_ridge",
+      "mean_gain": -0.0030458874952448917,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.00409971391595115,
+        -0.00213857432234531
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "ramsey_calibration",
+        48,
+        1024
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.9022906447304486,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.502490984814229,
+        1.5515907049228643
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.0515625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.04375,
+        0.06015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.06171875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.05390625,
+        0.06953125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.07578125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.05546875,
+        0.0953125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.05078125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0421875,
+        0.05859375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.003125,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.00546875,
+        -0.00078125
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.05703125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0484375,
+        0.0664257812499999
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.0828125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0703125,
+        0.0953125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.08359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0734375,
+        0.09453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0953125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.08201171875,
+        0.10859375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.0796875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.06484375,
+        0.0953125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.00234375,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.00625,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        128,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.08125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.06875,
+        0.09453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.0015625,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0046875
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.00078125,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.00234375
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.00078125,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.00234375
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.0015625,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0046875
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.003125,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.009375
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.0109375,
+      "positive_seeds": 3,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.025
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0015625,
+      "positive_seeds": 2,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.00390625
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        512,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.003125,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.009375
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        2,
+        2048,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.40546875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.3703125,
+        0.43828125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.4359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4171875,
+        0.45625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.41328125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.37966796875000003,
+        0.4453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.41875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.39138671875000003,
+        0.446875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.0046875,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.009375,
+        -0.00078125
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.40078125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.365625,
+        0.434375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.453125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.409375,
+        0.49609375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.46328125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4234375,
+        0.50390625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.44375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.41560546875000004,
+        0.47265625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.40546875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.3796875,
+        0.4296875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.0078125,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.01251953125,
+        -0.003125
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        128,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.4515625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.41953125,
+        0.49140625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.18046875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.1625,
+        0.2015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.2,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.17185546875,
+        0.23515625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.21015625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.1890625,
+        0.23046875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.17890625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.159375,
+        0.2015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.2,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.16953125,
+        0.2359375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.23359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.215625,
+        0.25078125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.24375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.2265625,
+        0.26015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.2484375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.23203125,
+        0.265625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.2328125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.21484375,
+        0.24921875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        512,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.23984375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.21875,
+        0.259375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.025,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0125,
+        0.0390625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.0265625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0171875,
+        0.03671875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.028125,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.01640625,
+        0.04142578124999989
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.02578125,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0140625,
+        0.03984375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.025,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0125,
+        0.0390625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.025,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.01484375,
+        0.03671875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.03046875,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0171875,
+        0.04375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.0359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.021875,
+        0.05234375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.02421875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.01328125,
+        0.03671875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        4,
+        2048,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.03125,
+      "positive_seeds": 9,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.01875,
+        0.04375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.50390625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4890625,
+        0.51953125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.50234375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48984375,
+        0.51484375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.49921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48515625,
+        0.5140625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.5,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4828125,
+        0.5203125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.00625,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.01015625,
+        -0.003125
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.5015625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48828125,
+        0.51640625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.50078125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48125,
+        0.5171875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.49296875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.475,
+        0.51015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.49609375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4765625,
+        0.5140625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.4890625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48125,
+        0.496875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.01015625,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.015625,
+        -0.004667968750000106
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        128,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.49921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48046875,
+        0.515625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.4953125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.45390625,
+        0.5351757812499999
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.521875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.503125,
+        0.5421875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.509375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.46796875,
+        0.5421875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.4796875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.44921875,
+        0.51328125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.5,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4578125,
+        0.5398632812499998
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.49765625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48359375,
+        0.51328125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.4890625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.46875,
+        0.5101757812499998
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.4953125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48046875,
+        0.51015625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.48671875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47341796875000003,
+        0.49921875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        512,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.49609375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48125,
+        0.5125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.3359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.31484375,
+        0.3546875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.340625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.3078125,
+        0.38046875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.353125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.32578125,
+        0.38203125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.325,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.30390625,
+        0.34765625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.3328125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.31328125,
+        0.3515625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.36484375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.3390625,
+        0.390625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.384375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.3453125,
+        0.42580078124999987
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.38046875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.34765625,
+        0.4171875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.33984375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.32419921875,
+        0.35625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        6,
+        2048,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.3734375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.33671875,
+        0.4140625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.496875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48671875,
+        0.50625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.4984375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4890625,
+        0.5078125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.49921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48984375,
+        0.5078125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.4921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48203125,
+        0.50234375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.0015625,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.00390625,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.496875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48671875,
+        0.50625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.484375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47576171875,
+        0.49453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.484375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47576171875,
+        0.49453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.48359375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47421875,
+        0.49375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.48515625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47734375,
+        0.49140625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": -0.01328125,
+      "positive_seeds": 1,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        -0.0203125,
+        -0.00703125
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        128,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.484375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.47576171875,
+        0.49453125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.50390625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48984375,
+        0.51640625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.51015625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.503125,
+        0.5179882812499998
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.50546875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4921875,
+        0.5171875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.50859375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.49609375,
+        0.521875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.50390625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48984375,
+        0.51640625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.49921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.490625,
+        0.50703125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.50390625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.496875,
+        0.5109570312499999
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.503125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4953125,
+        0.5109375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.50078125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.5,
+        0.50234375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        512,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.49921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.490625,
+        0.50703125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.4921875,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.471875,
+        0.5101757812499998
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.49453125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48125,
+        0.5078125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.48828125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.46953125,
+        0.5046875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.5015625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48748046875,
+        0.5203125
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.0
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.4890625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.4703125,
+        0.50546875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "local_logistic_l2",
+      "mean_gain": 0.5109375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.50078125,
+        0.52109375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "local_rbf_svc",
+      "mean_gain": 0.50625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.49453125,
+        0.51796875
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "local_mlp_l2",
+      "mean_gain": 0.51015625,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.49921875,
+        0.52265625
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "local_bayes",
+      "mean_gain": 0.49453125,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.48671875,
+        0.50234375
+      ],
+      "observed_gain": true
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "query_known_bayes",
+      "mean_gain": 0.0,
+      "positive_seeds": 0,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "observed_gain": false
+    },
+    {
+      "configuration": [
+        "late_pauli_query",
+        8,
+        2048,
+        0.01
+      ],
+      "control": "classical_selected",
+      "mean_gain": 0.5109375,
+      "positive_seeds": 10,
+      "seed_count": 10,
+      "descriptive_paired_bootstrap_95": [
+        0.50078125,
+        0.52109375
+      ],
+      "observed_gain": true
+    }
+  ],
+  "elapsed_seconds": 182.16249339999922,
+  "platform": "Windows-11-10.0.22621-SP0",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\\u0424\u0451\u0434\u043e\u0440\\Oxford\\PersonalResearch\\QML_bag_of_tricks\\.venv-clean\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll",
+      "version": "0.3.28",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "vcomp",
+      "filepath": "C:\\Users\\\u0424\u0451\u0434\u043e\u0440\\Oxford\\PersonalResearch\\QML_bag_of_tricks\\.venv-clean\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\\u0424\u0451\u0434\u043e\u0440\\Oxford\\PersonalResearch\\QML_bag_of_tricks\\.venv-clean\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+      "version": "0.3.28",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "versions": {
+    "numpy": "2.2.4",
+    "scipy": "1.15.2",
+    "scikit-learn": "1.9.1",
+    "qiskit": "2.3.1"
+  },
+  "source_hashes": {
+    "core.py": "2d80352418fd47105683f1e76508d993671afdcee7a65c0f293ead48598ed666",
+    "fixtures.py": "505cf7317db177bfa99cd54c898b7d4d12826153fb7a954914405afcd6422075",
+    "geometry.py": "b6e146200ba848cfa15f2b8aa9e172cc1980aa4e0fee3b75ca6565d0412161d8",
+    "__init__.py": "f02fb55092db3431c790f6b2bd7147b0161ee98a74f33057f0a0e6c9351c0e21",
+    "__main__.py": "204a807a58cd1b21a15cda24bc65b1e04145243c7cb5bc57057ea24342da9fef",
+    "learning/benchmark.py": "2773c65e3109be5ce2a9cfb3dafa8fec065cc785eb0760b396d57e3721274633",
+    "learning/demos.py": "85b46fc201ac647a15ded128d0974ba68240b38b449c8e1f0a7634b9acfa2b03",
+    "learning/experimental_learning.py": "b0cf48645781f304193878aee8d99dea535c3033c7af4c8f4c0123b0f8e81c82",
+    "learning/generative.py": "d87b69f3602213d9b30ba2866fc6442629479a5632d3af21fcbaeef520caaf5b",
+    "learning/methods.py": "fe5a427761739c186d453908de64d8d9b48b68e6c2aafb314379bf7c9d2bb9e4",
+    "learning/models.py": "ebcfdd2cf7220302a5267d38d5fc9bd057d4644d09f54a4957981a050cc2c229",
+    "learning/offline_surrogate.py": "65fcf2ba2b7f5857ff549b137837b4ce6a475459d8c94f1cec0ba0fcabac2c04",
+    "learning/opportunities.py": "b996fe1090608ab7eceacf4b6fe6d1e6a48d5f428dfb62988a0a551acec488b6",
+    "learning/study.py": "51deb7497b4379b7416352d906ca79c4e94243ab3ceee08fe1254aba892984d2",
+    "learning/__init__.py": "6a046b5bd7f42b64f299234cd54dd14678976a16e8494e60259c1271dc792dba",
+    "strategies/__init__.py": "b1b50a9e3c9e47e3fb6d7bbe634790014bbf16e8e7d2e95468ec6eacfb0dbd5e",
+    "learning/application_backends/cirq.py": "243025c88b63b014493308c2a159eee2be3f97ae5db05658a85f36ec66b65622",
+    "learning/application_backends/pennylane.py": "48e749ad821a186148507676064efeea3f6877ca5dd54d87ee78e3366f453f99",
+    "learning/application_backends/qiskit.py": "ad9feb2d76ed9c74271fc8d9bbb75f58c944a4cf851b0463bb9ec71909509c77",
+    "learning/application_backends/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/backends/cirq.py": "db31f5cd4add0cbf8b95d18db8ddaa786527fffbacefda360292e02396a73d0d",
+    "learning/backends/pennylane.py": "7d959ada1bf6ec3ba375e84056050f6ec9cfdfafbb7731a4970163bd307b157f",
+    "learning/backends/qiskit.py": "30598ebdcea6364946ad0cd754b0aab7a9bd42d5fdb4274b9d8790990842c242",
+    "learning/backends/__init__.py": "5c3c306059baf58b0f7f14abca71e81d5d32983fda9e06a57b00a41a787a8eae",
+    "learning/recipes/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/born_mmd/cirq_impl.py": "d5a6036dd12f66807c16503e26b4041c2ca8d3aa8fbfb849f9ac81ce56d6b2b9",
+    "learning/recipes/born_mmd/pennylane_impl.py": "37ff0c997e3e9c971821463bedc89e514d4f0d7f1db64d0577039281cb5d3ba9",
+    "learning/recipes/born_mmd/qiskit_impl.py": "a42bf5e2cfdc6214356cbf2ee72ba35697950fc6cbb64a131edfdaf6892273f0",
+    "learning/recipes/born_mmd/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/classical_pretraining/cirq_impl.py": "ebee91e05ce6a791bf0c76a36da5eb16d7b8bd8bfec722a99446615debee72ba",
+    "learning/recipes/classical_pretraining/pennylane_impl.py": "2f8e88efb959d0e27823c78687b9ca371e1ea22f501bf3fbfded8d8b566ac566",
+    "learning/recipes/classical_pretraining/qiskit_impl.py": "bc2d19e25476ffa24482d5bb4feb2ddb090f277b4e5d321eb96a0947cefb3e97",
+    "learning/recipes/classical_pretraining/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/classical_shadows/cirq_impl.py": "ab3586e1294a7dc93754f06d8a6ad0506682a180f2b5e143afaaae72d80369eb",
+    "learning/recipes/classical_shadows/pennylane_impl.py": "b72d841fd05e1c8269d735229e7199433a8e9788e3763502e9fb3726f0a92665",
+    "learning/recipes/classical_shadows/qiskit_impl.py": "ca8f07edddbcc5ae2f2df86974d41d65d78d80e7a84b81d19e5831c247c4060f",
+    "learning/recipes/classical_shadows/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/classical_warm_start/cirq_impl.py": "f43929a9267213a938af32058fd7241992552cee28e6ed421dbca97d90c15ca5",
+    "learning/recipes/classical_warm_start/pennylane_impl.py": "a240bd277ecc03bbde5675147d61b83646718b6b1bc8b7717c2286d5064abd1b",
+    "learning/recipes/classical_warm_start/qiskit_impl.py": "80c6d144fa8c62c95f6ed64a1d05a359657903eb75924492fe3c806fa566e5ff",
+    "learning/recipes/classical_warm_start/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/fidelity_kernel/cirq_impl.py": "2cd0bb26578829d8dd2bd7f799b1ab4468606982dadc5e0e6d14b6cb02c1b776",
+    "learning/recipes/fidelity_kernel/pennylane_impl.py": "1d56354f2a4069da644f7ec7c5a80b42818c42f4b597da3de704261141c8dd64",
+    "learning/recipes/fidelity_kernel/qiskit_impl.py": "33e4ac8d8b8ac77eeaa03d0d913b775713300bc7a56b16702df7c37d5727826c",
+    "learning/recipes/fidelity_kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/frozen_features/cirq_impl.py": "92b22c7caddd0ad442b9cc6f2771dd6bed30635e59327e9aae576285128dd230",
+    "learning/recipes/frozen_features/pennylane_impl.py": "57573d480eaee4d6917afae3a6a749d0f7351599210906b2b4fdb0df5ac2acb1",
+    "learning/recipes/frozen_features/qiskit_impl.py": "19277f4108409b35328a7571e94d55977898f4f4b1a85ef290b55dd8b6098613",
+    "learning/recipes/frozen_features/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/kernel_surrogate/cirq_impl.py": "6430be0ac5913997aebdfb8d1ce31387eb6a4a0da34feea6a8ef4b2f18249cf1",
+    "learning/recipes/kernel_surrogate/pennylane_impl.py": "3a88533ef08ca6284dcc18fd1d1c0cb34f379d9d3cdd496169a52b6df083de72",
+    "learning/recipes/kernel_surrogate/qiskit_impl.py": "b9aabcac98030e7db9493405652ab43f9069befc8c56e92d399ded544e1b8d5c",
+    "learning/recipes/kernel_surrogate/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/kipu_offline_surrogate/cirq_impl.py": "0164f214fcf00ba60a9ed7d3db464838055b6f422b19eef277222a68966a6245",
+    "learning/recipes/kipu_offline_surrogate/pennylane_impl.py": "8f498a9564d8805e07abf3119fb86797d2c0de5a88c54f2ddf8a4a63c5e0a921",
+    "learning/recipes/kipu_offline_surrogate/qiskit_impl.py": "e0aaa854bea67879d9083345a204ce2bb3b298112c377a525d4f82769d5a86ae",
+    "learning/recipes/kipu_offline_surrogate/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/nystrom/cirq_impl.py": "f6deece74b78e47c60c2051d91f0d930a591a92c409a35f6d662dda80296e873",
+    "learning/recipes/nystrom/pennylane_impl.py": "ad0504105e954d8aa0eca27b42444e691ec8a2e2079cb8e561c4eca2ebc886ec",
+    "learning/recipes/nystrom/qiskit_impl.py": "467f527eb5e08272c50f7996d48c3a6df32f3b6541a0e4af241a063824f8f183",
+    "learning/recipes/nystrom/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/parameter_shift/cirq_impl.py": "c739d8be9ee42cc0f4a9530aadef9a8bcd7a4f982c5b42b048af64eee8dd56e1",
+    "learning/recipes/parameter_shift/pennylane_impl.py": "7a5bfba495c826edac55bc564b5b584bb74bea5cbe284139a5e8b0135eba80c1",
+    "learning/recipes/parameter_shift/qiskit_impl.py": "92693be34811bd2b873a15adb40810ccd5a25b4d11fef033d3706d67dfee7843",
+    "learning/recipes/parameter_shift/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/projected_kernel/cirq_impl.py": "1c741708a09c10d3ae60bd7c5db907761a90c95efe29d561fc5fd0d8527fecd9",
+    "learning/recipes/projected_kernel/pennylane_impl.py": "971a32158121adbe03cf025e2bb2964144745de16ba6b0f2d0bd75d309ae428f",
+    "learning/recipes/projected_kernel/qiskit_impl.py": "c4639fd3236df91f25613e646eb84eee3b55206f62acde128fd2eefa7f003ac4",
+    "learning/recipes/projected_kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/reuploading/cirq_impl.py": "5956c066b71c1b55d08f9a3b112f2f10ff9eaed0df65db3de3280193ad9e113f",
+    "learning/recipes/reuploading/pennylane_impl.py": "068563eaa36c5b6a27911bb213cdc2fa134e79783480d20ce10256dfec7e4eb8",
+    "learning/recipes/reuploading/qiskit_impl.py": "6229544667be71ab0fe8dcbd7d455a2ee6e863f35bb695806bf6ad7ee2ccf275",
+    "learning/recipes/reuploading/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/shot_allocation/cirq_impl.py": "a77d52d40b7c68423d45a13cb8a618665b0a29c2ad37d35029f46304310e0b8f",
+    "learning/recipes/shot_allocation/pennylane_impl.py": "bf4981c5e4f0499a63318676200efc72c41273483d2697389f20ec8e0141f393",
+    "learning/recipes/shot_allocation/qiskit_impl.py": "41d638074ac93d6c13103180c2ce65b34133f684559d667cdfa8ba79cc189998",
+    "learning/recipes/shot_allocation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "learning/recipes/spsa/cirq_impl.py": "1b8b03684d33734202673dda4bcc3f50c82f78d5737b167cd7240153a3bc5f6e",
+    "learning/recipes/spsa/pennylane_impl.py": "314ca17a7facac612f8d94b77b0e73581654477703b19cbf3c97b9d6bf604a4a",
+    "learning/recipes/spsa/qiskit_impl.py": "621d9ce51fa2f55a0d505130e80e849ea5aba86d4ab8c91416a27be55e83e82b",
+    "learning/recipes/spsa/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "strategies/constrained_hva/cirq_impl.py": "f18b4335a69ce3b18752952ea3c0be8fc7d1a64c465494e447a4378afa66ac98",
+    "strategies/constrained_hva/pennylane_impl.py": "4bba777976737ef3a026f31e3662372f4ce01bcbe7da42321643d27c3d4a8e1a",
+    "strategies/constrained_hva/qiskit_impl.py": "c9f85e49d5ff5a13baaea41be4bd3cbea6dce7425b87c4658c12b5a86f809c44",
+    "strategies/constrained_hva/__init__.py": "44fcada410067c7e4f425952e8815fee4a7a72704c3c3cb3ed6824099dcf73c3",
+    "strategies/correlated_parameters/cirq_impl.py": "759f966fdde0eaf7bc76915de9df364c064b05093c1d2ced0a194ea389fea0e0",
+    "strategies/correlated_parameters/pennylane_impl.py": "2c76e028d8d6dd062492270c41d06251b6e17c40e7c639a2be431db7b7136acc",
+    "strategies/correlated_parameters/qiskit_impl.py": "569db42a5b86e1fd424b9eced309452bfdad12f3917c90ef9480e53c981b4498",
+    "strategies/correlated_parameters/__init__.py": "e5f9f2c6fb5edb5aee038831261b1a09dc1c44ec4859399d9785d45d68c7125b",
+    "strategies/engineered_dissipation/cirq_impl.py": "648780aa6f06858fd0ad34e9fe496458507d45e03664dc25d0a9c78e7c1f9adb",
+    "strategies/engineered_dissipation/pennylane_impl.py": "13efee8ae44a3883b8b02ef2000e646136dab2658ee17d137531fbf676dd72b6",
+    "strategies/engineered_dissipation/qiskit_impl.py": "cf63a1f55b638610669e537a9922ed6bfbb9a33fcd2bd893c621f44160374e06",
+    "strategies/engineered_dissipation/__init__.py": "6769de0a073f39393e85bcfd90910369d9fa294797a6bf64557fc67a989de4de",
+    "strategies/finite_local_depth/cirq_impl.py": "4e08f526453bac5c164b773e3a612e42da75055645586aaa4b26371e638a9262",
+    "strategies/finite_local_depth/pennylane_impl.py": "076dea7443a2cc1c4eb5094281acba47d3317a617c8db15a442d5a8fb0cfc3c6",
+    "strategies/finite_local_depth/qiskit_impl.py": "19d016da1a7a2e49da8ede6b4c128b804090918a492389a5e888addd473b8e0e",
+    "strategies/finite_local_depth/__init__.py": "ae9652833b448b6455aa794304c9a1a93456cc90bd059857cd980d295e8bfe81",
+    "strategies/gaussian_init/cirq_impl.py": "0858492ac8f558e544816b47bdaf3cc06d8a2880f63bfefab5522a8e9a5d476f",
+    "strategies/gaussian_init/pennylane_impl.py": "9383dedf3e81557c90b720e00833d5214334209ae910bc290dbeed854c230b05",
+    "strategies/gaussian_init/qiskit_impl.py": "4c22673b93fe880fdae5cdc37b32d5e5f76dbb053bce2c3858d376705c3ed406",
+    "strategies/gaussian_init/__init__.py": "43b2ea63f4bba200e07b324138a21e8f34c5ac0efb19871c6e60395e621f391c",
+    "strategies/gaussian_mixture/cirq_impl.py": "503cc5a1426470dfac5cc33070d1052db672a4aefce4d5c0fc23eb41c13a5e16",
+    "strategies/gaussian_mixture/pennylane_impl.py": "6231853628b4da0a9e036f48f80448cf51adf61379bf4e96dc87ebb5fe4819f6",
+    "strategies/gaussian_mixture/qiskit_impl.py": "494b84542b26c7986f5578603e30149e4aa2bb54df7db3ff8a77998ebe923a13",
+    "strategies/gaussian_mixture/__init__.py": "cd7ddf6e35d6ab71fca0f5a57ef9ce7ca965c556a41a42e388c3373dde02f635",
+    "strategies/identity_block_init/cirq_impl.py": "a2fb7cb157a815a957a7d2bf85d9fe9d911e0722a67ab862e6471660bf3b9064",
+    "strategies/identity_block_init/pennylane_impl.py": "941c10b2470de07d6810c5d88204214f680fa65d83d9a7672c64313a044104ba",
+    "strategies/identity_block_init/qiskit_impl.py": "8f4b12df5b7a4f817de1df7274798dc085a984eec2dafbdc37c21de407ffd931",
+    "strategies/identity_block_init/__init__.py": "d48a5a6ce79c75f110f81adf3c0ba81292bbd2c71119305c30da78aaf9a16eb2",
+    "strategies/local_loss/cirq_impl.py": "31b39c80b8d315f0599a6651e9fc793c60dff4f1e5374204811703c2b257a7e7",
+    "strategies/local_loss/pennylane_impl.py": "46b7de082b53837816b0d7ab7da44f6bb28213eb72d231d78898d829e7942684",
+    "strategies/local_loss/qiskit_impl.py": "a985b800516eed88ee6f66257e2754fc4980cbbe26ff7b3eb02ed73f826112f6",
+    "strategies/local_loss/__init__.py": "fa1bc7d83bf5b8d819aac6fe951e2923d4cebdf888e8fa8306a54d5893cb9490",
+    "strategies/low_excitation/cirq_impl.py": "eacc4f17c27f5d22b5712fd81bb91169c0eb9df9dfafe45dc99bad08c968d2fd",
+    "strategies/low_excitation/pennylane_impl.py": "40c846af92c24287befee65361008bd7099b2e54bfadd288bd6d1078b3d1c044",
+    "strategies/low_excitation/qiskit_impl.py": "d61b0d9e61124d660d9e557384527e50f476df5dafb19aa4b9f2f39810b6b894",
+    "strategies/low_excitation/__init__.py": "5c6a2a1a6878e30a03ad5fde8a621e3469977a6d74f69dd738571f9a69e6f828",
+    "strategies/matchgate/cirq_impl.py": "9e2e905aceb239f5ea071124f9a6bf2a76eb6826d1bf8100838ac560fa7b3411",
+    "strategies/matchgate/pennylane_impl.py": "5eb708ac452c0cda0ee587e7eb53dba0645b3a20c615fc52e569ac3f36693870",
+    "strategies/matchgate/qiskit_impl.py": "a4c07587c08d0ed9c91515303828d3fd498509b3f398b132e2d47274d359170b",
+    "strategies/matchgate/__init__.py": "a012ca068a3049ec0e8163f85ef34a06c99b004dd2e9207f6a902289ebcdeef4",
+    "strategies/mera/cirq_impl.py": "2905bfe4e5962cc8a9ff3938eb8c8a65cbbf09016d8726c36497c8c40fe91343",
+    "strategies/mera/pennylane_impl.py": "3392a39619b8d67a1c01a6d7305f613d501112afdcb9d2c7330d1613eb8684ff",
+    "strategies/mera/qiskit_impl.py": "b1f8ca8d7cb7435b9611e499edc988df4281698332d46f48056052029681fa06",
+    "strategies/mera/__init__.py": "933dba75ad6983f633a940b487cd0f90e9ea14a429adec8778663f68fd95be36",
+    "strategies/mmd_loss/cirq_impl.py": "2f49dbdc9f478f2ae031296e1ba4e9755989fb11cd1819854442690ec8da8868",
+    "strategies/mmd_loss/pennylane_impl.py": "28b3af10b6bbdd26e49f417c56677a66d299330e47eba3b8c137f7f4fa703ab1",
+    "strategies/mmd_loss/qiskit_impl.py": "dc45a10e3d7286ae5e583aa5fb46b731d3905ddb533567377103c368d7c296eb",
+    "strategies/mmd_loss/__init__.py": "dc2b4de7ba46cf09122509e45ec1f413b62a40f828ab04a278c605c650ee35b4",
+    "strategies/mps/cirq_impl.py": "a627e8b8473bcd33e00fcb0b0c51cde07d8dd48d557d19173d90c81fa68e081c",
+    "strategies/mps/pennylane_impl.py": "7051e1ba69f522a229fbc68aac0b4162aea587237bdef2479b23e65bcda46e38",
+    "strategies/mps/qiskit_impl.py": "1e68e2d7b09ddac194b2785f7aa24108e8bf822c2fca51811d71e2900caa5d42",
+    "strategies/mps/__init__.py": "5a429d0ea5c2ef3b1402a434c3136924a295de093dc69b28d2586eebbbe81ad2",
+    "strategies/natural_gradient/cirq_impl.py": "fb371c514656fa73079c92d88039f7ec7eb2f23350592173bb5a64b422d445ee",
+    "strategies/natural_gradient/pennylane_impl.py": "3eff93c73991bce142f2aa0e99249f4299ef0c273d2699fb72c0bed3e4591ad5",
+    "strategies/natural_gradient/qiskit_impl.py": "c3c6c74c3df66365f36066a2bb7c40c6b59a85b12ab68a6805e531966dec2367",
+    "strategies/natural_gradient/__init__.py": "23ca49976305d1f526c64ab085633a792b967059b96c66049e63d1b9e0946c3b",
+    "strategies/near_identity_encoding/cirq_impl.py": "21d5380ebbbce85df6ead4b3bfcd5271c20906a92d475ffe237443a3f95f5891",
+    "strategies/near_identity_encoding/pennylane_impl.py": "fda3aa0f54a0598c9850f45e3f6ccc6b77fbd283eafc913c4c31fbb77679214d",
+    "strategies/near_identity_encoding/qiskit_impl.py": "2e03d3af9d23b82c34975992909bdf5c3e767a08e5c24aab3dcc97f291158fc1",
+    "strategies/near_identity_encoding/__init__.py": "63b33faac9c6a04af82ea6a497b338229c566d2ebe048855c66965e0550ec9df",
+    "strategies/nonunital_noise/cirq_impl.py": "c3d49a8469c54c4cba64b6e50fd5b5e1f50dfaf6127a39fe8fb7d016b6d6eb10",
+    "strategies/nonunital_noise/pennylane_impl.py": "fc40ecfe52b18b66c11b603298c196cc30f3fa35112a35ae64e51a2dc7d39919",
+    "strategies/nonunital_noise/qiskit_impl.py": "9d7b910968f877035b81dd615f8065d8d2ed0e9c07366fca41842a731f887235",
+    "strategies/nonunital_noise/__init__.py": "7d15983b38b3d28ae6f72942e4795f7b41396e35fa4b7d8b78eb623b072b84b4",
+    "strategies/permutation_equivariant/cirq_impl.py": "20eec8637af0cf2937d5d0e74e99a9847923e2cd315f4d51e54c540ddfd8babe",
+    "strategies/permutation_equivariant/pennylane_impl.py": "192cb23096c71630cde1815c5c5bcb876e85b9ee6cf473a99c1885a29d17bd1f",
+    "strategies/permutation_equivariant/qiskit_impl.py": "6a486db4f847138e119f7c95ef0be2e49f6fd134608660968231781932bdff31",
+    "strategies/permutation_equivariant/__init__.py": "6a7d90d8cb0da654a84fd5180fc6d6181314f4c822ef7a305d6b2e866d142373",
+    "strategies/qcnn/cirq_impl.py": "ac3e258be2d73fd30f151d7dd8f0965066515d518f8282c793b878947c4e9d13",
+    "strategies/qcnn/pennylane_impl.py": "cc0ffa9af778ea11e8c1b78d7aff34ffdcbb8f36178cc8b8a0571db61bbe7712",
+    "strategies/qcnn/qiskit_impl.py": "6a4efaf8343389eef8dc6631301348d3f9beb0dd508f856b4da331d35a77f2bb",
+    "strategies/qcnn/__init__.py": "0a993f773a4f287dca88c7050c05ca630a46fbc4ae120f7751a9f87fda8a719b",
+    "strategies/ttn/cirq_impl.py": "89295ece3c4238dcbae28c0df20f8535838a8bc74f6b96854f67bed737ec2d4c",
+    "strategies/ttn/pennylane_impl.py": "7b83b32c4a7869ffc91deaa8d60b852998a8f7898253ccda01d1d446e777b77f",
+    "strategies/ttn/qiskit_impl.py": "1e6d567ff9ca071ea4a17b02e80e5d14b7ff2400d4474231568bea1e2f0f6781",
+    "strategies/ttn/__init__.py": "ea1bd14395fd53a669fa778508315464674b8951133ae19ac9b9cb077ef77bbe"
+  },
+  "protocol_sha256": "7bac6bc346d3fd30e486e94b2dbaade90a2242cc73be03345f0a2c2e57938bbd",
+  "limits": "No hardware runs or computational speedup. Periodic task has an identical cheap classical representation. Quantum-state task compares acquisition protocols, not the power of regularization; general POVM lower bounds belong to the cited paper, not this finite simulation. All cells are retained; intervals are descriptive, uncorrected for multiple comparisons.",
+  "full_report": "opportunities.json.gz",
+  "full_json_sha256": "612856ef97692c07e26c8ad5a3218dba5c91177e36c592e66ae924829b144699",
+  "experiment_configurations": 280,
+  "base_evaluations": 1720
+}

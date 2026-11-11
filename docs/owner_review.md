@@ -10,6 +10,9 @@ Review these artifacts in order:
    expected outputs and adaptation guidance.
 2. [Real-data study](study.md): dataset selection, target scaling, candidate grids,
    split isolation, uncertainty interpretation and complete negative findings.
+   Also review the [application comparisons](applications/results.md): late-query
+   access, matched copy counts, restricted local measurements, the optimal
+   likelihood control, classical Fourier equivalence and simulated-noise scope.
 3. [Agent implementation evaluation](agent_evaluation.md): prompts, acceptance
    checks, task restrictions, self-reported logs and limits of inference.
 4. [Evidence coverage](coverage.md): theorem conditions, proof-to-code gaps and

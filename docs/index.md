@@ -10,6 +10,12 @@ and its complete results, including the stronger classical scores in these small
 configurations. The [five agent tasks](agent_evaluation.md) show bounded examples
 of implementation and independent replay.
 
+For application-specific incentives, explore the [new application benchmarks](applications/index.md):
+periodic calibration and late-query quantum-state characterization. Their
+[complete results](applications/results.md) compare tuned regularized models,
+optimal inference for the selected classical records, and domain-informed
+controls that can remove the quantum benefit.
+
 The [owner review packet](owner_review.md) collects the outstanding scientific
 review. See [release instructions](release.md) for local artifacts and publication.
 

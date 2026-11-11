@@ -5,6 +5,8 @@ recursive-include docs *.md *.js *.png *.svg
 recursive-include scripts *.py
 recursive-include tests *.py
 recursive-include results *.json
+recursive-include results *.json.gz
+exclude results/opportunities.json
 recursive-include notebooks *.ipynb
 recursive-include agent_eval *.py *.json *.md *.csv
 prune results/local
