@@ -16,5 +16,6 @@ jobs:
       - run: python scripts/run_notebooks.py
       - run: python -m pytest -q
       - run: python scripts/audit_opportunity_results.py
+      - run: python scripts/audit_paper_results.py
       - run: python -m mkdocs build --strict
       - run: python -m build

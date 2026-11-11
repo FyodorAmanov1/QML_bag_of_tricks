@@ -7,6 +7,9 @@ Agent-friendly QML recipes with explicit assumptions and classical comparisons.
 - A bounded real-data study: three datasets, ten repeated splits, eight models,
   three validation candidates per model and 240 untouched-test evaluations.
 - Five agent-produced project solutions, independently re-executed and graded.
+- Bounded numerical reproductions of two classical-input application papers:
+  alloy-phase classification and wireless channel equalization, with pinned
+  author artifacts, fresh circuit/dynamics runs and stronger classical controls.
 - Two application prototypes with 280 configurations and 1,720 base evaluations:
   periodic calibration and late-query quantum-state learning. Includes tuned
   regularized controls, optimal local-record inference and controls that remove

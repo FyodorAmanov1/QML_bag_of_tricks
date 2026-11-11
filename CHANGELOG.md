@@ -1,5 +1,14 @@
 # Changelog
 
+## Classical-application paper reproductions
+
+- Added pinned, licensed alloy data and score archives for Pei et al. (Matter,
+  2024), fresh author-workflow replay and leakage-free tuned-baseline comparisons.
+- Added a bounded six-qubit channel-equalization replication for Hu et al.
+  (Nature Communications, 2024), with stronger causal classical equalizers.
+- Added independent SDK verification, provenance manifests and artifact audits;
+  archived statistics are kept distinct from fresh simulation results.
+
 ## Application benchmarks — 2026-11-11
 
 - Added periodic calibration and late-query quantum-state property benchmarks,

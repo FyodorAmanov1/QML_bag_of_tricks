@@ -10,3 +10,4 @@ exclude results/opportunities.json
 recursive-include notebooks *.ipynb
 recursive-include agent_eval *.py *.json *.md *.csv
 prune results/local
+recursive-include reproductions *.json *.csv *.npy *.upstream *.md

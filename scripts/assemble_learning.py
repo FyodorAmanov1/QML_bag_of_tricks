@@ -153,6 +153,78 @@ def bell_probabilities(rho):
 '''
 }
 
+PAPER_BACKENDS = {
+"qiskit": '''"""Independent native circuits used to verify paper-reproduction models."""
+import numpy as np
+from qiskit import QuantumCircuit
+from qiskit.quantum_info import Statevector, DensityMatrix, Operator
+
+def zz_state(x, repetitions=1):
+    n = len(x); c = QuantumCircuit(n)
+    edges = [(0,1)] if n==2 else [(n-1,0)]+[(i,i+1) for i in range(n-1)]
+    for _ in range(repetitions):
+        for i in range(n): c.h(i)
+        for i in range(n): c.p(float(2*x[i]), i)
+        for i,j in edges:
+            c.cx(i,j); c.p(float(2*(np.pi-x[i])*(np.pi-x[j])), j); c.cx(i,j)
+    order = [int(format(i,f'0{n}b')[::-1],2) for i in range(2**n)]
+    return np.asarray(Statevector.from_instruction(c))[order]
+
+def evolve(rho, unitary):
+    n = int(np.log2(len(rho)))
+    order = [int(format(i,f'0{n}b')[::-1],2) for i in range(2**n)]
+    c = QuantumCircuit(n)
+    c.unitary(Operator(unitary[np.ix_(order,order)]), range(n))
+    out = np.asarray(DensityMatrix(rho[np.ix_(order,order)]).evolve(c))
+    return out[np.ix_(order,order)]
+''',
+"pennylane": '''"""Independent native circuits used to verify paper-reproduction models."""
+import numpy as np
+import pennylane as qml
+
+def zz_state(x, repetitions=1):
+    n = len(x); dev = qml.device('default.qubit', wires=n)
+    edges = [(0,1)] if n==2 else [(n-1,0)]+[(i,i+1) for i in range(n-1)]
+    @qml.qnode(dev)
+    def circuit():
+        for _ in range(repetitions):
+            for i in range(n): qml.Hadamard(wires=i)
+            for i in range(n): qml.PhaseShift(float(2*x[i]), wires=i)
+            for i,j in edges:
+                qml.CNOT(wires=[i,j]); qml.PhaseShift(float(2*(np.pi-x[i])*(np.pi-x[j])), wires=j); qml.CNOT(wires=[i,j])
+        return qml.state()
+    return np.asarray(circuit(),dtype=complex)
+
+def evolve(rho, unitary):
+    n = int(np.log2(len(rho))); dev = qml.device('default.mixed', wires=n)
+    @qml.qnode(dev)
+    def circuit():
+        qml.QubitDensityMatrix(rho,wires=range(n))
+        qml.QubitUnitary(unitary,wires=range(n))
+        return qml.density_matrix(wires=range(n))
+    return np.asarray(circuit(),dtype=complex)
+''',
+"cirq": '''"""Independent native circuits used to verify paper-reproduction models."""
+import numpy as np
+import cirq
+
+def zz_state(x, repetitions=1):
+    n = len(x); q = cirq.LineQubit.range(n); c = cirq.Circuit()
+    edges = [(0,1)] if n==2 else [(n-1,0)]+[(i,i+1) for i in range(n-1)]
+    for _ in range(repetitions):
+        c.append(cirq.H.on_each(*q))
+        for i in range(n): c.append(cirq.ZPowGate(exponent=float(2*x[i]/np.pi))(q[i]))
+        for i,j in edges:
+            c.append(cirq.CNOT(q[i],q[j])); c.append(cirq.ZPowGate(exponent=float(2*(np.pi-x[i])*(np.pi-x[j])/np.pi))(q[j])); c.append(cirq.CNOT(q[i],q[j]))
+    return cirq.Simulator(dtype=np.complex128).simulate(c,qubit_order=q).final_state_vector
+
+def evolve(rho, unitary):
+    n = int(np.log2(len(rho))); q = cirq.LineQubit.range(n)
+    c = cirq.Circuit(cirq.MatrixGate(unitary).on(*q))
+    return cirq.DensityMatrixSimulator(dtype=np.complex128).simulate(c,initial_state=rho,qubit_order=q).final_density_matrix
+'''
+}
+
 RECIPES = [
 ("kipu_offline_surrogate", "Kipu-style offline quantum-feature surrogates", "https://kipu-quantum.com/blog/classical-surrogates-for-quantum-feature-extraction", "Public vendor workflow: acquire quantum feature pairs, fit a classical surrogate, and deploy with a classical predictor. Ridge is the student family reported in Kipu's example. The native demos here use small reference teachers, not Kipu's DQFE circuits, proprietary SDK, datasets or claimed accuracy figures. Held-out fidelity is an empirical acceptance gate, not a universal theorem.", "See [the full teacher-first workflow](kipu_workflow.md). Use an already-fitted quantum feature teacher or import real Kipu input/output feature pairs. Freeze the teacher before distillation, preserve the downstream predictor, and export a teacher-free classical artifact only after validation. This entry explicitly differs from density-embedding fidelity-kernel approximation and Nyström."),
 ("parameter_shift", "Parameter-shift differentiation", "https://doi.org/10.1103/PhysRevA.99.032331", "Exact expectation derivative identity for a single Pauli rotation occurrence per coordinate; unbiased sampled expectation gradients. Nonlinear losses require a classical chain rule; shifting the loss itself is generally incorrect.", "Use finite-shot training when numerical differences would amplify shot noise. Shared coordinates need occurrence-wise derivatives; arbitrary generators need generalized rules."),
@@ -251,6 +323,15 @@ def assemble_application_backends():
     print('Generated three independent application verification backends.')
 
 
+def assemble_paper_backends():
+    directory = ROOT/'src/qml_tricks/learning/replication_backends'
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory/'__init__.py').write_text('')
+    for sdk, source in PAPER_BACKENDS.items():
+        (directory/f'{sdk}.py').write_text(source, encoding='utf-8')
+
+
 if __name__ == '__main__':
     main()
     assemble_application_backends()
+    assemble_paper_backends()

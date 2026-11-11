@@ -16,6 +16,10 @@ periodic calibration and late-query quantum-state characterization. Their
 optimal inference for the selected classical records, and domain-informed
 controls that can remove the quantum benefit.
 
+The [classical-application paper reproductions](reproductions/index.md) target
+published materials screening and wireless channel equalization, using pinned
+author artifacts, fresh numerical runs and stronger classical controls.
+
 The [owner review packet](owner_review.md) collects the outstanding scientific
 review. See [release instructions](release.md) for local artifacts and publication.
 

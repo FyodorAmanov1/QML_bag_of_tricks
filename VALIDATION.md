@@ -6,7 +6,7 @@ on 2026-11-11. Earlier reference snapshots are retained from 2026-11-09.
 | Check | Observed result |
 |---|---|
 | Clean virtual environment, pinned dependency closure | All reference dependencies installed; `pip check` reports no broken requirements |
-| Native SDK suite | 199 tests passed, including probability agreement across Qiskit, PennyLane and Cirq |
+| Native SDK suite | 219 tests passed, including probability agreement across Qiskit, PennyLane and Cirq |
 | Analytical checks | Product-state objective/gradient formulas, exact variance quadrature, tied-parameter derivative |
 | Structural checks | Excitation conservation and deliberate control leakage; permutation-equivariant output |
 | Sampling and reporting | Finite-shot consistency, exact/sampled evaluation accounting, serializable results |
@@ -22,6 +22,9 @@ on 2026-11-11. Earlier reference snapshots are retained from 2026-11-09.
 | Agent implementation tasks | Five scripts independently re-executed and passed artifact checks; three agents, two follow-up tasks; not a general capability estimate |
 | Application comparisons | 280 fixed configurations, 1,720 base evaluations and ten independent synthetic-data seeds; zero failed final evaluations or tuning candidates; all 221 candidate warnings retained |
 | Application identities | Three native SDKs verify Ramsey/Fourier equivalence and Bell probabilities, including YY signs and bit ordering; likelihood-ratio and matched-copy accounting checked independently |
+| Classical-application papers | Recovered the authors' 300-split alloy archive mean; all 20 fresh quantum replay scores match their archived seeds exactly; ten new controlled alloy splits and three new communications datasets |
+| Paper reproduction audit | 158 fresh model evaluations independently audited, including six extra classical fits matching the quantum training-message budget; raw predictions, split/fit indices, source hashes and pinned artifacts checked |
+| Reservoir implementation | Native density evolution and reduced-memory contraction agree in all three SDKs, including the full six-qubit reproduction configuration |
 | Packaging | 0.2.0 wheel/source archive built; wheel imported independently of the source tree and ran a native circuit plus learning model; source archive contains three notebooks and five agent solutions |
 
 Reference versions: Qiskit 2.3.1, Qiskit Aer 0.17.2, PennyLane 0.45.1, Cirq Core
@@ -40,6 +43,7 @@ python -m venv .venv-clean
 .\.venv-clean\Scripts\python.exe -m pytest -q
 .\.venv-clean\Scripts\python.exe scripts/grade_agent_tasks.py
 .\.venv-clean\Scripts\python.exe scripts/audit_opportunity_results.py
+.\.venv-clean\Scripts\python.exe scripts/audit_paper_results.py
 .\.venv-clean\Scripts\python.exe -m pip check
 .\.venv-clean\Scripts\python.exe -m mkdocs build --strict
 ```
@@ -56,6 +60,12 @@ it compares against selected random single-copy local records, including optimal
 known-family inference. Knowing the query early removes that gap. Periodic
 quantum features match cheap classical Fourier features in the exact limit.
 These synthetic results establish no broad tabular, runtime or hardware advantage.
+
+The paper reproductions use real alloy observations and synthetic classical
+communication messages. They recover the original comparator gains within their
+stated bounded numerical scope, while stronger tuned classical models perform
+better in the additional comparisons. Archived statistics are distinguished
+from new runs; the complete published sweeps and hardware work are not reproduced.
 
 Linux CI is configured but was not executed locally. Hardware jobs, production
 validation, exhaustive literature coverage and full theorem reproductions are

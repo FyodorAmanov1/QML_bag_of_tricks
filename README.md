@@ -32,6 +32,11 @@ Install `.[all,learning]` when you want all three SDKs.
 
 ## What does the evidence show?
 
+For classical application data, the [paper reproduction suite](docs/reproductions/index.md)
+tests published alloy-phase prediction and wireless channel equalization studies.
+It distinguishes archived-number recovery, fresh simulations and comparisons
+against stronger tuned classical models. See the [complete reproduction report](docs/reproductions/results.md).
+
 The [application benchmarks](docs/applications/index.md) now test useful
 structure explicitly: periodic sensor calibration and late-query quantum-state
 characterization. Across ten seeds, the eight-qubit, 512-copy state experiment

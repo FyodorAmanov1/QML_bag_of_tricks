@@ -13,6 +13,8 @@ Review these artifacts in order:
    Also review the [application comparisons](applications/results.md): late-query
    access, matched copy counts, restricted local measurements, the optimal
    likelihood control, classical Fourier equivalence and simulated-noise scope.
+   The [paper reproductions](reproductions/results.md) separately identify
+   archived results, fresh replay, author preprocessing and stronger controls.
 3. [Agent implementation evaluation](agent_evaluation.md): prompts, acceptance
    checks, task restrictions, self-reported logs and limits of inference.
 4. [Evidence coverage](coverage.md): theorem conditions, proof-to-code gaps and

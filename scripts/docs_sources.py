@@ -29,4 +29,7 @@ def on_files(files, config):
         path = root/'results'/name
         if path.exists():
             files.append(File.generated(config,f'source/results/{name}',abs_src_path=str(path)))
+    for path in (root/'src/qml_tricks/learning/replication_backends').glob('*.py'):
+        if path.name != '__init__.py':
+            files.append(File.generated(config,f'source/replications/{path.name}',abs_src_path=str(path)))
     return files

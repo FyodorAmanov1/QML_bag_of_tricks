@@ -1,0 +1,62 @@
+[
+  {
+    "study": "alloys",
+    "repository": "https://github.com/peizong/quantum-machine-learning-metallurgy",
+    "commit": "406f405980456c69213eae16d5df257f3fce0323",
+    "path": "simulator_data_process/alloy-property-avg.csv",
+    "url": "https://raw.githubusercontent.com/peizong/quantum-machine-learning-metallurgy/406f405980456c69213eae16d5df257f3fce0323/simulator_data_process/alloy-property-avg.csv",
+    "local_path": "reproductions/alloys/data.csv",
+    "sha256": "76f7848916b8aedfeaa4e12bc74886438a240919d0d555300d83bfd52d13b40b",
+    "bytes": 121830
+  },
+  {
+    "study": "alloys",
+    "repository": "https://github.com/peizong/quantum-machine-learning-metallurgy",
+    "commit": "406f405980456c69213eae16d5df257f3fce0323",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/peizong/quantum-machine-learning-metallurgy/406f405980456c69213eae16d5df257f3fce0323/LICENSE",
+    "local_path": "reproductions/alloys/LICENSE.upstream",
+    "sha256": "ec10df88c1f0398e4e602630d9704028f0cdecb9eede12893596dfca86f1fd1e",
+    "bytes": 1064
+  },
+  {
+    "study": "alloys",
+    "repository": "https://github.com/peizong/quantum-machine-learning-metallurgy",
+    "commit": "406f405980456c69213eae16d5df257f3fce0323",
+    "path": "simulator_data_process/res/zz_1.2_8.npy",
+    "url": "https://raw.githubusercontent.com/peizong/quantum-machine-learning-metallurgy/406f405980456c69213eae16d5df257f3fce0323/simulator_data_process/res/zz_1.2_8.npy",
+    "local_path": "reproductions/alloys/published_8.npy",
+    "sha256": "8dd0f440ed2c6d0c215aa3ed2e8749dbe664aa71fac6e3148ef347b62595e9a4",
+    "bytes": 24944
+  },
+  {
+    "study": "alloys",
+    "repository": "https://github.com/peizong/quantum-machine-learning-metallurgy",
+    "commit": "406f405980456c69213eae16d5df257f3fce0323",
+    "path": "simulator_data_process/res/zz_1.2_10.npy",
+    "url": "https://raw.githubusercontent.com/peizong/quantum-machine-learning-metallurgy/406f405980456c69213eae16d5df257f3fce0323/simulator_data_process/res/zz_1.2_10.npy",
+    "local_path": "reproductions/alloys/published_10.npy",
+    "sha256": "e5cd8c009d5a4a4b135a63ad2226c68558e93504ea25f0f31b26a044b530247a",
+    "bytes": 24944
+  },
+  {
+    "study": "alloys",
+    "repository": "https://github.com/peizong/quantum-machine-learning-metallurgy",
+    "commit": "406f405980456c69213eae16d5df257f3fce0323",
+    "path": "simulator_data_process/scripts/run_1.2_split.py",
+    "url": "https://raw.githubusercontent.com/peizong/quantum-machine-learning-metallurgy/406f405980456c69213eae16d5df257f3fce0323/simulator_data_process/scripts/run_1.2_split.py",
+    "local_path": ".cache/paper_sources/alloy_script.py",
+    "sha256": "fb23e52445a041cac7757dccf2875532e1b72f0f51f8ab48e522b0c7c9537c6e",
+    "bytes": 4828
+  },
+  {
+    "study": "nisqrc",
+    "repository": "https://github.com/skhanCC/NISQRC-Codes",
+    "commit": "153cd59aef951710f52acef764edae1c2564a26d",
+    "path": "3_Channel_Equalization_Error_vs_SNR.ipynb",
+    "url": "https://raw.githubusercontent.com/skhanCC/NISQRC-Codes/153cd59aef951710f52acef764edae1c2564a26d/3_Channel_Equalization_Error_vs_SNR.ipynb",
+    "local_path": ".cache/paper_sources/nisqrc.ipynb",
+    "sha256": "31222b681a5c3a1553ec420523b8dc5fb3c8bf181ae27360651cff8163b445f0",
+    "bytes": 476620
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "scope": "two classical-data application papers; bounded numerical replications, not complete hardware reproductions",
+  "alloys": {
+    "doi": "10.1016/j.matt.2024.05.035",
+    "author_archive_splits": 300,
+    "fresh_replay_seeds": [22,23,24,25,26,27,28,29,30,31],
+    "qubits": [8,10], "repetitions": 1, "entanglement": "circular",
+    "replay_pca": "full SVD with legacy U-based deterministic sign convention",
+    "replay_preprocessing": "max over all rows, PCA and StandardScaler on train, MinMaxScaler over train+test as in pinned script; contamination explicitly retained only for author replay",
+    "controlled_seeds": [100,101,102,103,104,105,106,107,108,109],
+    "controlled_split": [0.6,0.2,0.2],
+    "controlled_quantum_C": [0.1,1.0,10.0],
+    "controlled_classical": "raw-feature L2 logistic, RBF-SVC and histogram boosting; shared train-only preprocessing and validation selection",
+    "success_boundary": "archived statistics, fresh numerical score agreement, and stronger-baseline superiority are separate claims"
+  },
+  "communications": {
+    "doi": "10.1038/s41467-024-51162-7",
+    "reservoir_seed": 17462, "memory_qubits": 2, "readout_qubits": 4,
+    "connectivity": "complete upper-triangular graph, as connected Fig. 3 branch",
+    "data_seeds": [100,101,102], "snr_db": 20,
+    "train_messages": 100, "validation_messages": 20, "test_messages": 100,
+    "symbols_per_message": 100, "tau": 1.0,
+    "paper_readout_C": 1000000.0,
+    "additional_controls": "validation-tuned causal polynomial-delay logistic regression and delay-window MLP, each nine candidates",
+    "sampling": "exact unconditional density dynamics, S=infinity; no hardware or finite-shot trajectory reproduction",
+    "published_reference_error": 0.0021,
+    "published_memoryless_logistic_error": 0.0446,
+    "numeric_limit": "the upstream message generator is unseeded; fresh random messages cannot reproduce its exact printed numbers"
+  },
+  "reporting": "retain every prescribed seed and model; no outcome-dependent tuning or seed removal; record warnings, failures, predictions, provenance and cost"
+}
