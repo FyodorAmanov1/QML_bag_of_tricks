@@ -2,11 +2,39 @@
 
 ![QML Bag of Tricks: choose, implement, benchmark](docs/assets/social-preview.png)
 
-**Choose a QML method, implement it with your coding agent, and compare it with classical ML.**
+**Explore reproduced QML applications. Choose a trainable method. Build it with your coding agent.**
 
 Runnable Qiskit, PennyLane and Cirq recipes connect scientific assumptions to
-native circuits, complete learning workflows and reproducible reports. Inspect
-predictive quality **and** cost before deciding whether a method fits your project.
+native circuits, complete learning workflows and reproducible reports. Start
+from an application, understand why the quantum model helps, then benchmark
+predictive quality and cost on your own project.
+
+## Why explore quantum machine learning?
+
+Published applications give concrete reasons to test quantum feature maps and
+quantum models with temporal memory. We reproduced numerical comparisons from
+two peer-reviewed papers using **classical application inputs**:
+
+| Application | Reproduced quantum result | Original classical comparator | Why try it? |
+|---|---|---|---|
+| [Alloy-phase prediction — Matter (2024)](docs/reproductions/alloys.md) | **89.12% accuracy** | 87.73% for the best original comparator in this replay | Explore a fidelity kernel for small materials-screening datasets |
+| [Wireless channel equalization — Nature Communications (2024)](docs/reproductions/communications.md) | **0.313% symbol error** | 4.437% for memoryless logistic regression | Learn a nonlinear temporal response with a fixed reservoir and classical readout |
+
+![Reproduced application motivation](docs/assets/qml_motivation.png)
+
+The alloy comparison uses ten replay splits for the ten-qubit model; all 20
+quantum replay scores across eight and ten qubits match their archived seeds.
+Channel equalization uses three fresh simulated message datasets at 20 dB.
+These reproduce gains over the **original comparators**. Stronger tuned classical
+models lead in our follow-up comparisons, documented alongside the full results
+in the [reproduction report](docs/reproductions/results.md). No hardware speedup
+is established by these bounded simulations.
+
+[Why and when to use QML](docs/why_qml.md) connects these motivations to method
+selection, trainability and implementation. For quantum inputs, the
+[two-copy state-learning example](docs/applications/experimental_learning.md)
+adds a conditional acquisition benefit: **100% vs 49.14%** mean balanced accuracy
+on the tested late-query, eight-qubit, 512-copy task.
 
 ## Start with one complete project
 
@@ -30,39 +58,28 @@ For a browser interface, install JupyterLab and open `notebooks/`.
 execution and public Colab setup once a repository destination is configured.
 Install `.[all,learning]` when you want all three SDKs.
 
-## What does the evidence show?
+## Reproduce the applications
 
-For classical application data, the [paper reproduction suite](docs/reproductions/index.md)
-tests published alloy-phase prediction and wireless channel equalization studies.
-It distinguishes archived-number recovery, fresh simulations and comparisons
-against stronger tuned classical models. See the [complete reproduction report](docs/reproductions/results.md).
+From the source checkout, run the classical-input paper examples:
 
-The [application benchmarks](docs/applications/index.md) now test useful
-structure explicitly: periodic sensor calibration and late-query quantum-state
-characterization. Across ten seeds, the eight-qubit, 512-copy state experiment
-reached **100% mean balanced accuracy** with two-copy Bell acquisition, compared
-with **49.14%** for the optimal classifier on the tested random single-copy local
-records. Both use the same number of state copies; Bell acquisition needs twice
-as many simultaneous qubits. This is a simulated, restricted quantum-input task.
-Knowing the query before acquisition removes the observed gap.
+```bash
+python -m qml_tricks.learning.paper_reproductions --study alloys
+python -m qml_tricks.learning.paper_reproductions --study communications
+```
 
-Periodic quantum features also improve on generic regularized regressors in a
-held-out-period task, while cheap classical Fourier features match them. The
-[complete application report](docs/applications/results.md) retains all 280
-configurations and 1,720 base evaluations, including these decisive controls.
+The [reproduction guide](docs/reproductions/index.md) covers pinned author data,
+reference archives, the stronger-control extensions and independent audits.
+Qiskit, PennyLane and Cirq construct the alloy feature map independently. The
+reservoir simulation uses exact SciPy dynamics with native SDK equivalence checks.
 
-![Observed real-data comparisons](docs/assets/real_data_study.png)
+Additional reports remain available for deeper evaluation:
 
-The small real-data study evaluates eight pipelines on three datasets, with ten
-split seeds and three validation candidates per model. **The tested classical
-configurations outperform these two-qubit quantum-feature configurations on mean
-predictive scores.** This describes the recorded settings, not all QML.
-
-Read the [complete study, uncertainty and costs](docs/study.md), including the
-two-feature classical control, warnings and untouched-test protocol. All three
-notebooks have executed outputs. Five agent project tasks were independently
-rerun and passed bounded acceptance checks; the [agent evaluation](docs/agent_evaluation.md)
-states the limitations of that evidence.
+- [Application benchmarks](docs/applications/results.md): periodic calibration,
+  quantum-state characterization, learning curves and copy/shot budgets.
+- [Initial tabular baseline study](docs/study.md): all earlier configurations,
+  classical comparisons, uncertainty and costs.
+- [Agent implementation evaluation](docs/agent_evaluation.md): five project tasks
+  independently rerun and checked, with their limits stated.
 
 ## Choose a method
 

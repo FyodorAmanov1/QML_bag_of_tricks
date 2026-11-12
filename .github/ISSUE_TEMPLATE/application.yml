@@ -1,0 +1,24 @@
+name: Application reproduction or project result
+description: Reproduce a published QML application or share a complete project comparison
+body:
+  - type: textarea
+    id: application
+    attributes:
+      label: Application and motivation
+      description: What should the model predict, and which representation or acquisition benefit motivates QML?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Peer-reviewed source and reproduction scope
+      description: Link the paper, code and data. Distinguish archived results, fresh simulations, hardware runs and extensions.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Implementation and comparison
+      description: Include commands, SDK versions, splits, seeds, tuning budgets, classical controls, held-out metrics and resource costs. Keep all tested outcomes.
+    validations:
+      required: true

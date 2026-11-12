@@ -42,9 +42,11 @@ lines+=['','## Interpretation and limits','',
 # Simple code-native release artwork, editable through this script.
 fig=plt.figure(figsize=(12.8,6.4),dpi=100,facecolor='#101a32');ax=fig.add_axes([0,0,1,1]);ax.set_axis_off()
 ax.text(.07,.80,'QML BAG OF TRICKS',fontsize=37,color='#ffffff',weight='bold',transform=ax.transAxes)
-ax.text(.07,.63,'Choose. Implement. Benchmark.',fontsize=27,color='#83e0ce',transform=ax.transAxes)
-ax.text(.07,.45,'Agent-friendly recipes for quantum machine learning',fontsize=19,color='#e6eafa',transform=ax.transAxes)
+ax.text(.07,.63,'Reproduced applications. Trainable methods.',fontsize=24,color='#83e0ce',transform=ax.transAxes)
+ax.text(.07,.45,'Explore alloy prediction and wireless channel recovery',fontsize=18,color='#e6eafa',transform=ax.transAxes)
 ax.text(.07,.30,'Qiskit  /  PennyLane  /  Cirq',fontsize=19,color='#b6c0f3',transform=ax.transAxes)
 ax.text(.07,.15,'Explicit assumptions · Classical controls · Reproducible artifacts',fontsize=15,color='#e6eafa',transform=ax.transAxes)
 fig.savefig(assets/'social-preview.png',facecolor=fig.get_facecolor());fig.savefig(assets/'social-preview.svg',facecolor=fig.get_facecolor());plt.close(fig)
+svg=assets/'social-preview.svg'
+svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8')
 print('Rendered study report, figures and release artwork.')

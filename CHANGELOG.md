@@ -1,5 +1,13 @@
 # Changelog
 
+## Application-led repository introduction
+
+- Featured reproduced alloy-prediction and channel-equalization gains in the
+  README, documentation landing pages, release introduction and launch draft.
+- Added a QML motivation guide, score-derived artwork and an application issue
+  template. Original-comparator scope and stronger follow-up controls remain
+  explicit; earlier studies and raw results are preserved in detailed reports.
+
 ## Classical-application paper reproductions
 
 - Added pinned, licensed alloy data and score archives for Pei et al. (Matter,

@@ -1,5 +1,10 @@
 # Contributing
 
+Application reproductions and project benchmarks are welcome. Start from the
+[QML motivation guide](docs/why_qml.md), select a concrete use case, and provide
+the source paper, runnable code, data provenance and full comparison. Use the
+application issue template to share a reproduction or a project result.
+
 Start with the coverage ledger and select one concrete missing construction or
 proof-to-code obligation. Report publication identity, theorem locator, exact
 ensemble, metric, scaling variables, input/observable factors, and limitations.

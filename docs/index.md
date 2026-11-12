@@ -1,24 +1,29 @@
 # QML Bag of Tricks
 
-**Choose a QML method. Implement it with your coding agent. Benchmark the result.**
+**Explore reproduced applications. Choose a trainable QML method. Build and benchmark it.**
 
 ![Choose, implement, benchmark](assets/social-preview.png)
 
-Start with the [three executed walkthroughs](tutorials.md) for classification,
-regression and a classical deployment surrogate. Inspect the [real-data study](study.md)
-and its complete results, including the stronger classical scores in these small
-configurations. The [five agent tasks](agent_evaluation.md) show bounded examples
-of implementation and independent replay.
+## Start from an application
 
-For application-specific incentives, explore the [new application benchmarks](applications/index.md):
-periodic calibration and late-query quantum-state characterization. Their
-[complete results](applications/results.md) compare tuned regularized models,
-optimal inference for the selected classical records, and domain-informed
-controls that can remove the quantum benefit.
+The [classical-input paper reproductions](reproductions/index.md) provide two
+concrete motivations: alloy-phase prediction with a quantum fidelity kernel,
+and wireless channel recovery with a fixed quantum reservoir. Fresh simulations
+recover gains over the original comparators: **89.12% vs 87.73% accuracy** for
+the ten-qubit alloy replay, and **0.313% vs 4.437% symbol error** for equalization.
+Stronger tuned classical models lead in the follow-up comparisons; the
+[full reproduction report](reproductions/results.md) presents both comparisons.
 
-The [classical-application paper reproductions](reproductions/index.md) target
-published materials screening and wireless channel equalization, using pinned
-author artifacts, fresh numerical runs and stronger classical controls.
+[Why and when to explore QML](why_qml.md) connects these examples to trainability,
+implementation choices and project scenarios. Start coding with the
+[three executed walkthroughs](tutorials.md) for classification, regression and
+classical surrogate deployment. The [five agent tasks](agent_evaluation.md)
+demonstrate implementation and independent replay.
+
+For quantum-input projects, the [late-query state-learning example](applications/experimental_learning.md)
+demonstrates a conditional benefit from two-copy acquisition. The
+[application benchmarks](applications/index.md) also cover periodic calibration
+and the representations behind its gains.
 
 The [owner review packet](owner_review.md) collects the outstanding scientific
 review. See [release instructions](release.md) for local artifacts and publication.
@@ -74,5 +79,6 @@ the reference environment. Clone the repository before installing it.
 [Fundamental-method audit](fundamentals_audit.md) explains prior omissions and the evidence categories.
 [Reproduction](reproduction.md) documents measurement accounting and commands.
 [Reference results](results.md) contains an exact analytical comparison and the regeneration command.
+The [initial tabular baseline study](study.md) retains all earlier results and controls.
 The collection makes no general quantum-advantage claim and no promise of
 training success. A large quantum state space alone establishes neither.

@@ -1,5 +1,5 @@
 site_name: QML Bag of Tricks
-site_description: Evidence-led strategies for trainable quantum machine learning
+site_description: Reproduced QML applications, trainable strategies and agent-friendly Qiskit, PennyLane and Cirq implementations
 theme:
   name: material
   features:

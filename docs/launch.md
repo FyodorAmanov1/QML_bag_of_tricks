@@ -8,25 +8,24 @@ are complete. Replace the placeholders with working URLs. No post has been sent.
 I built QML Bag of Tricks to help ML engineers and their coding agents try
 quantum machine learning with clear assumptions and measurable comparisons.
 
-It includes Qiskit, PennyLane and Cirq implementations, three executed project
-notebooks, and a small real-data benchmark with classical controls. Methods cover
-initialization, local costs, structured circuits, quantum natural gradient,
-kernels and classical deployment surrogates. Each guide explains when the method
-fits and where its guarantees stop.
+Start with two published applications on classical inputs. Our bounded numerical
+replications recover 89.12% accuracy for quantum alloy-phase prediction versus
+87.73% for the best original comparator, and 0.313% symbol error for quantum
+reservoir equalization versus 4.437% for memoryless logistic regression.
 
-The first real-data study is useful precisely because it reports the complete
-results: the tested classical configurations outperform these small quantum
-feature models. The repository helps you reproduce and investigate that outcome,
-as well as decide what to try next.
+Those are reasons to explore the models on an appropriate project. The complete
+reports also show where stronger tuned classical alternatives lead; they do not
+claim universal quantum superiority or a measured hardware speedup.
 
-Application-specific tests also show where structure helps: a two-copy quantum
-state-learning protocol improves sample efficiency for late queries. The report
-includes tuned regularized models, optimal inference for the tested classical
-records, and a query-known control that removes the gap. Periodic calibration
-shows a useful representation benefit that a classical Fourier model also gets.
+The repository connects that motivation to runnable Qiskit, PennyLane and Cirq
+code, three executed project notebooks and implementation guides for local costs,
+near-identity encoding, structured circuits, natural gradient and classical
+surrogate deployment. Quantum-input examples add a separate motivation through
+two-copy state learning with late observable queries.
 
 Repository: [PUBLIC REPOSITORY URL]
-Start with a notebook: [PUBLIC WALKTHROUGH URL]
+Why QML and where to start: [PUBLIC MOTIVATION GUIDE URL]
+Reproduce an application: [PUBLIC REPRODUCTION GUIDE URL]
 
 If you try it on a dataset, share the settings, baselines and results in an issue.
 Contributions that improve evidence, usability or reproducibility are welcome.

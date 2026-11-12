@@ -1,6 +1,15 @@
 # QML Bag of Tricks 0.2.0 — release candidate
 
-Agent-friendly QML recipes with explicit assumptions and classical comparisons.
+Reproduced QML applications, trainable methods and agent-friendly implementation
+recipes in Qiskit, PennyLane and Cirq.
+
+The application entry point is motivated by two peer-reviewed classical-input
+studies: the alloy replay reaches 89.12% accuracy versus 87.73% for its best
+original comparator, while reservoir equalization reaches 0.313% symbol error
+versus 4.437% for direct memoryless logistic regression. These are bounded
+numerical reproductions of the original comparisons; stronger tuned classical
+models lead in the follow-up comparisons. See the
+[motivation guide](docs/why_qml.md) and [full reproduction report](docs/reproductions/results.md).
 
 - Three executed project notebooks: real-data classification, real-data regression
   and offline quantum-feature distillation with a classical exported student.
@@ -18,10 +27,9 @@ Agent-friendly QML recipes with explicit assumptions and classical comparisons.
   PennyLane and Cirq entrypoints, scientific sources and evidence boundaries.
 - Release artwork, a clearer entry point, package artifacts and a review packet.
 
-Observed real-data results favor the tested classical configurations over these
-small quantum-feature configurations. They do not establish conclusions about
-all QML, quantum advantage or production readiness. Source reports retain failures,
-warnings, uncertainty and costs rather than selecting only favorable cases.
+The earlier tabular study remains available as a detailed benchmark report.
+All source reports retain failures, warnings, uncertainty and costs. Application
+gains are scoped to their stated comparators and data-access assumptions.
 
 The new state-learning result is a conditional two-copy acquisition benefit on
 synthetic quantum inputs. The periodic feature benefit has an identical cheap

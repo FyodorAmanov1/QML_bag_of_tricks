@@ -1,11 +1,11 @@
 # Find applications where quantum structure matters
 
-The original [real-data study](../study.md) remains a useful negative control.
-Two-qubit frozen features on compressed generic tabular data do not test every
-QML architecture or application. They do not establish a reason to choose QML
-for those recorded datasets either.
+Start with the representation or acquisition benefit your project needs. For
+classical inputs, the [reproduced alloy and communications studies](../reproductions/index.md)
+show gains over their original comparators. The [QML motivation guide](../why_qml.md)
+explains when those models are worth testing and connects them to practical recipes.
 
-These additional experiments ask more specific questions:
+These additional application prototypes make two mechanisms explicit:
 
 | Application | Potential benefit | Control that tests the explanation |
 |---|---|---|
@@ -18,6 +18,9 @@ from a gain against the best possible classical method, a wall-time speedup,
 or a demonstrated production application. No tests assert that QML must win.
 
 ## Reproduce or adapt
+
+The [initial tabular study](../study.md) remains available as a separate report
+with all earlier configurations, outcomes and classical controls.
 
 ```bash
 python -m pip install -e ".[qiskit,learning,notebooks]"

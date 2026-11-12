@@ -1,14 +1,18 @@
 # Reproduce QML papers on classical application data
 
-These studies use classical inputs and ordinary application labels. They are
-separate from the synthetic late-query quantum-state task.
+Explore QML through two published applications with classical inputs: materials
+screening and nonlinear communication-channel recovery. Fresh numerical runs
+recover the original comparator gains: **89.12% vs 87.73% accuracy** in the
+ten-qubit alloy replay, and **0.313% vs 4.437% symbol error** in equalization.
+Use these as concrete starting hypotheses for a project.
 
 | Study | Application and accessible artifacts | Local reproduction scope |
 |---|---|---|
 | [Pei et al., Matter (2024)](alloys.md) | Real alloy descriptors and phase labels; author code and 300-split score archives | Archive recalculation, fresh native circuit replay on ten splits per architecture, and a leakage-free tuned-baseline extension |
 | [Hu et al., Nature Communications (2024)](communications.md) | Simulated classical communication symbols through a noisy nonlinear channel; author notebook and numerical reference curves | Six-qubit connected-reservoir simulation at 20 dB with three seeded datasets, original comparator and stronger temporal controls |
 
-Read the [measured results](results.md). A successfully recomputed archived
+Stronger tuned classical alternatives lead in the follow-up comparisons, also
+included in the [measured results](results.md). A successfully recomputed archived
 number, a new numerical replication, and superiority to newly tuned baselines
 are distinct evidence levels. Neither study is reproduced end-to-end here:
 alloy-candidate discovery, language-model screening and quantum hardware jobs
