@@ -1,6 +1,14 @@
 """MkDocs hook: copy canonical SDK files into downloadable site assets."""
 from pathlib import Path
+import json
 from mkdocs.structure.files import File
+
+
+def on_page_context(context, page, config, nav):
+    if page.is_homepage:
+        root = Path(config['config_file_path']).parent
+        context['showcase'] = json.loads((root/'docs/assets/showcase.json').read_text(encoding='utf-8'))
+    return context
 
 
 def on_page_markdown(markdown, page, config, files):

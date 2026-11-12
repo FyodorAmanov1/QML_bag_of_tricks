@@ -13,6 +13,8 @@ checked on 2026-11-12. Earlier benchmark/reference snapshots are retained.
 | Ensemble sampling | Fixed Haar circuit factors are resampled along with initialized angles |
 | Fundamental choices | Near-identity encoder bound; independent-copy identity cancellation and gradient formula; FS metric, global-phase invariance, QNG update and singular-direction regularization |
 | Documentation | `python -m mkdocs build --strict` passed; 19 circuit guides plus 14 learning guides; 99 recipe entrypoints and three additional application-model classes |
+| Website evidence | `scripts/build_showcase.py --check` verifies website data and README comparison tables against canonical paper/application records |
+| Website browser review | Local headless Chrome checks at 1440×1100 and 390×844: evidence filters, five project routes, all SDK commands, copy confirmation, mobile guide navigation and 20 internal homepage links; no horizontal overflow or JavaScript exceptions |
 | Reference runs | 57 one-step four-qubit runs; configurations, SDK versions, and source hashes recorded |
 | Learning reference | 42 additional native entrypoints; classification, regression, known-preparation quantum and generative benchmarks with three seeds |
 | Surrogates and pretraining | Saved-model parity, zero quantum-backend inference for the student, held-out kernel error, same-hidden-feature classical control and explicit warm-start costs |
@@ -48,6 +50,7 @@ python -m venv .venv-clean
 .\.venv-clean\Scripts\python.exe scripts/audit_opportunity_results.py
 .\.venv-clean\Scripts\python.exe scripts/audit_paper_results.py
 .\.venv-clean\Scripts\python.exe scripts/build_application_catalog.py --check
+.\.venv-clean\Scripts\python.exe scripts/build_showcase.py --check
 .\.venv-clean\Scripts\python.exe scripts/run_case_model_reference.py
 .\.venv-clean\Scripts\python.exe -m pip check
 .\.venv-clean\Scripts\python.exe -m mkdocs build --strict

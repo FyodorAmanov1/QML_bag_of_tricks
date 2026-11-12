@@ -35,6 +35,10 @@ models lead in the follow-up comparisons. See the
 - 19 circuit-strategy guides and 14 learning/estimation guides with Qiskit,
   PennyLane and Cirq entrypoints, scientific sources and evidence boundaries.
 - Release artwork, a clearer entry point, package artifacts and a review packet.
+- A redesigned README and responsive application showcase, with evidence
+  filters, a project selector, SDK commands and source-derived comparison data.
+  The Pages workflow produces a private downloadable preview by default;
+  public documentation publication is a separate option.
 
 The earlier tabular study remains available as a detailed benchmark report.
 All source reports retain failures, warnings, uncertainty and costs. Application

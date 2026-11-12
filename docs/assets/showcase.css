@@ -1,0 +1,1097 @@
+:root{
+  --md-text-font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --md-code-font:ui-monospace,SFMono-Regular,Consolas,monospace;
+  --md-primary-fg-color:#143b2c;
+  --md-accent-fg-color:#457135;
+  --qml-ink:#19362b;
+  --qml-muted:#58675c;
+  --qml-paper:#f5f5ee;
+  --qml-lime:#d9ff65;
+  --qml-line:#d9dfd2
+}
+.md-header{
+  background:#143b2c;
+  box-shadow:none
+}
+.md-typeset a{
+  color:#2b6346
+}
+.md-header__button.md-logo img{
+  height:1.45rem;
+  width:1.45rem
+}
+.md-main__inner:has(.qml-home){
+  margin-top:0;
+  max-width:1240px
+}
+.md-content__inner:has(.qml-home){
+  margin:0;
+  padding:0
+}
+.md-main:has(.qml-home){
+  background:var(--qml-paper)
+}
+.md-footer:has(+*){
+  margin-top:0
+}
+.qml-home{
+  color:var(--qml-ink);
+  font-size:16px;
+  line-height:1.65;
+  padding:0 40px
+}
+.qml-home [hidden]{
+  display:none!important
+}
+.qml-home h1,.qml-home h2,.qml-home h3{
+  color:inherit;
+  font-weight:650;
+  letter-spacing:-.045em;
+  line-height:1.08;
+  margin:0
+}
+.qml-home p{
+  margin:0
+}
+.qml-home a{
+  color:inherit
+}
+.qml-home a:hover{
+  text-decoration:none;
+  color:#447536
+}
+.qml-home a:focus-visible,.qml-home button:focus-visible,.qml-home select:focus-visible{
+  outline:3px solid #886fc4;
+  outline-offset:5px
+}
+.qml-home button,.qml-home select{
+  font:inherit
+}
+.qml-home .qml-eyebrow{
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:1.7px;
+  line-height:1.5
+}
+.qml-local-nav{
+  height:77px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--qml-line);
+  gap:20px
+}
+.qml-local-nav>div{
+  display:flex;
+  gap:26px;
+  font-size:12px;
+  font-weight:650
+}
+.qml-edition{
+  font-size:10px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  white-space:nowrap
+}
+.qml-dot{
+  display:inline-block;
+  width:7px;
+  height:7px;
+  background:#6f914a;
+  border-radius:50%;
+  margin-right:8px
+}
+.qml-hero{
+  display:grid;
+  grid-template-columns:1.16fr 1fr;
+  gap:50px;
+  padding:62px 0 58px;
+  align-items:center
+}
+.qml-hero .qml-eyebrow{
+  color:#527c48;
+  margin-bottom:21px
+}
+.qml-hero h1{
+  font-size:clamp(60px,6.4vw,88px);
+  font-weight:650;
+  letter-spacing:-.065em;
+  line-height:.98
+}
+.qml-hero h1 span{
+  color:#5c8042
+}
+.qml-hero-description{
+  font-size:17px;
+  line-height:1.65;
+  color:var(--qml-muted);
+  margin-top:26px!important
+}
+.qml-actions{
+  display:flex;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap
+}
+.qml-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  min-height:47px;
+  padding:11px 18px;
+  border:1px solid var(--qml-ink);
+  border-radius:5px;
+  font-size:12px;
+  font-weight:650
+}
+.qml-btn-primary{
+  background:var(--qml-ink);
+  color:#fff!important
+}
+.qml-btn-primary:hover{
+  background:#2f503c
+}
+.qml-btn-secondary{
+  background:transparent
+}
+.qml-btn-secondary:hover{
+  background:#e6ecd9
+}
+.qml-hero-stats{
+  display:flex;
+  gap:29px;
+  margin-top:37px
+}
+.qml-hero-stats>div{
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.qml-hero-stats strong{
+  font-size:35px;
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-2px
+}
+.qml-hero-stats span{
+  font-size:10px;
+  line-height:1.5;
+  color:var(--qml-muted)
+}
+.qml-lab{
+  background:#143b2c;
+  color:#eef4e6;
+  border-radius:14px;
+  overflow:hidden;
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background-image:radial-gradient(ellipse at 85% 15%,#476d393d,transparent 70%)
+}
+.qml-lab-top{
+  padding:25px 27px 0;
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  letter-spacing:1.5px;
+  color:#bccfb4
+}
+.qml-circuit{
+  width:100%;
+  height:auto;
+  margin:8px 0 -5px
+}
+.qml-lab-copy{
+  padding:0 30px 25px
+}
+.qml-lab-copy .qml-eyebrow{
+  color:var(--qml-lime);
+  font-size:9px
+}
+.qml-lab-copy h2{
+  font-size:36px;
+  margin-top:13px;
+  letter-spacing:-1.5px
+}
+.qml-lab-copy p{
+  font-size:12px;
+  line-height:1.8;
+  color:#bccfb4;
+  margin-top:15px;
+  max-width:315px
+}
+.qml-sdk-strip{
+  border-top:1px solid #46604b;
+  display:flex;
+  justify-content:space-between;
+  padding:16px 28px;
+  font-size:11px;
+  font-weight:650;
+  color:#d9e6cb
+}
+.qml-section{
+  padding:63px 0;
+  border-top:1px solid var(--qml-line);
+  scroll-margin-top:70px
+}
+.qml-section-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:45px;
+  margin-bottom:32px
+}
+.qml-section-heading h2,.qml-start h2{
+  font-size:42px;
+  margin-top:12px;
+  letter-spacing:-1.9px
+}
+.qml-section-heading>p{
+  font-size:13px;
+  line-height:1.8;
+  max-width:350px;
+  color:var(--qml-muted)
+}
+.qml-filterbar{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:23px
+}
+.qml-filterbar button,.qml-sdk-tabs button{
+  border:1px solid var(--qml-line);
+  border-radius:5px;
+  padding:9px 13px;
+  cursor:pointer;
+  background:transparent;
+  font-size:11px;
+  font-weight:650
+}
+.qml-filterbar button[aria-pressed=true],.qml-sdk-tabs button[aria-pressed=true]{
+  background:var(--qml-ink);
+  border-color:var(--qml-ink);
+  color:white
+}
+.qml-filterbar button span{
+  font-size:9px;
+  margin-left:9px;
+  opacity:.7
+}
+.qml-filterbar p{
+  font-size:10px;
+  color:var(--qml-muted);
+  margin-left:auto
+}
+.qml-evidence-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px
+}
+.qml-evidence-card{
+  border:1px solid var(--qml-line);
+  background:#fffef9;
+  border-radius:8px;
+  padding:22px 22px 17px;
+  display:flex;
+  flex-direction:column;
+  min-width:0
+}
+.qml-card-heading{
+  display:flex;
+  justify-content:space-between;
+  color:var(--qml-muted);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  font-weight:700
+}
+.qml-card-number{
+  color:#9aa795
+}
+.qml-evidence-card h3{
+  font-size:22px;
+  letter-spacing:-.7px;
+  margin-top:17px;
+  min-height:48px
+}
+.qml-evidence-badge{
+  font-size:8px;
+  font-weight:700;
+  align-self:flex-start;
+  border-radius:3px;
+  padding:3px 6px;
+  margin-top:12px
+}
+.qml-terminal .md-clipboard{
+  display:none
+}
+.qml-home .qml-start .qml-terminal>p{
+  color:#b0c1a4;
+  margin-top:0;
+  max-width:none
+}
+.qml-badge-reproduced{
+  background:#e3edd5;
+  color:#31532d
+}
+.qml-badge-adaptation{
+  background:#ece6fb;
+  color:#5a4288
+}
+.qml-badge-reported{
+  background:#eceee7;
+  color:#4e5d4e
+}
+.qml-card-metric{
+  padding-top:22px
+}
+.qml-card-metric>span{
+  font-size:10px;
+  display:block;
+  color:var(--qml-muted)
+}
+.qml-card-metric strong{
+  display:block;
+  font-size:43px;
+  font-weight:600;
+  letter-spacing:-2px;
+  line-height:1.15;
+  margin-top:2px
+}
+.qml-card-metric strong.qml-long-value{
+  font-size:25px;
+  letter-spacing:-1px;
+  min-height:50px;
+  max-width:250px
+}
+.qml-card-metric p{
+  font-size:10px;
+  color:var(--qml-muted);
+  line-height:1.6;
+  margin-top:8px;
+  min-height:32px
+}
+.qml-mechanism{
+  font-size:12px;
+  line-height:1.7;
+  margin-top:19px!important
+}
+.qml-scope{
+  font-size:10px;
+  line-height:1.75;
+  color:#65715f;
+  border-top:1px solid #e5e8dc;
+  padding-top:13px;
+  margin-top:16px!important;
+  margin-bottom:17px!important
+}
+.qml-card-links{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:10px;
+  font-weight:750;
+  margin-top:auto
+}
+.qml-card-links a:hover{
+  text-decoration:underline
+}
+.qml-card-source{
+  font-size:8px;
+  color:#7a8574;
+  margin-top:9px!important
+}
+.qml-evidence-note{
+  font-size:11px;
+  line-height:1.8;
+  color:var(--qml-muted);
+  margin-top:21px!important;
+  max-width:870px
+}
+.qml-evidence-note a{
+  text-decoration:underline
+}
+.qml-opportunity-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:22px
+}
+.qml-opportunity{
+  padding:20px 0 8px
+}
+.qml-mini-icon{
+  font:14px var(--md-code-font);
+  color:#527747;
+  display:inline-flex;
+  align-items:center;
+  min-height:38px;
+  padding:8px 11px;
+  background:#e7ecda;
+  border-radius:5px
+}
+.qml-opportunity h3{
+  font-size:22px;
+  line-height:1.2;
+  margin-top:22px;
+  letter-spacing:-.7px
+}
+.qml-opportunity p{
+  font-size:12px;
+  color:var(--qml-muted);
+  line-height:1.8;
+  margin-top:14px
+}
+.qml-text-link{
+  font-size:11px;
+  font-weight:700;
+  display:inline-block;
+  margin-top:20px
+}
+.qml-space-note{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:12px 25px;
+  padding:25px 27px;
+  border-radius:7px;
+  background:#e8ecde;
+  margin-top:32px
+}
+.qml-space-note strong{
+  font-size:16px;
+  letter-spacing:-.3px
+}
+.qml-space-note p{
+  font-size:12px;
+  line-height:1.85;
+  color:#4c5f4b
+}
+.qml-space-note a{
+  font-size:10px;
+  font-weight:700;
+  grid-column:2
+}
+.qml-quantum-data{
+  background:#173d2d;
+  border-radius:12px;
+  color:#f3f5e9;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  padding:45px 45px;
+  margin:4px 0 60px
+}
+.qml-quantum-data .qml-eyebrow{
+  color:var(--qml-lime)
+}
+.qml-quantum-data h2{
+  font-size:39px;
+  margin-top:16px;
+  letter-spacing:-1.5px
+}
+.qml-quantum-data>div>p:not(.qml-eyebrow){
+  font-size:12px;
+  color:#c1d0b8;
+  line-height:1.8;
+  margin-top:19px
+}
+.qml-btn-lime{
+  background:var(--qml-lime);
+  border-color:var(--qml-lime);
+  color:#163d2b!important;
+  margin-top:25px
+}
+.qml-quantum-score{
+  align-self:center
+}
+.qml-quantum-score>p:first-child{
+  font-size:9px!important;
+  letter-spacing:1.2px
+}
+.qml-quantum-score>strong{
+  font-size:100px;
+  letter-spacing:-7px;
+  line-height:1.2;
+  font-weight:550;
+  color:var(--qml-lime)
+}
+.qml-quantum-score>strong>span{
+  font-size:42px;
+  margin-left:5px
+}
+.qml-quantum-score>div{
+  font-size:12px;
+  color:#cfdbbf;
+  max-width:300px
+}
+.qml-quantum-score>p:last-child{
+  font-size:10px!important;
+  max-width:330px
+}
+.qml-project-picker{
+  display:grid;
+  grid-template-columns:.9fr 1.3fr;
+  border:1px solid var(--qml-line);
+  border-radius:9px;
+  overflow:hidden
+}
+.qml-project-input{
+  padding:30px;
+  background:#e9eddf
+}
+.qml-project-input label{
+  display:block;
+  font-size:12px;
+  font-weight:750;
+  margin-bottom:12px
+}
+.qml-project-input select{
+  border:1px solid #b8c5ad;
+  border-radius:5px;
+  background:#fffef9;
+  max-width:100%;
+  width:100%;
+  padding:13px 11px;
+  font-size:12px;
+  color:var(--qml-ink);
+  cursor:pointer
+}
+.qml-project-input p{
+  font-size:12px;
+  line-height:1.8;
+  color:var(--qml-muted);
+  margin-top:19px
+}
+.qml-project-input a{
+  font-size:11px;
+  font-weight:700;
+  display:inline-block;
+  margin-top:18px
+}
+.qml-project-output{
+  padding:30px;
+  background:#fffef9
+}
+.qml-project-output h3{
+  font-size:27px;
+  letter-spacing:-1px;
+  margin-top:10px;
+  max-width:380px
+}
+.qml-project-output dl{
+  display:grid;
+  grid-template-columns:68px 1fr;
+  gap:12px 20px;
+  margin:23px 0 0;
+  font-size:12px;
+  line-height:1.7
+}
+.qml-project-output dt{
+  font-weight:750
+}
+.qml-project-output dd{
+  color:var(--qml-muted);
+  margin:0
+}
+.qml-start{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:50px;
+  align-items:center
+}
+.qml-start>div>p:not(.qml-eyebrow){
+  font-size:13px;
+  color:var(--qml-muted);
+  margin-top:21px;
+  max-width:350px;
+  line-height:1.8
+}
+.qml-sdk-tabs{
+  display:flex;
+  gap:7px;
+  margin-top:23px
+}
+.qml-terminal{
+  background:#17392b;
+  color:#e4edda;
+  border-radius:9px;
+  overflow:hidden;
+  min-width:0
+}
+.qml-terminal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:17px 20px;
+  border-bottom:1px solid #46604b;
+  font-size:9px
+}
+.qml-terminal-header>span{
+  display:flex;
+  gap:5px;
+  align-items:center
+}
+.qml-terminal-header i{
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:#a7b793;
+  border-radius:50%;
+  opacity:.6
+}
+.qml-terminal-header b{
+  font-size:8px;
+  font-weight:500;
+  letter-spacing:1.2px;
+  margin-left:10px
+}
+.qml-terminal-header button{
+  font-size:9px;
+  cursor:pointer;
+  color:#d9ff65
+}
+.qml-terminal pre{
+  padding:22px!important;
+  margin:0!important;
+  background:transparent!important;
+  overflow:auto;
+  border-radius:0;
+  white-space:pre
+}
+.qml-terminal code{
+  font-size:12px!important;
+  line-height:1.9!important;
+  background:transparent!important;
+  color:#d9ff65!important;
+  padding:0!important;
+  box-shadow:none!important
+}
+.qml-terminal>p{
+  font-size:9px;
+  padding:0 22px 22px;
+  color:#b0c1a4;
+  line-height:1.8
+}
+.qml-agent-contract{
+  border-top:1px solid var(--qml-line);
+  border-bottom:1px solid var(--qml-line);
+  padding:43px 0 45px;
+  text-align:center
+}
+.qml-agent-contract h2{
+  font-size:36px;
+  letter-spacing:-1.5px;
+  margin-top:12px
+}
+.qml-agent-contract>p{
+  font-size:13px;
+  color:var(--qml-muted);
+  max-width:610px;
+  margin:17px auto 22px;
+  line-height:1.8
+}
+.qml-agent-contract>div{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  font-size:11px;
+  font-weight:700;
+  flex-wrap:wrap
+}
+.qml-home-footer{
+  padding:35px 0 40px;
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  flex-wrap:wrap;
+  font-size:10px;
+  color:var(--qml-muted)
+}
+.qml-home-footer strong{
+  font-size:14px;
+  color:var(--qml-ink)
+}
+.qml-home-footer>div>p{
+  margin-top:5px
+}
+.qml-home-footer>div:nth-child(2){
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  padding-top:3px
+}
+.qml-home-footer>p{
+  font-size:9px;
+  line-height:1.8;
+  max-width:270px
+}
+.qml-sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
+@media(min-width:1400px){
+  .qml-home{
+    padding:0 36px
+  }
+  .qml-hero{
+    gap:75px
+  }
+  .qml-hero h1{
+    font-size:91px
+  }
+}
+@media(max-width:1000px){
+  .qml-home{
+    padding:0 28px
+  }
+  .qml-hero{
+    gap:30px;
+    padding:48px 0
+  }
+  .qml-hero h1{
+    font-size:69px
+  }
+  .qml-hero-stats{
+    gap:18px
+  }
+  .qml-hero-stats>div{
+    gap:7px
+  }
+  .qml-hero-stats strong{
+    font-size:29px
+  }
+  .qml-hero-stats span{
+    font-size:9px
+  }
+  .qml-evidence-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .qml-opportunity-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:26px
+  }
+  .qml-quantum-data{
+    gap:35px;
+    padding:34px
+  }
+  .qml-section-heading h2,.qml-start h2{
+    font-size:36px
+  }
+  .qml-start{
+    gap:28px
+  }
+  .qml-section-heading>p{
+    max-width:300px
+  }
+}
+@media(max-width:720px){
+  .qml-home{
+    padding:0 20px
+  }
+  .qml-local-nav{
+    height:auto;
+    min-height:82px;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+    gap:12px;
+    padding:17px 0
+  }
+  .qml-local-nav>div{
+    gap:24px;
+    font-size:11px;
+    flex-wrap:wrap
+  }
+  .qml-edition{
+    font-size:9px
+  }
+  .qml-hero{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:39px 0 42px
+  }
+  .qml-hero .qml-eyebrow{
+    font-size:8px;
+    letter-spacing:1.4px
+  }
+  .qml-hero h1{
+    font-size:70px;
+    max-width:400px
+  }
+  .qml-hero-description{
+    font-size:15px;
+    margin-top:21px!important
+  }
+  .qml-hero-stats{
+    justify-content:space-between;
+    gap:10px;
+    margin-top:29px
+  }
+  .qml-hero-stats strong{
+    font-size:31px
+  }
+  .qml-hero-stats span{
+    font-size:9px
+  }
+  .qml-actions{
+    gap:9px;
+    margin-top:23px
+  }
+  .qml-btn{
+    padding:10px 13px;
+    font-size:11px;
+    gap:15px
+  }
+  .qml-lab{
+    max-width:500px
+  }
+  .qml-lab-top{
+    padding:22px 25px 0
+  }
+  .qml-circuit{
+    max-height:215px;
+    margin:0
+  }
+  .qml-lab-copy{
+    padding:0 25px 23px
+  }
+  .qml-lab-copy h2{
+    font-size:32px
+  }
+  .qml-lab-copy p{
+    font-size:12px;
+    max-width:350px
+  }
+  .qml-sdk-strip{
+    padding:14px 25px
+  }
+  .qml-section{
+    padding:40px 0
+  }
+  .qml-section-heading{
+    display:block;
+    margin-bottom:25px
+  }
+  .qml-section-heading h2,.qml-start h2{
+    font-size:35px;
+    letter-spacing:-1.6px
+  }
+  .qml-section-heading>p{
+    font-size:12px;
+    max-width:100%;
+    margin-top:17px
+  }
+  .qml-filterbar{
+    gap:7px
+  }
+  .qml-filterbar button{
+    font-size:10px;
+    padding:8px 10px
+  }
+  .qml-filterbar button span{
+    margin-left:6px
+  }
+  .qml-filterbar p{
+    display:none
+  }
+  .qml-evidence-grid{
+    grid-template-columns:1fr;
+    gap:13px
+  }
+  .qml-evidence-card{
+    padding:23px
+  }
+  .qml-evidence-card h3{
+    min-height:0;
+    font-size:24px
+  }
+  .qml-evidence-badge{
+    font-size:9px
+  }
+  .qml-card-metric strong{
+    font-size:43px
+  }
+  .qml-card-metric p{
+    min-height:0;
+    font-size:11px
+  }
+  .qml-mechanism{
+    font-size:13px
+  }
+  .qml-scope{
+    font-size:11px
+  }
+  .qml-card-links{
+    font-size:11px
+  }
+  .qml-card-source{
+    font-size:9px
+  }
+  .qml-card-metric strong.qml-long-value{
+    max-width:none;
+    min-height:0;
+    font-size:28px
+  }
+  .qml-opportunity-grid{
+    grid-template-columns:1fr 1fr;
+    gap:20px
+  }
+  .qml-opportunity h3{
+    font-size:21px
+  }
+  .qml-opportunity p{
+    font-size:11px
+  }
+  .qml-opportunity .qml-text-link{
+    font-size:10px
+  }
+  .qml-space-note{
+    display:block;
+    padding:22px
+  }
+  .qml-space-note p{
+    margin-top:10px;
+    font-size:11px
+  }
+  .qml-space-note a{
+    display:inline-block;
+    margin-top:13px
+  }
+  .qml-quantum-data{
+    grid-template-columns:1fr;
+    gap:17px;
+    padding:27px;
+    margin-bottom:39px
+  }
+  .qml-quantum-data h2{
+    font-size:34px
+  }
+  .qml-quantum-score{
+    border-top:1px solid #56704d;
+    padding-top:12px
+  }
+  .qml-quantum-score>strong{
+    font-size:90px
+  }
+  .qml-quantum-score>p:last-child{
+    max-width:none
+  }
+  .qml-project-picker{
+    grid-template-columns:1fr
+  }
+  .qml-project-input,.qml-project-output{
+    padding:24px
+  }
+  .qml-project-output h3{
+    font-size:25px
+  }
+  .qml-project-output dl{
+    grid-template-columns:56px 1fr;
+    gap:12px;
+    font-size:11px
+  }
+  .qml-start{
+    grid-template-columns:1fr;
+    gap:27px
+  }
+  .qml-start>div>p:not(.qml-eyebrow){
+    max-width:none;
+    font-size:12px
+  }
+  .qml-terminal code{
+    font-size:10px!important
+  }
+  .qml-terminal pre{
+    padding:20px 15px!important
+  }
+  .qml-terminal-header{
+    padding:15px
+  }
+  .qml-terminal>p{
+    padding:0 15px 17px
+  }
+  .qml-agent-contract{
+    padding:33px 0
+  }
+  .qml-agent-contract h2{
+    font-size:30px
+  }
+  .qml-agent-contract>p{
+    font-size:12px
+  }
+  .qml-agent-contract>div{
+    gap:13px;
+    font-size:10px
+  }
+  .qml-home-footer{
+    display:block;
+    padding:30px 0
+  }
+  .qml-home-footer>div:nth-child(2){
+    margin:18px 0
+  }
+  .qml-home-footer>p{
+    max-width:none
+  }
+}
+.qml-evidence-badge{
+  font-size:10px
+}
+.qml-scope{
+  font-size:12px
+}
+.qml-mechanism{
+  font-size:13px
+}
+.qml-card-metric p{
+  font-size:11px
+}
+.qml-card-links{
+  font-size:11px
+}
+.qml-card-source{
+  font-size:9px
+}
+.qml-card-heading{
+  font-size:10px
+}
+@media(min-width:1220px){
+  .md-main__inner:has(.qml-home)>.md-sidebar{
+    display:none
+  }
+}
+@media(max-width:720px){
+  .qml-hero h1{
+    font-size:56px
+  }
+  .qml-filterbar button,.qml-sdk-tabs button{
+    min-height:42px
+  }
+  .qml-evidence-badge{
+    font-size:10px
+  }
+  .qml-scope{
+    font-size:12px
+  }
+}
+@media(prefers-reduced-motion:no-preference){
+  .qml-evidence-card,.qml-opportunity,.qml-btn{
+    transition:transform .17s ease,border-color .17s ease,background .17s ease
+  }
+  .qml-evidence-card:hover{
+    transform:translateY(-3px);
+    border-color:#8da67d
+  }
+  .qml-opportunity:hover{
+    transform:translateY(-2px)
+  }
+}

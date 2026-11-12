@@ -1,0 +1,120 @@
+{% extends "main.html" %}
+{% block extrahead %}
+  <meta property="og:title" content="QML Bag of Tricks — Make the quantum part count">
+  <meta property="og:description" content="Published applications, native quantum models and fair benchmarks. A practical field guide for ML engineers and coding agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ config.site_url }}assets/website-preview.png">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="1100">
+  <meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+{% block content %}
+<div class="qml-home">
+  <nav class="qml-local-nav" aria-label="Explore this field guide">
+    <span class="qml-edition"><span class="qml-dot"></span> THE PRACTICAL FIELD GUIDE</span>
+    <div><a href="#evidence">Results</a><a href="#why-qml">Why QML</a><a href="#project">Your project</a><a href="#start">Get started ↗</a></div>
+  </nav>
+
+  <section class="qml-hero" aria-labelledby="qml-title">
+    <div class="qml-hero-copy">
+      <p class="qml-eyebrow">QUANTUM MACHINE LEARNING, WITH A PURPOSE</p>
+      <h1 id="qml-title">Make the<br>quantum part<br><span>count.</span></h1>
+      <p class="qml-hero-description">Find a reason to try QML. Build a native model.<br class="qml-desktop-break"> Measure what helps your project.</p>
+      <div class="qml-actions"><a class="qml-btn qml-btn-primary" href="#evidence">Explore the results <span>↘</span></a><a class="qml-btn qml-btn-secondary" href="#start">Run an experiment <span>↗</span></a></div>
+      <div class="qml-hero-stats">
+        <div><strong>{{ showcase.counts.reproductions }}</strong><span>paper comparisons<br>reproduced here</span></div>
+        <div><strong>{{ showcase.counts.paper_leads }}</strong><span>further published<br>application cases</span></div>
+        <div><strong>{{ showcase.counts.sdks }}</strong><span>independently built<br>native SDKs</span></div>
+      </div>
+    </div>
+    <div class="qml-lab" aria-label="A structured representation, with explicit costs">
+      <div class="qml-lab-top"><span>REPRESENTATION LAB</span><span>ψ → f(x)</span></div>
+      <svg class="qml-circuit" viewBox="0 0 430 230" role="img" aria-labelledby="circuit-title">
+        <title id="circuit-title">An illustrative path from input features through a quantum model to measured outputs</title>
+        <g fill="none" stroke="#8ca68e" stroke-width="1.3">
+          <path d="M25 66H390M25 116H390M25 166H390"/>
+          <path d="M35 47L48 61L34 78M35 97L48 111L34 128M35 147L48 161L34 178" stroke="#d9ff65"/>
+        </g>
+        <g fill="#254938" stroke="#75916e">
+          <rect x="78" y="47" width="39" height="38" rx="5"/><rect x="78" y="97" width="39" height="38" rx="5"/><rect x="78" y="147" width="39" height="38" rx="5"/>
+          <rect x="178" y="37" width="69" height="158" rx="9" stroke="#d9ff65"/>
+          <rect x="299" y="47" width="38" height="38" rx="5"/><rect x="299" y="97" width="38" height="38" rx="5"/><rect x="299" y="147" width="38" height="38" rx="5"/>
+        </g>
+        <g font-family="ui-monospace,monospace" font-size="15" text-anchor="middle" fill="#e7efdd"><text x="98" y="72">x₁</text><text x="98" y="122">x₂</text><text x="98" y="172">x₃</text><text x="212" y="119" fill="#d9ff65" font-size="29">Uθ</text></g>
+        <g fill="none" stroke="#d9ff65" stroke-width="2"><path d="M307 72a11 11 0 0 1 23 0M318 70l8-11M307 122a11 11 0 0 1 23 0M318 120l8-11M307 172a11 11 0 0 1 23 0M318 170l8-11"/></g>
+        <g font-family="ui-monospace,monospace" font-size="10" fill="#a8bca5" text-anchor="middle"><text x="98" y="220">LOAD</text><text x="212" y="220">TRANSFORM</text><text x="318" y="220">MEASURE</text></g>
+      </svg>
+      <div class="qml-lab-copy"><span class="qml-eyebrow">A USEFUL STARTING POINT</span><h2>Small register.<br>Rich representation.</h2><p>A rich state space is an opportunity. Structured loading, useful readout and classical controls decide whether it pays.</p></div>
+      <div class="qml-sdk-strip"><span>Qiskit</span><span>PennyLane</span><span>Cirq</span></div>
+    </div>
+  </section>
+
+  <section class="qml-section" id="evidence" aria-labelledby="evidence-title">
+    <div class="qml-section-heading"><div><p class="qml-eyebrow">01 / THE EVIDENCE</p><h2 id="evidence-title">Reasons to try.<br>Results to inspect.</h2></div><p>Two original-comparator gains reproduced here. Six further peer-reviewed cases. Each card keeps its comparator and limits in view.</p></div>
+    <div class="qml-filterbar" role="group" aria-label="Filter application evidence">
+      <button type="button" data-evidence-filter="all" aria-pressed="true">All cases <span>{{ showcase.cases|length }}</span></button>
+      <button type="button" data-evidence-filter="reproduced" aria-pressed="false">Reproduced here <span>{{ showcase.counts.reproductions }}</span></button>
+      <button type="button" data-evidence-filter="adaptation" aria-pressed="false">Runnable adaptations <span>{{ showcase.counts.adaptations }}</span></button>
+      <button type="button" data-evidence-filter="reported" aria-pressed="false">Paper leads <span>{{ showcase.counts.paper_leads-showcase.counts.adaptations }}</span></button>
+      <p id="qml-case-count" aria-live="polite">{{ showcase.cases|length }} cases</p>
+    </div>
+    <div class="qml-evidence-grid">
+      {% for case in showcase.cases %}
+      <article class="qml-evidence-card" data-evidence-status="{{ case.status }}" id="case-{{ case.id }}">
+        <div class="qml-card-heading"><span>{{ case.domain | e }}</span><span class="qml-card-number">{{ '%02d' % loop.index }}</span></div>
+        <h3>{{ case.title | e }}</h3>
+        <div class="qml-evidence-badge qml-badge-{{ case.status }}">{{ case.badge | e }}</div>
+        <div class="qml-card-metric"><span>{{ case.metric | e }}</span><strong class="{% if case.value|length > 15 %}qml-long-value{% endif %}">{{ case.value | e }}</strong><p>Compared with {{ case.baseline | e }}</p></div>
+        <p class="qml-mechanism">{{ case.mechanism | e }}</p>
+        <p class="qml-scope">{{ case.scope | e }}</p>
+        <div class="qml-card-links"><a href="{{ case.guide | url }}">{{ 'Guide & adaptation' if case.status == 'adaptation' else 'Inspect the result' }} ↗</a><a href="{{ case.paper }}" aria-label="Primary publication: {{ case.venue | e }}">Paper ↗</a></div>
+        <p class="qml-card-source">{{ case.venue | e }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="qml-evidence-note">Paper results and reduced local adaptations are separate evidence. A reported mean difference alone does not establish statistical significance or a hardware speedup. <a href="{{ 'use_cases/' | url }}">Read the evidence catalog →</a></p>
+  </section>
+
+  <section class="qml-section" id="why-qml" aria-labelledby="why-title">
+    <div class="qml-section-heading"><div><p class="qml-eyebrow">02 / THE OPPORTUNITY</p><h2 id="why-title">Give quantum structure<br>a useful job.</h2></div><p>Start with the part of your task that could benefit from a different representation, physical memory or measurement protocol.</p></div>
+    <div class="qml-opportunity-grid">
+      <a class="qml-opportunity" href="{{ 'learning/fidelity_kernel/' | url }}"><span class="qml-mini-icon">K(x, x′)</span><h3>Learn a different similarity.</h3><p>Test feature-map geometry on a compact dataset. Keep tuned classical kernels and exact equivalents in the comparison.</p><span class="qml-text-link">Explore quantum kernels ↗</span></a>
+      <a class="qml-opportunity" href="{{ 'reproductions/communications/' | url }}"><span class="qml-mini-icon">ρ(t)</span><h3>Use physical memory.</h3><p>Let fixed dynamics transform a temporal signal, then fit a regularized classical readout with a clear memory control.</p><span class="qml-text-link">Explore reservoir learning ↗</span></a>
+      <a class="qml-opportunity" href="{{ 'method_selector/' | url }}"><span class="qml-mini-icon">∂L / ∂θ</span><h3>Make training measurable.</h3><p>Choose local objectives, structured circuits and useful initial references. Check the assumptions before scaling.</p><span class="qml-text-link">Choose a trainable method ↗</span></a>
+      <a class="qml-opportunity" href="{{ 'learning/kipu_workflow/' | url }}"><span class="qml-mini-icon">Q → C</span><h3>Deploy a classical student.</h3><p>Train a quantum teacher, distill its features offline, then gate export on held-out fidelity and task quality.</p><span class="qml-text-link">Explore offline distillation ↗</span></a>
+    </div>
+    <div class="qml-space-note"><strong>What about space?</strong><p>An <em>n</em>-qubit register represents 2<sup>n</sup> amplitudes. Structured preparation and a small measured output can make that representation useful. Count loading, repeat shots, noise and classical simulation before claiming an end-to-end resource gain.</p><a href="{{ 'foundations/' | url }}">Read the foundations ↗</a></div>
+  </section>
+
+  <section class="qml-quantum-data" aria-labelledby="quantum-data-title">
+    <div><p class="qml-eyebrow">WHEN THE INPUTS ARE QUANTUM</p><h2 id="quantum-data-title">The measurement<br>can be the advantage.</h2><p>For a late observable query, coherent two-copy acquisition can preserve information that the tested single-copy local records lose.</p><a class="qml-btn qml-btn-lime" href="{{ 'applications/experimental_learning/' | url }}">Inspect the access model ↗</a></div>
+    <div class="qml-quantum-score"><p>LOCAL SIMULATION · BALANCED ACCURACY</p><strong>{{ showcase.quantum_data.quantum }}<span>%</span></strong><div>vs <b>{{ showcase.quantum_data.classical }}%</b> for optimal inference on the tested local records</div><p>{{ showcase.quantum_data.qubits }}-qubit states · {{ showcase.quantum_data.coherent_qubits }} coherent qubits for Bell acquisition · {{ showcase.quantum_data.copies }} matched state copies · ideal acquisition · late query. Knowing the query early removes this gap. Restricted synthetic state family.</p></div>
+  </section>
+
+  <section class="qml-section" id="project" aria-labelledby="project-title">
+    <div class="qml-section-heading"><div><p class="qml-eyebrow">03 / YOUR STARTING POINT</p><h2 id="project-title">Start with your data.</h2></div><p>Choose a task to get a candidate, the controls to keep, and a first experiment. This is a starting hypothesis for your benchmark.</p></div>
+    <div class="qml-project-picker">
+      <div class="qml-project-input"><label for="qml-task">What are you working with?</label><select id="qml-task"><option value="tabular">Small tabular or materials data</option><option value="images">Images and limited labels</option><option value="signals">Temporal or streaming signals</option><option value="pairs">Text pairs or duplicate records</option><option value="quantum">Copies of a quantum state</option></select><p>New to QML? Begin with a small experiment and a strong classical baseline.</p><a href="{{ 'why_qml/' | url }}">Read the motivation guide ↗</a></div>
+      <div class="qml-project-output" aria-live="polite">
+        <article data-task-panel="tabular"><span class="qml-eyebrow">YOUR FIRST EXPERIMENT</span><h3>A fidelity kernel with a classical SVM.</h3><dl><dt>Try</dt><dd>A selected kernel geometry with train-only scaling and regularization.</dd><dt>Compare</dt><dd>Tuned RBF/linear SVMs, tree ensembles and the exact classical Pauli control.</dd><dt>Measure</dt><dd>Held-out accuracy, macro-F1, quadratic kernel queries and Gram memory.</dd></dl><a class="qml-text-link" href="{{ 'use_cases/multiclass_kernel/' | url }}">Open the runnable kernel model ↗</a></article>
+        <article data-task-panel="images" hidden><span class="qml-eyebrow">YOUR FIRST EXPERIMENT</span><h3>A compact hybrid image head.</h3><dl><dt>Try</dt><dd>A classical encoder with a small quantum head and an auxiliary objective.</dd><dt>Compare</dt><dd>The same encoder and route with a classical head, plus a tuned pretrained vision model.</dd><dt>Measure</dt><dd>Geographic/group-held-out metrics, loading gates, gradients, shots and training cost.</dd></dl><a class="qml-text-link" href="{{ 'use_cases/earth_observation/' | url }}">Open the image-model guide ↗</a></article>
+        <article data-task-panel="signals" hidden><span class="qml-eyebrow">YOUR FIRST EXPERIMENT</span><h3>A fixed reservoir and a simple readout.</h3><dl><dt>Try</dt><dd>Quantum dynamics as nonlinear temporal features with a regularized classical readout.</dd><dt>Compare</dt><dd>Causal delay features, polynomial equalizers and classical reservoirs with matched history.</dd><dt>Measure</dt><dd>Prediction error, reset/readout cost, temporal access and training-message budgets.</dd></dl><a class="qml-text-link" href="{{ 'reproductions/communications/' | url }}">Open the reservoir reproduction ↗</a></article>
+        <article data-task-panel="pairs" hidden><span class="qml-eyebrow">YOUR FIRST EXPERIMENT</span><h3>Route ambiguous pairs to a hybrid head.</h3><dl><dt>Try</dt><dd>TF-IDF triage and a jointly trained classical encoder plus quantum head.</dd><dt>Compare</dt><dd>TF-IDF, a classical head using the same route, and a semantic matcher.</dd><dt>Measure</dt><dd>Entity-group-held-out F1/PR-AUC, false merges and the fraction of quantum queries.</dd></dl><a class="qml-text-link" href="{{ 'use_cases/entity_matching/' | url }}">Open the runnable matcher ↗</a></article>
+        <article data-task-panel="quantum" hidden><span class="qml-eyebrow">YOUR FIRST EXPERIMENT</span><h3>Match the acquisition to the query.</h3><dl><dt>Try</dt><dd>Two-copy Bell acquisition when the observable query arrives after measurement.</dd><dt>Compare</dt><dd>Optimal inference on the chosen local records and an early-known-query control.</dd><dt>Measure</dt><dd>Balanced accuracy, total copies, simultaneous coherent qubits and noise sensitivity.</dd></dl><a class="qml-text-link" href="{{ 'applications/experimental_learning/' | url }}">Open the quantum-data prototype ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="qml-section qml-start" id="start" aria-labelledby="start-title">
+    <div><p class="qml-eyebrow">04 / FROM READING TO RUNNING</p><h2 id="start-title">Your first experiment.<br>One SDK at a time.</h2><p>Use Python 3.12 from a cloned checkout. Start with the multiclass reference, inspect its saved predictions, then bring your own dataset.</p><div class="qml-sdk-tabs" role="group" aria-label="Choose Python SDK"><button data-sdk="qiskit" aria-pressed="true" type="button">Qiskit</button><button data-sdk="pennylane" aria-pressed="false" type="button">PennyLane</button><button data-sdk="cirq" aria-pressed="false" type="button">Cirq</button></div><a class="qml-text-link" href="{{ 'use_cases/models/' | url }}">Model APIs, custom data & saved runs ↗</a></div>
+    <div class="qml-terminal"><div class="qml-terminal-header"><span><i></i><i></i><i></i> <b>YOUR TERMINAL</b></span><button id="qml-copy" type="button" aria-label="Copy installation and run commands">Copy commands</button></div><pre><code id="qml-commands">python -m pip install -e ".[qiskit,learning]"
+python -m qml_tricks.learning.case_models \
+  --case multiclass_kernel \
+  --framework qiskit \
+  --output results/local/first_run.json</code></pre><p>Exact simulator reference · classical controls included · no QPU account required</p><span id="qml-copy-status" class="qml-sr-only" aria-live="polite"></span></div>
+  </section>
+
+  <section class="qml-agent-contract"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2>Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div></section>
+  <footer class="qml-home-footer"><div><strong>QML Bag of Tricks</strong><p>Built for useful, reproducible experiments.</p></div><div><a href="https://github.com/FyodorAmanov1/QML_bag_of_tricks">GitHub ↗</a><a href="{{ 'coverage/' | url }}">Evidence & assumptions</a><a href="{{ 'owner_review/' | url }}">Review status</a></div><p>0.2.0 candidate · owner scientific review pending.<br>Source repository is private during review. Published papers are linked publicly.</p></footer>
+</div>
+{% endblock %}

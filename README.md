@@ -1,168 +1,174 @@
-# QML Bag of Tricks
+<p align="center">
+  <img src="docs/assets/readme-hero.svg" alt="QML Bag of Tricks — make the quantum part count" width="100%">
+</p>
 
-![QML Bag of Tricks: choose, implement, benchmark](docs/assets/social-preview.png)
+<p align="center">
+  <strong>A practical QML field guide for ML engineers and coding agents.</strong><br>
+  Find a reason to try quantum machine learning. Build the model. Measure what helps.
+</p>
 
-**Explore reproduced QML applications. Choose a trainable method. Build it with your coding agent.**
+<p align="center">
+  <a href="#why-qml-is-worth-testing">Why QML?</a> ·
+  <a href="#results-worth-exploring">Results</a> ·
+  <a href="#run-your-first-experiment">Get started</a> ·
+  <a href="docs/index.md">Explore the website and guides</a> ·
+  <a href="docs/use_cases/models.md">Model APIs</a>
+</p>
 
-Runnable Qiskit, PennyLane and Cirq recipes connect scientific assumptions to
-native circuits, complete learning workflows and reproducible reports. Start
-from an application, understand why the quantum model helps, then benchmark
-predictive quality and cost on your own project.
+<p align="center">
+  <strong>19</strong> circuit strategies &nbsp; / &nbsp;
+  <strong>14</strong> learning guides &nbsp; / &nbsp;
+  <strong>3</strong> native SDKs &nbsp; / &nbsp;
+  <strong>2</strong> paper reproductions &nbsp; / &nbsp;
+  <strong>6</strong> further published cases
+</p>
 
-## Why explore quantum machine learning?
+## Why QML is worth testing
 
-Published applications give concrete reasons to test quantum feature maps and
-quantum models with temporal memory. We reproduced numerical comparisons from
-two peer-reviewed papers using **classical application inputs**:
+Quantum models offer several concrete hypotheses for an ML project:
 
-| Application | Reproduced quantum result | Original classical comparator | Why try it? |
-|---|---|---|---|
-| [Alloy-phase prediction — Matter (2024)](docs/reproductions/alloys.md) | **89.12% accuracy** | 87.73% for the best original comparator in this replay | Explore a fidelity kernel for small materials-screening datasets |
-| [Wireless channel equalization — Nature Communications (2024)](docs/reproductions/communications.md) | **0.313% symbol error** | 4.437% for memoryless logistic regression | Learn a nonlinear temporal response with a fixed reservoir and classical readout |
-
-![Reproduced application motivation](docs/assets/qml_motivation.png)
-
-The alloy comparison uses ten replay splits for the ten-qubit model; all 20
-quantum replay scores across eight and ten qubits match their archived seeds.
-Channel equalization uses three fresh simulated message datasets at 20 dB.
-These reproduce gains over the **original comparators**. Stronger tuned classical
-models lead in our follow-up comparisons, documented alongside the full results
-in the [reproduction report](docs/reproductions/results.md). No hardware speedup
-is established by these bounded simulations.
-
-[Why and when to use QML](docs/why_qml.md) connects these motivations to method
-selection, trainability and implementation. For quantum inputs, the
-[two-copy state-learning example](docs/applications/experimental_learning.md)
-adds a conditional acquisition benefit: **100% vs 49.14%** mean balanced accuracy
-on the tested late-query, eight-qubit, 512-copy task.
-
-## More published applications to explore
-
-The [application catalog](docs/use_cases/index.md) contains six peer-reviewed
-leads, with implementation plans and benchmark contracts for coding agents.
-Three now include runnable model adaptations in all three SDKs:
-
-| Application | Published comparison | Explore it for |
+| Opportunity | Where to try it | What makes the experiment useful |
 |---|---|---|
-| [Satellite-image classification](docs/use_cases/earth_observation.md) | **95.8% accuracy** vs 94.9% for DenseNet; 93.5% for the matched classical multitask model | A compact quantum image head when labels are scarce |
-| [Molecular carcinogenicity](docs/use_cases/molecular_toxicity.md) | **0.8614 ROC-AUC** vs 0.8258 for LightAutoML | Annealer-based weak-learner selection on a small endpoint |
-| [Hyperparameter search](docs/use_cases/hyperparameter_search.md) | **2,960 training epochs** vs 3,014 with classical SVR prediction | Reducing expensive neural-network training work |
-| [Hybrid entity matching](docs/use_cases/entity_matching.md) | **96.5% accuracy** vs 94.0% for TF-IDF on an extended hard-case test | Route ambiguous pairs to a small jointly trained hybrid head |
-| [Multiclass kernel SVM](docs/use_cases/multiclass_kernel.md) | Higher mean cross-validation accuracy than the tested classical kernels across six tasks | Select task-appropriate kernel geometry, with exact classical controls |
-| [Adversarial QVC](docs/use_cases/adversarial_qvc.md) | Greater resistance to transferred classical attacks than the tested CNN/ResNet models | Explore cross-model attack transfer, with quantum white-box controls |
+| **A different similarity geometry** | Small materials, molecular or tabular datasets | Compare a quantum fidelity kernel with tuned conventional kernels and domain features |
+| **Temporal features from physical dynamics** | Nonlinear signals and streaming data | Train a classical readout on a fixed quantum reservoir and compare equally informed classical memories |
+| **Compact, structured representations** | Hybrid image models and constrained quantum heads | Use structure, local readout and a measured loading budget to keep the quantum part manageable |
+| **Better acquisition of quantum data** | State characterization with late observable queries | Test coherent multi-copy measurements under matched state-copy access |
+| **A useful hybrid workflow** | Ambiguous record matching, learning-curve prediction and offline deployment | Isolate the contribution of routing, representation, quantum queries and classical training |
 
-**These additions are reported paper results, not local reproductions.** The
-image comparison uses a reduced noiseless-simulator benchmark. The molecular
-gain is one of ten endpoints; the classical model leads on the other nine.
-The search comparison measures epochs, with aggregation and hardware overhead
-requiring separate controls. The molecular and HPO methods use quantum annealing.
-Each guide states code/data readiness, exact result locations, required
-classical controls and resource costs. Agents can also read the
-[structured evidence catalog](docs/use_cases/catalog.json).
+An $n$-qubit register represents $2^n$ amplitudes. That space becomes useful
+when preparation is structured and a compact readout answers the task. Loading,
+shots, noise and classical alternatives decide whether the full workflow pays.
+The [motivation guide](docs/why_qml.md) connects each opportunity to methods and costs.
 
-Run the new models with `entity_matching`, `multiclass_kernel` or
-`adversarial_qvc` as the case:
+## Results worth exploring
 
-```bash
-python -m pip install -e ".[qiskit,learning]"
-python -m qml_tricks.learning.case_models --case entity_matching --framework qiskit --output results/local/entity.json
-```
+### Two classical-input comparisons reproduced here
 
-[Model APIs and benchmark instructions](docs/use_cases/models.md) cover custom
-data, all three SDKs and nine saved reference runs. The local models are reduced
-adaptations with their own outcomes; they do not reproduce the published gains.
-The entity win belongs to the combined pipeline, product Pauli kernels have an
-exact classical equivalent, and transferred-attack resilience does not imply
-white-box robustness.
+These bounded simulations recover gains over the papers' original comparators.
+The stronger tuned classical follow-ups are preserved alongside them.
 
-## Start with one complete project
+<!-- showcase:reproductions:start -->
+| Application | Quantum result | Classical comparison | Evidence and scope |
+|---|---|---|---|
+| [Predict alloy phases](docs/reproductions/alloys.md) | **89.12%** · Accuracy ↑ | 87.73% · best original classical comparator | Local comparator replay. 10-qubit replay, 10 splits. Stronger tuned classical models lead in follow-up comparisons. |
+| [Recover a wireless signal](docs/reproductions/communications.md) | **0.313%** · Symbol error ↓ | 4.437% · memoryless logistic error | Local comparator replay. 6 qubits, 3 fresh simulated datasets at 20 dB. Stronger causal classical controls lead. |
+<!-- showcase:reproductions:end -->
 
-| Goal | Executed walkthrough |
-|---|---|
-| Classify real tabular observations | [Classification notebook](notebooks/01_classification.ipynb) |
-| Regress a real numerical target | [Regression notebook](notebooks/02_regression.ipynb) |
-| Train a quantum teacher, deploy a classical student | [Offline distillation notebook](notebooks/03_offline_surrogate.ipynb) |
+The alloy figure uses ten replay splits for the ten-qubit model. All 20 fresh
+quantum replay scores across eight and ten qubits match their archived seeds.
+The communications example uses three fresh simulated datasets at 20 dB.
+[Protocols, pinned data and complete comparisons →](docs/reproductions/index.md)
 
-Use Python 3.12, clone this repository, then install **one** SDK first:
+### Six more peer-reviewed reasons to experiment
+
+These are **published results**. Three have runnable reduced adaptations here;
+those local runs have their own outcomes and do not reproduce the paper gains.
+
+<!-- showcase:papers:start -->
+| Application | Quantum result | Classical comparison | Evidence and scope |
+|---|---|---|---|
+| [Classify satellite images](docs/use_cases/earth_observation.md) | **95.8%** · test accuracy ↑ | 94.9% · DenseNet | Published result. Simplified simulator benchmark; large CNNs were reference comparisons under lightweight training settings. |
+| [Screen a molecular endpoint](docs/use_cases/molecular_toxicity.md) | **0.8614** · ROC-AUC ↑ | 0.8258 · LightAutoML | Published result. The positive endpoint is one of ten ADMET datasets; LightAutoML leads on the other nine. |
+| [Spend fewer training epochs](docs/use_cases/hyperparameter_search.md) | **2,960** · target-model training epochs ↓ | 3,014 · Swift-Hyperband SVR epochs | Published result. Epoch counts exclude end-to-end annealer overhead; gains over classical prediction are task dependent and aggregation is a confound. |
+| [Match ambiguous records](docs/use_cases/entity_matching.md) | **96.5%** · test accuracy ↑ | 94.0% · TF-IDF | Published result. The win is for the combined pipeline on an extended hard-case test; standalone HQNN scores 0.887 there and Osaka hardware evaluation is lower. |
+| [Choose a multiclass kernel](docs/use_cases/multiclass_kernel.md) | **Higher mean CV accuracy** · Figure-only comparison | Tested linear, polynomial, sigmoid and Gaussian SVMs | Published result. Figure-only paired comparisons are not transcribed as exact numbers; the Pauli product kernels also have an efficient exact classical formula. |
+| [Study attack transfer](docs/use_cases/adversarial_qvc.md) | **Greater transfer resilience** · Figure-only comparison | Tested ConvNet / ResNet18 targets | Published result. A transfer-attack benefit is distinct from white-box robustness: attacks optimized directly against QVCs remain effective. |
+<!-- showcase:papers:end -->
+
+[Application catalog and primary sources →](docs/use_cases/index.md)
+
+### A separate opportunity with quantum inputs
+
+Our late-query state-learning prototype reaches **100% versus 49.14% mean
+balanced accuracy** on the tested eight-qubit, 512-copy task. Bell acquisition
+retains information lost by the specified single-copy local records, including
+their optimal inference control. It needs 16 simultaneously coherent qubits
+for the two copies; knowing the
+query early removes this gap. [Access model and full results →](docs/applications/experimental_learning.md)
+
+The [periodic-calibration prototype](docs/applications/ramsey_calibration.md)
+adds a useful control: its quantum Fourier features have an identical cheap
+classical implementation. Preserve that equivalence when interpreting a gain.
+
+## Run your first experiment
+
+Use Python 3.12, clone this repository and install one SDK:
 
 ```bash
 python -m venv .venv
 # Activate .venv using your shell.
-python -m pip install -e ".[qiskit,learning,notebooks]"
-python -m qml_tricks benchmark --task classification --framework qiskit --output results/local/report.json
+python -m pip install -e ".[qiskit,learning]"
+python -m qml_tricks.learning.case_models --case multiclass_kernel --framework qiskit --output results/local/first_run.json
 ```
 
-For a browser interface, install JupyterLab and open `notebooks/`.
-[Walkthrough instructions and troubleshooting](docs/tutorials.md) cover local
-execution and public Colab setup once a repository destination is configured.
-Install `.[all,learning]` when you want all three SDKs.
+Use `.[pennylane,learning]` or `.[cirq,learning]` with the matching
+`--framework`. Install `.[all,learning]` for the full SDK matrix.
 
-## Reproduce the applications
+| Build this | Start here |
+|---|---|
+| A multiclass quantum-kernel classifier | `--case multiclass_kernel` · [Guide](docs/use_cases/multiclass_kernel.md) |
+| A hybrid matcher with TF-IDF triage | `--case entity_matching` · [Guide](docs/use_cases/entity_matching.md) |
+| A QVC and cross-model attack matrix | `--case adversarial_qvc` · [Guide](docs/use_cases/adversarial_qvc.md) |
+| An end-to-end dataset project | [Classification](notebooks/01_classification.ipynb), [regression](notebooks/02_regression.ipynb), [offline surrogate](notebooks/03_offline_surrogate.ipynb) |
+| An original-comparator paper replay | `python -m qml_tricks.learning.paper_reproductions --study alloys` or `--study communications` |
 
-From the source checkout, run the classical-input paper examples:
+The [model API guide](docs/use_cases/models.md) covers custom data and nine saved
+reference runs. The heads use short reference training; benchmark quality and
+cost before adapting them to a project. [Installation and walkthrough help →](docs/tutorials.md)
+
+## Make the quantum model trainable
+
+| Your next decision | Repository support |
+|---|---|
+| Start from a useful reference | [Near-identity encoding](docs/strategies/near_identity_encoding.md), [identity blocks](docs/strategies/identity_block_init.md), [Gaussian initialization](docs/strategies/gaussian_init.md) |
+| Keep the objective measurable | [Local costs](docs/strategies/local_loss.md), [QCNNs](docs/strategies/qcnn.md), [structure-based method selector](docs/method_selector.md) |
+| Improve optimization when gradients are resolvable | [Quantum natural gradient](docs/strategies/natural_gradient.md), [parameter-shift](docs/learning/parameter_shift.md), [SPSA](docs/learning/spsa.md) |
+| Reuse classical work | [Classical pretraining and warm starts](docs/learning/pretraining_surrogates.md) |
+| Deploy a trained teacher through a classical student | [Kipu-style offline feature distillation](docs/learning/kipu_workflow.md), with held-out fidelity gates and zero-query inference checks |
+
+Every strategy separates its published guarantee from its executable scope.
+The **99 native recipe entrypoints** share mathematical utilities; they are not
+99 distinct algorithms. Three additional application classes have nine native
+state constructors. [Evidence coverage →](docs/coverage.md)
+
+## Give your agent a benchmark contract
+
+> Split before preprocessing. Choose settings using validation data only.
+> Include regularized and domain-informed classical controls. Save predictions,
+> artifacts, uncertainty and loading/readout/shot costs. State the access model
+> and the paper-to-code differences. Preserve unsuccessful results. Accept a
+> quantum gain only for the tested endpoint and comparator.
+
+[Five executed agent tasks](agent_eval/tasks.json), [full application results](docs/applications/results.md)
+and the [initial tabular study](docs/study.md) show how this works in practice.
+The source reports retain stronger classical results, failed configurations and
+warnings. The collection establishes no general hardware or runtime advantage.
+
+## Website, validation and contributions
+
+The redesigned [website source](docs/index.md) includes an evidence gallery,
+project selector, SDK commands and the complete guide library. Preview locally:
 
 ```bash
-python -m qml_tricks.learning.paper_reproductions --study alloys
-python -m qml_tricks.learning.paper_reproductions --study communications
+python -m pip install -e ".[docs]"
+python scripts/build_showcase.py --check
+python -m mkdocs serve
 ```
 
-The [reproduction guide](docs/reproductions/index.md) covers pinned author data,
-reference archives, the stronger-control extensions and independent audits.
-Qiskit, PennyLane and Cirq construct the alloy feature map independently. The
-reservoir simulation uses exact SciPy dynamics with native SDK equivalence checks.
-
-Additional reports remain available for deeper evaluation:
-
-- [Application benchmarks](docs/applications/results.md): periodic calibration,
-  quantum-state characterization, learning curves and copy/shot budgets.
-- [Initial tabular baseline study](docs/study.md): all earlier configurations,
-  classical comparisons, uncertainty and costs.
-- [Agent implementation evaluation](docs/agent_evaluation.md): five project tasks
-  independently rerun and checked, with their limits stated.
-
-## Choose a method
-
-- [Task-based selector](docs/index.md): local losses, identity blocks, Gaussian
-  initialization, QCNNs, tensor architectures and symmetries.
-- [Learning workflows](docs/learning/index.md): parameter-shift, re-uploading,
-  kernels, frozen features, SPSA, shot allocation, shadows and generative learning.
-- [Kipu-style offline distillation](docs/learning/kipu_workflow.md): a frozen trained
-  teacher, measured feature pairs and fidelity-gated classical export.
-- [Evidence and gaps](docs/coverage.md): formal scopes, restricted demonstrations
-  and engineering companions are labeled separately.
-
-The collection contains **19 circuit-strategy guides and 14 learning guides**.
-Its **99 native entrypoints share mathematical utilities**; they are not 99
-distinct algorithms or complete reproductions of every cited theorem.
-
-## Give this contract to your agent
-
-> Use this repository to fit a model to my dataset. Split before preprocessing,
-> select settings using validation data only, include classical controls, save
-> predictions and model artifacts, and report held-out metrics, uncertainty and
-> resources. State the mathematical assumptions. Preserve negative results;
-> do not infer quantum advantage from a small simulator experiment.
-
-[Five executable project tasks](agent_eval/tasks.json) and their saved solutions
-demonstrate the workflow. The quantum-state example uses known simulator
-preparation descriptions; hardware state-copy access is a different interface.
-Finite-shot modes simulate measurements on the host. No QPU account is required.
-
-## Validate and contribute
+The GitHub Pages workflow builds a private downloadable preview by default.
+Public publication is a separate explicit workflow option; the source repository
+remains private for owner review. [Hosting and release instructions →](docs/release.md)
 
 ```bash
 python -m pip install -e ".[all,learning,notebooks,dev,docs]"
 python -m pytest
-python scripts/run_notebooks.py
 python -m mkdocs build --strict
 ```
 
-See [validation](VALIDATION.md), [contributing](CONTRIBUTING.md), the
+Contribute a reproduction, a stronger control, a useful dataset report or a
+clearer implementation. See [contributing](CONTRIBUTING.md), [validation](VALIDATION.md),
 [bibliography](references.bib) and [citation metadata](CITATION.cff).
-Code uses the [MIT license](LICENSE).
+Code is [MIT licensed](LICENSE).
 
-**Release status: 0.2.0 candidate; owner scientific review pending.**
-The [review packet](docs/owner_review.md) and [release notes](RELEASE_NOTES.md)
-identify measured results and remaining obligations. The docs build locally;
-the [GitHub repository](https://github.com/FyodorAmanov1/QML_bag_of_tricks) is
-private for owner review. Public documentation and Colab access are pending.
+**0.2.0 candidate · owner scientific review pending.**
+[Review packet](docs/owner_review.md) · [Release notes](RELEASE_NOTES.md)

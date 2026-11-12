@@ -1,5 +1,16 @@
 # Changelog
 
+## Application showcase and website — 2026-11-12
+
+- Redesigned the README with a native SVG banner, a complete results summary,
+  practical QML motivations and a shorter path to running a model.
+- Added a responsive website homepage with eight evidence cards, status filters,
+  five project routes, SDK commands, a quantum-data feature and the full guides.
+- Derived displayed scores and comparison tables from canonical reports and
+  the application catalog. Published claims retain their evidence labels.
+- Added a private GitHub Actions preview artifact and a separate explicit Pages
+  publication option. Repository visibility is preserved.
+
 ## Three runnable paper-inspired models — 2026-11-12
 
 - Added HQNN/TF-IDF entity matching, multiclass fidelity-kernel SVMs and
