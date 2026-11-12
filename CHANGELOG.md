@@ -1,5 +1,14 @@
 # Changelog
 
+## More published application leads — 2026-11-12
+
+- Added satellite-image classification, carcinogenicity screening and
+  quantum-assisted hyperparameter search, with primary-source score comparisons.
+- Added agent implementation contracts, classical controls, data-readiness
+  records and resource accounting. Kept annealing distinct from gate circuits.
+- Added a validated structured evidence catalog and generated index. New
+  literature records remain separate from the existing two paper reproductions.
+
 ## Application-led repository introduction
 
 - Featured reproduced alloy-prediction and channel-equalization gains in the

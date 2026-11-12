@@ -5,6 +5,11 @@ classical inputs, the [reproduced alloy and communications studies](../reproduct
 show gains over their original comparators. The [QML motivation guide](../why_qml.md)
 explains when those models are worth testing and connects them to practical recipes.
 
+For additional domains, use the [published application catalog](../use_cases/index.md):
+satellite-image classification, molecular carcinogenicity and quantum-assisted
+hyperparameter search. These guides provide exact reported comparisons and
+agent benchmark plans. They are explicitly separate from locally run examples.
+
 These additional application prototypes make two mechanisms explicit:
 
 | Application | Potential benefit | Control that tests the explanation |

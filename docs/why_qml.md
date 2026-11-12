@@ -47,6 +47,22 @@ classical delay features, nonlinear equalizers or classical reservoirs with
 comparable access to past inputs. Check reset, readout and repeated-execution
 costs before considering a hardware implementation.
 
+## Further application hypotheses
+
+The [peer-reviewed application catalog](use_cases/index.md) provides three more
+ways to explore QML on classical inputs. Each guide separates the paper's
+reported outcome from our proposed implementation protocol:
+
+- [Satellite imagery](use_cases/earth_observation.md): test a compact quantum
+  head while controlling for the classical encoder and auxiliary objective.
+- [Molecular carcinogenicity](use_cases/molecular_toxicity.md): compare annealed
+  weak-learner selection with classical solvers on exactly the same ensemble.
+- [Hyperparameter search](use_cases/hyperparameter_search.md): test whether a
+  quantum-trained curve predictor saves enough training work to cover its cost.
+
+These are implementation leads, with source and artifact-readiness records.
+They add domains to explore; full local reproductions remain future work.
+
 ## Turn the motivation into a trainable implementation
 
 | Your next decision | Repository support |

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-12",
+  "scope": "Additional peer-reviewed application leads; reported scores are not local benchmark outputs.",
+  "applications": [
+    {
+      "id": "earth_observation",
+      "title": "Satellite-image classification",
+      "guide": "earth_observation.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "implementation_guide_and_upstream_code",
+      "publication": {
+        "title": "Multitask learning for earth observation data classification with hybrid quantum network",
+        "authors": "Fan Fan, Yilei Shi, Tobias Guggemos and Xiao Xiang Zhu",
+        "venue": "Quantum Machine Intelligence",
+        "year": 2026,
+        "doi": "10.1007/s42484-026-00415-3",
+        "url": "https://link.springer.com/article/10.1007/s42484-026-00415-3",
+        "primary_result_url": "https://link.springer.com/content/pdf/10.1007/s42484-026-00415-3.pdf",
+        "locator": "Table 4; Sections 4.1-4.3",
+        "peer_reviewed": true
+      },
+      "backend": "noiseless_gate_simulator",
+      "metric": {"name": "test accuracy", "unit": "fraction", "direction": "higher"},
+      "quantum": {"model": "MLTQNN", "value": 0.958},
+      "classical_comparators": [
+        {"model": "MLTCNN", "role": "matched multitask counterpart", "value": 0.935},
+        {"model": "CNN", "role": "similar parameter count", "value": 0.937},
+        {"model": "DenseNet", "role": "best tested classical accuracy on this setting", "value": 0.949}
+      ],
+      "experimental_scope": "Reduced balanced SAT-6 setting: 4200/1200/1200 train/validation/test images; three training runs; 12 qubits.",
+      "headline_caveat": "Simplified simulator benchmark; large CNNs were reference comparisons under lightweight training settings.",
+      "uncertainty": "Table 4 reports plus/minus 0.002 for MLTQNN, 0.007 for MLTCNN and 0.013 for DenseNet; these are not local confidence intervals.",
+      "upstream": {
+        "code_url": "https://github.com/zhu-xlab/MLTQNN",
+        "code_access": "public_repository_inspected_not_executed",
+        "data_access": "See paper Section 4.1 and upstream dataLoader.py; exact sampled indices have not been recovered here."
+      },
+      "acceptance_checks": [
+        "Save image IDs and geographic groups before fitting preprocessing or the auxiliary task.",
+        "Compare the shared encoder with classical convolution and a tuned pretrained vision baseline.",
+        "Report loading gates, measurement settings, training circuits, wall time and host memory.",
+        "Retain failed seeds and evaluate finite shots separately from noiseless expectations."
+      ]
+    },
+    {
+      "id": "molecular_toxicity",
+      "title": "Molecular carcinogenicity screening",
+      "guide": "molecular_toxicity.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "implementation_guide",
+      "publication": {
+        "title": "Performance of Quantum Annealing Machine Learning Classification Models on ADMET Datasets",
+        "authors": "Hadi Salloum and colleagues",
+        "venue": "IEEE Access",
+        "year": 2025,
+        "doi": "10.1109/ACCESS.2025.3531391",
+        "url": "https://doi.org/10.1109/ACCESS.2025.3531391",
+        "primary_result_url": "https://inspirehep.net/files/f7e8c2722a6e150153c21830a0fae9fe",
+        "locator": "Tables 1 and 2; Section VII",
+        "peer_reviewed": true
+      },
+      "backend": "quantum_annealer",
+      "metric": {"name": "ROC-AUC", "unit": "fraction", "direction": "higher"},
+      "quantum": {"model": "QBoost", "value": 0.8614},
+      "classical_comparators": [
+        {"model": "LightAutoML", "role": "paper classical comparator", "value": 0.8258}
+      ],
+      "experimental_scope": "Carcinogens_Lagunin endpoint; Table 2 lists 196 training examples, including 42 positives; D-Wave Advantage 4.1.",
+      "headline_caveat": "The positive endpoint is one of ten ADMET datasets; LightAutoML leads on the other nine.",
+      "uncertainty": "The Table 1 point estimates alone do not establish significance or scaffold-split generalization.",
+      "upstream": {
+        "code_url": null,
+        "code_access": "paper_mentions_links_but_targets_not_resolved",
+        "data_access": "The paper's Code and Data Availability statement names links; their targets and exact split artifacts have not been verified here."
+      },
+      "acceptance_checks": [
+        "Recover source molecules, fingerprints and split IDs before claiming a replication.",
+        "Include scaffold-separated testing and PR-AUC for the imbalanced endpoint.",
+        "Optimize the identical weak-learner QUBO with classical solvers as well as the annealer.",
+        "Save embedding, chain breaks, reads, anneal time, queue time and classical preprocessing costs."
+      ]
+    },
+    {
+      "id": "hyperparameter_search",
+      "title": "Hyperparameter-search resource reduction",
+      "guide": "hyperparameter_search.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "implementation_guide_and_upstream_code",
+      "publication": {
+        "title": "Distributed hybrid quantum-classical performance prediction for hyperparameter optimization",
+        "authors": "Eric Wulff, Juan Pablo Garcia Amboage, Marcel Aach and colleagues",
+        "venue": "Quantum Machine Intelligence",
+        "year": 2024,
+        "doi": "10.1007/s42484-024-00198-5",
+        "url": "https://link.springer.com/article/10.1007/s42484-024-00198-5",
+        "primary_result_url": "https://link.springer.com/article/10.1007/s42484-024-00198-5",
+        "locator": "Section 4; Figure 4(a)",
+        "peer_reviewed": true
+      },
+      "backend": "quantum_annealer",
+      "metric": {"name": "target-model training epochs", "unit": "epochs", "direction": "lower"},
+      "quantum": {"model": "Swift-Hyperband QT-SVR", "value": 2960},
+      "classical_comparators": [
+        {"model": "Swift-Hyperband SVR", "role": "classical performance-prediction counterpart", "value": 3014},
+        {"model": "Hyperband", "role": "no performance predictor", "value": 3237}
+      ],
+      "experimental_scope": "CIFAR-10 CNN hyperparameter search; averages over three seeds; similar target-model performance.",
+      "headline_caveat": "Epoch counts exclude end-to-end annealer overhead; gains over classical prediction are task dependent and aggregation is a confound.",
+      "uncertainty": "The paper plots error bars; the catalog transcribes means and does not infer significance.",
+      "upstream": {
+        "code_url": "https://github.com/JP-Amboage/qtml-hybrid-workflow",
+        "code_access": "public_repository_inspected_not_executed",
+        "data_access": "CIFAR-10 setup is in upstream cifar10_tf_methods.py and cifar10_torch_methods.py; original trial histories have not been replayed here."
+      },
+      "acceptance_checks": [
+        "Use identical target-model search spaces, seed schedules and stopping rules.",
+        "Fit performance predictors on completed training trials without future-epoch leakage.",
+        "Compare an equally sized classical predictor ensemble to control for aggregation.",
+        "Report final model quality, total target epochs and end-to-end compute and monetary cost separately."
+      ]
+    }
+  ]
+}

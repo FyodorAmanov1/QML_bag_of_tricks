@@ -36,6 +36,26 @@ selection, trainability and implementation. For quantum inputs, the
 adds a conditional acquisition benefit: **100% vs 49.14%** mean balanced accuracy
 on the tested late-query, eight-qubit, 512-copy task.
 
+## More published applications to explore
+
+The [application catalog](docs/use_cases/index.md) adds three peer-reviewed
+leads, with implementation plans and benchmark contracts for coding agents:
+
+| Application | Published comparison | Explore it for |
+|---|---|---|
+| [Satellite-image classification](docs/use_cases/earth_observation.md) | **95.8% accuracy** vs 94.9% for DenseNet; 93.5% for the matched classical multitask model | A compact quantum image head when labels are scarce |
+| [Molecular carcinogenicity](docs/use_cases/molecular_toxicity.md) | **0.8614 ROC-AUC** vs 0.8258 for LightAutoML | Annealer-based weak-learner selection on a small endpoint |
+| [Hyperparameter search](docs/use_cases/hyperparameter_search.md) | **2,960 training epochs** vs 3,014 with classical SVR prediction | Reducing expensive neural-network training work |
+
+**These additions are reported paper results, not local reproductions.** The
+image comparison uses a reduced noiseless-simulator benchmark. The molecular
+gain is one of ten endpoints; the classical model leads on the other nine.
+The search comparison measures epochs, with aggregation and hardware overhead
+requiring separate controls. The latter two methods use quantum annealing.
+Each guide states code/data readiness, exact result locations, required
+classical controls and resource costs. Agents can also read the
+[structured evidence catalog](docs/use_cases/catalog.json).
+
 ## Start with one complete project
 
 | Goal | Executed walkthrough |

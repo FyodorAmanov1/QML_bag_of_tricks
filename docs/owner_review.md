@@ -15,6 +15,10 @@ Review these artifacts in order:
    likelihood control, classical Fourier equivalence and simulated-noise scope.
    The [paper reproductions](reproductions/results.md) separately identify
    archived results, fresh replay, author preprocessing and stronger controls.
+   Review the [additional published applications](use_cases/index.md) against
+   their primary tables: these remain reported leads, with no local training
+   runs. Check the best-classical-comparator selection, the one-of-ten molecular
+   endpoint context, epoch-versus-wall-time distinction and artifact readiness.
 3. [Agent implementation evaluation](agent_evaluation.md): prompts, acceptance
    checks, task restrictions, self-reported logs and limits of inference.
 4. [Evidence coverage](coverage.md): theorem conditions, proof-to-code gaps and

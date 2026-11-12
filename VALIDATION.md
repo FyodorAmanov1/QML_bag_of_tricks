@@ -1,12 +1,12 @@
 # Validation record
 
-Verified locally on Windows with CPython 3.12.3; application extension checked
-on 2026-11-11. Earlier reference snapshots are retained from 2026-11-09.
+Verified locally on Windows with CPython 3.12.3; published application catalog
+checked on 2026-11-12. Earlier benchmark/reference snapshots are retained.
 
 | Check | Observed result |
 |---|---|
 | Clean virtual environment, pinned dependency closure | All reference dependencies installed; `pip check` reports no broken requirements |
-| Native SDK suite | 219 tests passed, including probability agreement across Qiskit, PennyLane and Cirq |
+| Automated suite | 230 tests passed, including probability agreement across Qiskit, PennyLane and Cirq and the application-catalog checks |
 | Analytical checks | Product-state objective/gradient formulas, exact variance quadrature, tied-parameter derivative |
 | Structural checks | Excitation conservation and deliberate control leakage; permutation-equivariant output |
 | Sampling and reporting | Finite-shot consistency, exact/sampled evaluation accounting, serializable results |
@@ -25,6 +25,7 @@ on 2026-11-11. Earlier reference snapshots are retained from 2026-11-09.
 | Classical-application papers | Recovered the authors' 300-split alloy archive mean; all 20 fresh quantum replay scores match their archived seeds exactly; ten new controlled alloy splits and three new communications datasets |
 | Paper reproduction audit | 158 fresh model evaluations independently audited, including six extra classical fits matching the quantum training-message budget; raw predictions, split/fit indices, source hashes and pinned artifacts checked |
 | Reservoir implementation | Native density evolution and reduced-memory contraction agree in all three SDKs, including the full six-qubit reproduction configuration |
+| Published application catalog | Three additional peer-reviewed leads checked against primary result locations; generated index selects the strongest recorded comparator and preserves scope; tests reject evidence-label promotion, missing controls and invalid score units |
 | Packaging | 0.2.0 wheel/source archive built; wheel imported independently of the source tree and ran a native circuit plus learning model; source archive contains three notebooks and five agent solutions |
 
 Reference versions: Qiskit 2.3.1, Qiskit Aer 0.17.2, PennyLane 0.45.1, Cirq Core
@@ -44,6 +45,7 @@ python -m venv .venv-clean
 .\.venv-clean\Scripts\python.exe scripts/grade_agent_tasks.py
 .\.venv-clean\Scripts\python.exe scripts/audit_opportunity_results.py
 .\.venv-clean\Scripts\python.exe scripts/audit_paper_results.py
+.\.venv-clean\Scripts\python.exe scripts/build_application_catalog.py --check
 .\.venv-clean\Scripts\python.exe -m pip check
 .\.venv-clean\Scripts\python.exe -m mkdocs build --strict
 ```
@@ -66,6 +68,12 @@ communication messages. They recover the original comparator gains within their
 stated bounded numerical scope, while stronger tuned classical models perform
 better in the additional comparisons. Archived statistics are distinguished
 from new runs; the complete published sweeps and hardware work are not reproduced.
+
+The additional satellite-image, molecular-carcinogenicity and hyperparameter-search
+guides record published results and implementation plans. Their models have not
+been trained or run locally. Tests validate catalog integrity and rendering;
+they do not independently verify those papers' experimental results. Upstream
+code was checked for availability, with unresolved molecular artifacts recorded.
 
 Linux CI is configured but was not executed locally. Hardware jobs, production
 validation, exhaustive literature coverage and full theorem reproductions are

@@ -14,6 +14,11 @@ the ten-qubit alloy replay, and **0.313% vs 4.437% symbol error** for equalizati
 Stronger tuned classical models lead in the follow-up comparisons; the
 [full reproduction report](reproductions/results.md) presents both comparisons.
 
+The [published application catalog](use_cases/index.md) adds satellite imagery,
+molecular carcinogenicity and hyperparameter-search resource reduction. These
+are reported results with agent implementation plans; they have not been
+reproduced locally. Each case names its classical comparators and data limits.
+
 [Why and when to explore QML](why_qml.md) connects these examples to trainability,
 implementation choices and project scenarios. Start coding with the
 [three executed walkthroughs](tutorials.md) for classification, regression and
