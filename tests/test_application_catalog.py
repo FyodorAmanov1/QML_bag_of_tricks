@@ -59,3 +59,12 @@ def test_renderer_does_not_require_quantum_to_win(catalog):
     changed["applications"][0]["quantum"]["value"] = 0.5
     catalog_builder.validate_catalog(changed, ROOT / "docs/use_cases")
     assert "MLTQNN: **50.0%**" in catalog_builder.render(changed)
+
+
+def test_figure_comparisons_do_not_invent_exact_numbers(catalog):
+    case = next(app for app in catalog["applications"] if app["id"] == "multiclass_kernel")
+    assert case["comparison_kind"] == "qualitative_figure"
+    assert "higher mean cross-validation" in catalog_builder.render(catalog)
+    case["quantum"]["value"] = .99
+    with pytest.raises(ValueError,match="invent numeric scores"):
+        catalog_builder.validate_catalog(catalog,ROOT/"docs/use_cases")

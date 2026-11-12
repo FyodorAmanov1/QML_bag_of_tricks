@@ -2,8 +2,9 @@
 # More published QML applications to explore
 
 These peer-reviewed studies report benefits on classical application inputs.
-Use them to choose a project hypothesis and a benchmark. **These 3 additions
-are literature-backed implementation guides, not locally reproduced models.**
+**6 paper cases; 3 include runnable reduced model adaptations.**
+The published comparisons below are **not locally reproduced**. Local adaptation
+runs exercise the software and have their own outcomes; they do not establish the paper gains.
 
 For runnable local paper reproductions, start with [alloy prediction and wireless
 equalization](../reproductions/index.md). Their stronger classical follow-up controls
@@ -11,14 +12,17 @@ remain in the [full results](../reproductions/results.md).
 
 ## Reported comparisons
 
-The table uses the best listed classical score for each recorded setting.
-Each guide also identifies the closest architectural or workflow counterpart.
+Numerical rows use the best listed classical score for that recorded setting.
+Figure-only findings retain a qualitative comparison; no missing scores are invented.
 
-| Application | Reported quantum model | Best recorded classical comparator | Scope to retain |
+| Application | Reported quantum model | Classical comparator(s) | Scope to retain |
 |---|---|---|---|
 | [Satellite-image classification](earth_observation.md) | MLTQNN: **95.8%** | DenseNet: 94.9% | Simplified simulator benchmark; large CNNs were reference comparisons under lightweight training settings. |
 | [Molecular carcinogenicity screening](molecular_toxicity.md) | QBoost: **0.8614 ROC-AUC** | LightAutoML: 0.8258 ROC-AUC | The positive endpoint is one of ten ADMET datasets; LightAutoML leads on the other nine. |
 | [Hyperparameter-search resource reduction](hyperparameter_search.md) | Swift-Hyperband QT-SVR: **2,960 epochs** | Swift-Hyperband SVR: 3,014 epochs | Epoch counts exclude end-to-end annealer overhead; gains over classical prediction are task dependent and aggregation is a confound. |
+| [Hybrid entity matching](entity_matching.md) | HQNN plus TF-IDF: **96.5%** | TF-IDF: 94.0% | The win is for the combined pipeline on an extended hard-case test; standalone HQNN scores 0.887 there and Osaka hardware evaluation is lower. |
+| [Multiclass quantum-kernel SVM](multiclass_kernel.md) | QEM-SVM: selected quantum kernels have higher mean cross-validation accuracy across the six reported tasks (Figure 7) | linear SVM, polynomial SVM, sigmoid SVM, Gaussian-kernel SVM | Figure-only paired comparisons are not transcribed as exact numbers; the Pauli product kernels also have an efficient exact classical formula. |
+| [QVC robustness to transferred attacks](adversarial_qvc.md) | amplitude-encoded QVC: greater resistance to transferred ConvNet-generated attacks in Figure 2 | ConvNet, ResNet18 | A transfer-attack benefit is distinct from white-box robustness: attacks optimized directly against QVCs remain effective. |
 
 A reported numerical difference alone does not establish statistical significance,
 a hardware speedup or superiority over every well-tuned classical model. Epoch savings
@@ -31,8 +35,11 @@ and predictive accuracy are different benefits. The guides preserve that distinc
 | Few labeled satellite images | A compressed classical encoder with a small quantum image head | The same encoder and auxiliary objective with a classical head |
 | A small imbalanced molecular endpoint | Binary selection of a fixed pool of weak learners | The identical selection problem solved classically |
 | Expensive neural-network tuning | Predict learning curves and stop unpromising trials | Classical prediction and an equally sized predictor ensemble |
+| Ambiguous record pairs | TF-IDF triage with a jointly trained hybrid quantum head | TF-IDF and a classical head on the same representation and route |
+| Multiclass tabular labels | Select a fidelity-kernel family using training/validation data | Tuned classical kernels and the exact classical product-kernel equivalent |
+| Transferred adversarial image perturbations | Amplitude-encoded QVC and a cross-model attack matrix | Independent classical targets, quantum white-box attacks and stronger attack sweeps |
 
-The image study uses gate circuits; the other two use **quantum annealing**.
+The molecular and hyperparameter-search studies use **quantum annealing**.
 Annealing requires its own solver interface. Existing Qiskit, PennyLane and Cirq
 recipes are building blocks for gate-model projects; substituting one for an
 annealer changes the method and requires a separate benchmark.
@@ -40,6 +47,21 @@ annealer changes the method and requires a separate benchmark.
 Each guide contains a concrete agent task, split rules, classical controls, resource
 accounting and acceptance criteria. Its implementation plan is our recommendation,
 separate from the cited paper's experimental protocol.
+
+## Run the three new model adaptations
+
+Install `.[learning]` and the selected SDK, then run from a source checkout:
+
+```bash
+python -m qml_tricks.learning.case_models --case entity_matching --framework qiskit --output results/local/entity.json
+python -m qml_tricks.learning.case_models --case multiclass_kernel --framework pennylane --output results/local/multiclass.json
+python -m qml_tricks.learning.case_models --case adversarial_qvc --framework cirq --output results/local/robustness.json
+```
+
+All three cases support all three SDKs. [Model and benchmark instructions](models.md)
+explain custom data and the saved [nine-run reference report](../source/results/case_models_reference.json).
+The references use exact simulator states, small new splits and short training.
+They retain classical wins and do not assert that QML must outperform a control.
 
 ## Evidence records and maintenance
 

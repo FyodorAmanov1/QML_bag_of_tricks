@@ -38,23 +38,42 @@ on the tested late-query, eight-qubit, 512-copy task.
 
 ## More published applications to explore
 
-The [application catalog](docs/use_cases/index.md) adds three peer-reviewed
-leads, with implementation plans and benchmark contracts for coding agents:
+The [application catalog](docs/use_cases/index.md) contains six peer-reviewed
+leads, with implementation plans and benchmark contracts for coding agents.
+Three now include runnable model adaptations in all three SDKs:
 
 | Application | Published comparison | Explore it for |
 |---|---|---|
 | [Satellite-image classification](docs/use_cases/earth_observation.md) | **95.8% accuracy** vs 94.9% for DenseNet; 93.5% for the matched classical multitask model | A compact quantum image head when labels are scarce |
 | [Molecular carcinogenicity](docs/use_cases/molecular_toxicity.md) | **0.8614 ROC-AUC** vs 0.8258 for LightAutoML | Annealer-based weak-learner selection on a small endpoint |
 | [Hyperparameter search](docs/use_cases/hyperparameter_search.md) | **2,960 training epochs** vs 3,014 with classical SVR prediction | Reducing expensive neural-network training work |
+| [Hybrid entity matching](docs/use_cases/entity_matching.md) | **96.5% accuracy** vs 94.0% for TF-IDF on an extended hard-case test | Route ambiguous pairs to a small jointly trained hybrid head |
+| [Multiclass kernel SVM](docs/use_cases/multiclass_kernel.md) | Higher mean cross-validation accuracy than the tested classical kernels across six tasks | Select task-appropriate kernel geometry, with exact classical controls |
+| [Adversarial QVC](docs/use_cases/adversarial_qvc.md) | Greater resistance to transferred classical attacks than the tested CNN/ResNet models | Explore cross-model attack transfer, with quantum white-box controls |
 
 **These additions are reported paper results, not local reproductions.** The
 image comparison uses a reduced noiseless-simulator benchmark. The molecular
 gain is one of ten endpoints; the classical model leads on the other nine.
 The search comparison measures epochs, with aggregation and hardware overhead
-requiring separate controls. The latter two methods use quantum annealing.
+requiring separate controls. The molecular and HPO methods use quantum annealing.
 Each guide states code/data readiness, exact result locations, required
 classical controls and resource costs. Agents can also read the
 [structured evidence catalog](docs/use_cases/catalog.json).
+
+Run the new models with `entity_matching`, `multiclass_kernel` or
+`adversarial_qvc` as the case:
+
+```bash
+python -m pip install -e ".[qiskit,learning]"
+python -m qml_tricks.learning.case_models --case entity_matching --framework qiskit --output results/local/entity.json
+```
+
+[Model APIs and benchmark instructions](docs/use_cases/models.md) cover custom
+data, all three SDKs and nine saved reference runs. The local models are reduced
+adaptations with their own outcomes; they do not reproduce the published gains.
+The entity win belongs to the combined pipeline, product Pauli kernels have an
+exact classical equivalent, and transferred-attack resilience does not imply
+white-box robustness.
 
 ## Start with one complete project
 

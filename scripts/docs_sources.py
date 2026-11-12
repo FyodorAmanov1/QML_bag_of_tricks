@@ -32,4 +32,13 @@ def on_files(files, config):
     for path in (root/'src/qml_tricks/learning/replication_backends').glob('*.py'):
         if path.name != '__init__.py':
             files.append(File.generated(config,f'source/replications/{path.name}',abs_src_path=str(path)))
+    for path in (root/'src/qml_tricks/learning/case_backends').glob('*.py'):
+        if path.name != '__init__.py':
+            files.append(File.generated(config,f'source/case_models/{path.name}',abs_src_path=str(path)))
+    for name, dest in (('case_models.py','models.py'),('case_benchmarks.py','benchmarks.py')):
+        path = root/'src/qml_tricks/learning'/name
+        files.append(File.generated(config,f'source/case_models/{dest}',abs_src_path=str(path)))
+    path = root/'results/case_models_reference.json'
+    if path.exists():
+        files.append(File.generated(config,'source/results/case_models_reference.json',abs_src_path=str(path)))
     return files

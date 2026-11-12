@@ -119,6 +119,131 @@
         "Compare an equally sized classical predictor ensemble to control for aggregation.",
         "Report final model quality, total target epochs and end-to-end compute and monetary cost separately."
       ]
+    },
+    {
+      "id": "entity_matching",
+      "title": "Hybrid entity matching",
+      "guide": "entity_matching.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "runnable_reference_adaptation",
+      "publication": {
+        "title": "Hybrid quantum neural networks show strongly reduced need for free parameters in entity matching",
+        "authors": "Lukas Bischof, Stefan Teodoropol, Rudolf M. Fuechslin and Kurt Stockinger",
+        "venue": "Scientific Reports",
+        "year": 2025,
+        "doi": "10.1038/s41598-025-88177-z",
+        "url": "https://www.nature.com/articles/s41598-025-88177-z",
+        "primary_result_url": "https://www.nature.com/articles/s41598-025-88177-z.pdf",
+        "locator": "Table 4; Combination of quantum and classical approaches",
+        "peer_reviewed": true
+      },
+      "backend": "noiseless_gate_simulator",
+      "metric": {"name": "test accuracy", "unit": "fraction", "direction": "higher"},
+      "quantum": {"model": "HQNN plus TF-IDF", "value": 0.965},
+      "classical_comparators": [
+        {"model": "TF-IDF", "role": "classical comparator on the same extended test set", "value": 0.940}
+      ],
+      "experimental_scope": "Hand-crafted sentence-pair data; 603-row extended test set; six-qubit noiseless hybrid pipeline.",
+      "headline_caveat": "The win is for the combined pipeline on an extended hard-case test; standalone HQNN scores 0.887 there and Osaka hardware evaluation is lower.",
+      "uncertainty": "Table 4 gives point estimates; it does not establish broad record-linkage superiority or an end-to-end hardware benefit.",
+      "upstream": {
+        "code_url": null,
+        "code_access": "no_author_code_url_verified",
+        "data_access": "Paper data are available from the corresponding author on reasonable request; exact source data were not acquired."
+      },
+      "local_model": {"module": "qml_tricks.learning.case_models", "class": "TfidfQuantumMatcher", "case": "entity_matching"},
+      "acceptance_checks": [
+        "Split by underlying entity before fitting TF-IDF, embeddings or routing thresholds.",
+        "Keep original and deliberately extended hard-case test distributions distinct.",
+        "Compare the same triage route with a classical head and include all learned embedding parameters.",
+        "Record quantum queries only for routed pairs, plus complete encoder and training costs."
+      ]
+    },
+    {
+      "id": "multiclass_kernel",
+      "title": "Multiclass quantum-kernel SVM",
+      "guide": "multiclass_kernel.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "runnable_reference_adaptation",
+      "publication": {
+        "title": "Quantum machine learning for multiclass classification beyond kernel methods",
+        "authors": "Chao Ding, Shi Wang, Yaonan Wang and Weibo Gao",
+        "venue": "Physical Review A",
+        "year": 2025,
+        "doi": "10.1103/PhysRevA.111.062410",
+        "url": "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.111.062410",
+        "primary_result_url": "https://dr.ntu.edu.sg/server/api/core/bitstreams/8098261f-9a5a-4190-929e-cfa4930efaaf/content",
+        "locator": "Figure 7; Section V.B; Table IV; Appendix D",
+        "peer_reviewed": true
+      },
+      "backend": "noiseless_gate_simulator",
+      "metric": {"name": "mean cross-validation accuracy", "unit": "fraction", "direction": "higher"},
+      "comparison_kind": "qualitative_figure",
+      "comparison_summary": "selected quantum kernels have higher mean cross-validation accuracy across the six reported tasks (Figure 7)",
+      "quantum": {"model": "QEM-SVM", "value": null},
+      "classical_comparators": [
+        {"model": "linear SVM", "role": "Figure 7 comparison", "value": null},
+        {"model": "polynomial SVM", "role": "Figure 7 comparison", "value": null},
+        {"model": "sigmoid SVM", "role": "Figure 7 comparison", "value": null},
+        {"model": "Gaussian-kernel SVM", "role": "Figure 7 comparison", "value": null}
+      ],
+      "experimental_scope": "Iris, Tae, Penguin, Glass, Ecoli and Vowel; five-fold kernel selection followed by a separate 70/30 evaluation.",
+      "headline_caveat": "Figure-only paired comparisons are not transcribed as exact numbers; the Pauli product kernels also have an efficient exact classical formula.",
+      "uncertainty": "The figure shows fold variation; overlapping selection/evaluation stages and preprocessing scope need auditing in a replication.",
+      "upstream": {
+        "code_url": null,
+        "code_access": "no_author_code_url_verified",
+        "data_access": "Public source datasets are cited in references 52-57; exact split indices and full fitted artifacts have not been recovered."
+      },
+      "local_model": {"module": "qml_tricks.learning.case_models", "class": "MulticlassQuantumKernel", "case": "multiclass_kernel"},
+      "acceptance_checks": [
+        "Fit normalization and PCA inside training folds and nest kernel selection before untouched testing.",
+        "Tune C, classical kernel scales and quantum encoding scales on validation data only.",
+        "Verify PSD, half-angle rotation conventions and exact Pauli-kernel classical equivalence.",
+        "Record quadratic overlap queries, state caching, Gram storage and all tuning candidates."
+      ]
+    },
+    {
+      "id": "adversarial_qvc",
+      "title": "QVC robustness to transferred attacks",
+      "guide": "adversarial_qvc.md",
+      "status": "paper_reported_not_locally_reproduced",
+      "implementation": "runnable_reference_adaptation",
+      "publication": {
+        "title": "Benchmarking adversarially robust quantum machine learning at scale",
+        "authors": "Maxwell T. West, Sarah M. Erfani, Christopher Leckie, Martin Sevior, Lloyd C. L. Hollenberg and Muhammad Usman",
+        "venue": "Physical Review Research",
+        "year": 2023,
+        "doi": "10.1103/PhysRevResearch.5.023186",
+        "url": "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023186",
+        "primary_result_url": "https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.5.023186",
+        "locator": "Figure 2; Section III.A; Appendices A-C",
+        "peer_reviewed": true
+      },
+      "backend": "noiseless_gate_simulator",
+      "metric": {"name": "accuracy under transferred attacks", "unit": "fraction", "direction": "higher"},
+      "comparison_kind": "qualitative_figure",
+      "comparison_summary": "greater resistance to transferred ConvNet-generated attacks in Figure 2",
+      "quantum": {"model": "amplitude-encoded QVC", "value": null},
+      "classical_comparators": [
+        {"model": "ConvNet", "role": "white-box attack source, evaluated on its own attacks", "value": null},
+        {"model": "ResNet18", "role": "independent classical transfer target", "value": null}
+      ],
+      "experimental_scope": "MNIST, Fashion-MNIST, CIFAR-2 and Celeb-A; plotted attack evaluations use 250 images per dataset and deep simulated QVCs.",
+      "headline_caveat": "A transfer-attack benefit is distinct from white-box robustness: attacks optimized directly against QVCs remain effective.",
+      "uncertainty": "No exact graph-digitized percentages are claimed; clean accuracy, threat roles, perturbation budgets and attack convergence must be compared separately.",
+      "upstream": {
+        "code_url": null,
+        "code_access": "no_author_code_url_verified",
+        "data_access": "The paper uses public image datasets; trained parameters, attack examples and original split manifests were not acquired."
+      },
+      "local_model": {"module": "qml_tricks.learning.case_models", "class": "AmplitudeQVCClassifier", "case": "adversarial_qvc"},
+      "acceptance_checks": [
+        "Generate attacks on a declared source and compare independent classical and quantum targets on the same perturbed inputs.",
+        "Include quantum white-box attacks, multiple restarts and attack-strength/convergence sweeps.",
+        "Report clean and attacked accuracy separately and account for amplitude normalization in input gradients.",
+        "Count amplitude-loading gates, deep circuit noise, attack queries and complete training resources."
+      ]
     }
   ]
 }

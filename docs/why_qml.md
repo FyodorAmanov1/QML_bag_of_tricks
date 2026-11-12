@@ -49,7 +49,7 @@ costs before considering a hardware implementation.
 
 ## Further application hypotheses
 
-The [peer-reviewed application catalog](use_cases/index.md) provides three more
+The [peer-reviewed application catalog](use_cases/index.md) provides six more
 ways to explore QML on classical inputs. Each guide separates the paper's
 reported outcome from our proposed implementation protocol:
 
@@ -59,9 +59,16 @@ reported outcome from our proposed implementation protocol:
   weak-learner selection with classical solvers on exactly the same ensemble.
 - [Hyperparameter search](use_cases/hyperparameter_search.md): test whether a
   quantum-trained curve predictor saves enough training work to cover its cost.
+- [Entity matching](use_cases/entity_matching.md): route ambiguous pairs to a
+  jointly trained hybrid head, comparing the same route with a classical head.
+- [Multiclass kernels](use_cases/multiclass_kernel.md): select a task-dependent
+  fidelity geometry and include its exact classical equivalent when available.
+- [Transferred image attacks](use_cases/adversarial_qvc.md): study differences
+  in learned representations using a full source-to-target attack matrix.
 
 These are implementation leads, with source and artifact-readiness records.
-They add domains to explore; full local reproductions remain future work.
+The last three include [runnable reduced adaptations](use_cases/models.md).
+They add domains to explore; full local paper reproductions remain future work.
 
 ## Turn the motivation into a trainable implementation
 

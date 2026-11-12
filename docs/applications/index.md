@@ -9,6 +9,9 @@ For additional domains, use the [published application catalog](../use_cases/ind
 satellite-image classification, molecular carcinogenicity and quantum-assisted
 hyperparameter search. These guides provide exact reported comparisons and
 agent benchmark plans. They are explicitly separate from locally run examples.
+The catalog now also links [runnable entity-matching, multiclass-kernel and
+adversarial-QVC models](../use_cases/models.md), with local adaptation runs
+separated from the cited publications' results.
 
 These additional application prototypes make two mechanisms explicit:
 

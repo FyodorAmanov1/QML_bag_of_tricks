@@ -331,7 +331,181 @@ def assemble_paper_backends():
         (directory/f'{sdk}.py').write_text(source, encoding='utf-8')
 
 
+CASE_BACKENDS = {
+"qiskit": '''"""Independent Qiskit circuits for reduced application-model adaptations."""
+import numpy as np
+from qiskit import QuantumCircuit
+from qiskit.quantum_info import Statevector
+
+
+def _logical_state(circuit):
+    n = circuit.num_qubits
+    order = [int(format(i, f'0{n}b')[::-1], 2) for i in range(2**n)]
+    return np.asarray(Statevector.from_instruction(circuit))[order]
+
+
+def kernel_state(x, topology='full'):
+    n = len(x)
+    c = QuantumCircuit(n)
+    if topology in ('x', 'y', 'z'):
+        for i in range(n):
+            if topology == 'z': c.h(i)
+            getattr(c, 'r' + topology)(float(x[i]), i)
+    else:
+        for i in range(n): c.h(i); c.rz(float(x[i]), i)
+        if topology == 'full': edges = [(i,j) for i in range(n) for j in range(i+1,n)]
+        else:
+            edges = [(i,i+1) for i in range(n-1)]
+            if topology == 'circular' and n > 2: edges.append((n-1,0))
+        for i,j in edges: c.rzz(float(x[i]*x[j]), i, j)
+    return _logical_state(c)
+
+
+def qvc_state(amplitudes, theta):
+    n = theta.shape[1]
+    order = [int(format(i, f'0{n}b')[::-1], 2) for i in range(2**n)]
+    c = QuantumCircuit(n)
+    c.initialize(np.asarray(amplitudes)[order], range(n))
+    for layer in theta:
+        for i in range(n):
+            c.rz(float(layer[i,0]), i); c.ry(float(layer[i,1]), i); c.rz(float(layer[i,2]), i)
+        for i in range(n-1): c.cz(i,i+1)
+    return _logical_state(c)
+
+
+def entity_state(angles, mixing, strong):
+    n = len(angles)
+    c = QuantumCircuit(n)
+    edges = [(0,1)] if n == 2 else [(i,(i+1)%n) for i in range(n)]
+    for layer in mixing:
+        for i in range(n): c.rx(float(angles[i]), i)
+        for k,(i,j) in enumerate(edges): c.rzz(float(layer[k]), i,j)
+        for i in range(n): c.ry(float(layer[len(edges)+i]), i)
+    for i in range(n): c.rx(float(angles[i]), i)
+    for layer in strong:
+        for i in range(n):
+            c.rz(float(layer[i,0]),i); c.ry(float(layer[i,1]),i); c.rz(float(layer[i,2]),i)
+        for i in range(n): c.cx(i,(i+1)%n)
+    return _logical_state(c)
+''',
+"pennylane": '''"""Independent PennyLane circuits for reduced application-model adaptations."""
+import numpy as np
+import pennylane as qml
+
+
+def kernel_state(x, topology='full'):
+    n = len(x)
+    dev = qml.device('default.qubit', wires=n)
+    @qml.qnode(dev)
+    def circuit():
+        if topology in ('x', 'y', 'z'):
+            for i in range(n):
+                if topology == 'z': qml.Hadamard(wires=i)
+                {'x':qml.RX,'y':qml.RY,'z':qml.RZ}[topology](float(x[i]),wires=i)
+        else:
+            for i in range(n): qml.Hadamard(wires=i); qml.RZ(float(x[i]),wires=i)
+            if topology == 'full': edges = [(i,j) for i in range(n) for j in range(i+1,n)]
+            else:
+                edges = [(i,i+1) for i in range(n-1)]
+                if topology == 'circular' and n > 2: edges.append((n-1,0))
+            for i,j in edges: qml.IsingZZ(float(x[i]*x[j]),wires=[i,j])
+        return qml.state()
+    return np.asarray(circuit(),dtype=complex)
+
+
+def qvc_state(amplitudes, theta):
+    n = theta.shape[1]
+    dev = qml.device('default.qubit',wires=n)
+    @qml.qnode(dev)
+    def circuit():
+        qml.StatePrep(amplitudes,wires=range(n))
+        for layer in theta:
+            for i in range(n):
+                qml.RZ(float(layer[i,0]),wires=i); qml.RY(float(layer[i,1]),wires=i); qml.RZ(float(layer[i,2]),wires=i)
+            for i in range(n-1): qml.CZ(wires=[i,i+1])
+        return qml.state()
+    return np.asarray(circuit(),dtype=complex)
+
+
+def entity_state(angles, mixing, strong):
+    n = len(angles)
+    dev = qml.device('default.qubit',wires=n)
+    @qml.qnode(dev)
+    def circuit():
+        edges = [(0,1)] if n == 2 else [(i,(i+1)%n) for i in range(n)]
+        for layer in mixing:
+            for i in range(n): qml.RX(float(angles[i]),wires=i)
+            for k,(i,j) in enumerate(edges): qml.IsingZZ(float(layer[k]),wires=[i,j])
+            for i in range(n): qml.RY(float(layer[len(edges)+i]),wires=i)
+        for i in range(n): qml.RX(float(angles[i]),wires=i)
+        for layer in strong:
+            for i in range(n):
+                qml.RZ(float(layer[i,0]),wires=i); qml.RY(float(layer[i,1]),wires=i); qml.RZ(float(layer[i,2]),wires=i)
+            for i in range(n): qml.CNOT(wires=[i,(i+1)%n])
+        return qml.state()
+    return np.asarray(circuit(),dtype=complex)
+''',
+"cirq": '''"""Independent Cirq circuits for reduced application-model adaptations."""
+import numpy as np
+import cirq
+
+
+def kernel_state(x, topology='full'):
+    n = len(x); q = cirq.LineQubit.range(n); c = cirq.Circuit()
+    if topology in ('x','y','z'):
+        for i in range(n):
+            if topology == 'z': c.append(cirq.H(q[i]))
+            c.append({'x':cirq.rx,'y':cirq.ry,'z':cirq.rz}[topology](float(x[i]))(q[i]))
+    else:
+        for i in range(n): c.append(cirq.H(q[i])); c.append(cirq.rz(float(x[i]))(q[i]))
+        if topology == 'full': edges = [(i,j) for i in range(n) for j in range(i+1,n)]
+        else:
+            edges = [(i,i+1) for i in range(n-1)]
+            if topology == 'circular' and n > 2: edges.append((n-1,0))
+        for i,j in edges:
+            c.append(cirq.CNOT(q[i],q[j])); c.append(cirq.rz(float(x[i]*x[j]))(q[j])); c.append(cirq.CNOT(q[i],q[j]))
+    return cirq.Simulator(dtype=np.complex128).simulate(c,qubit_order=q).final_state_vector
+
+
+def qvc_state(amplitudes, theta):
+    n = theta.shape[1]; q = cirq.LineQubit.range(n); c = cirq.Circuit()
+    for layer in theta:
+        for i in range(n):
+            c.append(cirq.rz(float(layer[i,0]))(q[i])); c.append(cirq.ry(float(layer[i,1]))(q[i])); c.append(cirq.rz(float(layer[i,2]))(q[i]))
+        for i in range(n-1): c.append(cirq.CZ(q[i],q[i+1]))
+    # Simulator state access is explicit; physical loading is not free.
+    return cirq.Simulator(dtype=np.complex128).simulate(c,initial_state=np.asarray(amplitudes,dtype=complex),qubit_order=q).final_state_vector
+
+
+def entity_state(angles, mixing, strong):
+    n = len(angles); q = cirq.LineQubit.range(n); c = cirq.Circuit()
+    edges = [(0,1)] if n == 2 else [(i,(i+1)%n) for i in range(n)]
+    for layer in mixing:
+        for i in range(n): c.append(cirq.rx(float(angles[i]))(q[i]))
+        for k,(i,j) in enumerate(edges):
+            c.append(cirq.CNOT(q[i],q[j])); c.append(cirq.rz(float(layer[k]))(q[j])); c.append(cirq.CNOT(q[i],q[j]))
+        for i in range(n): c.append(cirq.ry(float(layer[len(edges)+i]))(q[i]))
+    for i in range(n): c.append(cirq.rx(float(angles[i]))(q[i]))
+    for layer in strong:
+        for i in range(n):
+            c.append(cirq.rz(float(layer[i,0]))(q[i])); c.append(cirq.ry(float(layer[i,1]))(q[i])); c.append(cirq.rz(float(layer[i,2]))(q[i]))
+        for i in range(n): c.append(cirq.CNOT(q[i],q[(i+1)%n]))
+    return cirq.Simulator(dtype=np.complex128).simulate(c,qubit_order=q).final_state_vector
+'''
+}
+
+
+def assemble_case_backends():
+    directory = ROOT/'src/qml_tricks/learning/case_backends'
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory/'__init__.py').write_text('')
+    for sdk, source in CASE_BACKENDS.items():
+        (directory/f'{sdk}.py').write_text(source, encoding='utf-8')
+    print('Generated three independent case-model backends (nine native state constructors).')
+
+
 if __name__ == '__main__':
     main()
     assemble_application_backends()
     assemble_paper_backends()
+    assemble_case_backends()

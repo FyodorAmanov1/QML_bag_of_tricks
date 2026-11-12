@@ -19,10 +19,15 @@ models lead in the follow-up comparisons. See the
 - Bounded numerical reproductions of two classical-input application papers:
   alloy-phase classification and wireless channel equalization, with pinned
   author artifacts, fresh circuit/dynamics runs and stronger classical controls.
-- Three additional peer-reviewed application guides: satellite imagery,
-  molecular carcinogenicity and hyperparameter-search resource reduction.
+- Six additional peer-reviewed application guides: satellite imagery,
+  molecular carcinogenicity, hyperparameter-search resource reduction,
+  hybrid entity matching, multiclass quantum kernels and QVC attack transfer.
   Includes a structured evidence catalog, result locators, artifact readiness
   and agent benchmark contracts. These are reported leads, not local reproductions.
+- Three runnable reduced application models with independent Qiskit, PennyLane
+  and Cirq construction, nine executed adaptation runs, classical controls,
+  training/query costs and quantum white-box attack diagnostics. Their outcomes
+  remain separate from the publications' successes.
 - Two application prototypes with 280 configurations and 1,720 base evaluations:
   periodic calibration and late-query quantum-state learning. Includes tuned
   regularized controls, optimal local-record inference and controls that remove

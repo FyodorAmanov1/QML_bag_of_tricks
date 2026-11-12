@@ -1,5 +1,16 @@
 # Changelog
 
+## Three runnable paper-inspired models — 2026-11-12
+
+- Added HQNN/TF-IDF entity matching, multiclass fidelity-kernel SVMs and
+  amplitude-encoded QVCs with transferred-attack benchmarks. Each has a
+  peer-reviewed source, a guide and three independent native SDK constructors.
+- Added nine executed reference adaptations with raw predictions, split IDs,
+  validation selection, source hashes, costs and retained convergence warnings.
+- Added exact classical Pauli-kernel controls, native phase/ordering/gradient
+  checks and quantum white-box attacks. Published success claims remain
+  distinct from these reduced experiments and qualitative figure comparisons.
+
 ## More published application leads — 2026-11-12
 
 - Added satellite-image classification, carcinogenicity screening and

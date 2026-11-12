@@ -19,6 +19,10 @@ Review these artifacts in order:
    their primary tables: these remain reported leads, with no local training
    runs. Check the best-classical-comparator selection, the one-of-ten molecular
    endpoint context, epoch-versus-wall-time distinction and artifact readiness.
+   The three [new model adaptations](use_cases/models.md) require a separate
+   check: HQNN+TF-IDF wins on an extended test, multiclass Figure 7 comparisons
+   differ from later held-out scores, and QVC transfer benefits do not survive
+   arbitrary white-box attacks. Review the reduced-model scope and saved runs.
 3. [Agent implementation evaluation](agent_evaluation.md): prompts, acceptance
    checks, task restrictions, self-reported logs and limits of inference.
 4. [Evidence coverage](coverage.md): theorem conditions, proof-to-code gaps and

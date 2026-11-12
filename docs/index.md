@@ -18,6 +18,9 @@ The [published application catalog](use_cases/index.md) adds satellite imagery,
 molecular carcinogenicity and hyperparameter-search resource reduction. These
 are reported results with agent implementation plans; they have not been
 reproduced locally. Each case names its classical comparators and data limits.
+It now also includes [three runnable model adaptations](use_cases/models.md):
+hybrid entity matching, multiclass quantum-kernel SVMs and an amplitude-encoded
+QVC with cross-model attack diagnostics, each supported by all three SDKs.
 
 [Why and when to explore QML](why_qml.md) connects these examples to trainability,
 implementation choices and project scenarios. Start coding with the

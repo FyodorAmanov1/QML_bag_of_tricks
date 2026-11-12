@@ -6,13 +6,13 @@ checked on 2026-11-12. Earlier benchmark/reference snapshots are retained.
 | Check | Observed result |
 |---|---|
 | Clean virtual environment, pinned dependency closure | All reference dependencies installed; `pip check` reports no broken requirements |
-| Automated suite | 230 tests passed, including probability agreement across Qiskit, PennyLane and Cirq and the application-catalog checks |
+| Automated suite | 312 tests passed, including probability agreement across Qiskit, PennyLane and Cirq, application-catalog checks and the new model/attack tests |
 | Analytical checks | Product-state objective/gradient formulas, exact variance quadrature, tied-parameter derivative |
 | Structural checks | Excitation conservation and deliberate control leakage; permutation-equivariant output |
 | Sampling and reporting | Finite-shot consistency, exact/sampled evaluation accounting, serializable results |
 | Ensemble sampling | Fixed Haar circuit factors are resampled along with initialized angles |
 | Fundamental choices | Near-identity encoder bound; independent-copy identity cancellation and gradient formula; FS metric, global-phase invariance, QNG update and singular-direction regularization |
-| Documentation | `python -m mkdocs build --strict` passed; 19 circuit guides plus 14 learning guides; 99 native entrypoints total |
+| Documentation | `python -m mkdocs build --strict` passed; 19 circuit guides plus 14 learning guides; 99 recipe entrypoints and three additional application-model classes |
 | Reference runs | 57 one-step four-qubit runs; configurations, SDK versions, and source hashes recorded |
 | Learning reference | 42 additional native entrypoints; classification, regression, known-preparation quantum and generative benchmarks with three seeds |
 | Surrogates and pretraining | Saved-model parity, zero quantum-backend inference for the student, held-out kernel error, same-hidden-feature classical control and explicit warm-start costs |
@@ -25,8 +25,10 @@ checked on 2026-11-12. Earlier benchmark/reference snapshots are retained.
 | Classical-application papers | Recovered the authors' 300-split alloy archive mean; all 20 fresh quantum replay scores match their archived seeds exactly; ten new controlled alloy splits and three new communications datasets |
 | Paper reproduction audit | 158 fresh model evaluations independently audited, including six extra classical fits matching the quantum training-message budget; raw predictions, split/fit indices, source hashes and pinned artifacts checked |
 | Reservoir implementation | Native density evolution and reduced-memory contraction agree in all three SDKs, including the full six-qubit reproduction configuration |
-| Published application catalog | Three additional peer-reviewed leads checked against primary result locations; generated index selects the strongest recorded comparator and preserves scope; tests reject evidence-label promotion, missing controls and invalid score units |
-| Packaging | 0.2.0 wheel/source archive built; wheel imported independently of the source tree and ran a native circuit plus learning model; source archive contains three notebooks and five agent solutions |
+| Published application catalog | Six additional peer-reviewed cases checked against primary result locations; quantitative and qualitative figure comparisons are separate; tests reject evidence-label promotion, missing controls and invented numeric scores |
+| New application models | Nine SDK/case runs completed for entity matching, multiclass kernels and adversarial QVCs; raw split IDs, predictions, warnings, source hashes, attack inputs and state-evaluation counts retained |
+| New model identities | Native phase, CZ-chain, bit-order and single-gate derivative checks; exact classical Pauli-kernel equivalence; input-gradient and PGD constraint checks; held-out metrics independently recomputed from saved predictions |
+| Packaging | 0.2.0 wheel/source archive built; wheel imported independently of the source tree and ran the new kernel model with its native backend; source archive includes the new guides, model code, nine-run report and tests alongside the earlier notebooks and agent solutions |
 
 Reference versions: Qiskit 2.3.1, Qiskit Aer 0.17.2, PennyLane 0.45.1, Cirq Core
 1.7.0, NumPy 2.2.4, SciPy 1.15.2, scikit-learn 1.9.1. See `requirements-reference.txt` for the
@@ -46,6 +48,7 @@ python -m venv .venv-clean
 .\.venv-clean\Scripts\python.exe scripts/audit_opportunity_results.py
 .\.venv-clean\Scripts\python.exe scripts/audit_paper_results.py
 .\.venv-clean\Scripts\python.exe scripts/build_application_catalog.py --check
+.\.venv-clean\Scripts\python.exe scripts/run_case_model_reference.py
 .\.venv-clean\Scripts\python.exe -m pip check
 .\.venv-clean\Scripts\python.exe -m mkdocs build --strict
 ```
@@ -74,6 +77,13 @@ guides record published results and implementation plans. Their models have not
 been trained or run locally. Tests validate catalog integrity and rendering;
 they do not independently verify those papers' experimental results. Upstream
 code was checked for availability, with unresolved molecular artifacts recorded.
+
+The new entity-matching, multiclass-kernel and adversarial-QVC models are
+reduced reference adaptations. Nine runs use exact simulation, one seed and
+short training. They do not reproduce the papers' successes. The saved entity
+and Iris examples tie their controls; the QVC remains underfit and vulnerable
+to its own white-box attack. The report retains convergence warnings. No
+test requires quantum predictive superiority.
 
 Linux CI is configured but was not executed locally. Hardware jobs, production
 validation, exhaustive literature coverage and full theorem reproductions are
