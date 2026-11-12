@@ -1,0 +1,36 @@
+{
+  "url": "https://fyodoramanov1.github.io/QML_bag_of_tricks/",
+  "verified_at_utc": "2026-11-12T03:21:10.755862+00:00",
+  "public_access": "verified without authentication or cookies",
+  "source_repository_private": true,
+  "deployed_source_commit": "a59b954521f5240c1a0d26c84fa2578339416dad",
+  "deployment_run": "https://github.com/FyodorAmanov1/QML_bag_of_tricks/actions/runs/43147343535",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "assets/showcase.css",
+      "status": 200
+    },
+    {
+      "path": "assets/showcase.js",
+      "status": 200
+    },
+    {
+      "path": "assets/showcase.json",
+      "status": 200
+    },
+    {
+      "path": "use_cases/multiclass_kernel/",
+      "status": 200
+    },
+    {
+      "path": "source/case_models/models.py",
+      "status": 200
+    }
+  ],
+  "evidence_cards": 8,
+  "canonical_showcase_data_matches": true
+}

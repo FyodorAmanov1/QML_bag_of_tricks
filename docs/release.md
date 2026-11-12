@@ -4,6 +4,11 @@ Version 0.2.0 is a local release candidate. Scientific review belongs to the
 repository owner and is pending; no external QML-engineer review is required.
 The [review packet](owner_review.md) links the evidence and checks.
 
+The documentation is [live on GitHub Pages](https://fyodoramanov1.github.io/QML_bag_of_tricks/).
+The source repository remains private. The owner explicitly approved public
+documentation publication, including the built examples and notebooks.
+Cloning the full source checkout still requires repository access.
+
 ## Reproduce and package
 
 From a cloned checkout with Python 3.12:
@@ -68,9 +73,10 @@ visibility merely to make deployment succeed.
 For an approved public documentation deployment, configure Pages to use
 **GitHub Actions** in repository settings, then run the workflow with
 **publish = true**. Verify the deployment's returned URL before adding a live
-website link to the README or repository About section. The configured target
-is `https://fyodoramanov1.github.io/QML_bag_of_tricks/`; a target URL alone does
-not establish that a site is live.
+website link to the README or repository About section. The current site URL
+is `https://fyodoramanov1.github.io/QML_bag_of_tricks/`. Ordinary repository
+pushes leave the live site unchanged; run the workflow with **publish = true**
+to publish a new documentation build.
 
 ## Public source and release links
 

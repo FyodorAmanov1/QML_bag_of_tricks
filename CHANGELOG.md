@@ -1,5 +1,12 @@
 # Changelog
 
+## Public documentation, private source — 2026-11-12
+
+- Published the approved documentation site on GitHub Pages while retaining
+  the private source repository.
+- Verified anonymous access to the homepage, assets, evidence data, a guide
+  and a Python download. Added the live URL and clarified source-access limits.
+
 ## Application showcase and website — 2026-11-12
 
 - Redesigned the README with a native SVG banner, a complete results summary,

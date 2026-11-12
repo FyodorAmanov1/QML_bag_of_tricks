@@ -50,5 +50,6 @@ classical Fourier implementation. Neither establishes a practical runtime gain
 or predictive superiority on general real-world classical datasets.
 
 Owner scientific review is pending. The GitHub repository is private for this
-review; public documentation and Colab access remain pending. This candidate is
+review; the documentation website is public on GitHub Pages with owner approval.
+Public source checkout and Colab installation access remain pending. This candidate is
 not presented as an already-published GitHub or PyPI release.

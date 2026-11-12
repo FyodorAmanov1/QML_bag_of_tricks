@@ -92,5 +92,8 @@ Linux CI is configured but was not executed locally. Hardware jobs, production
 validation, exhaustive literature coverage and full theorem reproductions are
 not established by these checks. Scientific review is pending with the
 repository owner; see `docs/owner_review.md` and `docs/coverage.md`.
-The GitHub repository is private for owner review. No live Pages site or public
-release is claimed.
+The GitHub repository remains private for owner review. The documentation
+website is public at `https://fyodoramanov1.github.io/QML_bag_of_tricks/` with
+owner approval. Anonymous HTTP checks verified the homepage, styles, scripts,
+evidence data, a model guide and a Python download. The first deployment record
+is retained in `results/website_publication.json`. No public package release is claimed.

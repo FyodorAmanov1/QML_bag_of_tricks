@@ -11,7 +11,7 @@
   <a href="#why-qml-is-worth-testing">Why QML?</a> ·
   <a href="#results-worth-exploring">Results</a> ·
   <a href="#run-your-first-experiment">Get started</a> ·
-  <a href="docs/index.md">Explore the website and guides</a> ·
+  <a href="https://fyodoramanov1.github.io/QML_bag_of_tricks/">Website and guides</a> ·
   <a href="docs/use_cases/models.md">Model APIs</a>
 </p>
 
@@ -146,8 +146,9 @@ warnings. The collection establishes no general hardware or runtime advantage.
 
 ## Website, validation and contributions
 
-The redesigned [website source](docs/index.md) includes an evidence gallery,
-project selector, SDK commands and the complete guide library. Preview locally:
+The [public website](https://fyodoramanov1.github.io/QML_bag_of_tricks/) includes
+an evidence gallery, project selector, SDK commands and the complete guide
+library. The source repository remains private. Preview locally:
 
 ```bash
 python -m pip install -e ".[docs]"
