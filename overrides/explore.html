@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+{% block content %}
+  {{ super() }}
+  <div class="qml-directory" aria-label="Complete documentation directory">
+    {% for group in documentation_groups %}
+    <section id="{{ group.id }}" aria-labelledby="directory-{{ group.id }}">
+      <h2 id="directory-{{ group.id }}">{{ group.title }} <span>{{ group.pages | length }} guides</span></h2>
+      <ul>
+        {% for guide in group.pages %}
+        <li><a href="{{ guide.url | url }}">{{ guide.title | e }} <span aria-hidden="true">↗</span></a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+{% endblock %}

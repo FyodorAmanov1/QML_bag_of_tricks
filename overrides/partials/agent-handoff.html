@@ -1,0 +1,20 @@
+<div class="qml-handoff" data-agent-handoff>
+  <div class="qml-handoff-heading">
+    <div><span class="qml-eyebrow">COPY → CUSTOMIZE → HAND TO YOUR AGENT</span><h3>A project brief, ready to paste.</h3></div>
+    <div class="qml-handoff-modes" role="group" aria-label="Choose agent access">
+      <button type="button" data-agent-mode="website" aria-pressed="true">Public website</button>
+      <button type="button" data-agent-mode="local" aria-pressed="false">Local checkout</button>
+    </div>
+  </div>
+  <p class="qml-handoff-intro">Replace the bracketed fields. Website mode needs browsing tools; local mode needs an authorized checkout and a Python environment.</p>
+  {% for mode, brief in agent_briefs.items() %}
+  <div data-agent-panel="{{ mode }}"{% if mode != 'website' %} hidden{% endif %}>
+    <div class="qml-handoff-bar"><span>{{ 'PUBLIC DOCS + LINKED SOURCES' if mode == 'website' else 'LOCAL REPOSITORY + YOUR DATA' }}</span><button type="button" data-agent-copy>Copy agent brief</button></div>
+    <pre tabindex="0" aria-label="{{ 'Public website' if mode == 'website' else 'Local checkout' }} agent brief"><code>{{ brief | e }}</code></pre>
+    <a class="qml-handoff-download" href="{{ ('assets/agent-' ~ mode ~ '.txt') | url }}" download>Download this brief as plain text ↗</a>
+  </div>
+  {% endfor %}
+  <p class="qml-handoff-status" data-agent-copy-status role="status" aria-live="polite"></p>
+  <p class="qml-handoff-footnote">Public source downloads are reference files, not an installable package. Full-checkout commands require access to the private repository. <a href="{{ 'agents/' | url }}">Read the integration guide ↗</a></p>
+  <noscript><p>Both briefs are available as plain text: <a href="{{ 'assets/agent-website.txt' | url }}">website brief</a> · <a href="{{ 'assets/agent-local.txt' | url }}">local brief</a>.</p></noscript>
+</div>

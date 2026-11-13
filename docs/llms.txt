@@ -1,0 +1,34 @@
+# QML Bag of Tricks
+
+> A practical QML field guide with mathematical contracts, native Qiskit,
+> PennyLane and Cirq references, and explicit classical comparisons.
+
+## Entry points
+- [Complete guide directory](https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/): every documentation page, grouped by purpose.
+- [Agent integration](https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/): website/local routes, setup and benchmark obligations.
+- [Website project brief](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/agent-website.txt)
+- [Local project brief](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/agent-local.txt)
+
+## Choose and implement
+- [Method selector](https://fyodoramanov1.github.io/QML_bag_of_tricks/method_selector/)
+- [Circuit strategies](https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/#strategies): mathematical contracts, assumptions, implementation scope and native source links.
+- [Learning workflows](https://fyodoramanov1.github.io/QML_bag_of_tricks/learning/)
+- [Application model APIs](https://fyodoramanov1.github.io/QML_bag_of_tricks/use_cases/models/)
+- [Project walkthroughs](https://fyodoramanov1.github.io/QML_bag_of_tricks/tutorials/)
+- [Teacher-first offline distillation](https://fyodoramanov1.github.io/QML_bag_of_tricks/learning/kipu_workflow/)
+
+## Evidence and evaluation
+- [Paper reproductions](https://fyodoramanov1.github.io/QML_bag_of_tricks/reproductions/)
+- [Published application catalog](https://fyodoramanov1.github.io/QML_bag_of_tricks/use_cases/)
+- [Evidence coverage](https://fyodoramanov1.github.io/QML_bag_of_tricks/coverage/)
+- [Agent task evaluation](https://fyodoramanov1.github.io/QML_bag_of_tricks/agent_evaluation/)
+
+## Access and interpretation
+The public site is static documentation, not an execution or inference API.
+The full source repository remains private; cloning/installing it requires access.
+Linked Python sources are reference files and can depend on shared package helpers.
+Use an authorized checkout or inspect dependencies and adapt locally.
+Preserve train-only preprocessing, validation selection, matched classical controls,
+held-out predictions, uncertainty and loading/readout/shot/time/memory accounting.
+Separate published claims, reduced adaptations and local benchmark results.
+Do not claim general quantum advantage or fabricate results when tools are absent.

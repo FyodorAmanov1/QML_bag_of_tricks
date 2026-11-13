@@ -20,7 +20,7 @@
       <p class="qml-eyebrow">QUANTUM MACHINE LEARNING, WITH A PURPOSE</p>
       <h1 id="qml-title">Make the<br>quantum part<br><span>count.</span></h1>
       <p class="qml-hero-description">Find a reason to try QML. Build a native model.<br class="qml-desktop-break"> Measure what helps your project.</p>
-      <div class="qml-actions"><a class="qml-btn qml-btn-primary" href="#evidence">Explore the results <span>↘</span></a><a class="qml-btn qml-btn-secondary" href="#start">Run an experiment <span>↗</span></a></div>
+      <div class="qml-actions"><a class="qml-btn qml-btn-primary" href="{{ 'explore/' | url }}">Explore documentation <span>↗</span></a><a class="qml-btn qml-btn-secondary" href="#evidence">Explore the results <span>↘</span></a><a class="qml-btn qml-btn-secondary" href="#start">Run an experiment <span>↗</span></a></div>
       <div class="qml-hero-stats">
         <div><strong>{{ showcase.counts.reproductions }}</strong><span>paper comparisons<br>reproduced here</span></div>
         <div><strong>{{ showcase.counts.paper_leads }}</strong><span>further published<br>application cases</span></div>
@@ -47,6 +47,17 @@
       <div class="qml-lab-copy"><span class="qml-eyebrow">A USEFUL STARTING POINT</span><h2>Small register.<br>Rich representation.</h2><p>A rich state space is an opportunity. Structured loading, useful readout and classical controls decide whether it pays.</p></div>
       <div class="qml-sdk-strip"><span>Qiskit</span><span>PennyLane</span><span>Cirq</span></div>
     </div>
+  </section>
+
+  <section class="qml-library" id="documentation" aria-labelledby="library-title">
+    <div class="qml-section-heading"><div><p class="qml-eyebrow">OPEN THE FIELD GUIDE</p><h2 id="library-title">Go straight to the methods.</h2></div><a class="qml-text-link" href="{{ 'explore/' | url }}">Browse every documentation page ↗</a></div>
+    <div class="qml-library-grid">
+      <a href="{{ 'explore/#strategies' | url }}"><strong>{{ showcase.counts.strategies }} circuit strategies <span>↗</span></strong><p>Mathematics, assumptions and native SDK code. Local costs, initialization, QNG and structured circuits.</p></a>
+      <a href="{{ 'learning/' | url }}"><strong>Learning workflows <span>↗</span></strong><p>Kernels, training, measurement budgets, classical pretraining and offline quantum-feature distillation.</p></a>
+      <a href="{{ 'reproductions/' | url }}"><strong>Paper reproductions <span>↗</span></strong><p>Alloy prediction and communication signals, with protocols, runnable references and classical follow-ups.</p></a>
+      <a href="{{ 'agents/' | url }}"><strong>Build with your agent <span>↗</span></strong><p>Choose public website or local checkout access, copy a project brief and define benchmark deliverables.</p></a>
+    </div>
+    <div class="qml-library-links"><a href="{{ 'method_selector/' | url }}">Choose a method ↗</a><a href="{{ 'use_cases/models/' | url }}">Model APIs ↗</a><a href="{{ 'tutorials/' | url }}">Worked examples ↗</a><a href="#agents">Copy an agent brief ↓</a></div>
   </section>
 
   <section class="qml-section" id="evidence" aria-labelledby="evidence-title">
@@ -114,7 +125,7 @@ python -m qml_tricks.learning.case_models \
   --output results/local/first_run.json</code></pre><p>Exact simulator reference · classical controls included · no QPU account required</p><span id="qml-copy-status" class="qml-sr-only" aria-live="polite"></span></div>
   </section>
 
-  <section class="qml-agent-contract"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2>Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div></section>
+  <section class="qml-agent-contract" id="agents" aria-labelledby="agent-title"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2 id="agent-title">Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div class="qml-agent-links"><a href="{{ 'agents/' | url }}">Setup & integration guide ↗</a><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div>{% include "partials/agent-handoff.html" %}</section>
   <footer class="qml-home-footer"><div><strong>QML Bag of Tricks</strong><p>Built for useful, reproducible experiments.</p></div><div><a href="https://github.com/FyodorAmanov1/QML_bag_of_tricks">GitHub ↗</a><a href="{{ 'coverage/' | url }}">Evidence & assumptions</a><a href="{{ 'owner_review/' | url }}">Review status</a></div><p>0.2.0 candidate · owner scientific review pending.<br>Source repository is private during review. Published papers are linked publicly.</p></footer>
 </div>
 {% endblock %}

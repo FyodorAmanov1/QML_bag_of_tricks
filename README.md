@@ -12,6 +12,8 @@
   <a href="#results-worth-exploring">Results</a> ·
   <a href="#run-your-first-experiment">Get started</a> ·
   <a href="https://fyodoramanov1.github.io/QML_bag_of_tricks/">Website and guides</a> ·
+  <a href="https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/">Explore documentation</a> ·
+  <a href="https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/">Use with your agent</a> ·
   <a href="docs/use_cases/models.md">Model APIs</a>
 </p>
 
@@ -133,6 +135,16 @@ state constructors. [Evidence coverage →](docs/coverage.md)
 
 ## Give your agent a benchmark contract
 
+The website's [documentation directory](https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/)
+lists every guide, including all technical circuit methods. The
+[agent integration guide](https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/)
+provides copyable project briefs for **public website access** and an
+**authorized local checkout**, plus setup commands and expected deliverables.
+For a compact machine-readable entry point, use
+[llms.txt](https://fyodoramanov1.github.io/QML_bag_of_tricks/llms.txt).
+The static website provides documentation and linked reference sources;
+installing the full package still requires access to the private repository.
+
 > Split before preprocessing. Choose settings using validation data only.
 > Include regularized and domain-informed classical controls. Save predictions,
 > artifacts, uncertainty and loading/readout/shot costs. State the access model
@@ -151,7 +163,8 @@ an evidence gallery, project selector, SDK commands and the complete guide
 library. Its visual design takes inspiration from [KETS Quantum](https://kets-quantum.com/):
 white and cool-gray surfaces, black-and-red typography, and spacious sections.
 The matching banner and locally served Poppins fonts carry that style through
-the repository. Content, navigation and interactive tools are unchanged.
+the repository. A visible documentation bar, complete guide directory and
+copyable agent handoffs make the technical library accessible without search.
 The source repository remains private. Preview locally:
 
 ```bash

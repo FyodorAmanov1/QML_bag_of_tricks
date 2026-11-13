@@ -1,0 +1,26 @@
+Use my authorized local QML Bag of Tricks checkout in this project.
+Checkout path: [absolute path]
+Task / target: [describe]
+Dataset / split constraints: [describe]
+SDK / compute budget: [Qiskit, PennyLane or Cirq; time, memory, qubits, shots]
+
+1. Read AGENTS.md, README.md, docs/explore.md, docs/method_selector.md and the
+   relevant strategy/learning guide before implementing. Inspect the primary
+   citation and native SDK construction; distinguish proof and executable scope.
+2. Use Python 3.12 and the chosen SDK extra, for example:
+   python -m pip install -e ".[qiskit,learning]"
+   python -m qml_tricks list
+   Run checkout commands from the repository root in an activated environment.
+   If no checkout exists, cloning requires authorized private-repository access;
+   use https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/ otherwise.
+3. Adapt the model API or recipe to my data. Split first; fit preprocessing on
+   training only; select settings on validation; keep the test partition untouched.
+   Include tuned regularized and domain-informed classical controls under matched
+   access. Use appropriate group/time splits. Preserve every outcome.
+4. Deliver runnable code, environment/seeds/splits, held-out predictions, metrics
+   with uncertainty, saved artifacts where supported, and resource costs for
+   loading, readout, shots, simulation, time and memory. Label all deviations from
+   the paper; do not infer training success or hardware advantage from a demo.
+5. For changes inside this repository, follow its authoring instructions and run
+   relevant tests, pytest and the strict MkDocs build. Do not publish or alter
+   repository visibility as part of this task.

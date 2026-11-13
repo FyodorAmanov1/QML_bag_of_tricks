@@ -1276,3 +1276,78 @@ body{
   .qml-local-nav>div{gap:16px}
   .qml-home{padding:0 18px}
 }
+
+/* Visible documentation routes and portable agent handoffs. */
+.qml-doc-nav{background:#fff;border-bottom:1px solid #dedfe2;color:#151515;font-size:12px}
+.qml-doc-nav>.md-grid{display:flex;align-items:center;gap:28px;padding:10px 26px;flex-wrap:wrap}
+.qml-doc-nav a{display:inline-flex;align-items:center;gap:14px;min-height:36px;font-weight:500}
+.qml-doc-nav a:hover{text-decoration:underline;color:var(--qml-red)}
+.qml-doc-nav .qml-doc-nav-primary{color:#a51d2f;border:1px solid #c12337;border-radius:4px;padding:5px 14px}
+.qml-library{padding:56px 0 10px;scroll-margin-top:90px}
+.qml-library .qml-section-heading{align-items:center;gap:25px;margin-bottom:26px}
+.qml-library .qml-section-heading h2{font-size:34px}
+.qml-library .qml-text-link{margin-top:0;flex-shrink:0}
+.qml-library-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.qml-library-grid>a{display:block;padding:22px;border:1px solid #dedfe2;border-top:3px solid #c12337;border-radius:4px;background:#fff}
+.qml-library-grid strong{display:flex;justify-content:space-between;gap:10px;font-size:15px;font-weight:500;line-height:1.6}
+.qml-library-grid strong>span{color:#c12337}
+.qml-library-grid p{font-size:12px;color:#595b61;line-height:1.9;margin-top:12px}
+.qml-library-grid>a:hover{border-color:#c12337}
+.qml-library-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:24px;font-size:12px}
+.qml-directory section{scroll-margin-top:90px;margin:38px 0}
+.qml-directory h2{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap}
+.qml-directory h2>span{font-size:12px;letter-spacing:0;color:#595b61}
+.qml-directory ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;margin:0;padding:0;gap:0 26px}
+.qml-directory li{margin:0!important;border-bottom:1px solid #e5e5e8}
+.qml-directory li a{display:flex;justify-content:space-between;gap:15px;align-items:center;min-height:58px;padding:13px 0;font-size:14px;line-height:1.7}
+.qml-directory li a>span{flex-shrink:0}
+.qml-home .qml-agent-contract>.qml-agent-links{display:flex}
+.qml-handoff,.qml-home .qml-agent-contract>.qml-handoff{display:block;margin:30px 0 0;border:1px solid #dedfe2;border-radius:5px;overflow:hidden;text-align:left;background:#fff;font-weight:400}
+.qml-handoff [hidden]{display:none!important}
+.qml-handoff-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 28px 12px}
+.qml-handoff .qml-eyebrow{font-size:9px;color:#a51d2f;letter-spacing:1.3px;font-weight:600}
+.qml-handoff h3,.qml-home .qml-handoff h3{font-size:24px;line-height:1.4;margin:8px 0 0;font-weight:400}
+.qml-handoff-modes{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.qml-handoff button{font-family:inherit;cursor:pointer}
+.qml-handoff-modes button{border:1px solid #dedfe2;border-radius:4px;padding:9px 12px;font-size:11px;min-height:44px;color:#151515}
+.qml-handoff-modes button[aria-pressed=true]{background:#c12337;border-color:#c12337;color:#fff}
+.qml-handoff-intro,.qml-home .qml-handoff-intro{padding:0 28px 22px;font-size:12px;line-height:1.9;color:#595b61;margin:0}
+.qml-handoff [data-agent-panel]{background:#17171b;color:#fff}
+.qml-handoff-bar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 24px;border-bottom:1px solid #45454a}
+.qml-handoff-bar>span{font-size:9px;letter-spacing:1.2px;color:#c8c9cf}
+.qml-handoff-bar button{font-size:12px;color:#ee7885;min-height:44px;border:1px solid #686a75;border-radius:4px;padding:5px 12px;flex-shrink:0}
+.qml-handoff pre,.qml-home .qml-handoff pre{margin:0!important;padding:24px 28px!important;max-height:380px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#17171b!important}
+.qml-handoff pre code,.qml-home .qml-handoff pre code{font:12px/1.9 var(--md-code-font);background:transparent!important;color:#fff!important;padding:0!important;white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:none;display:block}
+.qml-handoff .md-clipboard{display:none}
+.qml-handoff a.qml-handoff-download{display:inline-block;color:#ee7885;font-size:11px;padding:0 28px 20px;line-height:1.9}
+.qml-handoff .qml-handoff-status{padding:0 28px;font-size:12px;line-height:1.8;color:#a51d2f;margin:0}
+.qml-handoff .qml-handoff-status:not(:empty){padding-top:16px}
+.qml-handoff-footnote,.qml-home .qml-handoff-footnote{font-size:11px;line-height:1.9;color:#595b61;padding:20px 28px;margin:0}
+.qml-handoff-footnote a{color:#a51d2f!important;text-decoration:underline}
+.qml-handoff noscript p{padding:0 28px 20px;font-size:12px}
+.qml-handoff :is(button,pre,a):focus-visible,.qml-doc-nav a:focus-visible{outline:3px solid #c12337;outline-offset:3px}
+@media(max-width:1100px){
+  .qml-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .qml-handoff-heading{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:720px){
+  .qml-doc-nav>.md-grid{gap:4px 20px;padding:10px 22px}
+  .qml-doc-nav a{font-size:11px;min-height:40px}
+  .qml-library{padding:40px 0 0}
+  .qml-library .qml-section-heading h2{font-size:30px}
+  .qml-library .qml-text-link{margin-top:16px}
+  .qml-library-grid{grid-template-columns:1fr;gap:14px}
+  .qml-library-grid>a{padding:22px}
+  .qml-library-links{gap:14px 22px}
+  .qml-directory ul{grid-template-columns:1fr}
+  .qml-handoff-heading{padding:23px 20px 12px}
+  .qml-handoff h3,.qml-home .qml-handoff h3{font-size:22px}
+  .qml-handoff-intro,.qml-home .qml-handoff-intro{padding:0 20px 20px}
+  .qml-handoff pre,.qml-home .qml-handoff pre{padding:20px!important}
+  .qml-handoff pre code,.qml-home .qml-handoff pre code{font-size:11px}
+  .qml-handoff-bar{padding:10px 20px}
+  .qml-handoff-bar>span{font-size:8px;letter-spacing:.6px}
+  .qml-handoff a.qml-handoff-download{padding:0 20px 20px}
+  .qml-handoff-footnote,.qml-home .qml-handoff-footnote{padding:20px}
+  .qml-handoff .qml-handoff-status{padding-left:20px;padding-right:20px}
+}

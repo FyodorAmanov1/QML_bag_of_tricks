@@ -1,0 +1,23 @@
+Use QML Bag of Tricks to implement and benchmark a QML candidate in my project.
+Task / target: [describe]
+Dataset / split constraints: [describe]
+SDK / compute budget: [Qiskit, PennyLane or Cirq; time, memory, qubits, shots]
+
+Start at https://fyodoramanov1.github.io/QML_bag_of_tricks/llms.txt
+Browse https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/
+Read the agent guide: https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/
+
+1. Select a method; read its mathematical contract, assumptions, primary citation
+   and linked native SDK source. Explain why it fits my task and budget.
+2. The public website is documentation, not a hosted execution API. The full
+   repository is private. Inspect linked sources and shared dependencies; adapt
+   the needed implementation locally. Do not assume a downloaded file is a
+   complete package or that private git clone/pip installation will work.
+3. Split first, fit preprocessing on training data only, and choose settings
+   using validation data. Include tuned regularized and domain-informed classical
+   controls under matched data access. Preserve classical wins and failures.
+4. Deliver runnable code, environment/seeds/splits, held-out predictions, metrics
+   with uncertainty, and loading/readout/shot/time/memory costs. Distinguish the
+   paper's claim from this adaptation. Do not claim general quantum advantage.
+5. If you lack browsing or execution tools, state the missing capability and
+   request the specific guide/source or environment needed; do not invent results.
