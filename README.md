@@ -148,7 +148,11 @@ warnings. The collection establishes no general hardware or runtime advantage.
 
 The [public website](https://fyodoramanov1.github.io/QML_bag_of_tricks/) includes
 an evidence gallery, project selector, SDK commands and the complete guide
-library. The source repository remains private. Preview locally:
+library. Its visual design takes inspiration from [KETS Quantum](https://kets-quantum.com/):
+white and cool-gray surfaces, black-and-red typography, and spacious sections.
+The matching banner and locally served Poppins fonts carry that style through
+the repository. Content, navigation and interactive tools are unchanged.
+The source repository remains private. Preview locally:
 
 ```bash
 python -m pip install -e ".[docs]"

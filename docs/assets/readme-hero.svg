@@ -2,36 +2,36 @@
   <title id="title">QML Bag of Tricks</title>
   <desc id="desc">Make the quantum part count. Trainable methods, real baselines, reproducible experiments.</desc>
   <defs>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d9ff65" stroke-opacity=".07"/></pattern>
-    <radialGradient id="glow"><stop stop-color="#476d39" stop-opacity=".8"/><stop offset="1" stop-color="#102d24" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#f07d8b" stroke-opacity=".07"/></pattern>
+    <radialGradient id="glow"><stop stop-color="#c12337" stop-opacity=".8"/><stop offset="1" stop-color="#151515" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1280" height="430" rx="24" fill="#102d24"/>
-  <rect width="1280" height="430" rx="24" fill="url(#grid)"/>
+  <rect width="1280" height="430" rx="0" fill="#151515"/>
+  <rect width="1280" height="430" rx="0" fill="url(#grid)"/>
   <ellipse cx="1040" cy="180" rx="300" ry="270" fill="url(#glow)"/>
   <g font-family="Arial,Helvetica,sans-serif">
-    <rect x="48" y="42" width="260" height="29" rx="14" fill="#d9ff65"/>
-    <text x="64" y="62" font-size="13" letter-spacing="1.6" font-weight="700" fill="#102d24">THE PRACTICAL FIELD GUIDE</text>
-    <text x="48" y="149" font-size="60" font-weight="700" letter-spacing="-2.5" fill="#f4f3eb">QML Bag of Tricks</text>
-    <text x="49" y="205" font-size="31" fill="#d9ff65" letter-spacing="-.8">Make the quantum part count.</text>
-    <text x="49" y="260" font-size="18" fill="#c4d3c5">Trainable methods. Real baselines. Reproducible experiments.</text>
-    <text x="49" y="349" font-size="15" font-weight="700" fill="#f4f3eb">QISKIT</text>
-    <circle cx="124" cy="344" r="2" fill="#d9ff65"/>
-    <text x="144" y="349" font-size="15" font-weight="700" fill="#f4f3eb">PENNYLANE</text>
-    <circle cx="255" cy="344" r="2" fill="#d9ff65"/>
-    <text x="275" y="349" font-size="15" font-weight="700" fill="#f4f3eb">CIRQ</text>
-    <text x="49" y="382" font-size="13" fill="#a9bdaf">Choose a useful task → build a native model → benchmark the result</text>
+    <rect x="48" y="42" width="260" height="29" rx="3" fill="#f07d8b"/>
+    <text x="64" y="62" font-size="13" letter-spacing="1.6" font-weight="700" fill="#151515">THE PRACTICAL FIELD GUIDE</text>
+    <text x="48" y="149" font-size="60" font-weight="700" letter-spacing="-2.5" fill="#ffffff">QML Bag of Tricks</text>
+    <text x="49" y="205" font-size="31" fill="#f07d8b" letter-spacing="-.8">Make the quantum part count.</text>
+    <text x="49" y="260" font-size="18" fill="#d2d6da">Trainable methods. Real baselines. Reproducible experiments.</text>
+    <text x="49" y="349" font-size="15" font-weight="700" fill="#ffffff">QISKIT</text>
+    <circle cx="124" cy="344" r="2" fill="#f07d8b"/>
+    <text x="144" y="349" font-size="15" font-weight="700" fill="#ffffff">PENNYLANE</text>
+    <circle cx="255" cy="344" r="2" fill="#f07d8b"/>
+    <text x="275" y="349" font-size="15" font-weight="700" fill="#ffffff">CIRQ</text>
+    <text x="49" y="382" font-size="13" fill="#bcbec5">Choose a useful task → build a native model → benchmark the result</text>
   </g>
   <g transform="translate(855 74)">
-    <circle cx="150" cy="135" r="116" fill="none" stroke="#9cbb9c" stroke-opacity=".35"/>
-    <ellipse cx="150" cy="135" rx="116" ry="46" fill="none" stroke="#9cbb9c" stroke-opacity=".35" transform="rotate(-34 150 135)"/>
-    <ellipse cx="150" cy="135" rx="46" ry="116" fill="none" stroke="#9cbb9c" stroke-opacity=".35" transform="rotate(-34 150 135)"/>
-    <path d="M23 135H277M150 8V262" stroke="#9cbb9c" stroke-opacity=".25"/>
-    <path d="M150 135L224 52" stroke="#d9ff65" stroke-width="3"/>
-    <circle cx="224" cy="52" r="9" fill="#d9ff65"/>
-    <circle cx="150" cy="135" r="5" fill="#f4f3eb"/>
-    <circle cx="64" cy="212" r="6" fill="#a798f2"/>
-    <path d="M64 212L150 135" stroke="#a798f2" stroke-width="2" stroke-dasharray="4 5"/>
-    <rect x="62" y="281" width="176" height="30" rx="15" fill="#203f31"/>
-    <text x="150" y="301" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.2" fill="#d9ff65">EXPLORE · BUILD · MEASURE</text>
+    <circle cx="150" cy="135" r="116" fill="none" stroke="#d2d6da" stroke-opacity=".35"/>
+    <ellipse cx="150" cy="135" rx="116" ry="46" fill="none" stroke="#d2d6da" stroke-opacity=".35" transform="rotate(-34 150 135)"/>
+    <ellipse cx="150" cy="135" rx="46" ry="116" fill="none" stroke="#d2d6da" stroke-opacity=".35" transform="rotate(-34 150 135)"/>
+    <path d="M23 135H277M150 8V262" stroke="#d2d6da" stroke-opacity=".25"/>
+    <path d="M150 135L224 52" stroke="#f07d8b" stroke-width="3"/>
+    <circle cx="224" cy="52" r="9" fill="#f07d8b"/>
+    <circle cx="150" cy="135" r="5" fill="#ffffff"/>
+    <circle cx="64" cy="212" r="6" fill="#ffffff"/>
+    <path d="M64 212L150 135" stroke="#ffffff" stroke-width="2" stroke-dasharray="4 5"/>
+    <rect x="62" y="281" width="176" height="30" rx="3" fill="#c12337"/>
+    <text x="150" y="301" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.2" fill="#f07d8b">EXPLORE · BUILD · MEASURE</text>
   </g>
 </svg>
