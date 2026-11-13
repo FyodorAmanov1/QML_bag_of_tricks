@@ -49,6 +49,8 @@
     </div>
   </section>
 
+  <section class="qml-agent-contract" id="agents" aria-labelledby="agent-title"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2 id="agent-title">Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div class="qml-agent-links"><a href="{{ 'agents/' | url }}">Setup & integration guide ↗</a><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div>{% include "partials/agent-handoff.html" %}</section>
+
   <section class="qml-library" id="documentation" aria-labelledby="library-title">
     <div class="qml-section-heading"><div><p class="qml-eyebrow">OPEN THE FIELD GUIDE</p><h2 id="library-title">Go straight to the methods.</h2></div><a class="qml-text-link" href="{{ 'explore/' | url }}">Browse every documentation page ↗</a></div>
     <div class="qml-library-grid">
@@ -125,7 +127,6 @@ python -m qml_tricks.learning.case_models \
   --output results/local/first_run.json</code></pre><p>Exact simulator reference · classical controls included · no QPU account required</p><span id="qml-copy-status" class="qml-sr-only" aria-live="polite"></span></div>
   </section>
 
-  <section class="qml-agent-contract" id="agents" aria-labelledby="agent-title"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2 id="agent-title">Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div class="qml-agent-links"><a href="{{ 'agents/' | url }}">Setup & integration guide ↗</a><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div>{% include "partials/agent-handoff.html" %}</section>
   <footer class="qml-home-footer"><div><strong>QML Bag of Tricks</strong><p>Built for useful, reproducible experiments.</p></div><div><a href="https://github.com/FyodorAmanov1/QML_bag_of_tricks">GitHub ↗</a><a href="{{ 'coverage/' | url }}">Evidence & assumptions</a><a href="{{ 'owner_review/' | url }}">Review status</a></div><p>0.2.0 candidate · owner scientific review pending.<br>Source repository is private during review. Published papers are linked publicly.</p></footer>
 </div>
 {% endblock %}
