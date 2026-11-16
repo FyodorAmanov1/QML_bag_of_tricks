@@ -1,0 +1,14 @@
+{
+  "intent": "follow_up",
+  "dataset": "wine_binary",
+  "data_kind": "classical",
+  "objective": "iid_classification",
+  "capabilities": {},
+  "project": {
+    "data_provenance": "Original recorded wine subset; record a new immutable protocol for extensions",
+    "target": "Two-class wine target",
+    "primary_metric": "Balanced accuracy, with paired split-level uncertainty",
+    "split_strategy": "Train/validation selection; untouched test for the frozen comparison",
+    "compute_budget": ""
+  }
+}

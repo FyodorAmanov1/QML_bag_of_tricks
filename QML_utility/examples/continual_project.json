@@ -1,0 +1,9 @@
+{
+  "data_kind": "classical",
+  "objective": "continued_adaptation",
+  "capabilities": {
+    "nonstationary_stream": true,
+    "repeated_tasks": true,
+    "amplitude_loading_feasible": true
+  }
+}

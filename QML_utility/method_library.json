@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scope": "Peer-reviewed method foundations with local engineering implementations; separate from published-success catalog",
+  "methods": [
+    {
+      "id": "quantum_features",
+      "title": "Fixed quantum features with a regularized classical head",
+      "foundation": "https://doi.org/10.1103/PhysRevLett.122.040504",
+      "foundation_scope": "Quantum feature spaces; not an advantage theorem for this circuit",
+      "hypothesis": "The fixed local measurements expose predictive nonlinear interactions without optimizing a quantum loss",
+      "prefer_when": "Establishing a low-optimization-cost quantum feature baseline",
+      "diagnose": ["feature variance and effective rank", "readout regularization", "classical Fourier features on identical angular inputs"],
+      "extension": "Change encoding scale, observable support or fixed circuit using validation; preserve all input coordinates",
+      "guide": "recipes/quantum_features.md"
+    },
+    {
+      "id": "projected_kernel",
+      "title": "Local measured features with a classical RBF kernel",
+      "foundation": "https://doi.org/10.1038/s41467-021-22539-9",
+      "foundation_scope": "Projected quantum kernels and task/access-specific results; this is a local-feature engineering adaptation",
+      "hypothesis": "Nonlinear classical processing of accessible quantum observables helps beyond a linear head",
+      "prefer_when": "Comparing head complexity on the same measured feature family",
+      "diagnose": ["feature collapse", "RBF bandwidth and regularization", "same-feature linear-head ablation"],
+      "extension": "Validate locality, measured feature budget and bandwidth; do not equate projection with quantum advantage",
+      "guide": "recipes/projected_kernel.md"
+    },
+    {
+      "id": "fidelity_kernel",
+      "title": "Fidelity kernel with SVC or kernel ridge",
+      "foundation": "https://doi.org/10.1038/s41586-019-0980-2",
+      "foundation_scope": "Quantum kernel estimation; this exact-simulator kernel does not demonstrate a hardware or computational advantage",
+      "hypothesis": "State-overlap similarity aligns with the target better than local measured-feature similarity",
+      "prefer_when": "Moderate row counts and explicit willingness to pay quadratic Gram costs",
+      "diagnose": ["off-diagonal kernel variance", "effective Gram rank", "RBF and exact classical simulation controls"],
+      "extension": "Validate feature-map and regularization choices; account for new-input kernel queries on hardware",
+      "guide": "recipes/fidelity_kernel.md"
+    },
+    {
+      "id": "trainable_local",
+      "title": "Trainable re-uploading circuit with local measurements",
+      "foundation": "https://doi.org/10.22331/q-2020-02-06-226",
+      "foundation_scope": "Re-uploading expressivity; this architecture and optimizer are an engineering adaptation, not an exact published winning model",
+      "hypothesis": "Task-adapted circuit features improve on the fixed circuit sufficiently to justify gradient costs",
+      "prefer_when": "Fixed feature models fit poorly and a measured gradient/training budget is available",
+      "diagnose": ["circuit gradient norms", "training loss curves", "train-versus-validation error", "fixed-map and classical nonlinear controls"],
+      "extension": "Validate weak encoding, depth and readout choices; QNG or warm starts require their own matched-cost ablations",
+      "guide": "recipes/trainable_local.md"
+    }
+  ],
+  "implementation_status": "Three native SDK constructions and local tests; see VALIDATION.md for executed training coverage",
+  "coverage_manifest": "implementation_coverage.json",
+  "execution_adapters": {
+    "reference": {"methods":["quantum_features","projected_kernel","fidelity_kernel","trainable_local"],"max_total_csv_rows":512,"guide":"PRACTICAL_WORKFLOW.md"},
+    "batched_features": {"methods":["quantum_features"],"max_total_csv_rows":20000,"guide":"SCALING.md","dense_quantum_gram":false,"out_of_core_csv":false}
+  },
+  "evaluation_adapters": ["single_holdout","repeated_iid_or_group_holdout","expanding_chronological_windows","explicit_predefined_row_ids"],
+  "deployment_adapters": {
+    "offline_feature_student": {"guide":"OFFLINE_DISTILLATION.md","frozen_teacher_required":true,"independent_export_gate_required":true,"student_quantum_queries":0,"role":"vendor-inspired engineering companion; not another peer-reviewed success case"}
+  },
+  "predictive_superiority_verified": false,
+  "not_included_in_published_success_case_count": true
+}

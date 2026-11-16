@@ -1,0 +1,48 @@
+{
+  "status": "paper_scoped_replication_plan_not_executed_here",
+  "reporting": [
+    "held-out predictions or channel estimates",
+    "all seeds/task orders and failed trials",
+    "training/validation/test identities and preprocessing fit scope",
+    "loading/readout/shots/query counts, simulation and hardware costs",
+    "uncertainty with the correct experimental unit"
+  ],
+  "promotion_gate": [
+    "recover exact original data and settings",
+    "replay the original comparator tuple",
+    "independently recompute the result",
+    "run separately labeled strong-control extensions",
+    "do not promote a new-data transfer before held-out evaluation"
+  ],
+  "case_id": "pauli_channel_learning",
+  "paper_settings": {
+    "target": "Pauli eigenvalues for a channel / justified twirl",
+    "access": "n system qubits plus n retained references",
+    "method": "Bell input, channel on system, Bell readout",
+    "noise_handling": "SPAM-robust depth decay plus separately calibrated auxiliary channel",
+    "published_overhead_base": 1.33,
+    "published_overhead_uncertainty": 0.05,
+    "entanglement_free_comparison_base": 2,
+    "hypothesis_test_total_qubits_up_to": 64,
+    "intrinsic_noise_experiment_qubits_up_to": 16
+  },
+  "must_recover": [
+    "final data archive and author analysis code",
+    "calibration assumptions and covariance",
+    "exact depth sequence and per-depth shots",
+    "cost of auxiliary characterization"
+  ],
+  "local_reference_scope": "Signed Choi/Pauli identities and known-calibration algebra only; not full EMEEL or device experiment",
+  "separate_extensions": [
+    "finite-shot confidence intervals including calibration covariance",
+    "measurement/SPAM drift stress test",
+    "gate/noise departures from Pauli model",
+    "selected-query output rather than materializing all coefficients"
+  ],
+  "stop_conditions": [
+    "use of the state-square YY sign instead of Choi transpose convention",
+    "division by near-zero calibration factor",
+    "ignoring auxiliary experiment cost",
+    "claim of polynomial full-output size for all 4^n coefficients"
+  ]
+}

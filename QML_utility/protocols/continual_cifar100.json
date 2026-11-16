@@ -1,0 +1,55 @@
+{
+  "case_id": "continual_plasticity",
+  "status": "paper_protocol_not_executed_here",
+  "data": {
+    "dataset": "CIFAR-100",
+    "preprocessing": [
+      "convert RGB to grayscale",
+      "flatten to 1024",
+      "L2 normalize for BOTH models"
+    ],
+    "task_sequence": "3000 random binary class pairs",
+    "network_reset_between_tasks": false
+  },
+  "paper_settings": {
+    "qubits": 10,
+    "depths": [
+      10,
+      20,
+      30
+    ],
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "epochs_per_task": 5,
+    "batch_size": 128,
+    "readout": "last-qubit Pauli Z logit"
+  },
+  "reported_L2_ablation": {
+    "locator": "Figure 11 / Appendix G",
+    "tasks": 500,
+    "learning_rate": 0.005,
+    "weight_decays": [
+      0.0001,
+      0.001,
+      0.01
+    ]
+  },
+  "upstream_audit": {
+    "commit": "c3c6cb4a91971d4fad6e468df6ac071851bb7460",
+    "default_depth": 10,
+    "warning": "Inspect NUM_TASKS and optimizer implementation. MNIST uses unequal paper training schedules; do not generalize CIFAR matching to MNIST. Public CIFAR source returns [z,-z] logits (softmax implies sigmoid(2z)); paper describes a Z logit. Record the convention used.",
+    "missing_or_unverified": [
+      "Saved trained trajectories",
+      "Standalone L2 ablation implementation",
+      "Full control/tuning sweep"
+    ]
+  },
+  "promotion_gate": [
+    "Original long trajectory on original data",
+    "Independent seeds and task orders",
+    "L2 and plasticity-aware classical baselines",
+    "Equal access/tuning and full compute costs",
+    "New-task accuracy AND prior-task retention",
+    "No claim of general plateau avoidance"
+  ]
+}

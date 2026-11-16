@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "policy": "Bounded non-winning results are retained; future usefulness remains an untested hypothesis.",
+  "episodes": [
+    {
+      "id": "pca2_wine_binary",
+      "source": "../results/study.json",
+      "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "dataset": "wine_binary",
+      "methods": [
+        "frozen_features",
+        "projected_kernel",
+        "fidelity_kernel"
+      ],
+      "configuration": {
+        "rows": 128,
+        "qubits": 2,
+        "depth": 1,
+        "trials_per_model": 3,
+        "split_seeds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "execution": "ideal Qiskit simulation"
+      },
+      "observation": "These tested quantum-feature pipelines had worse mean held-out scores than the tested classical configurations.",
+      "inference_scope": "configuration_and_dataset_specific_no_gain",
+      "does_not_establish": [
+        "method-wide uselessness",
+        "failure with more effective training or other data geometry",
+        "a proof that a modified circuit cannot help"
+      ],
+      "follow_up_hypotheses": [
+        "optimization-limited fitting",
+        "information loss from compression",
+        "mismatch of encoding/scale/readout with task structure"
+      ],
+      "required_diagnostics": [
+        "training and validation learning curves",
+        "classical model on identical compressed features",
+        "full-feature classical baseline",
+        "kernel off-diagonal variance / concentration where relevant"
+      ],
+      "allowed_action": "validation_only_prespecified_followup",
+      "retest_protocol": "protocols/contextual_followup.json"
+    },
+    {
+      "id": "pca2_breast_cancer",
+      "source": "../results/study.json",
+      "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "dataset": "breast_cancer",
+      "methods": [
+        "frozen_features",
+        "projected_kernel",
+        "fidelity_kernel"
+      ],
+      "configuration": {
+        "rows": 128,
+        "qubits": 2,
+        "depth": 1,
+        "trials_per_model": 3,
+        "split_seeds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "execution": "ideal Qiskit simulation"
+      },
+      "observation": "These tested quantum-feature pipelines had worse mean held-out scores than the tested classical configurations.",
+      "inference_scope": "configuration_and_dataset_specific_no_gain",
+      "does_not_establish": [
+        "method-wide uselessness",
+        "failure with more effective training or other data geometry",
+        "a proof that a modified circuit cannot help"
+      ],
+      "follow_up_hypotheses": [
+        "optimization-limited fitting",
+        "information loss from compression",
+        "mismatch of encoding/scale/readout with task structure"
+      ],
+      "required_diagnostics": [
+        "training and validation learning curves",
+        "classical model on identical compressed features",
+        "full-feature classical baseline",
+        "kernel off-diagonal variance / concentration where relevant"
+      ],
+      "allowed_action": "validation_only_prespecified_followup",
+      "retest_protocol": "protocols/contextual_followup.json"
+    },
+    {
+      "id": "pca2_diabetes",
+      "source": "../results/study.json",
+      "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "dataset": "diabetes",
+      "methods": [
+        "frozen_features",
+        "projected_kernel",
+        "fidelity_kernel"
+      ],
+      "configuration": {
+        "rows": 128,
+        "qubits": 2,
+        "depth": 1,
+        "trials_per_model": 3,
+        "split_seeds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "execution": "ideal Qiskit simulation"
+      },
+      "observation": "These tested quantum-feature pipelines had worse mean held-out scores than the tested classical configurations.",
+      "inference_scope": "configuration_and_dataset_specific_no_gain",
+      "does_not_establish": [
+        "method-wide uselessness",
+        "failure with more effective training or other data geometry",
+        "a proof that a modified circuit cannot help"
+      ],
+      "follow_up_hypotheses": [
+        "optimization-limited fitting",
+        "information loss from compression",
+        "mismatch of encoding/scale/readout with task structure"
+      ],
+      "required_diagnostics": [
+        "training and validation learning curves",
+        "classical model on identical compressed features",
+        "full-feature classical baseline",
+        "kernel off-diagonal variance / concentration where relevant"
+      ],
+      "allowed_action": "validation_only_prespecified_followup",
+      "retest_protocol": "protocols/contextual_followup.json"
+    },
+    {
+      "id": "alloy_clean_controls",
+      "source": "../docs/reproductions/results.md",
+      "dataset": "alloy_phases",
+      "methods": [
+        "fidelity_kernel"
+      ],
+      "observation": "The recorded clean-preprocessing quantum kernel lost to tuned full-feature RBF-SVC and boosting.",
+      "inference_scope": "configuration_and_dataset_specific_no_gain",
+      "does_not_establish": [
+        "all kernels/reservoirs fail",
+        "no utility on other datasets or with a different validated training protocol"
+      ],
+      "follow_up_hypotheses": [
+        "domain-aware descriptors",
+        "train-only feature map/scale selection",
+        "composition-family generalization"
+      ],
+      "required_diagnostics": [
+        "same-information regularized controls",
+        "training budget and feature-selection audit"
+      ],
+      "allowed_action": "validation_only_prespecified_followup",
+      "retest_protocol": "protocols/contextual_followup.json"
+    },
+    {
+      "id": "channel_causal_controls",
+      "source": "../docs/reproductions/results.md",
+      "dataset": "nonlinear_channel_20dB",
+      "methods": [
+        "quantum_reservoir"
+      ],
+      "observation": "The recorded fixed reservoir beat memoryless logistic regression but lost to the tested causal classical controls.",
+      "inference_scope": "configuration_and_dataset_specific_no_gain",
+      "does_not_establish": [
+        "all kernels/reservoirs fail",
+        "no utility on other datasets or with a different validated training protocol"
+      ],
+      "follow_up_hypotheses": [
+        "match memory and nonlinear features",
+        "retune reservoir dynamics on validation",
+        "different channel/noise/memory regimes"
+      ],
+      "required_diagnostics": [
+        "same-information regularized controls",
+        "training budget and feature-selection audit"
+      ],
+      "allowed_action": "validation_only_prespecified_followup",
+      "retest_protocol": "protocols/contextual_followup.json"
+    }
+  ]
+}

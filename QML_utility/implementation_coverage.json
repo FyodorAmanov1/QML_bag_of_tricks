@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-16",
+  "scope": "Implementation and integration checks, not predictive superiority",
+  "portfolio_methods": ["quantum_features", "projected_kernel", "fidelity_kernel", "trainable_local"],
+  "unified_project": {
+    "distribution":"qml-bag-of-tricks",
+    "entry_point":"qml-utility setup",
+    "canonical_library":"qml_tricks",
+    "training_essentials":["natural_gradient","local_loss","identity_block_init","near_identity_encoding"],
+    "supervised_circuit_optimizers":["adam","gd","qng"],
+    "initialization_and_encoding_are_distinct":true,
+    "test_file":"tests/test_unification.py",
+    "checks":"Canonical strategy/control execution in three SDKs; supervised QNG versus analytical geometry in both tasks; shared encoding-scale controls; case setup and one-distribution/default-CI discovery",
+    "installed_wheel_workflow":"Essential setup checks plus nine-family/25-candidate QNG-enabled classification run completed"
+  },
+  "frameworks": ["qiskit", "pennylane", "cirq"],
+  "tasks": ["binary_classification", "multiclass_classification", "scalar_regression"],
+  "checks": [
+    {"name":"native_state_order_and_full_coordinate_upload", "coverage":"All three SDKs; seven input features, three qubits, two layers; explicit tail-coordinate sensitivity", "test":"tests/test_practical.py::test_all_coordinates_and_independent_three_sdk_state_order"},
+    {"name":"rotation_readout_and_expectation_gradient", "coverage":"All three SDKs; analytical one-qubit XYZ fixture, Y sign and central-difference gate derivative", "test":"tests/test_practical.py::test_native_half_angles_local_y_sign_and_gate_gradient"},
+    {"name":"joint_nonlinear_loss_gradient", "coverage":"Classification/regression circuit, head and bias gradients versus independent central differences", "test":"tests/test_practical.py::test_joint_loss_gradient_uses_chain_rule"},
+    {"name":"all_family_training_prediction_serialization_and_audit", "coverage":"Four QML families and five classical controls, classification and regression, all three SDKs; one-qubit integration fixture", "test":"tests/test_practical.py::test_real_project_run_all_families_and_reload_selected_predictor"},
+    {"name":"split_leakage_boundaries", "coverage":"Disjoint groups, chronological order/embargo, repeated-time rejection, target exclusion", "test":"tests/test_practical.py::test_group_and_temporal_splits_do_not_mix_entities_or_future"},
+    {"name":"train_only_preprocessing_and_budget", "coverage":"Held-out extremes do not alter training statistics; artifact round-trip; explicit budget failure", "test":"tests/test_practical.py::test_train_only_preprocessing_serialization_and_budget"},
+    {"name":"failed_trial_retention", "coverage":"Budget-limited QML trials remain in a partial report", "test":"tests/test_practical.py::test_failed_trials_stay_visible_in_partial_report"},
+    {"name":"constraint_aware_routing", "coverage":"Gradient, Gram-memory, query-free deployment and preparation planning constraints", "test":"tests/test_practical.py::test_portfolio_responds_to_gradient_memory_and_deployment_constraints"},
+    {"name":"batched_features", "coverage":"600 rows for both tasks in all three SDKs; state-batch bound, one acquisition pass, serialization, no dense Gram", "test":"tests/test_workbench.py::test_batched_training_exceeds_reference_cap_without_dense_gram"},
+    {"name":"multi_run_evaluation", "coverage":"IID/group repeated holdouts, frozen plans, paired summaries and audited child artifacts", "test":"tests/test_workbench.py::test_repeated_holdouts_freeze_plan_audit_every_run_and_pair_results"},
+    {"name":"expanding_time_windows", "coverage":"Three folds with nonoverlapping tests and two embargo boundaries", "test":"tests/test_workbench.py::test_walk_forward_windows_have_disjoint_tests_and_two_embargoes"},
+    {"name":"offline_feature_distillation", "coverage":"Classification/regression and three SDK teachers; held-out export gates and frozen-head prediction", "test":"tests/test_workbench.py::test_frozen_teacher_distillation_and_no_native_inference"},
+    {"name":"sdk_free_student", "coverage":"Fresh process blocks Qiskit/PennyLane/Cirq and native-model package imports while loading and predicting", "test":"tests/test_workbench.py::test_student_loads_and_predicts_in_a_process_with_all_quantum_imports_blocked"},
+    {"name":"failed_gate_and_disjoint_records", "coverage":"Overlapping gates rejected before native acquisition, incomplete gate classes rejected, failed fidelity blocks export", "test":"tests/test_workbench.py::test_failed_fidelity_gate_blocks_export_and_overlapping_gate_spends_no_queries"}
+  ],
+  "executed_real_observation_integration_runs": [
+    {"dataset":"bundled wine", "framework":"qiskit", "task":"three_class_classification", "records":72, "features":13, "qubits":2, "steps":6, "model_families":9, "candidate_trials":25, "independent_artifact_audit":true},
+    {"dataset":"bundled diabetes", "framework":"pennylane", "task":"scalar_regression", "records":72, "features":10, "qubits":2, "steps":6, "model_families":9, "candidate_trials":25, "independent_artifact_audit":true},
+    {"dataset":"bundled breast cancer", "framework":"qiskit", "task":"binary_classification", "records":569, "features":30, "qubits":2, "adapter":"batched_features", "model_families":5, "candidate_trials":13, "independent_artifact_audit":true},
+    {"dataset":"bundled diabetes", "framework":"cirq", "task":"scalar_regression", "records":72, "features":10, "evaluation":"three repeated holdouts, seeds 7/17/27", "model_families_per_run":7, "candidate_trials_total":57, "independent_artifact_audit":true}
+  ],
+  "physical_hardware_verified": false,
+  "paper_scale_classical_data_win_reproduced": false,
+  "general_predictive_advantage_verified": false,
+  "package_checks": ["wheel built without isolated dependency downloads", "isolated target installation", "installed evidence/portfolio resource loading", "PennyLane quickstart from isolated installed package"],
+  "requires_further_work": ["finite-shot and noisy hardware adapters", "out-of-core and modality-specific adapters", "confirmatory external evaluation and dependence-aware statistical inference", "calibrated class probabilities", "provider-specific feature adapters and distribution-shift validation"]
+}

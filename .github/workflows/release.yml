@@ -25,6 +25,8 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -e ".[all,learning,notebooks,dev,docs]"
       - run: python -m pytest -q
+      - run: python -m QML_utility.validate_docs
+      - run: python -m QML_utility setup --output QML_utility/results/local/release-setup --check-essentials
       - run: python scripts/audit_opportunity_results.py
       - run: python scripts/audit_paper_results.py
       - run: python scripts/run_notebooks.py

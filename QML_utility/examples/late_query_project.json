@@ -1,0 +1,10 @@
+{
+  "data_kind": "quantum",
+  "objective": "late_observable_magnitude",
+  "capabilities": {
+    "quantum_state_copies": true,
+    "two_copy_coherence": true,
+    "late_observable_query": true,
+    "expectation_magnitude_target": true
+  }
+}

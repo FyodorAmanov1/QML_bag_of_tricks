@@ -1,0 +1,9 @@
+{
+  "scope":"Core training tools of the unified repository; these are not additional predictive-advantage cases",
+  "strategies":[
+    {"id":"natural_gradient","aliases":["ngd","qng"],"title":"Quantum natural gradient descent","role":"optimizer","guide":"../docs/strategies/natural_gradient.md","project_setting":{"quantum":{"optimizer":"qng","metric_regularization":0.001}},"project_scope":"Circuit FS preconditioning with a classical Adam head; measured hardware metrics are not implemented"},
+    {"id":"local_loss","aliases":["local_cost","local_cost_functions"],"title":"Local cost functions","role":"objective_design","guide":"../docs/strategies/local_loss.md","project_setting":null,"project_scope":"Canonical product-state local/global cost experiment; supervised local XYZ readout is available but is not this theorem or a replacement loss"},
+    {"id":"identity_block_init","aliases":["near_identity_initialization","near_identity_init"],"title":"Identity-block initialization","role":"initialization","guide":"../docs/strategies/identity_block_init.md","project_setting":null,"project_scope":"Canonical independent forward/inverse blocks initialized to identity; transfer requires a compatible project ansatz"},
+    {"id":"near_identity_encoding","aliases":["weak_encoding"],"title":"Near-identity encoding","role":"encoding_design","guide":"../docs/strategies/near_identity_encoding.md","project_setting":{"quantum":{"encoding_scale_candidates":[0.1,0.5,1.0]}},"project_scope":"Weak-angle candidates are an engineering adaptation; encoding scale and identity-block initialization are different choices"}
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "checked_on": "2026-11-16",
+  "sources": {
+    "graphon": {
+      "repository": "https://github.com/QuaRobot/QGNR",
+      "commit": "97ee491cecf8d8ce9847a3503735117b89977a71",
+      "license_recorded": null,
+      "executed_here": false,
+      "files": [
+        {
+          "path": "QGNR-main/QGNR/model_GNR.py",
+          "sha256": "c1ef4a8dfca5c57cc386db7ef91f9fadcd45787d9f500aec6b40dcfad9e13be8"
+        },
+        {
+          "path": "QGNR-main/QGNR/train_GNR.py",
+          "sha256": "4a4eac746435401f0bd07e9fd7529d7dce82c0b57b009fb24ecc853863dd78e7"
+        },
+        {
+          "path": "QGNR-main/QGNR/helper.py",
+          "sha256": "2c2c6600fed01f84c28b508ff9e4f728d45f58ffe4133765c53e5f7e1877e574"
+        }
+      ]
+    },
+    "plasticity": {
+      "repository": "https://github.com/sxzgroup/quantum-plasticity",
+      "commit": "c3c6cb4a91971d4fad6e468df6ac071851bb7460",
+      "license_recorded": "Apache-2.0",
+      "executed_here": false,
+      "files": [
+        {
+          "path": "src/cifar.py",
+          "sha256": "4a3bb534a8946c7d633c38d766fab79d363b19b9903c1694331aee31b16ce7ae"
+        },
+        {
+          "path": "src/mnist.py",
+          "sha256": "b96c9fa6f268926b0ab414ddce9cb166eacb14f5322000c5d5c50d54ea018fec"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "2a6d0c2d194e4ebc8f239c22d6c19ccc7123633b2937016c5cf69495ab82c0ff"
+        }
+      ]
+    },
+    "attention": {
+      "repository": "https://github.com/PaddlePaddle/Quantum",
+      "commit": "760c787f29e18db77ec6fba5e91da6166ae6599e",
+      "license_recorded": "NOASSERTION",
+      "executed_here": false,
+      "files": [
+        {
+          "path": "applications/text_classification/qsann_classification.py",
+          "sha256": "8b582113badf1f801bbf35bf7e62083d08d047668b42dd7a98e4ca41a17d11bc"
+        },
+        {
+          "path": "paddle_quantum/qml/qsann.py",
+          "sha256": "3e93ba2c64ff9971a161fba36f92c4af2d0bbcb5a8869b58d49c0126226a086e"
+        }
+      ]
+    },
+    "photonic_kernel": {
+      "repository": "https://github.com/dapingQ/PhoQuKs",
+      "commit": "9a04579985d6c653b89b3de6b6699ef857067e0c",
+      "license_recorded": "MIT",
+      "executed_here": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f06c121aca2d95ce0d76840bfae4ead9b38e9d94f00aa6be94eb74010926a259"
+        },
+        {
+          "path": "data_utils.py",
+          "sha256": "c1cb33f87f75caac20d1b8b3e08b8fb6d8eb7d7a86362d4f9c6a2d4c9afcd42b"
+        },
+        {
+          "path": "simualte_all_kernels.py",
+          "sha256": "4a774bdbbd2bbd4b5760a7dd4c4aee21b2dd3b7eb2494ebf1cc73d2ce1b8259f"
+        },
+        {
+          "path": "plot_main.py",
+          "sha256": "42d6ebaa8b38dbdc6a653328ed610345432e553e7cf4d47eaaca5362bccc5c79"
+        }
+      ]
+    },
+    "volatility": {
+      "repository": "https://github.com/LeeQY1996/Quantum-Reservoir-computing-for-Realized-Volatility-Forecasting",
+      "commit": "d2e9b0aa599afd33c6cfb10352e2c36fe92fa76f",
+      "license_recorded": null,
+      "executed_here": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "d044f6f217d5c262d9669d332380976a39a9ff69b2abda826654f280e4f92403"
+        },
+        {
+          "path": "Time_series.jl",
+          "sha256": "e7d9ec76f4663afdce2c2903bf3f8211d1d3f7fc5d79dc9ee7d2981c4693ac64"
+        },
+        {
+          "path": "predict_result.csv",
+          "sha256": "58d9a227c19e89e23e5ae9b993dc6b90ced8f25fbb2a00d9fa68b236af90249a"
+        }
+      ]
+    }
+  }
+}

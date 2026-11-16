@@ -1,0 +1,54 @@
+{
+  "case_id": "quantum_graphons",
+  "status": "paper_protocol_not_executed_here",
+  "data": {
+    "synthetic_graphons": 13,
+    "graphs_per_graphon": 10,
+    "node_counts": [
+      50,
+      77,
+      105,
+      133,
+      161,
+      188,
+      216,
+      244,
+      272,
+      300
+    ],
+    "independent_trials": 10,
+    "evaluation_resolution": 1000
+  },
+  "objective": "squared Gromov-Wasserstein distance; retain paper table scaling",
+  "models": [
+    "QGNR",
+    "IGNR/SIREN",
+    "FNO",
+    "permutation-aware Fourier control",
+    "GWB"
+  ],
+  "parameter_counts": {
+    "QGNR": 169,
+    "IGNR": 921
+  },
+  "upstream_audit": {
+    "commit": "97ee491cecf8d8ce9847a3503735117b89977a71",
+    "entrypoint": "QGNR-main/QGNR/train_GNR.py",
+    "data_archive": "QGNR-main/QGNR/Data/graphs.zip",
+    "data_archive_bytes": 14015777,
+    "observations": [
+      "Public code only establishes a single-graphon training path",
+      "save_path construction uses /Result/ with empty ppath: review and redirect into a user-writable experiment directory before execution",
+      "Original dependencies use torchquantum 0.1.7 and qiskit 0.38.0; use a separate environment",
+      "Do not execute downloaded pickle data without establishing trust",
+      "No source license found in inspected file tree"
+    ]
+  },
+  "promotion_gate": [
+    "Recover exact graph trials and full comparator settings",
+    "Audit transport loss, alignment and frequency budgets",
+    "Reproduce all 13 graphons, not one favorable example",
+    "Retain ties and uncertainty; report parameter count separately from runtime",
+    "Obtain original conditional pipeline before claiming Table 4 reproduction"
+  ]
+}

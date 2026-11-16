@@ -9,6 +9,12 @@ Give your agent a task, a dataset description, a compute budget and one of the
 copyable briefs below. The same workflow applies to any coding agent that can
 read files or browse documentation and run Python in your project environment.
 
+The entry point is now [QML Utility](utility/unified_setup.md), shipped in the
+same distribution as the research library. Start with `qml-utility setup`; it
+exposes published cases, QNG, local costs, identity-block initialization and weak
+encoding. It runs canonical research implementations rather than disconnected
+copies. See [the utility project brief](utility/project_agent_brief.md).
+
 | Access route | What your agent can do | What it needs |
 |---|---|---|
 | **Public website** | Read methods, follow primary citations, inspect linked native source files and adapt a method in your project | Browsing tools; local file writing and Python execution for implementation and benchmarking |

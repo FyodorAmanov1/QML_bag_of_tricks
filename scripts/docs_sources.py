@@ -1,7 +1,27 @@
 """MkDocs hook: copy canonical SDK files into downloadable site assets."""
 from pathlib import Path
 import json
+import posixpath
+import re
 from mkdocs.structure.files import File
+
+
+def utility_sources(root):
+    folder = root/'QML_utility'
+    paths = list(folder.glob('*.md'))+list(folder.glob('*.json'))
+    for name in ('evidence','recipes','protocols','results'):
+        paths += [p for p in (folder/name).glob('*') if p.is_file() and p.suffix in ('.md','.json','.gz')]
+    sources = {}
+    for path in paths:
+        relative = path.relative_to(folder)
+        if path.suffix=='.md':
+            dest = 'utility/'+str(relative.with_name('index.md' if path.name=='README.md' else path.name.lower())).replace('\\','/')
+        else:
+            dest = 'utility/'+relative.as_posix()
+        sources[path.resolve()] = dest
+    for path in list(folder.glob('*.py'))+list((folder/'models').glob('*.py'))+list((folder/'benchmarks').glob('*.py')):
+        sources[path.resolve()] = 'utility/source/'+path.relative_to(folder).as_posix()
+    return sources
 
 
 def on_page_context(context, page, config, nav):
@@ -15,6 +35,7 @@ def on_page_context(context, page, config, nav):
         }
     if page.file.src_uri == 'explore.md':
         groups = {key: dict(id=key, title=title, pages=[]) for key, title in (
+            ('utility', 'Start with QML Utility'),
             ('essentials', 'Essentials & project guides'),
             ('strategies', 'Circuit strategies'),
             ('learning', 'Learning workflows'),
@@ -36,6 +57,23 @@ def on_page_context(context, page, config, nav):
 
 
 def on_page_markdown(markdown, page, config, files):
+    if page.file.src_uri.startswith('utility/'):
+        root = Path(config['config_file_path']).parent
+        mapping = utility_sources(root)
+        canonical = next(path for path,dest in mapping.items() if dest==page.file.src_uri)
+        def link(match):
+            target,separator,anchor = match.group(2).partition('#')
+            if not target or '://' in target or target.startswith(('mailto:','/')):
+                return match.group(0)
+            path = (canonical.parent/target).resolve()
+            dest = mapping.get(path)
+            if dest is None and path.is_relative_to((root/'docs').resolve()):
+                dest = path.relative_to((root/'docs').resolve()).as_posix()
+            if dest is None:
+                return match.group(0)
+            relative = posixpath.relpath(dest,posixpath.dirname(page.file.src_uri))
+            return match.group(1)+'('+relative+(separator+anchor if separator else '')+')'
+        return re.sub(r'(\[[^\]]*\])\(([^)]+)\)',link,markdown)
     if page.file.src_uri.startswith("learning/"):
         return markdown.replace("../../src/qml_tricks/learning/recipes/", "../source/learning/")
     if page.file.src_uri.startswith("strategies/"):
@@ -45,6 +83,8 @@ def on_page_markdown(markdown, page, config, files):
 
 def on_files(files, config):
     root = Path(config["config_file_path"]).parent
+    for path,dest in utility_sources(root).items():
+        files.append(File.generated(config,dest,abs_src_path=str(path)))
     source = root / "src/qml_tricks/strategies"
     for path in source.glob("*/*_impl.py"):
         dest = f"source/{path.parent.name}/{path.name}"

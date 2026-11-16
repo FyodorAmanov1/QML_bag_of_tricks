@@ -1,5 +1,17 @@
 # QML Bag of Tricks 0.2.0 — release candidate
 
+## Unreleased unified entry point
+
+One root distribution now provides `qml-utility` and the existing `qml-tricks`
+CLI. Start with `qml-utility setup` for published-case protocols and the canonical
+QNG, local-cost, identity-block and weak-encoding strategy checks. Supervised QNG
+reuses the main geometry implementation. Utility documentation is included in
+the same website build from its canonical files. Default CI/test discovery covers
+both layers. Original studies and research implementations remain available;
+this local integration does not publish a release or change source visibility.
+
+## Earlier release-candidate contents
+
 Reproduced QML applications, trainable methods and agent-friendly implementation
 recipes in Qiskit, PennyLane and Cirq.
 

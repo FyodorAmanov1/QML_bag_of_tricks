@@ -11,4 +11,12 @@ exclude results/opportunities.json
 recursive-include notebooks *.ipynb
 recursive-include agent_eval *.py *.json *.md *.csv
 prune results/local
+recursive-include QML_utility *.py *.json *.md *.gz
+include QML_utility/LICENSE
+prune QML_utility/.cache
+prune QML_utility/.pytest_cache
+prune QML_utility/build
+prune QML_utility/dist
+prune QML_utility/results/local
+prune QML_utility/qml_utility_workbench.egg-info
 recursive-include reproductions *.json *.csv *.npy *.upstream *.md

@@ -4,6 +4,13 @@ Version 0.2.0 is a local release candidate. Scientific review belongs to the
 repository owner and is pending; no external QML-engineer review is required.
 The [review packet](owner_review.md) links the evidence and checks.
 
+The unreleased integration is one product: build/install from the repository
+root, which includes `QML_utility` and `qml_tricks` in one wheel/source archive.
+`python -m pytest` now includes utility tests. Use the
+[unified setup](utility/unified_setup.md) to inspect the four training essentials
+and publication-scoped case catalog before model training. Old utility-only
+packaging commands are historical; there is no separate utility release artifact.
+
 The documentation is [live on GitHub Pages](https://fyodoramanov1.github.io/QML_bag_of_tricks/).
 The source repository remains private. The owner explicitly approved public
 documentation publication, including the built examples and notebooks.

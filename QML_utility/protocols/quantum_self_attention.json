@@ -1,0 +1,92 @@
+{
+  "status": "paper_scoped_replication_plan_not_executed_here",
+  "reporting": [
+    "held-out predictions or channel estimates",
+    "all seeds/task orders and failed trials",
+    "training/validation/test identities and preprocessing fit scope",
+    "loading/readout/shots/query counts, simulation and hardware costs",
+    "uncertainty with the correct experimental unit"
+  ],
+  "promotion_gate": [
+    "recover exact original data and settings",
+    "replay the original comparator tuple",
+    "independently recompute the result",
+    "run separately labeled strong-control extensions",
+    "do not promote a new-data transfer before held-out evaluation"
+  ],
+  "case_id": "quantum_self_attention",
+  "paper_settings": {
+    "datasets": [
+      "Yelp",
+      "IMDb",
+      "Amazon"
+    ],
+    "dataset_family": "UCI Sentiment Labelled Sentences, not full IMDb movie reviews",
+    "records_per_domain": 1000,
+    "class_balance": "50/50",
+    "split": "80/20; recover exact split",
+    "initializations": 9,
+    "qubits": 4,
+    "encoder_depth": 1,
+    "embedding_dimension": 12,
+    "qkv_depth": {
+      "Yelp": 1,
+      "IMDb": 1,
+      "Amazon": 2
+    },
+    "learning_rate": {
+      "Yelp": 0.008,
+      "IMDb": 0.002,
+      "Amazon": 0.008
+    },
+    "initialization_std": 0.01,
+    "attention": "exp(-(q_i-k_j)^2), row normalized",
+    "comparison": "simple CSANN and mean-embedding linear head"
+  },
+  "numeric_source": {
+    "type": "author manuscript corresponding to the journal publication",
+    "url": "https://arxiv.org/pdf/2205.05625v2",
+    "locator": "Tables I and III",
+    "must_reconcile_version_of_record": true
+  },
+  "reported_accuracy_percent": {
+    "Yelp": {
+      "QSANN_mean": 84.79,
+      "QSANN_sd": 1.29,
+      "CSANN_mean": 83.11,
+      "CSANN_sd": 0.89
+    },
+    "IMDb": {
+      "QSANN_mean": 80.28,
+      "QSANN_sd": 1.78,
+      "CSANN_mean": 79.67,
+      "CSANN_sd": 0.83
+    },
+    "Amazon": {
+      "QSANN_mean": 84.25,
+      "QSANN_sd": 1.75,
+      "CSANN_mean": 83.22,
+      "CSANN_sd": 1.28
+    }
+  },
+  "must_recover": [
+    "training epochs and residual/regularization settings",
+    "tokenization, train vocabulary, OOV/padding policy",
+    "source-version consistency for Table III",
+    "full embedding parameter accounting",
+    "source-paper mismatch: depth-one 4-qubit public code token array has 24 scalars versus paper dimension 12",
+    "source-paper mismatch: head initialization std 0.001 in code versus manuscript 0.01",
+    "observable order/repetition, pi rescaling, residual formula and ansatz consistency"
+  ],
+  "separate_extensions": [
+    "tune TF-IDF linear/SVM and frozen encoder baselines",
+    "replace quantum q/k/v with equally sized classical features and keep the Gaussian attention",
+    "repeat data splits as well as parameter seeds",
+    "evaluate token-order and padding ablations"
+  ],
+  "stop_conditions": [
+    "comparison described as beating pretrained language models",
+    "dictionary built with test labels",
+    "test split used to choose the seed"
+  ]
+}

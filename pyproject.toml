@@ -9,7 +9,7 @@ readme = "README.md"
 description = "Evidence-led, three-framework recipes for trainable quantum machine learning"
 requires-python = ">=3.12"
 license = "MIT"
-dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2"]
+dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2", "scikit-learn>=1.6,<2", "joblib>=1.4,<2"]
 
 [project.urls]
 Repository = "https://github.com/FyodorAmanov1/QML_bag_of_tricks"
@@ -25,14 +25,24 @@ dev = ["pytest>=9,<10", "build>=1,<2"]
 docs = ["mkdocs-material>=9.7,<10"]
 
 [project.scripts]
+qml-utility = "QML_utility.__main__:main"
 qml-tricks = "qml_tricks.__main__:main"
 
+[tool.setuptools.package-dir]
+qml_tricks = "src/qml_tricks"
+QML_utility = "QML_utility"
+
+[tool.setuptools]
+include-package-data = false
+
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "."]
+include = ["qml_tricks*", "QML_utility", "QML_utility.models", "QML_utility.benchmarks"]
 
 [tool.setuptools.package-data]
 qml_tricks = ["catalog.json"]
 "qml_tricks.learning" = ["catalog.json", "opportunity_protocol.json"]
+QML_utility = ["*.json", "*.md", "protocols/*.json", "evidence/*.md", "recipes/*.md", "examples/*.json", "results/*.md", "results/*.json.gz"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "QML_utility/tests"]

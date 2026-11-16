@@ -1,0 +1,17 @@
+{
+  "data_kind": "classical",
+  "objective": "molecular_activity_regression",
+  "capabilities": {
+    "molecular_descriptors": true,
+    "activity_regression_target": true,
+    "subsample_learning_curve": true,
+    "fixed_reservoir_budget": true
+  },
+  "project": {
+    "data_provenance": "",
+    "target": "Continuous molecular ACT endpoint",
+    "primary_metric": "Held-out MSE in the declared target units",
+    "split_strategy": "Recover original splits, then label a separate scaffold/group extension",
+    "compute_budget": ""
+  }
+}

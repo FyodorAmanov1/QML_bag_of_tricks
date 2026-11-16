@@ -4,12 +4,15 @@ Task / target: [describe]
 Dataset / split constraints: [describe]
 SDK / compute budget: [Qiskit, PennyLane or Cirq; time, memory, qubits, shots]
 
-1. Read AGENTS.md, README.md, docs/explore.md, docs/method_selector.md and the
+1. Start with QML_utility/UNIFIED_SETUP.md and QML_utility/AGENTS.md. Utility is
+   the entry point of the same installed project as the canonical strategy library.
+   Read AGENTS.md, README.md, docs/explore.md, docs/method_selector.md and the
    relevant strategy/learning guide before implementing. Inspect the primary
    citation and native SDK construction; distinguish proof and executable scope.
 2. Use Python 3.12 and the chosen SDK extra, for example:
    python -m pip install -e ".[qiskit,learning]"
-   python -m qml_tricks list
+   python -m QML_utility setup --output QML_utility/results/local/agent_setup --check-essentials
+   python -m QML_utility strategies --all
    Run checkout commands from the repository root in an activated environment.
    If no checkout exists, cloning requires authorized private-repository access;
    use https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/ otherwise.

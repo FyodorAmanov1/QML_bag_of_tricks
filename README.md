@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <a href="QML_utility/UNIFIED_SETUP.md">Start with QML Utility</a> ·
   <a href="#why-qml-is-worth-testing">Why QML?</a> ·
   <a href="#results-worth-exploring">Results</a> ·
   <a href="#run-your-first-experiment">Get started</a> ·
@@ -26,6 +27,26 @@
 </p>
 
 ## Why QML is worth testing
+
+**Start with [QML Utility](QML_utility/START_HERE.md), the entry point to this
+single project.** It connects published-case protocols, core training methods,
+model fitting and evaluation to the research library below. One installation
+provides both `qml-utility` and `qml-tricks`:
+
+```bash
+python -m pip install -e ".[qiskit]"
+qml-utility setup --output QML_utility/results/local/my_setup --check-essentials
+```
+
+Setup exposes the published-case catalog alongside **quantum natural gradient
+descent, local costs, identity-block initialization and near-identity encoding**.
+It prepares a project contract and can execute the main library's canonical
+strategy/control checks. QNG is also selectable in supervised training.
+[Unified setup guide](QML_utility/UNIFIED_SETUP.md) ·
+[All practical workflows](QML_utility/PRACTICAL_WORKFLOW.md).
+
+Published successes apply to their stated task and comparator. Core training
+tools have their own assumptions; they do not guarantee a new-project advantage.
 
 Quantum models offer several concrete hypotheses for an ML project:
 
@@ -100,11 +121,18 @@ Use Python 3.12, clone this repository and install one SDK:
 python -m venv .venv
 # Activate .venv using your shell.
 python -m pip install -e ".[qiskit,learning]"
-python -m qml_tricks.learning.case_models --case multiclass_kernel --framework qiskit --output results/local/first_run.json
+qml-utility setup --output QML_utility/results/local/first_setup --check-essentials
+qml-utility run --config QML_utility/results/local/first_setup/project.json --output QML_utility/results/local/first_comparison
 ```
 
-Use `.[pennylane,learning]` or `.[cirq,learning]` with the matching
-`--framework`. Install `.[all,learning]` for the full SDK matrix.
+Use `.[pennylane,learning]` or `.[cirq,learning]` and pass the matching
+`--framework` to setup. Install `.[all,learning]` for the full SDK matrix.
+
+The existing application entrypoints remain available; for example:
+
+```bash
+python -m qml_tricks.learning.case_models --case multiclass_kernel --framework qiskit --output results/local/multiclass.json
+```
 
 | Build this | Start here |
 |---|---|

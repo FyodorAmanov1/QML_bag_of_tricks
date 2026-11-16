@@ -1,0 +1,431 @@
+{
+  "schema_version": 2,
+  "checked_on": "2026-11-16",
+  "policy": "Peer-reviewed, publication-scoped success evidence. An unsuccessful bounded experiment does not establish method-wide uselessness; a plausible extension is not a demonstrated win.",
+  "cases": [
+    {
+      "id": "continual_plasticity",
+      "title": "Continual image learning with compact-unitary QNNs",
+      "guide": "evidence/continual_plasticity.md",
+      "data_kind": "classical",
+      "objective": "continued_adaptation",
+      "evidence_type": "peer_reviewed_numerical",
+      "publication": {
+        "doi": "10.1103/ry52-85ll",
+        "url": "https://journals.aps.org/prxquantum/abstract/10.1103/ry52-85ll",
+        "year": 2026,
+        "locator": "Figure 2; Appendix A.2; Appendix G / Figure 11",
+        "peer_reviewed": true
+      },
+      "observed_success": "QNN retains new-task learnability as tested MLPs degrade, including reported L2 controls. No figure percentages invented.",
+      "data_conditions": [
+        "Sequential random binary CIFAR-100 tasks, not a fixed IID classification dataset",
+        "32x32 grayscale pixels, flattened and L2-normalized; no two-PCA-component bottleneck",
+        "Long task sequence without reinitializing the network"
+      ],
+      "required_capabilities": [
+        "nonstationary_stream",
+        "repeated_tasks",
+        "amplitude_loading_feasible"
+      ],
+      "necessary_controls": [
+        "L2 MLP sweep",
+        "reset/replay/continual-backprop controls",
+        "classical orthogonal or unitary parameterization",
+        "matched tuning and compute budgets"
+      ],
+      "mechanism_status": "Compact unitary geometry is the authors explanation; compactness alone is not a universal trainability guarantee.",
+      "blockers": [
+        "Full paper trajectory and L2 variants have not been replicated locally",
+        "Public default script is not the complete reported ablation suite",
+        "Hardware amplitude loading and finite-shot training remain separate costs"
+      ],
+      "upstream_key": "plasticity",
+      "local_implementation": "Native SU(4) circuit/readout references only; no published training trajectory reproduced",
+      "locally_reproduced_paper_win": false,
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data.",
+      "protocol": "protocols/continual_cifar100.json"
+    },
+    {
+      "id": "quantum_graphons",
+      "title": "Quantum graphon neural representation",
+      "guide": "evidence/quantum_graphons.md",
+      "data_kind": "classical",
+      "objective": "graphon_reconstruction",
+      "evidence_type": "peer_reviewed_numerical",
+      "publication": {
+        "doi": "10.1038/s41534-025-01141-7",
+        "url": "https://www.nature.com/articles/s41534-025-01141-7",
+        "year": 2026,
+        "locator": "Tables 1, 2, 4; Methods; Supplementary Note 3",
+        "peer_reviewed": true
+      },
+      "observed_success": "Lower or tied reported graphon reconstruction error than listed baselines; 169 versus 921 parameters in single-graphon model.",
+      "data_conditions": [
+        "Collections of graphs sharing an underlying graphon",
+        "Unknown node alignment; permutation-invariant reconstruction objective",
+        "Oscillatory or degree-ambiguous structure is a motivating regime, not a sufficient success theorem"
+      ],
+      "required_capabilities": [
+        "graph_collections",
+        "node_permutation_invariance",
+        "graphon_objective"
+      ],
+      "necessary_controls": [
+        "GWD-trained IGNR/SIREN and FNO",
+        "permutation-aware Fourier features",
+        "matched transport solver and evaluation resolution",
+        "strong graph kernels/GNNs for downstream classification"
+      ],
+      "mechanism_status": "Frequency representation and node-permutation-aware loss are motivating mechanisms; larger frequency support does not prove arbitrary coefficient expressivity.",
+      "blockers": [
+        "Original classification pipeline not present in inspected public file tree",
+        "No repository license recorded at inspected commit; source inspected, not vendored",
+        "Published real-graph classification margins are modest and do not compare all modern GNNs"
+      ],
+      "upstream_key": "graphon",
+      "local_implementation": "Pinned upstream source inspection and paper-faithful replication plan; no local training claim",
+      "locally_reproduced_paper_win": false,
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data.",
+      "protocol": "protocols/graphon_reconstruction.json"
+    },
+    {
+      "id": "late_query_bell",
+      "title": "Two-copy learning of late-query quantum properties",
+      "guide": "evidence/late_query_bell.md",
+      "data_kind": "quantum",
+      "objective": "late_observable_magnitude",
+      "evidence_type": "peer_reviewed_theory_and_experiment",
+      "publication": {
+        "doi": "10.1126/science.abn7293",
+        "url": "https://preskill.caltech.edu/pubs/preskill-2022-quantum-advantage.pdf",
+        "year": 2022,
+        "locator": "Property-prediction protocol and supplemental measurement analysis",
+        "peer_reviewed": true
+      },
+      "observed_success": "Published quantum-data learning separation and hardware demonstration; local benchmark is a restricted analytic protocol audit.",
+      "data_conditions": [
+        "Fresh independent copies of the same quantum state",
+        "Observable query arrives after acquisition",
+        "Target is expectation magnitude/square, not its sign"
+      ],
+      "required_capabilities": [
+        "quantum_state_copies",
+        "two_copy_coherence",
+        "late_observable_query",
+        "expectation_magnitude_target"
+      ],
+      "necessary_controls": [
+        "Optimal inference on random local records",
+        "Query-known-before-acquisition ablation",
+        "Matched state-copy counts and readout noise"
+      ],
+      "mechanism_status": "Joint acquisition retains squared Pauli expectation information that random pre-query local records rarely contain.",
+      "blockers": [
+        "Not a model for an ordinary CSV",
+        "Local baseline is optimal for specified random local measurements, not every conceivable classical acquisition protocol"
+      ],
+      "local_implementation": "Standalone sufficient-statistic benchmark plus three native Bell-acquisition references",
+      "locally_reproduced_paper_win": false,
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "photonic_process",
+      "title": "Entanglement-assisted photonic process learning",
+      "guide": "evidence/photonic_process.md",
+      "data_kind": "quantum",
+      "objective": "bosonic_process_learning",
+      "evidence_type": "peer_reviewed_experiment_with_access_bound",
+      "publication": {
+        "doi": "10.1126/science.adv2560",
+        "url": "https://preskill.caltech.edu/pubs/preskill-2025-quantum-learning.pdf",
+        "year": 2025,
+        "locator": "Figure 2 reconstruction versus Figure 3 hypothesis test",
+        "peer_reviewed": true
+      },
+      "observed_success": "120-mode hypothesis-test success 0.563 +/- 0.025 with 100000 samples; distinct from the 100-mode reconstruction extrapolation.",
+      "data_conditions": [
+        "Unknown multimode random displacement process",
+        "Access to optical probes and retained entangled reference modes",
+        "Learning high-frequency characteristic-function structure"
+      ],
+      "required_capabilities": [
+        "bosonic_displacement_process",
+        "epr_probe_memory",
+        "joint_cv_measurement"
+      ],
+      "necessary_controls": [
+        "Entanglement-free strategies under the same channel access",
+        "Separate empirical extrapolation from hypothesis-test lower bound",
+        "Loss, squeezing and mode/copy budgets"
+      ],
+      "mechanism_status": "EPR probes and joint CV measurement change accessible acquisition information.",
+      "blockers": [
+        "Requires specialized photonic acquisition, not a standard gate-QPU classifier",
+        "No hardware/data replay performed locally"
+      ],
+      "artifact_url": "https://doi.org/10.11583/dtu.29517107.v1",
+      "local_implementation": "Data/code entry point and exact distinction between the two published comparisons",
+      "locally_reproduced_paper_win": false,
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "discrete_log_kernel",
+      "title": "Fault-tolerant kernel learning of discrete-log concepts",
+      "guide": "evidence/discrete_log_kernel.md",
+      "data_kind": "classical",
+      "objective": "cryptographic_concept_learning",
+      "evidence_type": "peer_reviewed_conditional_theory",
+      "publication": {
+        "doi": "10.1038/s41567-021-01287-z",
+        "url": "https://www.nature.com/articles/s41567-021-01287-z",
+        "year": 2021,
+        "locator": "Concept-class construction and kernel-estimation analysis",
+        "peer_reviewed": true
+      },
+      "observed_success": "End-to-end learning separation under a discrete-log hardness assumption; not a measured real-data benchmark.",
+      "data_conditions": [
+        "Constructed multiplicative-group examples with a discrete-log-defined target",
+        "Required feature-state preparation preserves the construction"
+      ],
+      "required_capabilities": [
+        "discrete_log_structure",
+        "fault_tolerant_access"
+      ],
+      "necessary_controls": [
+        "State the exact hardness assumption and input distribution",
+        "Count feature preparation and kernel estimates"
+      ],
+      "mechanism_status": "Quantum arithmetic makes a specially constructed target learnable efficiently.",
+      "blockers": [
+        "Fault-tolerant resource requirement",
+        "No evidence that common tabular/image labels have this structure"
+      ],
+      "local_implementation": "Theory/use-case boundary only; no fake small-modulus speedup demonstration",
+      "locally_reproduced_paper_win": false,
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "molecular_reservoir",
+      "title": "Fixed Rydberg reservoirs for molecular activity",
+      "guide": "evidence/molecular_reservoir.md",
+      "data_kind": "classical",
+      "objective": "molecular_activity_regression",
+      "evidence_type": "peer_reviewed_numerical",
+      "publication": {
+        "doi": "10.1021/acs.jcim.5c00958",
+        "url": "https://doi.org/10.1021/acs.jcim.5c00958",
+        "year": 2025,
+        "locator": "Published abstract; Figures 2-5; publisher SI Sections S2.3-S3",
+        "peer_reviewed": true
+      },
+      "observed_success": "Reported robustness of fixed quantum reservoir features as molecular-descriptor subsamples shrink; no digitized regression scores asserted.",
+      "data_conditions": [
+        "MMACD activity regression from molecular descriptors",
+        "Published SI uses datasets 4,5,9,14,15 and subsample sizes 100,200,800",
+        "Supervised feature selection and one-/two-body reservoir readout are part of the pipeline"
+      ],
+      "required_capabilities": [
+        "molecular_descriptors",
+        "activity_regression_target",
+        "subsample_learning_curve",
+        "fixed_reservoir_budget"
+      ],
+      "necessary_controls": [
+        "Same raw/selected features and subsamples for all models",
+        "Tuned RF, GPR/RBF, SVR, boosting and regularized neural readouts",
+        "Scaffold/group split extension",
+        "Nested supervised feature selection and classical nonlinear-feature ablations"
+      ],
+      "mechanism_status": "Fixed quantum dynamics avoid variational circuit optimization, but the reported feature geometry is not a sufficient condition for a new molecular target.",
+      "blockers": [
+        "Exact final-paper split artifacts and regression pipeline not recovered",
+        "Final SI S2.4 and other SI prose/captions disagree on MMACD14 versus MMACD4; exact identity unresolved",
+        "Standardization/SHAP/clustering fit scope needs an outer-test exposure audit",
+        "No new local molecular training or hardware run"
+      ],
+      "local_implementation": "Task-specific agent protocol and inspected sources; no reproduced published training win",
+      "locally_reproduced_paper_win": false,
+      "protocol": "protocols/molecular_reservoir.json",
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "quantum_self_attention",
+      "title": "Gaussian projected quantum self-attention for short text",
+      "guide": "evidence/quantum_self_attention.md",
+      "data_kind": "classical",
+      "objective": "short_text_sentiment",
+      "evidence_type": "peer_reviewed_numerical",
+      "publication": {
+        "doi": "10.1007/s11432-023-3879-7",
+        "url": "https://link.springer.com/article/10.1007/s11432-023-3879-7",
+        "year": 2024,
+        "locator": "Tables 1 and 3; author manuscript Tables I and III; experimental setting",
+        "peer_reviewed": true
+      },
+      "observed_success": "Reported short-sentence accuracy means exceed the simple classical self-attention and mean-embedding baselines; modern pretrained language models were not tested.",
+      "data_conditions": [
+        "Balanced Sentiment Labelled Sentences subsets from Yelp, IMDb and Amazon",
+        "1000 sentences per domain, 80/20 split; several-to-dozens of words",
+        "Four-qubit query/key/value circuits with compact embeddings and nine initialization repeats"
+      ],
+      "required_capabilities": [
+        "short_text_sequences",
+        "sentiment_labels",
+        "token_level_quantum_features",
+        "matched_text_baselines"
+      ],
+      "necessary_controls": [
+        "Matched classical Gaussian attention",
+        "Mean-embedding linear head",
+        "TF-IDF regularized linear classifier",
+        "Small classical attention with separately tuned capacity",
+        "Frozen pretrained-text-encoder head"
+      ],
+      "mechanism_status": "Projected query/key features and Gaussian attention change the representation; the Gaussian normalization itself is classical.",
+      "blockers": [
+        "Author-manuscript table values must stay tied to that source version",
+        "Pinned public code differs in embedding dimensions, head initialization and feature/residual conventions",
+        "End-to-end published training not rerun locally",
+        "Parameter counts exclude embedding parameters and do not establish full-model compression"
+      ],
+      "local_implementation": "Tested classical Gaussian feature aggregation plus task protocol and inspected sources; no full trained classifier or reproduced paper win",
+      "locally_reproduced_paper_win": false,
+      "protocol": "protocols/quantum_self_attention.json",
+      "upstream_key": "attention",
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "photonic_interference_kernel",
+      "title": "Interference-aware photonic kernels on structured labels",
+      "guide": "evidence/photonic_interference_kernel.md",
+      "data_kind": "classical",
+      "objective": "engineered_kernel_classification",
+      "evidence_type": "peer_reviewed_hardware_benchmark",
+      "publication": {
+        "doi": "10.1038/s41566-025-01682-5",
+        "url": "https://www.nature.com/articles/s41566-025-01682-5",
+        "year": 2025,
+        "locator": "Classification-task construction; Figure 4; supplementary geometric-difference protocol",
+        "peer_reviewed": true
+      },
+      "observed_success": "Reported two-photon photonic classification advantage over distinguishable-photon and standard kernel comparators on geometrically engineered labels; no exact plotted scores transcribed.",
+      "data_conditions": [
+        "Random phase vectors with binary targets engineered using both kernel Gram matrices",
+        "Two photons in six optical modes; N=40,60,80,100 in the experiment",
+        "Two-thirds training, one-third testing; five generated tasks for average curves"
+      ],
+      "required_capabilities": [
+        "optical_phase_features",
+        "engineered_target_permitted",
+        "interference_kernel",
+        "kernel_task_benchmark"
+      ],
+      "necessary_controls": [
+        "Distinguishable-photon ablation",
+        "RBF, polynomial, linear and neural tangent kernels",
+        "Exact classical two-photon simulation",
+        "Independent label-generator transfer evaluation"
+      ],
+      "mechanism_status": "Interference changes kernel geometry for a constructed target; this does not prove practical speedup or advantage on independently supplied business labels.",
+      "blockers": [
+        "Label generation sees the full designed task; do not call it ordinary inductive generalization",
+        "Small optical system has an exact classical simulation",
+        "Archived accuracy replay and hardware acquisition remain unexecuted here"
+      ],
+      "local_implementation": "Task-specific agent protocol and inspected sources; no reproduced published training win",
+      "locally_reproduced_paper_win": false,
+      "protocol": "protocols/photonic_interference_kernel.json",
+      "upstream_key": "photonic_kernel",
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "volatility_reservoir",
+      "title": "Quantum reservoirs for one-step realized volatility",
+      "guide": "evidence/volatility_reservoir.md",
+      "data_kind": "classical",
+      "objective": "one_step_realized_volatility",
+      "evidence_type": "peer_reviewed_numerical",
+      "publication": {
+        "doi": "10.1103/rbj7-4wnq",
+        "url": "https://journals.aps.org/prresearch/abstract/10.1103/rbj7-4wnq",
+        "year": 2026,
+        "locator": "Table II, Table III and Section IV chronological evaluation",
+        "peer_reviewed": true
+      },
+      "observed_success": "Table II one-step QR2 MSE 0.103 versus best listed classical RCX 0.1089; multiple classical models remain in the model confidence set. Five-step RC MSE 0.1528 beats QR1 0.1556 and QR2 0.1663.",
+      "data_conditions": [
+        "Monthly realized-volatility target and causally timed predictors",
+        "Historical rolling re-estimation, approximately 571-month initial window",
+        "One-step claim distinct from five-step recursive forecasting and other market periods"
+      ],
+      "required_capabilities": [
+        "monthly_realized_volatility",
+        "one_step_target",
+        "chronological_features",
+        "rolling_reestimation"
+      ],
+      "necessary_controls": [
+        "HAR/ARMAX and classical reservoir with matched memory",
+        "LSTM and regularized lag-feature models",
+        "Nested chronological feature selection",
+        "Identical forecasting origins and revised-data policy"
+      ],
+      "mechanism_status": "Input/memory partition and fixed Ising dynamics are a temporal-feature hypothesis; no out-of-period or trading-profit guarantee follows.",
+      "blockers": [
+        "Exact original forecast alignment and full tuning histories need auditing",
+        "MCS inclusion is not unique superiority",
+        "No local replication of the original chronological benchmark"
+      ],
+      "local_implementation": "Task-specific agent protocol and inspected sources; no reproduced published training win",
+      "locally_reproduced_paper_win": false,
+      "protocol": "protocols/volatility_reservoir.json",
+      "upstream_key": "volatility",
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    },
+    {
+      "id": "pauli_channel_learning",
+      "title": "Error-mitigated entanglement-enhanced Pauli-channel learning",
+      "guide": "evidence/pauli_channel_learning.md",
+      "data_kind": "quantum",
+      "objective": "pauli_channel_characterization",
+      "evidence_type": "peer_reviewed_hardware_with_access_bound",
+      "publication": {
+        "doi": "10.1038/s41467-026-75553-0",
+        "url": "https://www.nature.com/articles/s41467-026-75553-0",
+        "year": 2026,
+        "locator": "Main Figures 1-4; commuting Choi observables; auxiliary-noise mitigation",
+        "peer_reviewed": true,
+        "inspected_version": "Accepted publisher manuscript, unedited/article in press"
+      },
+      "observed_success": "Hardware characterization reports overhead 1.33 +/- 0.05 per qubit below the entanglement-free base 2; distinct from predictive classification accuracy.",
+      "data_conditions": [
+        "Queryable Pauli channel, or explicitly justified twirled-channel target",
+        "System-reference entanglement and auxiliary-memory calibration",
+        "Pauli eigenvalues rather than full classical amplitude vectors as outputs"
+      ],
+      "required_capabilities": [
+        "pauli_channel_queries",
+        "entangled_reference_memory",
+        "auxiliary_calibration",
+        "bell_readout"
+      ],
+      "necessary_controls": [
+        "Entanglement-free channel learning under the stated access model",
+        "Auxiliary-memory calibration overhead",
+        "SPAM and gate-depth decay controls",
+        "Requested-output size and uncertainty accounting"
+      ],
+      "mechanism_status": "Commuting Choi observables jointly encode channel coefficients; transpose conventions preserve the sign that a two-copy state-square protocol loses.",
+      "blockers": [
+        "Small native references verify identities only, not the 64-qubit experiment",
+        "Auxiliary division is ill-conditioned near zero and has calibration uncertainty",
+        "All 4^n coefficients cannot be printed in polynomial space"
+      ],
+      "local_implementation": "Independent three-SDK ideal Pauli-channel/Bell acquisition and signed-coefficient/calibration algebra; not full hardware EMEEL",
+      "locally_reproduced_paper_win": false,
+      "protocol": "protocols/pauli_channel_learning.json",
+      "finding_scope": "Published success for the stated data/access/comparator tuple; not a guarantee on new data."
+    }
+  ]
+}

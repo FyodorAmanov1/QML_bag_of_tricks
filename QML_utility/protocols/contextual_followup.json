@@ -1,0 +1,48 @@
+{
+  "status": "prospective_engineering_protocol_not_a_published_success",
+  "purpose": "Investigate a bounded non-winning result without generalizing its failure or assuming that extra training fixes it.",
+  "stages": [
+    {
+      "name": "diagnose",
+      "actions": [
+        "retain original fixed test partition for comparability, but label its reuse exploratory if its scores informed redesign",
+        "reserve genuinely uninspected test records or fresh external data for confirmatory evaluation of a redesigned method",
+        "measure training versus validation error and gradient/circuit diagnostics",
+        "quantify information lost to compression with same-feature classical controls"
+      ]
+    },
+    {
+      "name": "prespecify",
+      "actions": [
+        "fix datasets, split/group/time rules, primary metric and acceptance threshold",
+        "declare separate original replay and modified-method experiment",
+        "freeze optimization, depth, encoding-scale and readout budgets for all models",
+        "select settings only inside training/validation; match budget policy"
+      ]
+    },
+    {
+      "name": "run",
+      "actions": [
+        "save all candidates, curves, failed seeds, warnings and compute costs",
+        "include regularized full-feature and same-feature classical models",
+        "if curves still improve at the budget boundary, report budget-limited rather than impossible"
+      ]
+    },
+    {
+      "name": "evaluate",
+      "actions": [
+        "evaluate the frozen finalist on untouched test data once",
+        "report paired uncertainty at the independent experimental unit",
+        "retain a no-gain result with its exact configuration",
+        "a success on changed data/training is a new result, not a replacement for the old one"
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "test-driven tuning",
+    "discarding failed configurations",
+    "increasing only the quantum compute budget without disclosure",
+    "claiming lost input features can be restored merely by training longer",
+    "calling absence of significance proof of equivalence"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "paper_scoped_replication_plan_not_executed_here",
+  "reporting": [
+    "held-out predictions or channel estimates",
+    "all seeds/task orders and failed trials",
+    "training/validation/test identities and preprocessing fit scope",
+    "loading/readout/shots/query counts, simulation and hardware costs",
+    "uncertainty with the correct experimental unit"
+  ],
+  "promotion_gate": [
+    "recover exact original data and settings",
+    "replay the original comparator tuple",
+    "independently recompute the result",
+    "run separately labeled strong-control extensions",
+    "do not promote a new-data transfer before held-out evaluation"
+  ],
+  "case_id": "volatility_reservoir",
+  "paper_settings": {
+    "target": "monthly realized volatility using paper transformation",
+    "evaluation_one_step": "August 1997 to December 2017, paper states 245 origins",
+    "initial_window_months_approx": 571,
+    "reestimate": "monthly",
+    "reservoir": "fixed fully connected transverse-field Ising input/memory partition",
+    "qubits_total": 10,
+    "lag_encoding_steps": 3,
+    "reservoir_instances_evaluated": 100,
+    "reported_selection": "best reservoir; audit inner-validation scope and retain all trials",
+    "trainable_readout": "ridge",
+    "published_one_step_MSE": {
+      "QR2": 0.103,
+      "QR1": 0.105,
+      "RCX": 0.1089
+    },
+    "published_five_step_MSE": {
+      "RC": 0.1528,
+      "QR1": 0.1556,
+      "QR2": 0.1663
+    }
+  },
+  "must_recover": [
+    "exact definition and transform of volatility and QLIKE",
+    "forecast-origin calendar and target alignment",
+    "feature vintages and publication lags",
+    "validation scope for forward selection",
+    "original reservoir couplings, readout penalty and random seeds"
+  ],
+  "separate_extensions": [
+    "causal walk-forward validation inside each training window",
+    "same temporal information for all models",
+    "regularized lag/Fourier features and tuned classical reservoirs",
+    "predeclared new periods and forecast horizons",
+    "paired temporal uncertainty; do not treat seeds as independent financial histories"
+  ],
+  "stop_conditions": [
+    "random row split",
+    "future or revised covariates used without a vintage policy",
+    "MCS membership reported as unique superiority",
+    "forecasting error called a trading-profit guarantee"
+  ]
+}

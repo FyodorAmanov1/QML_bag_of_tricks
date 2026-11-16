@@ -1,0 +1,65 @@
+{
+  "status": "paper_scoped_replication_plan_not_executed_here",
+  "reporting": [
+    "held-out predictions or channel estimates",
+    "all seeds/task orders and failed trials",
+    "training/validation/test identities and preprocessing fit scope",
+    "loading/readout/shots/query counts, simulation and hardware costs",
+    "uncertainty with the correct experimental unit"
+  ],
+  "promotion_gate": [
+    "recover exact original data and settings",
+    "replay the original comparator tuple",
+    "independently recompute the result",
+    "run separately labeled strong-control extensions",
+    "do not promote a new-data transfer before held-out evaluation"
+  ],
+  "case_id": "molecular_reservoir",
+  "paper_settings": {
+    "task": "continuous ACT regression",
+    "dataset_family": "MMACD files 4,5,9,14,15",
+    "feature_pipeline": "classical model selection, SHAP feature reduction, fixed reservoir, classical readout",
+    "selected_descriptors": 18,
+    "reservoir_readout": "one- and two-body observables",
+    "feature_detuning_range_MHz": [-6, 6],
+    "observable_time_step_microseconds": 0.4,
+    "subsample_sizes": [
+      100,
+      200,
+      800
+    ],
+    "final_SI_repeats": {
+      "five_subsamples_per_file_size": true,
+      "extra_subsamples_for_file14": 25
+    },
+    "split": "80/20 within subsamples; recover exact record IDs"
+  },
+  "source_versions": {
+    "published_article": "https://doi.org/10.1021/acs.jcim.5c00958",
+    "publisher_SI": "https://api.figshare.com/v2/articles/29832777",
+    "SI_filename": "ci5c00958_si_001.pdf",
+    "SI_sha256": "4ebdca82647d0f6cad0f96e5d01ba973f1acc8afb0d80b97d70873398c7f2eb0",
+    "consistency_blocker": "Final SI S2.4 identifies MMACD14 for detailed analyses, but other SI prose and the S1 caption identify MMACD4. Resolve against original artifacts/authors; do not silently choose one."
+  },
+  "must_recover": [
+    "main-text reservoir pulse/time geometry",
+    "original molecular records, preprocessing and split IDs",
+    "exact classical model-selection history",
+    "standardization/SHAP/clustering fit scope before subsampling and outer test exposure",
+    "conflicting MMACD4/MMACD14 identifiers inside the final SI",
+    "definition of the subsample unit versus actual training rows"
+  ],
+  "separate_extensions": [
+    "fit SHAP and all selection inside the outer training partition",
+    "compare same full and selected descriptors in classical controls",
+    "compare classical spin-reservoir dynamics on the same inputs",
+    "hold out molecular scaffolds/groups",
+    "sweep learning-curve size with a fixed test set",
+    "separate UMAP visualization/classification from ACT regression"
+  ],
+  "stop_conditions": [
+    "unknown target provenance",
+    "supervised feature selection on held-out labels",
+    "no same-input classical control"
+  ]
+}

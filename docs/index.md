@@ -7,6 +7,9 @@ description: A practical QML field guide. Explore reproduced comparisons, publis
 
 # QML Bag of Tricks
 
+Start with [QML Utility](utility/unified_setup.md): one project setup connects
+published-case protocols, core training methods and benchmarked model workflows.
+
 Make the quantum part count. This website connects published QML applications
 to trainable methods, native models and reproducible classical comparisons.
 

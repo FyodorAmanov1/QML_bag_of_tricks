@@ -1,0 +1,10 @@
+# Existing Python 3.12 repository environment already provides these.
+numpy>=2.2,<3
+scipy>=1.14,<2
+pytest>=9,<10
+scikit-learn>=1.6,<2
+joblib>=1.4,<2
+# Install one or all SDKs separately for native circuit verification:
+# qiskit==2.3.1
+# pennylane==0.45.1
+# cirq-core==1.7.0

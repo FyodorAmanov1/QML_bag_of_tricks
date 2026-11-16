@@ -1,0 +1,56 @@
+{
+  "status": "paper_scoped_replication_plan_not_executed_here",
+  "reporting": [
+    "held-out predictions or channel estimates",
+    "all seeds/task orders and failed trials",
+    "training/validation/test identities and preprocessing fit scope",
+    "loading/readout/shots/query counts, simulation and hardware costs",
+    "uncertainty with the correct experimental unit"
+  ],
+  "promotion_gate": [
+    "recover exact original data and settings",
+    "replay the original comparator tuple",
+    "independently recompute the result",
+    "run separately labeled strong-control extensions",
+    "do not promote a new-data transfer before held-out evaluation"
+  ],
+  "case_id": "photonic_interference_kernel",
+  "paper_settings": {
+    "photons": 2,
+    "modes": 6,
+    "experimental_task_sizes": [
+      40,
+      60,
+      80,
+      100
+    ],
+    "task_repeats": 5,
+    "train_fraction": 0.6666666666666666,
+    "test_fraction": 0.3333333333333333,
+    "target_construction": "geometric difference of full quantum and distinguishable-photon Gram matrices",
+    "labels_are_engineered": true
+  },
+  "source_artifacts": {
+    "repository": "https://github.com/dapingQ/PhoQuKs",
+    "dependencies": "DisCoPy optics branch at a0aeb6c0471440250b06807802e7e94c748b4035",
+    "cache_format": "pickle/NumPy data; inspect format and trust before loading",
+    "readme_code_mismatch": "README names geo_diff.py while inspected helper is data_utils.py"
+  },
+  "must_recover": [
+    "label discretization and C-selection procedure",
+    "all five tasks for each size/input state",
+    "experimental count normalization and uncertainty",
+    "exact plot scope: selected tasks versus averages"
+  ],
+  "separate_extensions": [
+    "nested C selection and independent generated-task testing",
+    "external labels fixed without access to candidate test Gram matrices",
+    "exact classical low-photon simulator control",
+    "distinguish computational advantage from kernel inductive bias"
+  ],
+  "stop_conditions": [
+    "claim of real-world external-label success from engineered targets",
+    "claim of classical intractability for two photons",
+    "test accuracy optimized by label/seed selection"
+  ]
+}

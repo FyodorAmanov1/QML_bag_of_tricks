@@ -1,0 +1,5 @@
+{
+  "data_kind": "classical",
+  "objective": "iid_classification",
+  "capabilities": {}
+}

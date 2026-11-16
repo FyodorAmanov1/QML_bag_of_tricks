@@ -10,6 +10,7 @@ straight to the technical methods. You do not need search to discover the librar
 
 | I want to… | Start here |
 |---|---|
+| Set up the unified toolkit and essential training strategies | [QML Utility](utility/unified_setup.md) · [Utility documentation](#utility) |
 | Read circuit mathematics and native SDK implementations | [All circuit strategies](#strategies) · [Method selector](method_selector.md) |
 | Build, train and evaluate a model | [Learning workflows](#learning) · [Model APIs](use_cases/models.md) |
 | Reproduce a published application | [Paper reproductions](reproductions/index.md) · [Complete comparisons](reproductions/results.md) |
