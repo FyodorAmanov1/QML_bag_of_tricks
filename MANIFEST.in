@@ -3,7 +3,6 @@ include requirements-reference.txt VALIDATION.md
 include RELEASE_NOTES.md
 include SECURITY.md
 include NOTICE
-recursive-include LICENSES *.txt
 recursive-include docs *.md *.js *.png *.svg *.json *.css *.txt *.ttf
 recursive-include overrides *.html
 recursive-include scripts *.py

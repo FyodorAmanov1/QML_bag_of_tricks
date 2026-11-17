@@ -1,6 +1,6 @@
 # License, attribution and scientific credit
 
-The current first-party QML Bag of Tricks distribution, including QML Utility,
+The QML Bag of Tricks project, including QML Utility,
 uses [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
 Project creator and maintainer: **Fyodor Amanov**. Other contributors and the
 original method authors retain their respective credit and rights.
@@ -14,15 +14,12 @@ contains an explicit contributor patent grant with its stated scope and terms.
 The repository's `NOTICE` is attribution information, not an additional license.
 
 The full license is in the root `LICENSE` and `QML_utility/LICENSE`. Package
-distributions include `LICENSE`, `NOTICE` and `LICENSES/MIT-legacy.txt` as legal
-metadata. Earlier MIT-distributed versions remain usable under their original
-terms; this transition does not revoke those permissions. The original MIT
-notice is preserved. Third-party fonts, alloy artifacts and dependencies retain
+distributions include `LICENSE` and `NOTICE` as legal metadata.
+Third-party fonts, alloy artifacts and dependencies retain
 their own licenses; see `NOTICE` and the adjacent third-party license files.
 
 Download the [license](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/legal/LICENSE.txt),
-[attribution notice](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/legal/NOTICE.txt),
-[original MIT notice](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/legal/MIT-legacy.txt) and
+[attribution notice](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/legal/NOTICE.txt) and
 [citation metadata](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/legal/CITATION.cff) from the built website.
 
 ## Cite the software you used

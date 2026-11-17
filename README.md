@@ -261,10 +261,8 @@ clearer implementation. See [contributing](CONTRIBUTING.md), [validation](VALIDA
 [bibliography](references.bib) and [citation metadata](CITATION.cff).
 ## Citation and license
 
-Current first-party code is [Apache-2.0 licensed](LICENSE). Attribution is
-preserved in [NOTICE](NOTICE); earlier MIT-distributed versions retain their
-original permissions and [notice](LICENSES/MIT-legacy.txt). Third-party materials
-retain their own licenses.
+Project code is [Apache-2.0 licensed](LICENSE), with attribution in
+[NOTICE](NOTICE). Third-party materials retain their own licenses.
 
 Please cite the software when it contributes to your research:
 

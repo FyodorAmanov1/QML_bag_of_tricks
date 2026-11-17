@@ -22,9 +22,10 @@ def main():
     assert citation['version'] == project['version']
     assert citation['authors'][0] == {'family-names': 'Amanov', 'given-names': 'Fyodor'}
     normalize = lambda data: data.replace(b'\r\n', b'\n')
-    legal = ['LICENSE', 'NOTICE', 'LICENSES/MIT-legacy.txt']
+    legal = ['LICENSE', 'NOTICE']
     stem = 'qml_bag_of_tricks-'+project['version']
     with zipfile.ZipFile(args.dist_dir/(stem+'-py3-none-any.whl')) as wheel:
+        assert not any('MIT-legacy' in name for name in wheel.namelist())
         prefix = stem+'.dist-info/'
         metadata = Parser().parsestr(wheel.read(prefix+'METADATA').decode())
         assert metadata['License-Expression'] == 'Apache-2.0'
@@ -33,6 +34,7 @@ def main():
             assert normalize(wheel.read(prefix+'licenses/'+name)) == normalize((root/name).read_bytes())
         assert normalize(wheel.read('QML_utility/LICENSE')) == normalize((root/'LICENSE').read_bytes())
     with tarfile.open(args.dist_dir/(stem+'.tar.gz')) as source:
+        assert not any('MIT-legacy' in name for name in source.getnames())
         for name in legal+['CITATION.cff', 'QML_utility/LICENSE']:
             assert normalize(source.extractfile(stem+'/'+name).read()) == normalize((root/name).read_bytes())
     print('Verified Apache-2.0 metadata, author citation and legal files in wheel and source archive.')

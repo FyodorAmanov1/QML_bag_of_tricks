@@ -110,8 +110,7 @@ def on_page_markdown(markdown, page, config, files):
 
 def on_files(files, config):
     root = Path(config["config_file_path"]).parent
-    for name, dest in (('LICENSE', 'LICENSE.txt'), ('NOTICE', 'NOTICE.txt'),
-                       ('LICENSES/MIT-legacy.txt', 'MIT-legacy.txt'), ('CITATION.cff', 'CITATION.cff')):
+    for name, dest in (('LICENSE', 'LICENSE.txt'), ('NOTICE', 'NOTICE.txt'), ('CITATION.cff', 'CITATION.cff')):
         files.append(File.generated(config, f'assets/legal/{dest}', abs_src_path=str(root/name)))
     for path,dest in utility_sources(root).items():
         files.append(File.generated(config,dest,abs_src_path=str(path)))

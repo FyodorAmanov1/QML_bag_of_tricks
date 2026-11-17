@@ -5,7 +5,7 @@
 Created and maintained by **Fyodor Amanov**, with project contributors.
 Part of the same Apache-2.0 project as `qml_tricks`.
 See [licensing and citation](LICENSING_AND_CITATION.md) for attribution,
-a copyable citation, original-paper credit and the preserved MIT history.
+a copyable citation and original-paper credit.
 
 Give an agent the task, data access, deployment constraints and budget. It can
 match published cases, propose several justified model candidates, train a
