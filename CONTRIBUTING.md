@@ -1,6 +1,7 @@
 # Contributing
 
 Application reproductions and project benchmarks are welcome. Start from the
+[Utility project workflow](QML_utility/PRACTICAL_WORKFLOW.md) and the
 [QML motivation guide](docs/why_qml.md), select a concrete use case, and provide
 the source paper, runnable code, data provenance and full comparison. Use the
 application issue template to share a reproduction or a project result.

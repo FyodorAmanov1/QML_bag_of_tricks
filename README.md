@@ -26,6 +26,42 @@
   <strong>6</strong> further published cases
 </p>
 
+## Start in five minutes
+
+Use Python 3.12. Clone once and install once from the repository root:
+
+```bash
+git clone https://github.com/FyodorAmanov1/QML_bag_of_tricks.git
+cd QML_bag_of_tricks
+python -m venv .venv
+```
+
+Activate with `.venv\Scripts\Activate.ps1` in PowerShell or
+`source .venv/bin/activate` in bash, then:
+
+```bash
+python -m pip install -e ".[qiskit]"
+python -m qml_tricks project doctor
+python -m qml_tricks project setup --output results/local/setup --check-essentials
+python -m qml_tricks project quickstart --output results/local/first_run
+```
+
+Open `results/local/first_run/run/REPORT.md`. This bundled comparison needs no
+QPU account or dataset download; it verifies integration, not quantum advantage.
+Use fresh output directories for subsequent runs. Replace the extra with
+`pennylane` or `cirq` and pass the matching `--framework` to setup and quickstart.
+
+**One project, two layers, one installation:** `qml-tricks project <command>`
+and `qml-utility <command>` execute the same Utility code. For environments
+without console scripts, `python -m qml_tricks project <command>` and
+`python -m QML_utility <command>` are equivalent. The core research commands
+remain `qml-tricks list`, `run` and `sweep`; `qml-utility research <command>`
+reaches those same commands. Use `--help` at either layer.
+
+Read [the complete starter guide](QML_utility/START_HERE.md),
+[the command and architecture map](QML_utility/UNIFIED_SETUP.md#command-map),
+or [the publication audit and known limits](QML_utility/PUBLIC_READINESS.md).
+
 ## Why QML is worth testing
 
 **Start with [QML Utility](QML_utility/START_HERE.md), the entry point to this
@@ -178,7 +214,7 @@ provides copyable project briefs for **public website access** and an
 For a compact machine-readable entry point, use
 [llms.txt](https://fyodoramanov1.github.io/QML_bag_of_tricks/llms.txt).
 The static website provides documentation and linked reference sources;
-installing the full package still requires access to the private repository.
+the full package can be installed from a public clone using the commands above.
 
 > Split before preprocessing. Choose settings using validation data only.
 > Include regularized and domain-informed classical controls. Save predictions,
@@ -200,7 +236,7 @@ white and cool-gray surfaces, black-and-red typography, and spacious sections.
 The matching banner and locally served Poppins fonts carry that style through
 the repository. A visible documentation bar, complete guide directory and
 copyable agent handoffs make the technical library accessible without search.
-The source repository remains private. Preview locally:
+The source repository is public. Preview locally:
 
 ```bash
 python -m pip install -e ".[docs]"
@@ -208,9 +244,8 @@ python scripts/build_showcase.py --check
 python -m mkdocs serve
 ```
 
-The GitHub Pages workflow builds a private downloadable preview by default.
-Public publication is a separate explicit workflow option; the source repository
-remains private for owner review. [Hosting and release instructions →](docs/release.md)
+The GitHub Pages workflow builds a downloadable preview by default.
+Publishing a new live website build remains a separate explicit workflow option. [Hosting and release instructions →](docs/release.md)
 
 ```bash
 python -m pip install -e ".[all,learning,notebooks,dev,docs]"

@@ -6,6 +6,33 @@ library. One root installation provides both. Utility files stay in this
 directory; the existing generated strategies keep their original authoring
 sources and independent native SDK construction.
 
+## Command map
+
+One root install provides every route below. The `project` namespace dispatches
+directly to QML Utility; the aliases share parsers, defaults and execution code.
+
+| Task | Unified command | Equivalent Utility command |
+|---|---|---|
+| Check environment | `qml-tricks project doctor` | `qml-utility doctor` |
+| Prepare a contract | `qml-tricks project setup --output results/local/setup` | `qml-utility setup --output results/local/setup` |
+| Fit a bundled comparison | `qml-tricks project quickstart --output results/local/example` | `qml-utility quickstart --output results/local/example` |
+| Fit your numeric data | `qml-tricks project run --config project.json --output results/local/run` | `qml-utility run --config project.json --output results/local/run` |
+| Evaluate/audit/predict | `qml-tricks project evaluate --help` (also `audit`, `predict`) | `qml-utility evaluate --help` (also `audit`, `predict`) |
+| Core strategy checks | `qml-tricks project strategy ngd --compare` | `qml-utility strategy ngd --compare` |
+| Advanced research commands | `qml-tricks run local_loss --framework qiskit` | `qml-utility research run local_loss --framework qiskit` |
+
+Prefix the commands with `python -m qml_tricks` or `python -m QML_utility`
+instead of the corresponding console-script name if needed. Use Python 3.12,
+the same environment, SDK extras and `--framework` names throughout.
+
+The research `run` accepts a strategy name and circuit options; project `run`
+accepts a JSON data/split/budget contract. Those are different scientific tasks,
+so their argument schemas and output schemas remain explicit. Strategy checks
+test mechanisms; project reports evaluate predictive quality. They share the
+canonical strategy implementations and QNG geometry, without treating a
+mechanism demonstration as a trained-model performance result. There is no
+second installation, copied circuit library or circuit-conversion layer.
+
 ```bash
 python -m pip install -e ".[qiskit]"
 qml-utility setup --output QML_utility/results/local/my_setup --check-essentials

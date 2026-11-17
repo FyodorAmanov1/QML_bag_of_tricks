@@ -15,7 +15,7 @@ do not call them end-to-end compression or wins over pretrained transformers.
 ## Agent implementation
 
 Follow [the protocol](../protocols/quantum_self_attention.json) and the pinned
-Paddle Quantum source, reconciling their differences first. Recover tokenization, vocabulary/OOV rules, padding,
+Paddle Quantum source, reconciling their differences first. Recover the vocabulary and out-of-vocabulary policy, padding, tokenization,
 embedding training, residuals and optimizer schedule before training. Keep data
 split repetitions separate from nine initialization repetitions.
 

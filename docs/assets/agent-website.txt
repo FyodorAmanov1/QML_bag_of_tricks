@@ -17,10 +17,11 @@ Read the agent guide: https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/
    contract, assumptions, primary citation and linked native SDK source. Consult
    the core toolkit for QNG, local costs, identity-block initialization and weak
    encoding; each has its own scope. Explain the fit to my project.
-2. The public website is documentation, not a hosted execution API. The full
-   repository is private. Inspect linked sources and shared dependencies; adapt
-   the needed implementation locally. Do not assume a downloaded file is a
-   complete package or that private git clone/pip installation will work.
+2. The public website is documentation, not a hosted execution API. Clone
+   https://github.com/FyodorAmanov1/QML_bag_of_tricks.git and install from its
+   root with python -m pip install -e ".[qiskit]" (or pennylane/cirq). Run
+   python -m qml_tricks project setup, then quickstart; both accept --output.
+   Linked individual source files can depend on shared package helpers.
 3. Split first, fit preprocessing on training data only, and choose settings
    using validation data. Include tuned regularized and domain-informed classical
    controls under matched data access. Preserve classical wins and failures.

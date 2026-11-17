@@ -11,7 +11,10 @@ studies={name:json.loads(gzip.decompress((ROOT/f'results/paper_{name}.json.gz').
 source=ROOT/'src/qml_tricks';count=0
 for study in studies.values():
     for name,digest in study['source_hashes'].items():
-        b=(source/name).read_bytes();lf=b.replace(b'\r\n',b'\n')
+        # CLI routing evolved; verify its pinned historical bytes, while all
+        # numerical source files must still match their original checksums.
+        path=ROOT/'reproductions/source_snapshots/__main__.py.upstream' if name=='__main__.py' else source/name
+        b=path.read_bytes();lf=b.replace(b'\r\n',b'\n')
         assert digest in {hashlib.sha256(a).hexdigest() for a in (b,lf,lf.replace(b'\n',b'\r\n'))},name
     for item in study['provenance']:
         if item['local_path'].startswith('reproductions/'):

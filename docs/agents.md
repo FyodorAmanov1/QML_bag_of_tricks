@@ -18,7 +18,7 @@ copies. See [the utility project brief](utility/project_agent_brief.md).
 | Access route | What your agent can do | What it needs |
 |---|---|---|
 | **Public website** | Read methods, follow primary citations, inspect linked native source files and adapt a method in your project | Browsing tools; local file writing and Python execution for implementation and benchmarking |
-| **Local checkout** | Read `AGENTS.md`, import the package, run recipes, reuse tests and save benchmark artifacts | Authorized private-repository access, Python 3.12 and the selected SDK dependencies |
+| **Local checkout** | Read `AGENTS.md`, import the package, run recipes, reuse tests and save benchmark artifacts | A public clone, Python 3.12 and the selected SDK dependencies |
 
 The website is a static documentation library. It does not execute your agent,
 train models, run QPU jobs or provide a hosted inference API. Downloaded reference
@@ -49,8 +49,7 @@ are available for agents that prefer text over a page layout.
 
 ## Set up a local checkout
 
-Cloning currently requires access to the **private** source repository. The
-public website does not grant that access. In an authorized shell:
+Clone the public repository and install both layers from its root:
 
 ```bash
 git clone https://github.com/FyodorAmanov1/QML_bag_of_tricks.git

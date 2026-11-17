@@ -5,17 +5,25 @@ from pathlib import Path
 from .core import RunConfig, catalog, experiment
 
 
-def main():
+def main(argv=None):
     import sys
-    if len(sys.argv)>1 and sys.argv[1]=='benchmark':
+    values = sys.argv[1:] if argv is None else list(argv)
+    if values and values[0] in ('project', 'utility'):
+        from QML_utility.__main__ import main as project_main
+        return project_main(values[1:])
+    if values and values[0]=='benchmark':
         from .learning.benchmark import main as benchmark_main
-        return benchmark_main(sys.argv[2:])
-    if len(sys.argv)>1 and sys.argv[1]=='learning-demo':
+        return benchmark_main(values[1:])
+    if values and values[0]=='learning-demo':
         from .learning.demos import run_recipe
         p=argparse.ArgumentParser();p.add_argument('method');p.add_argument('--framework',choices=['qiskit','pennylane','cirq'],default='qiskit');p.add_argument('--seed',type=int,default=7)
-        args=p.parse_args(sys.argv[2:]);print(json.dumps(run_recipe(args.method,args.framework,args.seed),indent=2));return
+        args=p.parse_args(values[1:]);print(json.dumps(run_recipe(args.method,args.framework,args.seed),indent=2));return
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser('project', help='Set up, train, evaluate and deploy with QML Utility')
+    sub.add_parser('utility', help='Alias for project')
+    sub.add_parser('benchmark', help='Run the research CSV benchmark')
+    sub.add_parser('learning-demo', help='Execute a research learning recipe')
     sub.add_parser("list")
     for name in ("run", "sweep"):
         p = sub.add_parser(name)
@@ -35,7 +43,7 @@ def main():
         p.add_argument("--output", type=Path)
         if name == "sweep":
             p.add_argument("--sizes", type=int, nargs="+", default=[2, 4, 8])
-    args = parser.parse_args()
+    args = parser.parse_args(values)
     if args.command == "list":
         print(json.dumps(catalog(), indent=2)); return
     rows = []

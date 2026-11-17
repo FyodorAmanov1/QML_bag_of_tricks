@@ -4,7 +4,8 @@ This folder is the entry point of the same installable project as `qml_tricks`.
 Reuse canonical research implementations through the integration layer; keep
 utility-specific implementation and evidence here. Run from the root with
 `python -m QML_utility...`. Do not modify, hide or relabel the
-original repository's studies. No publication or visibility change is authorized.
+original repository's studies. Publication and visibility are owner decisions;
+the owner authorized public publication of this unified repository.
 
 Start from `catalog.json`, the matching evidence guide and replication protocol.
 Separate published success, native circuit verification, local protocol audit

@@ -12,9 +12,8 @@ and publication-scoped case catalog before model training. Old utility-only
 packaging commands are historical; there is no separate utility release artifact.
 
 The documentation is [live on GitHub Pages](https://fyodoramanov1.github.io/QML_bag_of_tricks/).
-The source repository remains private. The owner explicitly approved public
-documentation publication, including the built examples and notebooks.
-Cloning the full source checkout still requires repository access.
+The owner authorized public source and documentation publication, including
+the built examples and notebooks. Clone the public repository to install the full project.
 
 ## Reproduce and package
 
@@ -36,9 +35,9 @@ readiness manifest. Preparing it does not commit, push or publish anything.
 
 ## Configure the public destination
 
-The repository is hosted privately at
+The public repository is hosted at
 [FyodorAmanov1/QML_bag_of_tricks](https://github.com/FyodorAmanov1/QML_bag_of_tricks)
-for owner review. No Pages deployment is triggered by a push; its workflow is
+as a research workbench with owner scientific review pending. No Pages deployment is triggered by a push; its workflow is
 manual and builds a downloadable preview by default.
 
 ## Preview the website privately
@@ -57,9 +56,9 @@ python -m mkdocs serve
 ```
 
 On GitHub, run **Website preview and publication** with **publish = false**.
-Download the `qml-website-preview` artifact from that run. In this private
-repository the artifact remains available to authorized repository users;
-this creates no public Pages deployment. Serve the downloaded directory with
+Download the `qml-website-preview` artifact from that run. In a public
+repository, previews and workflow logs are public too; preview mode simply
+leaves the live Pages deployment unchanged. Serve the downloaded directory with
 `python -m http.server` to preview all relative links and assets.
 
 ## Publish the documentation site
@@ -87,7 +86,7 @@ to publish a new documentation build.
 
 ## Public source and release links
 
-After the owner chooses to make the repository public, run
+For the public repository, run
 `python scripts/prepare_release.py --repo-url https://github.com/FyodorAmanov1/QML_bag_of_tricks`.
 It writes a public-links checklist without changing the source notebooks. The
 generated links assume the `main` branch and project-style GitHub Pages; check

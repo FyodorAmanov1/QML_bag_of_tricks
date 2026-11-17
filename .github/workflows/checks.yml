@@ -16,7 +16,8 @@ jobs:
       - run: python scripts/run_notebooks.py
       - run: python -m pytest -q
       - run: python -m QML_utility.validate_docs
-      - run: python -m QML_utility setup --output QML_utility/results/local/ci-setup --check-essentials
+      - run: python -m qml_tricks project doctor
+      - run: python -m qml_tricks project setup --output QML_utility/results/local/ci-setup --check-essentials
       - run: python -m QML_utility quickstart --output QML_utility/results/local/ci-quickstart
       - run: python scripts/audit_opportunity_results.py
       - run: python scripts/audit_paper_results.py

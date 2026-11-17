@@ -31,7 +31,7 @@
 
 ## Access and interpretation
 The public site is static documentation, not an execution or inference API.
-The full source repository remains private; cloning/installing it requires access.
+The full source repository is public; clone it and install from the root.
 Linked Python sources are reference files and can depend on shared package helpers.
 Use an authorized checkout or inspect dependencies and adapt locally.
 Preserve train-only preprocessing, validation selection, matched classical controls,

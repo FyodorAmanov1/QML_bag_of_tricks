@@ -7,7 +7,7 @@ match published cases, propose several justified model candidates, train a
 comparison, inspect diagnostics and return a reusable predictor with its limits.
 The runnable reference currently covers numeric classification and regression;
 specialized modalities have explicit replication/adapter routes. This remains a
-local prototype with separate implementation and predictive-evidence gates.
+research workbench with separate implementation and predictive-evidence gates.
 
 ## Try a complete comparison
 
@@ -182,5 +182,5 @@ coordinates. Recover the original long trajectory first, then add tuned
 plasticity-aware classical controls. Record both adaptation and forgetting.
 See [the exact plan](protocols/continual_cifar100.json).
 
-Do not publish a new success-oriented repository until that replication gate is
-passed. Keep the original studies as reproducibility records.
+Public availability does not certify that replication gate. Do not market
+these pending replications as local successes. Keep the original studies as reproducibility records.

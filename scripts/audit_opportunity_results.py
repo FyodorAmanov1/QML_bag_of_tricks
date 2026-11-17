@@ -15,7 +15,10 @@ assert hashlib.sha256(raw).hexdigest() == compact['full_json_sha256']
 assert hashlib.sha256(json.dumps(data['protocol'], sort_keys=True).encode()).hexdigest() == data['protocol_sha256']
 source = ROOT/'src/qml_tricks'
 for name, digest in data['source_hashes'].items():
-    contents = (source/name).read_bytes()
+    # The public CLI gained project routing after these runs. Preserve its
+    # original provenance; numerical implementations still verify in place.
+    path = ROOT/'reproductions/source_snapshots/__main__.py.upstream' if name == '__main__.py' else source/name
+    contents = path.read_bytes()
     # Windows Git checkouts may use CRLF; Linux uses LF. Preserve the original
     # snapshot hash and accept only that byte content under either EOL spelling.
     lf = contents.replace(b'\r\n', b'\n')

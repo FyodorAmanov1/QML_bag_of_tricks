@@ -6,7 +6,7 @@ import os
 
 COMMANDS = dict(setup='setup_project',strategies='strategies',strategy='strategies',quickstart='quickstart',doctor='doctor',recommend='recommend',
                 run='run_project',evaluate='evaluate_project',audit='audit_project',
-                predict='predict_project',surrogate_demo='surrogate_demo')
+                predict='predict_project',surrogate_demo='surrogate_demo',research=None)
 
 
 def main(argv=None):
@@ -15,6 +15,9 @@ def main(argv=None):
     values = sys.argv[1:] if argv is None else argv
     args = parser.parse_args(values[:1])
     remaining = values[1:]
+    if args.command == 'research':
+        from qml_tricks.__main__ import main as research_main
+        return research_main(remaining)
     # A local CLI default, respecting an explicit user choice. Avoid excessive
     # OpenMP parallelism on small references and fragile Windows core discovery.
     os.environ.setdefault('OMP_NUM_THREADS','1')

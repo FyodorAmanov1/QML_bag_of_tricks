@@ -14,8 +14,8 @@ SDK / compute budget: [Qiskit, PennyLane or Cirq; time, memory, qubits, shots]
    python -m QML_utility setup --output QML_utility/results/local/agent_setup --check-essentials
    python -m QML_utility strategies --all
    Run checkout commands from the repository root in an activated environment.
-   If no checkout exists, cloning requires authorized private-repository access;
-   use https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/ otherwise.
+   If no checkout exists, clone https://github.com/FyodorAmanov1/QML_bag_of_tricks.git.
+   The source and both CLI entry points are public.
 3. Adapt the model API or recipe to my data. Split first; fit preprocessing on
    training only; select settings on validation; keep the test partition untouched.
    Include tuned regularized and domain-informed classical controls under matched
