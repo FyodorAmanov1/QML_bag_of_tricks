@@ -4,6 +4,12 @@ A result belongs to its dataset, split, feature map, training procedure, budget,
 measurement model, comparator and metric. It does not belong to a method name
 for all time. `experiment_outcomes.json` retains five such bounded episodes.
 
+For pinned text sources, `source_sha256` retains the originally audited byte
+checksum. The additional `source_sha256_lf` records the same content with CRLF
+converted to LF, so Linux and Windows checkouts can verify it consistently.
+Verification allows only that line-ending conversion; result content and the
+original provenance hashes remain preserved.
+
 For example, the old real-data study used 128-row subsets of wine, breast-cancer
 and diabetes data; two PCA coordinates, two qubits, one layer and three candidate
 settings per quantum model. Its unfavorable outcomes apply to those pipelines.

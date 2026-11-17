@@ -45,6 +45,13 @@ strategy/control checks. QNG is also selectable in supervised training.
 [Unified setup guide](QML_utility/UNIFIED_SETUP.md) ·
 [All practical workflows](QML_utility/PRACTICAL_WORKFLOW.md).
 
+On the website, choose **Start with QML Utility** in the persistent navigation
+or open the [unified setup](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/unified_setup/).
+The homepage links case selection, training, evaluation and the preserved
+research library. Repository pushes and website publication are separate:
+the [manual Pages workflow](docs/release.md#publish-the-documentation-site)
+must be run to update the live documentation.
+
 Published successes apply to their stated task and comparator. Core training
 tools have their own assumptions; they do not guarantee a new-project advantage.
 

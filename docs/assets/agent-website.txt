@@ -4,11 +4,19 @@ Dataset / split constraints: [describe]
 SDK / compute budget: [Qiskit, PennyLane or Cirq; time, memory, qubits, shots]
 
 Start at https://fyodoramanov1.github.io/QML_bag_of_tricks/llms.txt
+Use QML Utility as the entry point:
+https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/unified_setup/
+Project workflow and brief:
+https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/practical_workflow/
+https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/project_agent_brief/
 Browse https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/
 Read the agent guide: https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/
 
-1. Select a method; read its mathematical contract, assumptions, primary citation
-   and linked native SDK source. Explain why it fits my task and budget.
+1. Start with QML Utility's case selection and project workflow. Match the data,
+   access conditions and budget before choosing a method. Read its mathematical
+   contract, assumptions, primary citation and linked native SDK source. Consult
+   the core toolkit for QNG, local costs, identity-block initialization and weak
+   encoding; each has its own scope. Explain the fit to my project.
 2. The public website is documentation, not a hosted execution API. The full
    repository is private. Inspect linked sources and shared dependencies; adapt
    the needed implementation locally. Do not assume a downloaded file is a

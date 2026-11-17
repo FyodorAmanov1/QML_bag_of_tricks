@@ -28,8 +28,11 @@ method into your own project, or obtain authorized checkout access.
 
 ## Find the right technical material
 
-1. Browse the [complete documentation directory](explore.md), then use the
-   [method selector](method_selector.md) to choose a candidate.
+1. Start with [QML Utility setup](utility/unified_setup.md),
+   [case selection](utility/case_selection.md) and the
+   [practical project workflow](utility/practical_workflow.md). Use the
+   [complete documentation directory](explore.md) and
+   [method selector](method_selector.md) for research depth.
 2. Read its assumptions and mathematical contract. In particular, inspect
    [near-identity encoding](strategies/near_identity_encoding.md),
    [local objectives](strategies/local_loss.md) and
@@ -54,18 +57,21 @@ git clone https://github.com/FyodorAmanov1/QML_bag_of_tricks.git
 cd QML_bag_of_tricks
 python -m venv .venv
 # Activate .venv using your shell before the following commands.
-python -m pip install -e ".[qiskit,learning]"
-python -m qml_tricks list
-python -m qml_tricks run local_loss --framework qiskit --output results/local/local_loss.json
-python -m qml_tricks.learning.case_models --case multiclass_kernel --framework qiskit --output results/local/first_run.json
+python -m pip install -e ".[qiskit]"
+python -m QML_utility doctor
+python -m QML_utility setup --framework qiskit --output QML_utility/results/local/agent_setup --check-essentials
+python -m QML_utility quickstart --framework qiskit --output QML_utility/results/local/agent_first_run
 ```
 
-Use Python 3.12. Install `.[pennylane,learning]` or `.[cirq,learning]` and use the
-matching `--framework` to choose another SDK. The `local_loss` run is a circuit
-diagnostic; the multiclass run is a small application reference. Neither is a
-benchmark of your dataset. For custom data, follow the
-[model APIs](use_cases/models.md#use-your-own-data) or the
-[CSV workflow](learning/index.md#csv-workflow), and design appropriate splits.
+Use Python 3.12. Install `.[pennylane]` or `.[cirq]` and use the matching
+`--framework` on setup and quickstart to choose another SDK. Setup prepares a
+contract and executes circuit diagnostics; quickstart fits a small numeric
+integration example against classical controls. Neither establishes an advantage
+on your dataset. Use fresh output directories. For custom data, follow the
+[Utility workflow](utility/practical_workflow.md) and
+[evaluation guide](utility/evaluation.md), with appropriate splits. The original
+[model APIs](use_cases/models.md#use-your-own-data),
+[learning workflows](learning/index.md) and `qml-tricks` CLI remain available.
 
 ## What to ask your agent to deliver
 

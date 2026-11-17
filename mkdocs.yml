@@ -1,5 +1,5 @@
 site_name: QML Bag of Tricks
-site_description: Reproduced QML applications, trainable strategies and agent-friendly Qiskit, PennyLane and Cirq implementations
+site_description: Start with QML Utility, benchmark native models and explore the QML research library in Qiskit, PennyLane and Cirq
 site_url: https://fyodoramanov1.github.io/QML_bag_of_tricks/
 theme:
   name: material

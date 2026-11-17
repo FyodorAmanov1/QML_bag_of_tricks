@@ -56,6 +56,33 @@ def on_page_context(context, page, config, nav):
     return context
 
 
+def on_nav(nav, config, files):
+    """Keep the practical entry point first without dropping auto-discovered guides."""
+    utility = next((item for item in nav.items if item.is_section and item.title == 'Utility'), None)
+    if utility is None:
+        return nav
+    utility.title = 'Start here: QML Utility'
+    first = ['index.md', 'unified_setup.md', 'start_here.md', 'project_agent_brief.md',
+             'case_selection.md', 'practical_workflow.md', 'evaluation.md', 'composing_methods.md']
+    priority = {f'utility/{name}': index for index, name in enumerate(first)}
+    utility.children.sort(key=lambda item: priority.get(getattr(getattr(item, 'file', None), 'src_uri', ''), len(first)))
+    nav.items.remove(utility)
+    nav.items.insert(1 if nav.items and nav.items[0].is_page and nav.items[0].is_homepage else 0, utility)
+
+    def pages(items):
+        for item in items:
+            if item.is_page:
+                yield item
+            elif item.is_section:
+                yield from pages(item.children)
+
+    nav.pages[:] = list(pages(nav.items))
+    for index, page in enumerate(nav.pages):
+        page.previous_page = nav.pages[index-1] if index else None
+        page.next_page = nav.pages[index+1] if index+1 < len(nav.pages) else None
+    return nav
+
+
 def on_page_markdown(markdown, page, config, files):
     if page.file.src_uri.startswith('utility/'):
         root = Path(config['config_file_path']).parent

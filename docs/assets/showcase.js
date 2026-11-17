@@ -21,7 +21,7 @@
     const sdk = button.dataset.sdk;
     root.querySelector('#qml-copy').textContent = 'Copy commands';
     root.querySelector('#qml-copy-status').textContent = '';
-    code.textContent = `python -m pip install -e ".[${sdk},learning]"\npython -m qml_tricks.learning.case_models \\\n  --case multiclass_kernel \\\n  --framework ${sdk} \\\n  --output results/local/first_run.json`;
+    code.textContent = `python -m pip install -e ".[${sdk}]"\npython -m QML_utility setup \\\n  --framework ${sdk} --check-essentials \\\n  --output QML_utility/results/local/first_setup\npython -m QML_utility quickstart \\\n  --framework ${sdk} \\\n  --output QML_utility/results/local/first_run`;
   }));
   root.querySelector('#qml-copy').addEventListener('click', async event => {
     const button = event.currentTarget;

@@ -9,7 +9,7 @@
   <meta name="twitter:card" content="summary_large_image">
 {% endblock %}
 {% block content %}
-<div class="qml-home">
+<div class="qml-home" id="qml-bag-of-tricks" tabindex="-1">
   <nav class="qml-local-nav" aria-label="Explore this field guide">
     <span class="qml-edition"><span class="qml-dot"></span> THE PRACTICAL FIELD GUIDE</span>
     <div><a href="{{ 'utility/' | url }}">Start with QML Utility</a><a href="#evidence">Results</a><a href="#why-qml">Why QML</a><a href="#project">Your project</a><a href="#start">Get started ↗</a></div>
@@ -19,7 +19,7 @@
     <div class="qml-hero-copy">
       <p class="qml-eyebrow">QUANTUM MACHINE LEARNING, WITH A PURPOSE</p>
       <h1 id="qml-title">Make the<br>quantum part<br><span>count.</span></h1>
-      <p class="qml-hero-description">Find a reason to try QML. Build a native model.<br class="qml-desktop-break"> Measure what helps your project.</p>
+      <p class="qml-hero-description">Start with QML Utility: match your use case, build a native model<br class="qml-desktop-break"> and benchmark it with the full research library.</p>
       <div class="qml-actions"><a class="qml-btn qml-btn-primary" href="{{ 'utility/unified_setup/' | url }}">Set up QML Utility <span>↗</span></a><a class="qml-btn qml-btn-secondary" href="{{ 'explore/' | url }}">Explore documentation <span>↗</span></a><a class="qml-btn qml-btn-secondary" href="#evidence">Explore the results <span>↘</span></a></div>
       <div class="qml-hero-stats">
         <div><strong>{{ showcase.counts.reproductions }}</strong><span>paper comparisons<br>reproduced here</span></div>
@@ -49,7 +49,18 @@
     </div>
   </section>
 
-  <section class="qml-agent-contract" id="agents" aria-labelledby="agent-title"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2 id="agent-title">Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div class="qml-agent-links"><a href="{{ 'agents/' | url }}">Setup & integration guide ↗</a><a href="{{ 'agent_evaluation/' | url }}">Five executed project tasks ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div>{% include "partials/agent-handoff.html" %}</section>
+  <section class="qml-library" id="utility" aria-labelledby="utility-title">
+    <div class="qml-section-heading"><div><p class="qml-eyebrow">START HERE / QML UTILITY</p><h2 id="utility-title">One toolkit.<br>A practical route into QML.</h2></div><p>QML Utility is the project entry point. The original strategy library supplies the research depth. One installation connects both.</p></div>
+    <div class="qml-library-grid">
+      <a href="{{ 'utility/case_selection/' | url }}"><strong>Match your use case <span>↗</span></strong><p>Inspect ten publication-scoped cases, their data and access conditions, classical controls and replication gaps.</p></a>
+      <a href="{{ 'utility/unified_setup/' | url }}"><strong>Set up the essentials <span>↗</span></strong><p>QNG, local costs, identity-block initialization and weak encoding, with executable checks and explicit assumptions.</p></a>
+      <a href="{{ 'utility/practical_workflow/' | url }}"><strong>Train and benchmark <span>↗</span></strong><p>Four native model families, your numeric data, split-aware classical comparisons and reusable prediction artifacts.</p></a>
+      <a href="{{ 'utility/composing_methods/' | url }}"><strong>Use the research library <span>↗</span></strong><p>Connect diagnostics to the existing circuit strategies, learning workflows, measurement tools and offline distillation.</p></a>
+    </div>
+    <div class="qml-library-links"><a href="{{ 'utility/start_here/' | url }}">Run a complete example ↗</a><a href="{{ 'utility/project_agent_brief/' | url }}">Give your agent a project ↗</a><a href="{{ 'utility/' | url }}">All QML Utility guides ↗</a></div>
+  </section>
+
+  <section class="qml-agent-contract" id="agents" aria-labelledby="agent-title"><span class="qml-eyebrow">BRING YOUR CODING AGENT</span><h2 id="agent-title">Give it a clear contract.</h2><p>Split first. Tune on validation. Include regularized and domain-informed controls. Save predictions, uncertainty and resources. Preserve every outcome.</p><div class="qml-agent-links"><a href="{{ 'utility/project_agent_brief/' | url }}">QML Utility project brief ↗</a><a href="{{ 'agents/' | url }}">Setup & integration guide ↗</a><a href="{{ 'method_selector/' | url }}">{{ showcase.counts.strategies }} circuit strategies ↗</a><a href="{{ 'learning/' | url }}">{{ showcase.counts.learning }} learning guides ↗</a></div>{% include "partials/agent-handoff.html" %}</section>
 
   <section class="qml-library" id="documentation" aria-labelledby="library-title">
     <div class="qml-section-heading"><div><p class="qml-eyebrow">OPEN THE FIELD GUIDE</p><h2 id="library-title">Go straight to the methods.</h2></div><a class="qml-text-link" href="{{ 'explore/' | url }}">Browse every documentation page ↗</a></div>
@@ -119,12 +130,14 @@
   </section>
 
   <section class="qml-section qml-start" id="start" aria-labelledby="start-title">
-    <div><p class="qml-eyebrow">04 / FROM READING TO RUNNING</p><h2 id="start-title">Your first experiment.<br>One SDK at a time.</h2><p>Use Python 3.12 from a cloned checkout. Start with the multiclass reference, inspect its saved predictions, then bring your own dataset.</p><p>The documentation and linked examples are public. Cloning and installing the full checkout currently requires access to the private repository.</p><div class="qml-sdk-tabs" role="group" aria-label="Choose Python SDK"><button data-sdk="qiskit" aria-pressed="true" type="button">Qiskit</button><button data-sdk="pennylane" aria-pressed="false" type="button">PennyLane</button><button data-sdk="cirq" aria-pressed="false" type="button">Cirq</button></div><a class="qml-text-link" href="{{ 'use_cases/models/' | url }}">Model APIs, custom data & saved runs ↗</a></div>
-    <div class="qml-terminal"><div class="qml-terminal-header"><span><i></i><i></i><i></i> <b>YOUR TERMINAL</b></span><button id="qml-copy" type="button" aria-label="Copy installation and run commands">Copy commands</button></div><pre><code id="qml-commands">python -m pip install -e ".[qiskit,learning]"
-python -m qml_tricks.learning.case_models \
-  --case multiclass_kernel \
+    <div><p class="qml-eyebrow">04 / FROM READING TO RUNNING</p><h2 id="start-title">Your first experiment.<br>One SDK at a time.</h2><p>Use Python 3.12 from a cloned checkout. Set up the essential strategy checks, run a complete QML Utility comparison, then bring your own dataset.</p><p>The documentation and linked examples are public. Cloning and installing the full checkout currently requires access to the private repository.</p><div class="qml-sdk-tabs" role="group" aria-label="Choose Python SDK"><button data-sdk="qiskit" aria-pressed="true" type="button">Qiskit</button><button data-sdk="pennylane" aria-pressed="false" type="button">PennyLane</button><button data-sdk="cirq" aria-pressed="false" type="button">Cirq</button></div><a class="qml-text-link" href="{{ 'utility/start_here/' | url }}">Setup, custom data & saved runs ↗</a></div>
+    <div class="qml-terminal"><div class="qml-terminal-header"><span><i></i><i></i><i></i> <b>YOUR TERMINAL</b></span><button id="qml-copy" type="button" aria-label="Copy installation and run commands">Copy commands</button></div><pre><code id="qml-commands">python -m pip install -e ".[qiskit]"
+python -m QML_utility setup \
+  --framework qiskit --check-essentials \
+  --output QML_utility/results/local/first_setup
+python -m QML_utility quickstart \
   --framework qiskit \
-  --output results/local/first_run.json</code></pre><p>Exact simulator reference · classical controls included · no QPU account required</p><span id="qml-copy-status" class="qml-sr-only" aria-live="polite"></span></div>
+  --output QML_utility/results/local/first_run</code></pre><p>Simulator integration example · classical controls included · no QPU account required · use fresh output paths</p><span id="qml-copy-status" class="qml-sr-only" aria-live="polite"></span></div>
   </section>
 
   <footer class="qml-home-footer"><div><strong>QML Bag of Tricks</strong><p>Built for useful, reproducible experiments.</p></div><div><a href="https://github.com/FyodorAmanov1/QML_bag_of_tricks">GitHub ↗</a><a href="{{ 'coverage/' | url }}">Evidence & assumptions</a><a href="{{ 'owner_review/' | url }}">Review status</a></div><p>0.2.0 candidate · owner scientific review pending.<br>Source repository is private during review. Published papers are linked publicly.</p></footer>

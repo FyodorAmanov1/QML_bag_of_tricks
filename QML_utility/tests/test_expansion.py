@@ -37,7 +37,8 @@ def test_new_case_matches_only_its_declared_protocol_and_is_not_local_win(case_i
     assert all(item['assessment_scope'] == 'protocol_requirements_not_method_wide_usefulness' for item in result['rejected'])
 
 
-def test_bounded_outcome_preserves_original_data_and_allows_prospective_followup():
+@pytest.mark.parametrize('newline', [b'\n', b'\r\n'])
+def test_bounded_outcome_preserves_original_data_and_allows_prospective_followup(newline):
     ledger = json.loads((ROOT/'experiment_outcomes.json').read_text())
     for episode in ledger['episodes']:
         assert episode['inference_scope'] == 'configuration_and_dataset_specific_no_gain'
@@ -45,7 +46,12 @@ def test_bounded_outcome_preserves_original_data_and_allows_prospective_followup
         assert episode['allowed_action'] == 'validation_only_prespecified_followup'
         assert (ROOT/episode['retest_protocol']).is_file()
         if 'source_sha256' in episode:
-            assert hashlib.sha256((ROOT/episode['source']).read_bytes()).hexdigest() == episode['source_sha256']
+            lf = (ROOT/episode['source']).read_bytes().replace(b'\r\n', b'\n')
+            checkout = lf.replace(b'\n', newline)
+            assert hashlib.sha256(checkout.replace(b'\r\n', b'\n')).hexdigest() == episode['source_sha256_lf']
+            # Preserve and verify the original snapshot, accepting only EOL spelling.
+            assert episode['source_sha256'] in {
+                hashlib.sha256(contents).hexdigest() for contents in (lf, lf.replace(b'\n', b'\r\n'))}
     profile = json.loads((ROOT/'examples/wine_followup.json').read_text())
     plan = build_plan(profile)
     assert [e['id'] for e in plan['selection']['contextual_outcomes']] == ['pca2_wine_binary']

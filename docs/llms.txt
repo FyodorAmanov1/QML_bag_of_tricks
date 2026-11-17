@@ -11,6 +11,11 @@
 - [Local project brief](https://fyodoramanov1.github.io/QML_bag_of_tricks/assets/agent-local.txt)
 
 ## Choose and implement
+- [Match a published case](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/case_selection/): required data/access conditions and replication blockers.
+- [Utility project brief](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/project_agent_brief/)
+- [Practical project workflow](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/practical_workflow/): four runnable families and split-aware comparisons.
+- [Repeated and chronological evaluation](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/evaluation/)
+- [Compose the core research methods](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/composing_methods/)
 - [Method selector](https://fyodoramanov1.github.io/QML_bag_of_tricks/method_selector/)
 - [Circuit strategies](https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/#strategies): mathematical contracts, assumptions, implementation scope and native source links.
 - [Learning workflows](https://fyodoramanov1.github.io/QML_bag_of_tricks/learning/)
@@ -32,4 +37,8 @@ Use an authorized checkout or inspect dependencies and adapt locally.
 Preserve train-only preprocessing, validation selection, matched classical controls,
 held-out predictions, uncertainty and loading/readout/shot/time/memory accounting.
 Separate published claims, reduced adaptations and local benchmark results.
+QML Utility and qml_tricks are included in the same root installation. Setup
+exposes core strategies; quickstart is an integration example, not an advantage
+benchmark. The ten Utility cases retain their publication-specific scope and
+implementation gaps. A match does not guarantee a new-project win.
 Do not claim general quantum advantage or fabricate results when tools are absent.

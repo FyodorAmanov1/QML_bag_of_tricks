@@ -1,11 +1,13 @@
 {
   "schema_version": 1,
   "policy": "Bounded non-winning results are retained; future usefulness remains an untested hypothesis.",
+  "source_hash_policy": "source_sha256 preserves the originally audited bytes; source_sha256_lf hashes the same text after CRLF-to-LF normalization for cross-platform verification. No other normalization is permitted.",
   "episodes": [
     {
       "id": "pca2_wine_binary",
       "source": "../results/study.json",
       "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "source_sha256_lf": "26f4e033dd3281154aba1aa2cd8bfb4b5eec3ef65a6414bb3b28cfe7e5d2ec4e",
       "dataset": "wine_binary",
       "methods": [
         "frozen_features",
@@ -56,6 +58,7 @@
       "id": "pca2_breast_cancer",
       "source": "../results/study.json",
       "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "source_sha256_lf": "26f4e033dd3281154aba1aa2cd8bfb4b5eec3ef65a6414bb3b28cfe7e5d2ec4e",
       "dataset": "breast_cancer",
       "methods": [
         "frozen_features",
@@ -106,6 +109,7 @@
       "id": "pca2_diabetes",
       "source": "../results/study.json",
       "source_sha256": "b41ce8fbeac0c1e50dfe9878248ca8b0778b5c7dc04225288f810d79f71f3bcf",
+      "source_sha256_lf": "26f4e033dd3281154aba1aa2cd8bfb4b5eec3ef65a6414bb3b28cfe7e5d2ec4e",
       "dataset": "diabetes",
       "methods": [
         "frozen_features",
