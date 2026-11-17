@@ -1,0 +1,26 @@
+QML Bag of Tricks
+https://github.com/FyodorAmanov1/QML_bag_of_tricks
+
+Created and maintained by Fyodor Amanov.
+Copyright (c) 2026 Fyodor Amanov and QML Bag of Tricks contributors.
+
+Original project notice, retained from the MIT-licensed versions:
+Copyright (c) 2026 QML Bag of Tricks contributors
+
+The current first-party distribution is licensed under Apache License 2.0.
+Previously distributed MIT versions retain their original permissions; the
+original MIT license and notice are preserved in LICENSES/MIT-legacy.txt.
+
+Third-party materials retain their own licenses and attributions:
+- Poppins fonts: The Poppins Project Authors; docs/assets/fonts/OFL.txt.
+- Alloy data and reference archives: Zongrui Pei and collaborators;
+  reproductions/alloys/LICENSE.upstream and reproductions/alloys/README.md.
+- Dependencies and externally linked papers/code retain their respective terms.
+
+Research methods are credited to their original authors in the strategy
+guides, evidence records and references.bib. This project does not claim
+authorship of the original methods or ownership of downstream discoveries.
+
+Citation information is in CITATION.cff. Please cite the software and the
+original papers for the methods used. This citation request is informational;
+it adds no conditions to Apache License 2.0.

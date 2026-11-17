@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=75"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,11 +8,14 @@ version = "0.2.0"
 readme = "README.md"
 description = "Evidence-led, three-framework recipes for trainable quantum machine learning"
 requires-python = ">=3.12"
-license = "MIT"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "LICENSES/*.txt"]
+authors = [{name = "Fyodor Amanov"}, {name = "QML Bag of Tricks contributors"}]
 dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2", "scikit-learn>=1.6,<2", "joblib>=1.4,<2"]
 
 [project.urls]
 Repository = "https://github.com/FyodorAmanov1/QML_bag_of_tricks"
+Documentation = "https://fyodoramanov1.github.io/QML_bag_of_tricks/"
 
 [project.optional-dependencies]
 learning = ["scikit-learn>=1.6,<2"]
@@ -42,7 +45,7 @@ include = ["qml_tricks*", "QML_utility", "QML_utility.models", "QML_utility.benc
 [tool.setuptools.package-data]
 qml_tricks = ["catalog.json"]
 "qml_tricks.learning" = ["catalog.json", "opportunity_protocol.json"]
-QML_utility = ["*.json", "*.md", "protocols/*.json", "evidence/*.md", "recipes/*.md", "examples/*.json", "results/*.md", "results/*.json.gz"]
+QML_utility = ["LICENSE", "*.json", "*.md", "protocols/*.json", "evidence/*.md", "recipes/*.md", "examples/*.json", "results/*.md", "results/*.json.gz"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "QML_utility/tests"]

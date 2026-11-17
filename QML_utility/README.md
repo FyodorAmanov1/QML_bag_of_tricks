@@ -2,6 +2,11 @@
 
 **A practical project layer backed by a preserved QML research library.**
 
+Created and maintained by **Fyodor Amanov**, with project contributors.
+Part of the same Apache-2.0 project as `qml_tricks`.
+See [licensing and citation](LICENSING_AND_CITATION.md) for attribution,
+a copyable citation, original-paper credit and the preserved MIT history.
+
 Give an agent the task, data access, deployment constraints and budget. It can
 match published cases, propose several justified model candidates, train a
 comparison, inspect diagnostics and return a reusable predictor with its limits.

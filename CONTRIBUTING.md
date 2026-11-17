@@ -1,5 +1,11 @@
 # Contributing
 
+Unless explicitly stated otherwise, contributions intentionally submitted for
+inclusion use the project's Apache-2.0 terms, as described in its section 5.
+Contributors retain their copyright. Preserve existing third-party notices,
+identify imported material and its license, and credit original method authors.
+See [licensing and citation](QML_utility/LICENSING_AND_CITATION.md).
+
 Application reproductions and project benchmarks are welcome. Start from the
 [Utility project workflow](QML_utility/PRACTICAL_WORKFLOW.md) and the
 [QML motivation guide](docs/why_qml.md), select a concrete use case, and provide

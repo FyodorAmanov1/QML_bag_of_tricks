@@ -26,6 +26,9 @@
   <strong>6</strong> further published cases
 </p>
 
+**Created and maintained by Fyodor Amanov, with project contributors.**
+If this software supports your research, please [cite it and the original method papers](#citation-and-license).
+
 ## Start in five minutes
 
 Use Python 3.12. Clone once and install once from the repository root:
@@ -256,7 +259,24 @@ python -m mkdocs build --strict
 Contribute a reproduction, a stronger control, a useful dataset report or a
 clearer implementation. See [contributing](CONTRIBUTING.md), [validation](VALIDATION.md),
 [bibliography](references.bib) and [citation metadata](CITATION.cff).
-Code is [MIT licensed](LICENSE).
+## Citation and license
+
+Current first-party code is [Apache-2.0 licensed](LICENSE). Attribution is
+preserved in [NOTICE](NOTICE); earlier MIT-distributed versions retain their
+original permissions and [notice](LICENSES/MIT-legacy.txt). Third-party materials
+retain their own licenses.
+
+Please cite the software when it contributes to your research:
+
+> Amanov, F., & QML Bag of Tricks contributors. (2026). *QML Bag of Tricks*
+> (Version 0.2.0) [Computer software]. https://github.com/FyodorAmanov1/QML_bag_of_tricks
+
+Use GitHub's **Cite this repository** button or [CITATION.cff](CITATION.cff).
+Record your exact commit and cite the original papers for the methods used.
+The citation request adds no license condition and implies no automatic
+coauthorship or ownership of downstream discoveries. A software DOI is pending
+an actual archived release; no placeholder DOI is used.
+[License, BibTeX and attribution details](QML_utility/LICENSING_AND_CITATION.md).
 
 **0.2.0 candidate · owner scientific review pending.**
 [Review packet](docs/owner_review.md) · [Release notes](RELEASE_NOTES.md)

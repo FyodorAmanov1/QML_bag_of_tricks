@@ -1,5 +1,15 @@
 # QML Bag of Tricks 0.2.0 — release candidate
 
+## License and attribution update
+
+- Current first-party distribution uses Apache-2.0 across both packages.
+- Added NOTICE, retained the original MIT notice in LICENSES/MIT-legacy.txt,
+  and preserved third-party licenses and attribution.
+- Citation and package metadata identify Fyodor Amanov and project contributors.
+- Added a citation guide; a DOI awaits a real archived release.
+- Earlier MIT permissions, historical reports and scientific evidence labels
+  remain intact. This update does not create a tagged scientific release.
+
 ## Unreleased unified entry point
 
 One root distribution now provides `qml-utility` and the existing `qml-tricks`

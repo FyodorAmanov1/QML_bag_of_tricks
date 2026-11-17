@@ -24,6 +24,7 @@
 - [Teacher-first offline distillation](https://fyodoramanov1.github.io/QML_bag_of_tricks/learning/kipu_workflow/)
 
 ## Evidence and evaluation
+- [License and citation](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/licensing_and_citation/): Apache-2.0, Fyodor Amanov and contributor credit, software citation and original-paper attribution.
 - [Paper reproductions](https://fyodoramanov1.github.io/QML_bag_of_tricks/reproductions/)
 - [Published application catalog](https://fyodoramanov1.github.io/QML_bag_of_tricks/use_cases/)
 - [Evidence coverage](https://fyodoramanov1.github.io/QML_bag_of_tricks/coverage/)

@@ -3,7 +3,11 @@ message: Please cite this repository and the original papers associated with eac
 title: QML Bag of Tricks
 type: software
 authors:
+  - family-names: Amanov
+    given-names: Fyodor
   - name: QML Bag of Tricks contributors
 version: 0.2.0
 date-released: 2026-11-09
-license: MIT
+license: Apache-2.0
+url: "https://github.com/FyodorAmanov1/QML_bag_of_tricks"
+repository-code: "https://github.com/FyodorAmanov1/QML_bag_of_tricks"
