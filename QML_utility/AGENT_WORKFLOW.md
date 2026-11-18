@@ -2,16 +2,18 @@
 
 For a new user project, begin with [the practical workflow](PRACTICAL_WORKFLOW.md)
 and `recommend.py`. It combines publication matches with separately labeled
-exploratory model portfolios. The instructions below describe the exact
-paper-replication track, whose unresolved artifacts remain explicit blockers.
+exploratory model portfolios. [Evidence labels](EVIDENCE_LEVELS.md) distinguish
+published findings, linked author code and verified local behavior.
 
-Use the selector to identify a replication candidate, then generate a reviewable
+Use the selector to identify a published-method candidate, then generate a reviewable
 contract. Neither command fits a model or certifies performance.
 
 Start with [the task-to-case map](CASE_SELECTION.md) to judge which candidate is
-worth the replication cost. The example profiles intentionally leave unknown
+worth adapting. The example profiles intentionally leave unknown
 data provenance or compute budgets blank; the planner reports those omissions.
-Even a complete draft requires resolution of the paper-specific artifact blockers.
+The planner defaults to `intent="adapt"`. Original paper replication is optional;
+select `intent="replicate"` only for that task. Resolve case-specific access,
+licensing and implementation constraints relevant to the chosen route.
 
 ```bash
 python -m QML_utility.plan_project --profile QML_utility/examples/molecular_project.json --output QML_utility/results/local/molecular_plan.json
@@ -29,8 +31,9 @@ not just a dataset name. Missing conditions mean *no matched evidence yet*.
 
 1. Read the evidence card and exact source version. Separate published settings,
    local references, unresolved details and proposed extensions.
-2. Recover original artifacts and first replay the paper comparator tuple. A
-   construction test or short smoke run is not a paper-scale performance run.
+2. Inspect the linked author implementation or local recipe and its reuse terms.
+   Adapt the documented method to the declared task. If independent replication
+   was explicitly requested, recover original artifacts and replay that protocol.
 3. Prespecify a new-project comparison. Fit preprocessing and model selection
    inside the training partition; use validation to select, then freeze.
 4. Include classical controls that match information, architecture components

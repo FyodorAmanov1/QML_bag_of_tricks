@@ -6,10 +6,13 @@ from pathlib import Path
 from .make_example import create_example
 from .recommend import recommend
 from .strategies import essentials,check
+from .evidence_access import implementation_access
 
 
 def setup(output,profile=None,framework='qiskit',optimizer='qng',check_essentials=False,profile_base=Path('.'),case_id=None):
     cases = json.loads((Path(__file__).parent/'catalog.json').read_text())['cases']
+    cases = [dict(case, implementation_access=implementation_access(case),
+                  independent_replication_required_for_use=False) for case in cases]
     selected = next((case for case in cases if case['id']==case_id),None)
     if case_id and selected is None:
         raise ValueError('Unknown published case')
@@ -20,7 +23,7 @@ def setup(output,profile=None,framework='qiskit',optimizer='qng',check_essential
     if profile is None and selected:
         config = dict(data_kind=selected['data_kind'],objective=selected['objective'],
                       capabilities=dict.fromkeys(selected['required_capabilities'],False),
-                      intent='replicate',selected_case=selected['id'])
+                      intent='adapt',selected_case=selected['id'])
     elif profile is None:
         config = create_example(output/'project',framework=framework)
         config['data']['path'] = str((output/'project/data.csv').resolve())

@@ -5,10 +5,13 @@ its stated comparison. It does not mean independently reproduced in this folder
 or guaranteed on a new project. All ten records retain their evidence type and
 local implementation scope in [the catalog](catalog.json).
 
-| Your actual problem | Replication candidate | Condition worth testing | First experiment that could support transfer |
+Published evidence and available author code are sufficient starting points;
+an independent local rerun is optional. See [source access and evidence labels](EVIDENCE_LEVELS.md).
+
+| Your actual problem | Published method | Condition worth testing | First experiment that could support transfer |
 |---|---|---|---|
-| A long stream of changing image tasks; preserving ability to learn the next one matters | [Continual QNN](evidence/continual_plasticity.md) | Persistent compact-unitary model and complete amplitude inputs under continued updates | Original long CIFAR trajectory, then matched L2 and plasticity-aware classical controls; report forgetting separately |
-| Several unaligned graphs plausibly sampled from one latent graphon | [QGNR](evidence/quantum_graphons.md) | Re-uploaded coordinates and permutation-invariant transport loss | Recover original reconstruction errors at the same resolution; compare classical oscillatory representations with the same solver |
+| A long stream of changing image tasks; preserving ability to learn the next one matters | [Continual QNN](evidence/continual_plasticity.md) | Persistent compact-unitary model and complete amplitude inputs under continued updates | Adapt the author training pipeline to a declared stream; compare L2 and plasticity-aware controls, adaptation and forgetting, disclosing sequence length |
+| Several unaligned graphs plausibly sampled from one latent graphon | [QGNR](evidence/quantum_graphons.md) | Re-uploaded coordinates and permutation-invariant transport loss | Adapt the documented reconstruction objective after resolving reuse terms; compare classical oscillatory representations with the same solver and resolution |
 | Small molecular descriptor samples with continuous activity labels | [Fixed molecular reservoir](evidence/molecular_reservoir.md) | Nonlinear fixed features may retain useful geometry when subsamples shrink | Recover 18-feature/MMACD protocol; compare full and selected classical features, train-only selection, and a fixed-test learning curve |
 | Short sentiment sentences with affordable token-level circuit evaluation | [QSANN](evidence/quantum_self_attention.md) | Quantum projected features with classical Gaussian attention | Replay short-text comparison; swap in classical features with the same attention, and include TF-IDF/frozen-encoder controls |
 | Historical monthly time series with a one-step volatility target | [Ising reservoir](evidence/volatility_reservoir.md) | Input/memory dynamics under causal rolling refits | Audit calendar and selection; walk-forward evaluation with equally informed classical reservoirs and regularized temporal models |
@@ -20,11 +23,12 @@ local implementation scope in [the catalog](catalog.json).
 
 ## Priorities and limits
 
-For an ordinary classical-data project, continual learning and graphon
-reconstruction remain the first full-replication targets here. Their task
-structure is explicit. Molecular reservoirs, short-text attention and volatility
-add application-specific leads; their source gaps, comparator limits and modest
-or conditional benefits make strong-control replication especially important.
+For an ordinary classical-data project, match the stated task structure before
+choosing an author implementation or local adapter. Continual learning,
+graphons, short-text attention and volatility have inspected source routes;
+molecular reservoirs remain a published lead with exact code/artifact gaps.
+Evaluate your adaptation against strong controls rather than requiring a
+complete original-paper rerun as the first step.
 The optical kernel case is a designed experiment, not a shortcut to success on
 external labels. Quantum acquisition cases require physical input access that a
 classical dataset does not supply.

@@ -12,6 +12,12 @@ Separate published success, native circuit verification, local protocol audit
 and full paper reproduction. No record currently certifies a locally reproduced
 classical-data paper win. Never invent an accuracy from a plot.
 
+Peer-reviewed results with documented author-code access are sufficient to
+include a published-code-backed method. Independent local paper replication is
+optional, not a release or use gate. Default new-project intent is adapt; reserve
+replicate for an explicitly requested independent paper replay. Keep missing
+code, source-version differences and reuse permissions explicit.
+
 For a new project start with recommend.py and PRACTICAL_WORKFLOW.md. The
 method_library.json portfolio is an explicit exploratory engineering route,
 separate from the ten published-success cases. Its tested implementations are
@@ -48,4 +54,5 @@ blockers must be resolved before an experiment can be considered executable.
 
 Upstream source is pinned and inspected, not automatically executed or vendored.
 Review licenses, dependencies, output paths and data deserialization first.
-Only export successful-use recommendations after held-out, matched-cost evidence.
+Only export successful-use recommendations for a new target project after
+held-out, matched-cost evidence; a published-source candidate is not that claim.

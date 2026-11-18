@@ -5,6 +5,10 @@ title: Use with your coding agent
 
 # Use QML Bag of Tricks with your coding agent
 
+For published methods, [peer-reviewed evidence and documented author code](utility/evidence_levels.md)
+are valid starting points. Ask your agent to adapt and evaluate your project;
+an independent rerun of the original paper is optional.
+
 Give your agent a task, a dataset description, a compute budget and one of the
 copyable briefs below. The same workflow applies to any coding agent that can
 read files or browse documentation and run Python in your project environment.

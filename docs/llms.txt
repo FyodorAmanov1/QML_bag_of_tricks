@@ -4,6 +4,7 @@
 > PennyLane and Cirq references, and explicit classical comparisons.
 
 ## Entry points
+- [Evidence labels and author implementations](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/evidence_levels/): peer-reviewed findings plus documented source access are valid starting points; local paper reruns are optional.
 - [Unified QML Utility setup](https://fyodoramanov1.github.io/QML_bag_of_tricks/utility/unified_setup/): published cases and core training strategies in one project.
 - [Complete guide directory](https://fyodoramanov1.github.io/QML_bag_of_tricks/explore/): every documentation page, grouped by purpose.
 - [Agent integration](https://fyodoramanov1.github.io/QML_bag_of_tricks/agents/): website/local routes, setup and benchmark obligations.

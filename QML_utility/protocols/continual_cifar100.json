@@ -37,6 +37,7 @@
   "upstream_audit": {
     "commit": "c3c6cb4a91971d4fad6e468df6ac071851bb7460",
     "default_depth": 10,
+    "default_tasks": 30,
     "warning": "Inspect NUM_TASKS and optimizer implementation. MNIST uses unequal paper training schedules; do not generalize CIFAR matching to MNIST. Public CIFAR source returns [z,-z] logits (softmax implies sigmoid(2z)); paper describes a Z logit. Record the convention used.",
     "missing_or_unverified": [
       "Saved trained trajectories",

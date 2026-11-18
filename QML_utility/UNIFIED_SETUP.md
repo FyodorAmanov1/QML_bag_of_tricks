@@ -46,6 +46,11 @@ those checks. Follow the generated README to train the candidate portfolio.
 
 ## Start from an actual published case
 
+Peer-reviewed findings with documented author code are sufficient starting
+points; independent paper reruns are optional. See [evidence levels and source
+access](EVIDENCE_LEVELS.md). New case setups use `intent="adapt"` and record
+source access for every case alongside its published and local scopes.
+
 ```bash
 qml-utility setup --case continual_plasticity --output QML_utility/results/local/continual_setup
 qml-utility setup --profile my_project.json --output QML_utility/results/local/my_project_setup

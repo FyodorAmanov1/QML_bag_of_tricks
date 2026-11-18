@@ -16,6 +16,11 @@ Read QML_utility/AGENTS.md, README.md and PRACTICAL_WORKFLOW.md. Keep all new
 utility code/configs/results in QML_utility. Preserve the original repository's
 strategies, generated sources and studies. Do not publish anything.
 
+Read EVIDENCE_LEVELS.md. Peer-reviewed evidence and documented author code are
+valid starting points; do not rerun a whole paper unless I request replication.
+Default to adapting the implementation and testing my project. Keep the source
+publication, code access, local verification and my new results separate.
+
 Create an explicit project JSON. Run QML_utility.recommend. Distinguish exact
 published-case matches from exploratory transfer candidates; do not convert a
 method foundation or construction test into a published predictive win.

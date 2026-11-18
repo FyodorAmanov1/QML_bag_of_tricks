@@ -10,6 +10,9 @@ Only public author sources were inspected. They were not executed or vendored.
   matched Adam settings and the original-data task construction.
 - Its default depth is 10. A default script is not the depth sweep or the L2
   ablation suite reported by the paper. Dependencies are not version-pinned.
+- The pinned CIFAR script sets `NUM_TASKS = 30`; the main paper uses 3,000.
+  Change that setting only for an intended full original trajectory, and record
+  the actual task count for any adaptation.
 - Source returns two logits `[z, -z]`. Their softmax corresponds to a `2z`
   logistic scale; the paper describes a Z logit. Record/reconcile this before
   asserting exact reproduction. The references here implement the paper's
@@ -37,9 +40,11 @@ Only public author sources were inspected. They were not executed or vendored.
 
 ## Interpretation
 
-These gaps reduce replication readiness; they do not by themselves refute the
-paper. They are why this folder reports *published successes with replication
-obligations* rather than declaring locally validated universal winners.
+These gaps concern exact replay, reuse permission or a particular implementation;
+they do not by themselves refute the paper or exclude a published method from
+the collection. Peer-reviewed findings with documented author code are valid
+starting points without an independent local rerun. Keep local execution claims
+separate and resolve constraints relevant to the chosen adaptation.
 
 ## Molecular reservoirs
 

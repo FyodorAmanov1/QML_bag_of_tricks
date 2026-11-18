@@ -48,7 +48,9 @@ known winning recipe.
 The root README/site lead into the utility, while the full research library is
 preserved. Utility documentation is included in the site directly from these
 canonical files, without a second authored copy under docs/.
-No publication, visibility change or release is part of this local work.
+Independent paper reruns are an optional research track; the published-method
+collection is usable with peer-reviewed evidence and documented source access.
+See [evidence levels](EVIDENCE_LEVELS.md) for the per-case routes.
 
 ## Current readiness and next implementation priorities
 
@@ -61,7 +63,7 @@ No publication, visibility change or release is part of this local work.
 | Raw images/text and categorical features | Explicit adaptation contract; existing pretraining companion | Utility-native train-only encoder and same-feature head comparisons |
 | QPU deployment | No automatic submission in this folder | Backend execution contracts, finite-shot uncertainty and noise-aware comparisons |
 | Offline teacher distillation | Utility-native feature mapper, frozen supported heads, empirical export gates and SDK-free student inference | Domain-shift stress tests and provider-specific measured-feature adapters |
-| Installation/release | Utility-specific wheel, editable install, doctor/quickstart/predict CLI | Clean-platform dependency CI, broader environment testing and release review |
+| Installation/release | One root distribution for both packages, shared CLI routes and Linux/Windows CI | Broader environment testing and versioned releases |
 
 More case cards alone will not close these gaps. Prioritize reproducible adapters,
 strong controls and verifiable outputs over a larger collection of model names.

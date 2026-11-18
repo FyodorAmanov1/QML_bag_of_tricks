@@ -53,6 +53,7 @@ No automated scan proves that a repository contains no sensitive information.
 - Preserve group/time splits, train-only preprocessing, validation-only
   selection, tuned classical controls and every failed or non-winning trial.
 - Use fresh output directories; load only trusted serialized model artifacts.
-- Scientific owner review and full original-data paper replications remain
-  separate from making the code public. See [validation](VALIDATION.md),
+- Peer-reviewed evidence and documented author implementations support the
+  published-method collection; independent paper reruns are optional. Review
+  [evidence labels](EVIDENCE_LEVELS.md), [validation](VALIDATION.md),
   [evidence policy](EVIDENCE_POLICY.md) and [contextual results](CONTEXTUAL_RESULTS.md).

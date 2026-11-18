@@ -2,6 +2,17 @@
 
 The unit of evidence is a **task–data–access–comparator–metric tuple**, not a model name.
 
+## Published evidence is sufficient for inclusion
+
+Peer-reviewed findings with documented author implementations may be included
+and used as published-code-backed starting points without rerunning the paper
+locally. Independent replication is an optional additional evidence level, not
+a prerequisite to publication of this library or use of its methods.
+See [evidence labels and implementation access](EVIDENCE_LEVELS.md).
+
+The rules below distinguish admission of a published finding from promotion to
+an independent local reproduction or a recommendation for a new target project.
+
 1. Admit a success only with a peer-reviewed primary publication and a result locator.
 2. Record whether it is numerical, hardware experimental, or a conditional theorem.
 3. Record inputs, targets, data-generation constraints, preprocessing, splits,
@@ -23,9 +34,10 @@ The unit of evidence is a **task–data–access–comparator–metric tuple**, 
    elsewhere. Better training or different data geometry is a prospective
    hypothesis; test it without retroactively changing the original outcome.
 
-No real-classical-data paper win has passed step 7 in this prototype. A native
-circuit identity test is valuable but cannot satisfy that gate. The late-query
-audit is a separate restricted result, not a new broad advantage claim.
+The utility catalog's published classical-data results are attributed to their
+papers, not relabeled as independent local replications. Step 7 applies only
+when making that additional local-reproduction claim. Native identity tests and
+the restricted late-query audit retain their own verification scope.
 
 Distinguish a finite experimental non-win from a mathematical constraint. More
 training may improve an optimization-limited fit; it cannot recover information

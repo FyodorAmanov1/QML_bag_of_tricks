@@ -9,9 +9,10 @@ library supplies canonical runtime implementations in the same distribution.
 1. Fill in `examples/project`-style JSON with capabilities actually available.
    A missing capability is not inferred from a dataset name.
 2. Run `select_case`; read the returned guide, primary result and protocol.
-3. Follow the exact upstream task before creating a reduced adaptation. Use an
-   isolated environment for legacy dependencies. Record the immutable commit,
-   any code changes, data hashes and every hyperparameter trial.
+3. Use or adapt the author implementation or a scoped local recipe. An original
+   paper rerun is optional; follow the exact upstream task only when claiming
+   an independent replication. Use an isolated environment for legacy
+   dependencies. Record the immutable commit, code changes, data hashes and trials.
 4. Use full task-relevant data. Include resource-matched classical controls and
    an evaluation plan frozen before test inspection.
 5. Save raw predictions/trajectories, independent seeds/task orders, uncertainty,

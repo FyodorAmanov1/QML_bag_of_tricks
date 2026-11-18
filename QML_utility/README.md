@@ -2,6 +2,12 @@
 
 **A practical project layer backed by a preserved QML research library.**
 
+**Peer-reviewed findings and documented author implementations are the basis
+for the published-method collection. Independent reruns of those papers are
+optional, not a prerequisite for using or publishing this library.** Start with
+[evidence labels and author-code links](EVIDENCE_LEVELS.md), then adapt a method
+and benchmark your own project.
+
 Created and maintained by **Fyodor Amanov**, with project contributors.
 Part of the same Apache-2.0 project as `qml_tricks`.
 See [licensing and citation](LICENSING_AND_CITATION.md) for attribution,
@@ -140,7 +146,7 @@ for source recovery, controls, selection and held-out evaluation.
 The benchmark uses exact sufficient-statistic sampling for a specified state
 family; it is not a QPU experiment or a replay of the Science experiment.
 
-## What is implemented and what is pending?
+## What you can use
 
 - Installable utility package and one CLI for setup diagnostics, quickstart,
   portfolios, training, repeated evaluation, audits and prediction.
@@ -171,21 +177,21 @@ family; it is not a QPU experiment or a replay of the Science experiment.
 - [Executed local protocol audit](results/README.md), with compressed per-state
   records and an early-query ablation, kept separate from paper performance.
 
-**Not yet completed:** full original-data QGNR training, long CIFAR-100 trajectories,
-the published L2 ablations, molecular/text/volatility training, or photonic/channel
-raw-data replay. Source-version and missing-artifact gaps are recorded. None is
-relabeled as a local win.
-The practical adapters are executable, while further scaling, modality adapters,
-hardware execution and independent application-performance replications remain
-work to do. See [the concrete readiness and priority map](REPOSITORY_DESIGN.md).
+## Use published implementations, then evaluate your project
 
-## First full paper-performance replication target
+For continual learning, graphons, projected attention, photonic kernels and
+volatility, follow the [five pinned author-source routes](EVIDENCE_LEVELS.md).
+The same guide distinguishes the institutional photonic archive, locally tested
+acquisition components, theoretical results and cases whose exact author
+artifacts have not been recovered. Source availability and reuse permission are
+separate checks; inspect the [source audit](SOURCE_AUDIT.md) before adapting code.
 
-Prioritize the **Split CIFAR-100 plasticity** protocol: it directly addresses a
-reported benefit over regularized classical networks and preserves all image
-coordinates. Recover the original long trajectory first, then add tuned
-plasticity-aware classical controls. Record both adaptation and forgetting.
-See [the exact plan](protocols/continual_cifar100.json).
+You do not need to repeat the original paper to use a published implementation.
+Select the relevant data/access conditions, declare your adaptation, and compare
+it with strong classical controls on your own held-out data. The numeric adapters
+in this repository are executable; specialized tasks use the author pipeline or
+an explicit task-specific adapter.
 
-Public availability does not certify that replication gate. Do not market
-these pending replications as local successes. Keep the original studies as reproducibility records.
+For an optional independent replication, retain the [original-data protocols](IMPLEMENTATION.md)
+and record its actual result separately. The catalog's published comparisons
+remain attributed to the papers; local tests and experiments keep their own scope.

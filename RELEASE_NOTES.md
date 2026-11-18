@@ -1,5 +1,19 @@
 # QML Bag of Tricks 0.2.0 — release candidate
 
+## Published-evidence workflow
+
+- Peer-reviewed findings and documented author implementations support inclusion
+  and use without requiring an independent local rerun of every paper.
+- Project planning and case setup default to `intent="adapt"`; `replicate` is
+  an explicit optional track. New-project performance still requires evaluation.
+- Selector matches use `published_candidates` / `evidence_matched_published_candidate`
+  status labels and include publication and `implementation_access` records.
+- `require_author_code=true` restricts matching to the five pinned inspected
+  author-source routes; it does not certify reuse terms or a local training result.
+- Existing local-reproduction flags, benchmark outcomes and scientific limits
+  remain unchanged. The evidence guide distinguishes source, archive, component
+  and theory access rather than treating every case as an unfinished local replay.
+
 ## License and attribution update
 
 - Project code uses Apache-2.0 across both packages.

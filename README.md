@@ -29,6 +29,11 @@
 **Created and maintained by Fyodor Amanov, with project contributors.**
 If this software supports your research, please [cite it and the original method papers](#citation-and-license).
 
+Use published methods backed by peer-reviewed findings and documented author
+implementations. Independent reruns of every paper are optional; each case
+separately identifies its source code, local implementation and verification.
+[Published evidence and implementation access](QML_utility/EVIDENCE_LEVELS.md).
+
 ## Start in five minutes
 
 Use Python 3.12. Clone once and install once from the repository root:
